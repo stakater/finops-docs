@@ -1,0 +1,24 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  create_release:
+    uses: stakater/.github/.github/workflows/release_template.yaml@v0.0.131
+    secrets:
+      SLACK_WEBHOOK_URL: ${{ secrets.STAKATER_DELIVERY_SLACK_WEBHOOK }}
+  build_container:
+    uses: stakater/.github/.github/workflows/push_container_only.yaml@v0.0.131
+    with:
+      DOCKER_BUILD_CONTEXTS: content=https://github.com/stakater/dco-docs.git#gh-pages
+      DOCKER_FILE_PATH: Dockerfile
+    secrets:
+      CONTAINER_REGISTRY_URL: ghcr.io/stakater
+      CONTAINER_REGISTRY_USERNAME: ${{ github.actor }}
+      CONTAINER_REGISTRY_PASSWORD: ${{ secrets.GHCR_TOKEN }}
+      SLACK_WEBHOOK_URL: ${{ secrets.STAKATER_DELIVERY_SLACK_WEBHOOK }}
+      GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+      DOCKER_SECRETS: GIT_AUTH_TOKEN=${{ secrets.PUBLISH_TOKEN }}

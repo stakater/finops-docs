@@ -1,0 +1,29 @@
+# Dist files
+dist/
+site/
+lib/
+
+# Test temp files
+**/__fixtures__/.temp/
+
+# Test coverage files
+coverage/
+
+# MacOS Desktop Services Store
+.DS_Store
+
+# Log files
+*.log
+
+# Typescript build info
+*.tsbuildinfo
+node_modules
+
+# Build files
+site/
+/mkdocs.yml
+
+.idea
+styles
+
+test/

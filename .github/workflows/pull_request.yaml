@@ -1,0 +1,63 @@
+name: Pull Request
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+      - '[0-9]+.[0-9]+'
+
+jobs:
+  doc_qa:
+    uses: stakater/.github/.github/workflows/pull_request_doc_qa.yaml@v0.0.131
+    with:
+      MD_CONFIG: .github/md_config.json
+      DOC_SRC: content README.md
+      MD_LINT_CONFIG: .markdownlint.yaml
+  deploy_doc:
+    concurrency:
+      group: pull_request_versioned_doc
+      cancel-in-progress: false
+    uses: stakater/.github/.github/workflows/pull_request_versioned_doc.yaml@v0.0.147
+    secrets:
+      GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+  build_container:
+    needs: deploy_doc
+    if: ${{ github.base_ref == 'main' }}
+    uses: stakater/.github/.github/workflows/pull_request_container_build.yaml@v0.0.131
+    with:
+      DOCKER_BUILD_CONTEXTS: content=https://github.com/stakater/dco-docs.git#pull-request-deployments
+      DOCKER_FILE_PATH: Dockerfile
+      CONTAINER_REGISTRY_URL: ghcr.io/stakater
+    secrets:
+      CONTAINER_REGISTRY_USERNAME: ${{ github.actor }}
+      CONTAINER_REGISTRY_PASSWORD: ${{ secrets.GHCR_TOKEN }}
+      SLACK_WEBHOOK_URL: ${{ secrets.STAKATER_DELIVERY_SLACK_WEBHOOK }}
+      DOCKER_SECRETS: GIT_AUTH_TOKEN=${{ secrets.PUBLISH_TOKEN }}
+  test:
+    runs-on: ubuntu-latest
+    needs: [
+      build_container,
+      deploy_doc
+    ]
+    env:
+      CURRENT_BRANCH: ${{ needs.deploy_doc.outputs.CURRENT_BRANCH }}
+      IMAGE_PATH: ${{ needs.build_container.outputs.IMAGE_PATH }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Login to Docker Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io/stakater
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_TOKEN }}
+      - name: Run Docker container for the docs
+        run: |
+          docker run -d --name dco-docs -p 8080:8080 ${{ env.IMAGE_PATH }} || exit 1
+      - name: Build testcafe tests
+        working-directory: ./testcafe
+        run: |
+          docker build -t testcafe-tests --build-arg CURRENT_BRANCH=${{ env.CURRENT_BRANCH }} .
+      - name: Run Docker container to run tests
+        run: |
+          docker run --rm --network="host" --name myapp-testcafe-container testcafe-tests:latest

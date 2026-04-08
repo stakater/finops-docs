@@ -1,0 +1,116 @@
+docker build -t github-action-markdown-link-check_repo:github-action-markdown-link-check_tag -f /home/runner/work/_actions/Wandalen/github-action-markdown-link-check/Dockerfile /home/runner/work/_actions/Wandalen/github-action-markdown-link-check/
+
+Arg "${{ inputs.file-path }}" in position 8 is not defined. It can corrupt execution.
+Please, read doc of action and setup it properly
+ > docker run --name github-action-markdown-link-check_tag --label github-action-markdown-link-check_repo --workdir /github/workspace --rm -e INPUT_CONFIG-FILE -e INPUT_USE-QUIET-MODE -e INPUT_USE-VERBOSE-MODE -e INPUT_MAX-DEPTH -e INPUT_FOLDER-PATH -e INPUT_CHECK-MODIFIED-FILES-ONLY -e INPUT_BASE-BRANCH -e INPUT_FILE-EXTENSION -e INPUT_FILE-PATH -e HOME -e GITHUB_JOB -e GITHUB_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_REPOSITORY_OWNER -e GITHUB_REPOSITORY_OWNER_ID -e GITHUB_RUN_ID -e GITHUB_RUN_NUMBER -e GITHUB_RETENTION_DAYS -e GITHUB_RUN_ATTEMPT -e GITHUB_REPOSITORY_ID -e GITHUB_ACTOR_ID -e GITHUB_ACTOR -e GITHUB_TRIGGERING_ACTOR -e GITHUB_WORKFLOW -e GITHUB_HEAD_REF -e GITHUB_BASE_REF -e GITHUB_EVENT_NAME -e GITHUB_SERVER_URL -e GITHUB_API_URL -e GITHUB_GRAPHQL_URL -e GITHUB_REF_NAME -e GITHUB_REF_PROTECTED -e GITHUB_REF_TYPE -e GITHUB_WORKFLOW_REF -e GITHUB_WORKFLOW_SHA -e GITHUB_WORKSPACE -e GITHUB_ACTION -e GITHUB_EVENT_PATH -e GITHUB_ACTION_REPOSITORY -e GITHUB_ACTION_REF -e GITHUB_PATH -e GITHUB_ENV -e GITHUB_STEP_SUMMARY -e GITHUB_STATE -e GITHUB_OUTPUT -e RUNNER_OS -e RUNNER_ARCH -e RUNNER_NAME -e RUNNER_ENVIRONMENT -e RUNNER_TOOL_CACHE -e RUNNER_TEMP -e RUNNER_WORKSPACE -e ACTIONS_RUNTIME_URL -e ACTIONS_RUNTIME_TOKEN -e ACTIONS_CACHE_URL -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/dco-docs/dco-docs":"/github/workspace" -v "/home/runner/work/_temp/_runner_file_commands":"/home/runner/work/_temp/_runner_file_commands" github-action-markdown-link-check_repo:github-action-markdown-link-check_tag yes yes .github/md_config.json . 3 no master .md ""
+npm warn deprecated har-validator@5.1.5: this library is no longer supported
+npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+
+added 65 packages in 4s
+
+5 packages are looking for funding
+  run `npm fund` for details
+Using markdown-link-check configuration file: .github/md_config.json
+USE_QUIET_MODE: yes
+USE_VERBOSE_MODE: yes
+FOLDER_PATH: .
+MAX_DEPTH: 3
+CHECK_MODIFIED_FILES: no
+FILE_EXTENSION: .md
+FILE_PATH: 
++ find . -name '*.md' -not -path './node_modules/*' -maxdepth 3 -exec markdown-link-check '{}' --config .github/md_config.json -q -v ';'
++ set +x
+=========================> MARKDOWN LINK CHECK <=========================
+
+FILE: ./notes.md
+
+0 links checked.
+
+FILE: ./README.md
+[✖] https://www.stakater.com/dco → Status: 404
+
+13 links checked.
+
+ERROR: 1 dead links found!
+[✖] https://www.stakater.com/dco → Status: 404
+
+FILE: ./content/getting-started/installation.md
+
+2 links checked.
+
+FILE: ./content/getting-started/uninstalling.md
+
+0 links checked.
+
+FILE: ./content/getting-started/overview.md
+
+2 links checked.
+
+FILE: ./content/getting-started/quick-start.md
+
+2 links checked.
+
+FILE: ./content/eula.md
+[✖] https://github.com/stakater/dex-config-operator/blob/main/LICENSE → Status: 404
+[✖] https://www.stakater.com/contact → Status: 404
+
+2 links checked.
+
+ERROR: 2 dead links found!
+[✖] https://github.com/stakater/dex-config-operator/blob/main/LICENSE → Status: 404
+[✖] https://www.stakater.com/contact → Status: 404
+
+FILE: ./content/overview/key-features.md
+
+0 links checked.
+
+FILE: ./content/guides/local-users.md
+
+0 links checked.
+
+FILE: ./content/guides/oauth2-clients.md
+
+FILE: ./content/reference/connector.md
+
+1 links checked.
+
+FILE: ./content/reference/security.md
+
+0 links checked.
+
+FILE: ./content/reference/dexconfig.md
+
+10 links checked.
+
+FILE: ./content/index.md
+
+6 links checked.
+
+FILE: ./content/architecture/concepts.md
+
+0 links checked.
+
+FILE: ./content/architecture/architecture.md
+
+0 links checked.
+
+FILE: ./content/troubleshooting.md
+
+0 links checked.
+
+FILE: ./content/changelog.md
+[✖] https://github.com/stakater/dex-config-operator/releases → Status: 404
+
+1 links checked.
+
+ERROR: 1 dead links found!
+[✖] https://github.com/stakater/dex-config-operator/releases → Status: 404
+
+=========================================================================
+Error: Process returned exit code 113
+Launched as "docker run --name github-action-markdown-link-check_tag --label github-action-markdown-link-check_repo --workdir /github/workspace --rm -e INPUT_CONFIG-FILE -e INPUT_USE-QUIET-MODE -e INPUT_USE-VERBOSE-MODE -e INPUT_MAX-DEPTH -e INPUT_FOLDER-PATH -e INPUT_CHECK-MODIFIED-FILES-ONLY -e INPUT_BASE-BRANCH -e INPUT_FILE-EXTENSION -e INPUT_FILE-PATH -e HOME -e GITHUB_JOB -e GITHUB_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_REPOSITORY_OWNER -e GITHUB_REPOSITORY_OWNER_ID -e GITHUB_RUN_ID -e GITHUB_RUN_NUMBER -e GITHUB_RETENTION_DAYS -e GITHUB_RUN_ATTEMPT -e GITHUB_REPOSITORY_ID -e GITHUB_ACTOR_ID -e GITHUB_ACTOR -e GITHUB_TRIGGERING_ACTOR -e GITHUB_WORKFLOW -e GITHUB_HEAD_REF -e GITHUB_BASE_REF -e GITHUB_EVENT_NAME -e GITHUB_SERVER_URL -e GITHUB_API_URL -e GITHUB_GRAPHQL_URL -e GITHUB_REF_NAME -e GITHUB_REF_PROTECTED -e GITHUB_REF_TYPE -e GITHUB_WORKFLOW_REF -e GITHUB_WORKFLOW_SHA -e GITHUB_WORKSPACE -e GITHUB_ACTION -e GITHUB_EVENT_PATH -e GITHUB_ACTION_REPOSITORY -e GITHUB_ACTION_REF -e GITHUB_PATH -e GITHUB_ENV -e GITHUB_STEP_SUMMARY -e GITHUB_STATE -e GITHUB_OUTPUT -e RUNNER_OS -e RUNNER_ARCH -e RUNNER_NAME -e RUNNER_ENVIRONMENT -e RUNNER_TOOL_CACHE -e RUNNER_TEMP -e RUNNER_WORKSPACE -e ACTIONS_RUNTIME_URL -e ACTIONS_RUNTIME_TOKEN -e ACTIONS_CACHE_URL -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/dco-docs/dco-docs":"/github/workspace" -v "/home/runner/work/_temp/_runner_file_commands":"/home/runner/work/_temp/_runner_file_commands" github-action-markdown-link-check_repo:github-action-markdown-link-check_tag yes yes .github/md_config.json . 3 no master .md """
+Launched at "/home/runner/work/dco-docs/dco-docs"
+Attempts exhausted, made 2 attempts :
+Attempt #1 started at : 13:29:06 GMT+0000 (Coordinated Universal Time)
+Attempt #2 started at : 13:30:26 GMT+0000 (Coordinated Universal Time)
