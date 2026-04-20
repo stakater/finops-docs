@@ -25,7 +25,7 @@ jobs:
     if: ${{ github.base_ref == 'main' }}
     uses: stakater/.github/.github/workflows/pull_request_container_build.yaml@v0.0.131
     with:
-      DOCKER_BUILD_CONTEXTS: content=https://github.com/stakater/dco-docs.git#pull-request-deployments
+      DOCKER_BUILD_CONTEXTS: content=https://github.com/stakater/finops-docs.git#pull-request-deployments
       DOCKER_FILE_PATH: Dockerfile
       CONTAINER_REGISTRY_URL: ghcr.io/stakater
     secrets:
@@ -53,7 +53,7 @@ jobs:
           password: ${{ secrets.GHCR_TOKEN }}
       - name: Run Docker container for the docs
         run: |
-          docker run -d --name dco-docs -p 8080:8080 ${{ env.IMAGE_PATH }} || exit 1
+          docker run -d --name finops-docs -p 8080:8080 ${{ env.IMAGE_PATH }} || exit 1
       - name: Build testcafe tests
         working-directory: ./testcafe
         run: |

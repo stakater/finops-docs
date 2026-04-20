@@ -1,7 +1,7 @@
 site_name: FinOps Operator
 docs_dir: content
-site_url: https://docs.stakater.com/dco/
-repo_url: https://github.com/stakater/dco-docs
+site_url: https://docs.stakater.com/finops/
+repo_url: https://github.com/stakater/finops-docs
 edit_uri: blob/main/content/
 theme:
   favicon: assets/images/favicon.svg
@@ -17,4 +17,39 @@ extra:
     default: latest
 
 nav:
-  - index.md
+  - Home: index.md
+  - Getting Started:
+      - getting-started/index.md
+      - Prerequisites: getting-started/prerequisites.md
+      - Installation: getting-started/installation.md
+      - Quickstart: getting-started/quickstart.md
+  - Concepts:
+      - concepts/index.md
+      - FinOpsProvider: concepts/finops-provider.md
+      - PriceBook: concepts/pricebook.md
+      - CostJob: concepts/costjob.md
+      - Offering: concepts/offering.md
+      - Subscription: concepts/subscription.md
+      - Billing model: concepts/billing-model.md
+      - Operating modes: concepts/operating-modes.md
+  - Guides:
+      - Define pricing: guides/define-pricing.md
+      - Collect cost data: guides/collect-cost-data.md
+      - Define an offering: guides/define-offering.md
+      - Subscribe to an offering: guides/subscribe-to-offering.md
+      - Parent-child subscriptions: guides/parent-child-subscriptions.md
+      - Required offerings: guides/required-offerings.md
+      - Read subscription costs: guides/read-subscription-costs.md
+      - Deactivation and cleanup: guides/deactivation-and-cleanup.md
+      - Uninstall: guides/uninstall.md
+  - Reference:
+      - CRDs:
+          - FinOpsProvider: reference/crds/finopsprovider.md
+          - PriceBook: reference/crds/pricebook.md
+          - CostJob: reference/crds/costjob.md
+          - Offering: reference/crds/offering.md
+          - Subscription: reference/crds/subscription.md
+      - Configuration: reference/configuration.md
+      - Status conditions: reference/status-conditions.md
+      - Glossary: reference/glossary.md
+  - Troubleshooting: troubleshooting.md
