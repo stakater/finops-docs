@@ -3370,7 +3370,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p>The lifecycle policy (<code>onParentDeactivate</code>) on an Offering sets the default behavior for child Subscriptions when their parent deactivates. Individual Subscriptions can override this policy.</p>
 <h2 id="key-things-to-know">Key things to know<a class="headerlink" href="#key-things-to-know" title="Permanent link">#</a></h2>
 <ul>
-<li>Offering is namespaced. Subscriptions and other Offerings reference it by name and optional namespace.</li>
+<li>Offering is <code>namespaced</code>. Subscriptions and other Offerings reference it by name and optional namespace.</li>
 <li><code>spec</code> is immutable after creation. To change pricing or compatibility, create a new Offering and migrate Subscriptions to it.</li>
 <li><code>priceMicros</code> is expressed in micro-currency: <code>1,000,000</code> equals 1.00 of the configured currency. The minimum value is <code>1</code>.</li>
 <li>An Offering with a self-reference or a cycle in <code>requiredOfferings</code> is rejected at admission.</li>

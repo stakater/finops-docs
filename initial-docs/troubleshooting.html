@@ -3458,7 +3458,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h2 id="symptom-cause-remedy">Symptom → cause → remedy<a class="headerlink" href="#symptom-cause-remedy" title="Permanent link">#</a></h2>
 <h3 id="subscription-stays-ready-false">Subscription stays <code>Ready: False</code><a class="headerlink" href="#subscription-stays-ready-false" title="Permanent link">#</a></h3>
 <p>Inspect the Ready condition to find the specific reason:</p>
-<div class="highlight"><pre><span></span><code>kubectl describe subscription &lt;name&gt;
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>subscription<span class="w"> </span>&lt;name&gt;
 </code></pre></div>
 <table>
 <thead>
@@ -3509,7 +3509,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <li><code>DependentOfferingsExist</code> — another Offering lists this one in <code>compatibility.requiredOfferings</code>.</li>
 </ul>
 <p>Identify the dependents:</p>
-<div class="highlight"><pre><span></span><code>kubectl describe offering &lt;name&gt;
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>offering<span class="w"> </span>&lt;name&gt;
 </code></pre></div>
 <p>The condition message names the blocking resources. Delete or migrate those dependents first, then retry the Offering deletion.</p>
 <h3 id="offering-rejected-on-create">Offering rejected on create<a class="headerlink" href="#offering-rejected-on-create" title="Permanent link">#</a></h3>
@@ -3524,7 +3524,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <ol>
 <li><strong>No <code>SubscriptionChargeCollection</code> CostJob is scheduled.</strong> Check whether an active CostJob of type <code>SubscriptionChargeCollection</code> exists:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>kubectl get costjob -A
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>costjob<span class="w"> </span>-A
 </code></pre></div>
 <p>If none exists, create one. The operator will not compute subscription charges without it.</p>
 <ol>
@@ -3536,7 +3536,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p>If you need a shorter guard on future Subscriptions, create a new Offering with a lower <code>minPeriods</code> value. You cannot change <code>minPeriods</code> on the existing Offering — Offering spec is immutable.</p>
 <h3 id="opencost-shows-stale-prices">OpenCost shows stale prices<a class="headerlink" href="#opencost-shows-stale-prices" title="Permanent link">#</a></h3>
 <p>In BYO-OpenCost mode the operator writes pricing data to a ConfigMap named <code>finops-operator-custom-pricing-configs</code> and restarts the OpenCost deployment when the ConfigMap changes. If prices appear stale, confirm that the restart completed:</p>
-<div class="highlight"><pre><span></span><code>kubectl rollout status deployment/&lt;opencost-deployment&gt; -n &lt;opencost-namespace&gt;
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>rollout<span class="w"> </span>status<span class="w"> </span>deployment/&lt;opencost-deployment&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;opencost-namespace&gt;
 </code></pre></div>
 <p>If the rollout did not happen, check that the operator has permission to restart the OpenCost deployment and that the ConfigMap is in the correct namespace.</p>
 <h3 id="costjob-lastexecutiontime-never-updates">CostJob <code>lastExecutionTime</code> never updates<a class="headerlink" href="#costjob-lastexecutiontime-never-updates" title="Permanent link">#</a></h3>
@@ -3544,7 +3544,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <ol>
 <li>The CronJob exists and is not suspended:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>kubectl get cronjob -n finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>cronjob<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <ol>
 <li>The operator's own logs for scheduling or connection errors.</li>

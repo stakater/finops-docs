@@ -3519,7 +3519,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">#</a></h2>
 <p><code>Offering</code> defines a billable service that tenants can subscribe to. It sets the recurring subscription fee, the tick interval and alignment that determine when charges accrue, optional minimum commitment periods, and compatibility constraints that gate which other Offerings must be present before this one can be activated. Create an Offering for each distinct service tier or add-on you want to make available; tenants then create <a href="subscription.html">Subscriptions</a> against it.</p>
 <h2 id="scope-and-name-constraints">Scope and name constraints<a class="headerlink" href="#scope-and-name-constraints" title="Permanent link">#</a></h2>
-<p><code>Offering</code> is namespaced. The <code>spec</code> is immutable: once created, no field may be changed. To revise pricing or compatibility rules, create a new Offering and point new Subscriptions at it. Deletion is blocked while any Subscription or other Offering still references this one. <code>kubectl get offering</code> shows a Ready column summarizing the Offering's activation status.</p>
+<p><code>Offering</code> is <code>namespaced</code>. The <code>spec</code> is immutable: once created, no field may be changed. To revise pricing or compatibility rules, create a new Offering and point new Subscriptions at it. Deletion is blocked while any Subscription or other Offering still references this one. <code>kubectl get offering</code> shows a Ready column summarizing the Offering's activation status.</p>
 <h2 id="spec">Spec<a class="headerlink" href="#spec" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -3548,7 +3548,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </tr>
 <tr>
 <td><code>lifecycle.onParentDeactivate</code></td>
-<td>enum</td>
+<td><code>enum</code></td>
 <td>optional</td>
 <td><code>Deactivate</code></td>
 <td>Default behavior for child Subscriptions when their parent deactivates. One of <code>Deactivate</code> or <code>Orphan</code>.</td>
@@ -3593,7 +3593,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </tr>
 <tr>
 <td><code>tickAlignment</code></td>
-<td>enum</td>
+<td><code>enum</code></td>
 <td>yes</td>
 <td>One of <code>ActivatedAt</code>, <code>HourBoundary</code>, <code>DayBoundary</code>, <code>MonthBoundary</code></td>
 <td>Where tick boundaries fall relative to the Subscription's activation time.</td>
@@ -3745,7 +3745,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </code></pre></div>
 <h2 id="related-guides">Related guides<a class="headerlink" href="#related-guides" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="../../guides/define-offering.html">Define an offering</a> — immutability, the subscriptionFee block, and <code>minPeriods</code>.</li>
+<li><a href="../../guides/define-offering.html">Define an offering</a> — immutability, the <code>subscriptionFee</code> block, and <code>minPeriods</code>.</li>
 <li><a href="../../guides/required-offerings.html">Required offerings</a> — composition via <code>compatibility.requiredOfferings</code>.</li>
 </ul>
 

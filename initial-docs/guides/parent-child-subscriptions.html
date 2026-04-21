@@ -3513,12 +3513,12 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <span class="w">    </span><span class="nt">onParentDeactivate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Orphan</span>
 </code></pre></div>
 <p>Apply both in order — the parent first, then the child:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f acme-postgres.yaml
-kubectl apply -f acme-postgres-storage.yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>acme-postgres.yaml
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>acme-postgres-storage.yaml
 </code></pre></div>
 <p>The child Subscription activates only after the parent is active. If the parent is not yet active, the child will show <code>Ready: False</code> with reason <code>ParentSubscriptionNotReady</code>.</p>
 <h2 id="verify-the-relationship">Verify the relationship<a class="headerlink" href="#verify-the-relationship" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>kubectl get subscription -n finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <p>Expected output:</p>
 <div class="highlight"><pre><span></span><code>NAME                    READY
@@ -3526,15 +3526,15 @@ acme-postgres           True
 acme-postgres-storage   True
 </code></pre></div>
 <p>Inspect the child to confirm the parent reference:</p>
-<div class="highlight"><pre><span></span><code>kubectl describe subscription acme-postgres-storage -n finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>subscription<span class="w"> </span>acme-postgres-storage<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <p>The <code>Spec</code> section will show the <code>parent.subscriptionRef</code> pointing to <code>acme-postgres</code>.</p>
 <h3 id="simulate-a-parent-deactivation">Simulate a parent deactivation<a class="headerlink" href="#simulate-a-parent-deactivation" title="Permanent link">#</a></h3>
 <p>Delete the parent Deployment to trigger deactivation via <code>targetRef</code>:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete deployment postgres -n acme
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>deployment<span class="w"> </span>postgres<span class="w"> </span>-n<span class="w"> </span>acme
 </code></pre></div>
 <p>Then check the child:</p>
-<div class="highlight"><pre><span></span><code>kubectl get subscription acme-postgres-storage -n finops-operator-system -o yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-postgres-storage<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
 </code></pre></div>
 <p>Because the child uses <code>Orphan</code>, it will remain <code>Ready: True</code> with condition reason <code>Orphaned</code>.</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>

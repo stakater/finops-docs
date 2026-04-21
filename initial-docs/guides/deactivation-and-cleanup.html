@@ -3432,7 +3432,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </ol>
 <p>If the Offering did not set <code>minPeriods</code>, the finalizer is removed after the next CostJob run following deactivation.</p>
 <h3 id="checking-the-cleanup-state">Checking the cleanup state<a class="headerlink" href="#checking-the-cleanup-state" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>kubectl get subscription acme-postgres -n finops-operator-system -o yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-postgres<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
 </code></pre></div>
 <p>While waiting for cleanup, you will see:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
@@ -3468,7 +3468,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h2 id="what-happens-when-a-targetref-disappears">What happens when a targetRef disappears<a class="headerlink" href="#what-happens-when-a-targetref-disappears" title="Permanent link">#</a></h2>
 <p>If a Subscription has <code>spec.lifecycle.targetRef</code> set and the target resource is deleted, the Subscription deactivates automatically. The sequence is the same as a user-initiated delete: snap-forward, <code>WaitingForCollectionJob</code>, finalizer removal after <code>minPeriods</code>.</p>
 <p>The condition on the Subscription will show <code>Ready: False</code> with reason <code>TargetNotFound</code> during the window between the target's disappearance and the deactivation being processed.</p>
-<div class="highlight"><pre><span></span><code>kubectl describe subscription acme-postgres -n finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>subscription<span class="w"> </span>acme-postgres<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Conditions:
   Type:    Ready
@@ -3483,7 +3483,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </code></pre></div>
 <h2 id="verify-cleanup-completed">Verify cleanup completed<a class="headerlink" href="#verify-cleanup-completed" title="Permanent link">#</a></h2>
 <p>After <code>minPeriods</code> ticks have elapsed and the CostJob has run, the Subscription object will be gone:</p>
-<div class="highlight"><pre><span></span><code>kubectl get subscription acme-postgres -n finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-postgres<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <p>Expected output:</p>
 <div class="highlight"><pre><span></span><code>Error from server (NotFound): subscriptions.finops.stakater.com "acme-postgres" not found

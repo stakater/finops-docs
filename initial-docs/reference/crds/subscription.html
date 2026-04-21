@@ -3563,7 +3563,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">#</a></h2>
 <p><code>Subscription</code> ties a tenant workload to an <a href="offering.html">Offering</a> and drives charge accrual. The operator activates the Subscription when its prerequisites are met, accumulates costs tick by tick according to the Offering's pricing rules, and writes rolling cost summaries into <code>status.costs</code>. Create a Subscription for each workload or tenant that should be billed against a defined Offering.</p>
 <h2 id="scope-and-name-constraints">Scope and name constraints<a class="headerlink" href="#scope-and-name-constraints" title="Permanent link">#</a></h2>
-<p><code>Subscription</code> is namespaced. There are no naming requirements beyond standard Kubernetes name constraints. A Subscription cannot reference itself as its own parent, and cannot point <code>lifecycle.targetRef</code> at itself — both are enforced at admission (create time only). <code>kubectl get subscription</code> shows a Ready column summarizing the Subscription's activation status.</p>
+<p><code>Subscription</code> is <code>namespaced</code>. There are no naming requirements beyond standard Kubernetes name constraints. A Subscription cannot reference itself as its own parent, and cannot point <code>lifecycle.targetRef</code> at itself — both are enforced at admission (create time only). <code>kubectl get subscription</code> shows a Ready column summarizing the Subscription's activation status.</p>
 <h2 id="spec">Spec<a class="headerlink" href="#spec" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -3606,7 +3606,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </tr>
 <tr>
 <td><code>lifecycle.onParentDeactivate</code></td>
-<td>enum</td>
+<td><code>enum</code></td>
 <td>optional</td>
 <td>Offering's policy, then <code>Deactivate</code></td>
 <td>How this Subscription behaves when its parent deactivates. One of <code>Deactivate</code> or <code>Orphan</code>. Overrides the Offering's <code>lifecycle.onParentDeactivate</code> when set.</td>
@@ -3642,10 +3642,12 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </tbody>
 </table>
 <h3 id="effective-onparentdeactivate-precedence">Effective onParentDeactivate precedence<a class="headerlink" href="#effective-onparentdeactivate-precedence" title="Permanent link">#</a></h3>
-<p>The effective <code>onParentDeactivate</code> policy is resolved in this order:
-1. <code>Subscription.spec.lifecycle.onParentDeactivate</code> (if set on this Subscription).
-2. <code>Offering.spec.lifecycle.onParentDeactivate</code> (from the referenced Offering).
-3. <code>Deactivate</code> (the built-in default).</p>
+<p>The effective <code>onParentDeactivate</code> policy is resolved in this order:</p>
+<ol>
+<li><code>Subscription.spec.lifecycle.onParentDeactivate</code> (if set on this Subscription).</li>
+<li><code>Offering.spec.lifecycle.onParentDeactivate</code> (from the referenced Offering).</li>
+<li><code>Deactivate</code> (the built-in default).</li>
+</ol>
 <h3 id="activation-rule">Activation rule<a class="headerlink" href="#activation-rule" title="Permanent link">#</a></h3>
 <p>A Subscription becomes active (<code>ready: True</code>) when all of the following are satisfied:</p>
 <ul>
@@ -3710,7 +3712,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <tbody>
 <tr>
 <td><code>granularity</code></td>
-<td>enum</td>
+<td><code>enum</code></td>
 <td>One of <code>hour</code>, <code>day</code>, <code>month</code>.</td>
 </tr>
 <tr>
@@ -3753,7 +3755,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <tbody>
 <tr>
 <td><code>name</code></td>
-<td>enum</td>
+<td><code>enum</code></td>
 <td>Meter name. One of: <code>subscription</code>, <code>cpuHour</code>, <code>gpuHour</code>, <code>ramGbHour</code>, <code>pvcGbHour</code>, <code>networkIngressGbHour</code>, <code>networkEgressGbHour</code>.</td>
 </tr>
 <tr>

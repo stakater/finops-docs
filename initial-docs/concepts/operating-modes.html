@@ -3367,7 +3367,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p>The operator maintains a ConfigMap named <code>finops-operator-custom-pricing-configs</code> in the OpenCost deployment's namespace. When a <a href="pricebook.html">PriceBook</a> changes, the operator rewrites this ConfigMap with the new pricing JSON. If the ConfigMap content actually changed, the operator restarts the OpenCost deployment so that OpenCost picks up the new rates. If the rates are identical to what is already in the ConfigMap, no restart occurs.</p>
 <p>In this mode, changes to the FinOpsProvider do not directly affect OpenCost. Pricing changes flow through the PriceBook instead.</p>
 <h2 id="how-to-choose">How to choose<a class="headerlink" href="#how-to-choose" title="Permanent link">#</a></h2>
-<p>Use MTO-bundled mode if your cluster already uses Stakater's MDO to manage OpenCost. The operator integrates with MDO's reconciliation loop rather than competing with it.</p>
+<p>Use MTO-bundled mode if your cluster already uses Stakater's Multi-Dependency Operator (MDO) to manage OpenCost. The operator integrates with the Multi-Dependency Operator's reconciliation loop rather than competing with it.</p>
 <p>Use BYO-OpenCost mode (the default) if you installed OpenCost yourself or through any mechanism other than MDO. This mode does not require any additional operators and is the correct choice for most standalone installations.</p>
 <p>If you are unsure, start with BYO-OpenCost mode. You can switch modes later by changing the <code>MTO_ENABLED</code> value and restarting the operator.</p>
 <h2 id="how-its-selected">How it's selected<a class="headerlink" href="#how-its-selected" title="Permanent link">#</a></h2>

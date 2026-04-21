@@ -3481,12 +3481,12 @@ platform-base     True
 <span class="w">    </span><span class="nt">onParentDeactivate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deactivate</span>
 </code></pre></div>
 <p>Apply both:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f platform-base.yaml
-kubectl apply -f managed-postgres.yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>platform-base.yaml
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>managed-postgres.yaml
 </code></pre></div>
 <p>If you apply <code>managed-postgres</code> before <code>platform-base</code> exists, <code>managed-postgres</code> will be <code>Ready: False</code> with reason <code>RequiredOfferingNotFound</code>. Once you apply <code>platform-base</code> and it becomes ready, <code>managed-postgres</code> transitions to <code>Ready: True</code>.</p>
 <h2 id="verify-it-worked">Verify it worked<a class="headerlink" href="#verify-it-worked" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>kubectl get offering -n finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>offering<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <p>Expected output once both Offerings are ready:</p>
 <div class="highlight"><pre><span></span><code>NAME              READY
@@ -3494,7 +3494,7 @@ platform-base     True
 managed-postgres  True
 </code></pre></div>
 <p>Check the condition detail:</p>
-<div class="highlight"><pre><span></span><code>kubectl describe offering managed-postgres -n finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>offering<span class="w"> </span>managed-postgres<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <p>Look for:</p>
 <div class="highlight"><pre><span></span><code>Conditions:

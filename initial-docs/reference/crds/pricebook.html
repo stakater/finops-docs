@@ -3463,7 +3463,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">#</a></h2>
 <p><code>PriceBook</code> defines the per-resource pricing rates used when the FinOps Operator computes infrastructure costs in custom-pricing mode. Use this resource when your environment requires pricing that differs from the default cloud provider rates — for example, on-premises clusters, chargeback scenarios, or negotiated cloud pricing. When a <code>PriceBook</code> is applied, the operator writes the rates into a ConfigMap that OpenCost reads on startup.</p>
 <h2 id="scope-and-name-constraints">Scope and name constraints<a class="headerlink" href="#scope-and-name-constraints" title="Permanent link">#</a></h2>
-<p><code>PriceBook</code> is namespaced. Multiple <code>PriceBook</code> objects may exist across namespaces, but only the one the operator is configured to use becomes active (reflected by <code>status.active: true</code>).</p>
+<p><code>PriceBook</code> is <code>namespaced</code>. Multiple <code>PriceBook</code> objects may exist across namespaces, but only the one the operator is configured to use becomes active (reflected by <code>status.active: true</code>).</p>
 <h2 id="spec">Spec<a class="headerlink" href="#spec" title="Permanent link">#</a></h2>
 <table>
 <thead>

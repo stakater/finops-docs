@@ -3496,11 +3496,11 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <span class="w">    </span><span class="nt">networkGiB</span><span class="p">:</span><span class="w"> </span><span class="s">"0.09"</span>
 </code></pre></div>
 <p>Apply it:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f pricebook.yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>pricebook.yaml
 </code></pre></div>
 <h2 id="verify-it-worked">Verify it worked<a class="headerlink" href="#verify-it-worked" title="Permanent link">#</a></h2>
 <p>Check that the <code>PriceBook</code> is active:</p>
-<div class="highlight"><pre><span></span><code>kubectl get pricebook acme-pricing -n finops-operator-system -o yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pricebook<span class="w"> </span>acme-pricing<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
 </code></pre></div>
 <p>Expected output includes:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
@@ -3510,10 +3510,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <span class="w">      </span><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="s">"True"</span>
 </code></pre></div>
 <p>Confirm the OpenCost ConfigMap was updated:</p>
-<div class="highlight"><pre><span></span><code>kubectl get configmap finops-operator-custom-pricing-configs -n finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>configmap<span class="w"> </span>finops-operator-custom-pricing-configs<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <p>The ConfigMap should have a <code>default.json</code> key. If the OpenCost pod restarted, you will see a recent <code>AGE</code> on the pod:</p>
-<div class="highlight"><pre><span></span><code>kubectl get pods -n finops-operator-system -l app=opencost
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-l<span class="w"> </span><span class="nv">app</span><span class="o">=</span>opencost
 </code></pre></div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
 <p>If the <code>PriceBook</code> does not become <code>active: true</code> or OpenCost shows stale prices, see <a href="../troubleshooting.html">Troubleshooting</a> and <a href="../reference/status-conditions.html">Status conditions reference</a>.</p>

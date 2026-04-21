@@ -3552,7 +3552,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 managed-postgres-v2   # new pricing; new Subscriptions reference this one
 </code></pre></div>
 <p>When the last Subscription referencing <code>managed-postgres-v1</code> is deactivated, you can delete <code>managed-postgres-v1</code>.</p>
-<h2 id="the-subscriptionfee-block">The subscriptionFee block<a class="headerlink" href="#the-subscriptionfee-block" title="Permanent link">#</a></h2>
+<h2 id="the-subscriptionfee-block">The <code>subscriptionFee</code> block<a class="headerlink" href="#the-subscriptionfee-block" title="Permanent link">#</a></h2>
 <p>The <code>pricing.subscriptionFee</code> block is the core of an <code>Offering</code>. It defines the recurring charge.</p>
 <table>
 <thead>
@@ -3628,12 +3628,12 @@ managed-postgres-v2   # new pricing; new Subscriptions reference this one
 </tbody>
 </table>
 <p>Values that do not match the expected format for the chosen <code>tickAlignment</code> are rejected at admission.</p>
-<h3 id="minperiods-as-a-cleanup-guard">minPeriods as a cleanup guard<a class="headerlink" href="#minperiods-as-a-cleanup-guard" title="Permanent link">#</a></h3>
+<h3 id="minperiods-as-a-cleanup-guard"><code>minPeriods</code> as a cleanup guard<a class="headerlink" href="#minperiods-as-a-cleanup-guard" title="Permanent link">#</a></h3>
 <p><code>minPeriods</code> is not a billing mechanism — it controls when a deleted Subscription is allowed to be garbage-collected. After a Subscription is deleted, the operator keeps the Kubernetes object visible (via a finalizer, a marker that prevents deletion until explicitly released) until at least <code>minPeriods</code> full ticks have elapsed since <code>activatedAt</code>. Billing continues normally during this window. Once the tick count is reached, the finalizer is removed and Kubernetes deletes the object.</p>
 <p>Set <code>minPeriods: 2</code> on a monthly Offering to require that any Subscription runs for at least two full months before it can be cleaned up.</p>
 <h2 id="compatibility-and-required-offerings">Compatibility and required offerings<a class="headerlink" href="#compatibility-and-required-offerings" title="Permanent link">#</a></h2>
 <p>The <code>compatibility.requiredOfferings</code> list names other <code>Offerings</code> that must be active on the parent Subscription or a sibling Subscription before this <code>Offering</code> can be activated. This is the mechanism for expressing service dependencies — for example, a "Managed Postgres" offering that requires a "Platform Base" offering to be present.</p>
-<p>See <a href="required-offerings.html">Required offerings</a> for a detailed walkthrough with examples.</p>
+<p>See <a href="required-offerings.html">Required offerings</a> for a detailed walk-through with examples.</p>
 <h2 id="lifecycle-defaults">Lifecycle defaults<a class="headerlink" href="#lifecycle-defaults" title="Permanent link">#</a></h2>
 <p>The <code>lifecycle</code> block sets default behavior for child Subscriptions when this Offering's Subscriptions are deactivated:</p>
 <table>
@@ -3699,7 +3699,7 @@ managed-postgres-v2   # new pricing; new Subscriptions reference this one
 <span class="w">    </span><span class="nt">onParentDeactivate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deactivate</span>
 </code></pre></div>
 <h2 id="verify-it-worked">Verify it worked<a class="headerlink" href="#verify-it-worked" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>kubectl get offering -n finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>offering<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <p>Expected output:</p>
 <div class="highlight"><pre><span></span><code>NAME              READY
@@ -3707,7 +3707,7 @@ managed-postgres  True
 platform-base     True
 </code></pre></div>
 <p>For more detail:</p>
-<div class="highlight"><pre><span></span><code>kubectl describe offering managed-postgres -n finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>offering<span class="w"> </span>managed-postgres<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <p>Look for a <code>Ready</code> condition with <code>status: "True"</code> and reason <code>ValidationSucceeded</code>. If the Offering references <code>requiredOfferings</code> and those are not yet ready, you will see <code>Ready: False</code> with reason <code>RequiredOfferingNotFound</code> or <code>RequiredOfferingNotReady</code> — this is expected while the referenced Offerings are being created.</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>

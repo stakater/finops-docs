@@ -3469,10 +3469,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p><strong>GCP</strong> and <strong>Azure</strong> follow the same pattern as AWS, using <code>gcpoptions</code> or <code>azureoptions</code> respectively, each accepting the same <code>cloudIntegrationSecret</code> and <code>pricingModelSource</code> fields.</p>
 <p>Setting <code>pricingModelSource: Pricebook</code> tells the operator to enable OpenCost's custom-pricing path so that your <code>PriceBook</code>-derived ConfigMap is used for cost calculations.</p>
 <p>Apply the appropriate provider:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f finops-provider.yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>finops-provider.yaml
 </code></pre></div>
 <h3 id="2-verify-the-finopsprovider">2. Verify the FinOpsProvider<a class="headerlink" href="#2-verify-the-finopsprovider" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>kubectl get finopsprovider default -o yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>finopsprovider<span class="w"> </span>default<span class="w"> </span>-o<span class="w"> </span>yaml
 </code></pre></div>
 <p>Look for:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
@@ -3537,7 +3537,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <span class="w">  </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
 </code></pre></div>
 <p>Apply it:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f resource-cost-collection.yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>resource-cost-collection.yaml
 </code></pre></div>
 <h3 id="4-understand-the-timeout-fields">4. Understand the timeout fields<a class="headerlink" href="#4-understand-the-timeout-fields" title="Permanent link">#</a></h3>
 <p>Each <code>CostJob</code> exposes timeout fields that control how long individual phases of the job are allowed to run. You can set these to tune the job for your environment; the defaults are listed below.</p>
@@ -3603,7 +3603,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </code></pre></div>
 <h2 id="verify-it-worked">Verify it worked<a class="headerlink" href="#verify-it-worked" title="Permanent link">#</a></h2>
 <p>Check the <code>CostJob</code> status:</p>
-<div class="highlight"><pre><span></span><code>kubectl get costjob resource-cost-collection -n finops-operator-system -o yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>costjob<span class="w"> </span>resource-cost-collection<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
 </code></pre></div>
 <p>After the first scheduled run, the status should show:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
@@ -3612,7 +3612,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <span class="w">  </span><span class="nt">lastExecutionTime</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-20T11:00:00Z"</span>
 </code></pre></div>
 <p>Confirm the operator created a <code>CronJob</code> in the operator's namespace:</p>
-<div class="highlight"><pre><span></span><code>kubectl get cronjobs -n finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>cronjobs<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <p>You should see an entry named after or associated with <code>resource-cost-collection</code>. The operator manages this <code>CronJob</code> — do not delete or edit it manually.</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>

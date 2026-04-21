@@ -3369,13 +3369,13 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p>In BYO-OpenCost mode, the PriceBook is the primary mechanism by which pricing reaches OpenCost. In MTO-bundled mode, the <a href="finops-provider.html">FinOpsProvider</a> drives the OpenCost configuration and pricing changes come from the PriceBook ConfigMap update path. See <a href="operating-modes.html">Operating modes</a> for details.</p>
 <h2 id="key-things-to-know">Key things to know<a class="headerlink" href="#key-things-to-know" title="Permanent link">#</a></h2>
 <ul>
-<li>PriceBook is namespaced. It typically lives in the same namespace as the operator (<code>finops-operator-system</code>).</li>
+<li>PriceBook is <code>namespaced</code>. It typically lives in the same namespace as the operator (<code>finops-operator-system</code>).</li>
 <li>Only <code>valuationMode: currency</code> has effect today. The <code>percent</code> mode is accepted by the API but not acted on.</li>
 <li>At most one PriceBook is active at a time. The status field <code>active: true</code> marks which PriceBook is currently feeding OpenCost.</li>
 <li>When a PriceBook changes, the operator rewrites the <code>finops-operator-custom-pricing-configs</code> ConfigMap. If the ConfigMap content actually changed, the operator restarts the OpenCost deployment. If the rates are identical, no restart occurs.</li>
 <li>All rate values are strings representing decimal numbers in the configured currency (for example, <code>"0.031"</code> for $0.031 per vCPU-hour).</li>
 <li>The currency field must be a valid three-letter ISO 4217 code (for example, <code>USD</code>, <code>EUR</code>).</li>
-<li>Changing a PriceBook affects future allocation cost computations. Historical data already stored is not retroactively recosted.</li>
+<li>Changing a PriceBook affects future allocation cost computations. Historical data already stored is not retroactively re-priced.</li>
 </ul>
 <h2 id="learn-more">Learn more<a class="headerlink" href="#learn-more" title="Permanent link">#</a></h2>
 <ul>

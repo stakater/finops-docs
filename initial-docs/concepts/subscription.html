@@ -3370,7 +3370,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p>The operator maintains a finalizer on every Subscription, which controls the cleanup behavior described below.</p>
 <h2 id="key-things-to-know">Key things to know<a class="headerlink" href="#key-things-to-know" title="Permanent link">#</a></h2>
 <ul>
-<li>Subscription is namespaced. The referenced Offering defaults to the same namespace unless <code>offeringRef.namespace</code> is specified.</li>
+<li>Subscription is <code>namespaced</code>. The referenced Offering defaults to the same namespace unless <code>offeringRef.namespace</code> is specified.</li>
 <li>A Subscription becomes active when its Offering is <code>Ready: True</code>, its parent Subscription (if set) is active, and its target resource (if set) exists and is <code>Ready</code>.</li>
 <li>If neither <code>parent</code> nor <code>targetRef</code> is set, the Subscription activates as soon as it validates against a ready Offering.</li>
 <li>Charges accrue per tick. The tick formula, alignment, and proration rules are defined by the Offering's <code>subscriptionFee</code>. See <a href="billing-model.html">Billing model</a>.</li>

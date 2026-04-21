@@ -3590,7 +3590,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h2 id="how-frequently-statuscosts-updates">How frequently status.costs updates<a class="headerlink" href="#how-frequently-statuscosts-updates" title="Permanent link">#</a></h2>
 <p><code>status.costs</code> is updated each time the <code>SubscriptionChargeCollection</code> CostJob runs. If your CostJob has <code>interval: 1h</code>, costs update at the top of each hour. If you need more frequent updates, set a shorter interval such as <code>5m</code>, but be aware that shorter intervals increase load on the database.</p>
 <p>Check your <code>SubscriptionChargeCollection</code> CostJob to confirm its schedule:</p>
-<div class="highlight"><pre><span></span><code>kubectl get costjob -n finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>costjob<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <p>If <code>status.costs</code> is empty, either the collection job has not run yet, or the Subscription is not active. Verify that <code>status.ready</code> is <code>"True"</code> and that the CostJob's <code>lastExecutionStatus</code> is <code>Success</code>.</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
