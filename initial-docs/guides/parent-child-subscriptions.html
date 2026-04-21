@@ -3446,8 +3446,8 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h2 id="when-to-use-a-parent-subscription">When to use a parent Subscription<a class="headerlink" href="#when-to-use-a-parent-subscription" title="Permanent link">#</a></h2>
 <p>Use a parent-child relationship when:</p>
 <ul>
-<li><strong>Traceability</strong>: you want to group related charges under a single logical unit. Querying the parent Subscription gives you a rollup point; querying each child shows the detailed breakdown.</li>
-<li><strong>Cascading deactivation</strong>: when the parent service ends (for example, a managed Postgres instance is deprovisioned), you want all its associated Subscriptions (storage, backup, monitoring) to deactivate automatically.</li>
+<li><strong>Traceability</strong>: you want to group related charges under a single logical unit. Querying the parent Subscription gives you an aggregation point; querying each child shows the detailed breakdown.</li>
+<li><strong>Cascading deactivation</strong>: when the parent service ends (for example, a managed Postgres instance is removed), you want all its associated Subscriptions (storage, backup, monitoring) to deactivate automatically.</li>
 </ul>
 <p>Without a parent link, each Subscription is independent and must be deactivated individually.</p>
 <h2 id="deactivate-vs-orphan">Deactivate vs Orphan<a class="headerlink" href="#deactivate-vs-orphan" title="Permanent link">#</a></h2>
@@ -3480,7 +3480,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </ol>
 <p>This means a child Subscription can always override the Offering's default. See <a href="define-offering.html">Define an offering</a> for a note on <code>lifecycle.allowOverride</code>.</p>
 <h2 id="example-managed-postgres-with-a-storage-child">Example: managed Postgres with a storage child<a class="headerlink" href="#example-managed-postgres-with-a-storage-child" title="Permanent link">#</a></h2>
-<p>In this example, a "managed-postgres" parent Subscription is tied to a <code>Deployment</code>. A child "managed-postgres-storage" Subscription represents the persistent storage allocation. The storage Subscription uses the <code>Orphan</code> policy — if the Postgres service is deprovisioned, the storage billing continues until the volume is explicitly cleaned up.</p>
+<p>In this example, a "managed-Postgres" parent Subscription is tied to a <code>Deployment</code>. A child "managed-Postgres-storage" Subscription represents the persistent storage allocation. The storage Subscription uses the <code>Orphan</code> policy — if the Postgres service is removed, the storage billing continues until the volume is explicitly cleaned up.</p>
 <p><strong>Parent Subscription:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subscription</span>

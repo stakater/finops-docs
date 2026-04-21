@@ -3465,7 +3465,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </tbody>
 </table>
 <p>The effective policy is resolved in this order: the child Subscription's own <code>spec.lifecycle.onParentDeactivate</code>, then the child Offering's <code>lifecycle.onParentDeactivate</code>, then <code>Deactivate</code> if neither is set. See <a href="parent-child-subscriptions.html">Parent-child subscriptions</a> for the full precedence explanation.</p>
-<h2 id="what-happens-when-a-targetref-disappears">What happens when a targetRef disappears<a class="headerlink" href="#what-happens-when-a-targetref-disappears" title="Permanent link">#</a></h2>
+<h2 id="what-happens-when-a-targetref-disappears">What happens when a <code>targetRef</code> disappears<a class="headerlink" href="#what-happens-when-a-targetref-disappears" title="Permanent link">#</a></h2>
 <p>If a Subscription has <code>spec.lifecycle.targetRef</code> set and the target resource is deleted, the Subscription deactivates automatically. The sequence is the same as a user-initiated delete: snap-forward, <code>WaitingForCollectionJob</code>, finalizer removal after <code>minPeriods</code>.</p>
 <p>The condition on the Subscription will show <code>Ready: False</code> with reason <code>TargetNotFound</code> during the window between the target's disappearance and the deactivation being processed.</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>subscription<span class="w"> </span>acme-postgres<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
