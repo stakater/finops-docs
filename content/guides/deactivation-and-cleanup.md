@@ -52,7 +52,7 @@ When a parent Subscription deactivates, the operator applies the effective `onPa
 
 The effective policy is resolved in this order: the child Subscription's own `spec.lifecycle.onParentDeactivate`, then the child Offering's `lifecycle.onParentDeactivate`, then `Deactivate` if neither is set. See [Parent-child subscriptions](./parent-child-subscriptions.md) for the full precedence explanation.
 
-## What happens when a targetRef disappears
+## What happens when a `targetRef` disappears
 
 If a Subscription has `spec.lifecycle.targetRef` set and the target resource is deleted, the Subscription deactivates automatically. The sequence is the same as a user-initiated delete: snap-forward, `WaitingForCollectionJob`, finalizer removal after `minPeriods`.
 

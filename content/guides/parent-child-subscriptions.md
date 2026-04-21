@@ -12,8 +12,8 @@ This guide explains how to link Subscriptions together in a parent-child relatio
 
 Use a parent-child relationship when:
 
-- **Traceability**: you want to group related charges under a single logical unit. Querying the parent Subscription gives you a rollup point; querying each child shows the detailed breakdown.
-- **Cascading deactivation**: when the parent service ends (for example, a managed Postgres instance is deprovisioned), you want all its associated Subscriptions (storage, backup, monitoring) to deactivate automatically.
+- **Traceability**: you want to group related charges under a single logical unit. Querying the parent Subscription gives you an aggregation point; querying each child shows the detailed breakdown.
+- **Cascading deactivation**: when the parent service ends (for example, a managed Postgres instance is removed), you want all its associated Subscriptions (storage, backup, monitoring) to deactivate automatically.
 
 Without a parent link, each Subscription is independent and must be deactivated individually.
 
@@ -40,7 +40,7 @@ This means a child Subscription can always override the Offering's default. See 
 
 ## Example: managed Postgres with a storage child
 
-In this example, a "managed-postgres" parent Subscription is tied to a `Deployment`. A child "managed-postgres-storage" Subscription represents the persistent storage allocation. The storage Subscription uses the `Orphan` policy — if the Postgres service is deprovisioned, the storage billing continues until the volume is explicitly cleaned up.
+In this example, a "managed-Postgres" parent Subscription is tied to a `Deployment`. A child "managed-Postgres-storage" Subscription represents the persistent storage allocation. The storage Subscription uses the `Orphan` policy — if the Postgres service is removed, the storage billing continues until the volume is explicitly cleaned up.
 
 **Parent Subscription:**
 

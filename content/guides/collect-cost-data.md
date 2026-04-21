@@ -114,7 +114,7 @@ Each `CostJob` exposes timeout fields that control how long individual phases of
 | `databaseInsertTimeout` | `3m` | Time allowed to write fetched data into the database. |
 | `databaseViewsRefreshTimeout` | `5m` | Time allowed to refresh materialized views after insert. |
 | `statusUpdateTimeout` | `1m` | Time allowed to write the execution result back to the `CostJob` status. |
-| `httpClientTimeout` | `90s` | HTTP client timeout for outbound requests (OpenCost, cloud APIs). |
+| `httpClientTimeout` | `90s` | `HTTP` client timeout for outbound requests (OpenCost, cloud APIs). |
 
 For most clusters the defaults are sufficient. Increase `openCostFetchTimeout` or `databaseInsertTimeout` if you see frequent `Error` or `Failed` statuses on the `CostJob` in large clusters.
 

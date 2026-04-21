@@ -32,7 +32,7 @@ The `pricing.subscriptionFee` block is the core of an `Offering`. It defines the
 |---|---|---|---|
 | `priceMicros` | int64 | yes | Price per tick in micro-currency. `1000000` = 1.00 of your configured currency. |
 | `period` | string | yes | Tick interval. Format depends on `tickAlignment` (see table below). |
-| `tickAlignment` | enum | yes | Where tick boundaries fall. |
+| `tickAlignment` | `enum` | yes | Where tick boundaries fall. |
 | `minPeriods` | int32 | no | Minimum number of full ticks before cleanup is allowed after deletion. |
 
 ### Tick alignment and period format

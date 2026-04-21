@@ -23,9 +23,9 @@ The `rates` block holds per-resource rates expressed as decimal strings. All fie
 | Field | Unit | Realistic example |
 |---|---|---|
 | `cpuHour` | Currency per vCPU-hour | `"0.031"` — reflects a typical on-prem server amortized cost |
-| `spotCPUHour` | Currency per spot vCPU-hour | `"0.012"` — lower rate for preemptible nodes |
+| `spotCPUHour` | Currency per spot vCPU-hour | `"0.012"` — lower rate for spot-capacity nodes |
 | `ramGbHour` | Currency per GB-hour of RAM | `"0.004"` — proportional to DRAM cost per server |
-| `spotRAMGbHour` | Currency per GB-hour of spot RAM | `"0.002"` — lower rate for preemptible nodes |
+| `spotRAMGbHour` | Currency per GB-hour of spot RAM | `"0.002"` — lower rate for spot-capacity nodes |
 | `pvGbHour` | Currency per GB-hour of persistent volume | `"0.00012"` — reflects block-storage cost (e.g. SSD at ~$0.10/GB/month) |
 | `gpuHour` | Currency per GPU-hour | `"1.80"` — reflects high-end GPU node amortized cost |
 | `networkGiB` | Currency per GiB transferred | `"0.09"` — applied to zone, region, and internet egress |
