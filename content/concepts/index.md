@@ -30,4 +30,4 @@ flowchart LR
     class FP,PB,CJ,Sub,Off crd;
 ```
 
-For a hands-on walkthrough that creates each of these resources in order, see [Getting started](../getting-started/index.md).
+For a hands-on walk-through that creates each of these resources in order, see [Getting started](../getting-started/index.md).

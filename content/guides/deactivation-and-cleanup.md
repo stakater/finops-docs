@@ -15,15 +15,15 @@ Deleting a Subscription does not immediately remove the Kubernetes object. The o
 The sequence on user-initiated delete is:
 
 1. **Deactivation**: the operator marks the Subscription deactivated and sets a `Deleting` condition with reason `MarkedForDeletion`.
-2. **Snap-forward**: `status.deactivatedAt` is set to the **next tick boundary** after the moment of deletion, not the moment of deletion itself. This means the Subscription is charged for the full final tick — there is never a partial final tick on deactivation. For example, if a `MonthBoundary` Subscription is deleted on April 15, `deactivatedAt` is set to May 1 (the next month boundary), and the full April charge accrues.
-3. **WaitingForCollectionJob**: the `Deleting` condition reason changes to `WaitingForCollectionJob`. The object remains visible in Kubernetes. The `SubscriptionChargeCollection` CostJob is the component that checks whether cleanup is allowed.
-4. **Finalizer removal**: once at least `minPeriods` full ticks have elapsed since `activatedAt`, the CostJob removes the finalizer. Kubernetes then garbage-collects the object.
+1. **Snap-forward**: `status.deactivatedAt` is set to the **next tick boundary** after the moment of deletion, not the moment of deletion itself. This means the Subscription is charged for the full final tick — there is never a partial final tick on deactivation. For example, if a `MonthBoundary` Subscription is deleted on April 15, `deactivatedAt` is set to May 1 (the next month boundary), and the full April charge accrues.
+1. **WaitingForCollectionJob**: the `Deleting` condition reason changes to `WaitingForCollectionJob`. The object remains visible in Kubernetes. The `SubscriptionChargeCollection` CostJob is the component that checks whether cleanup is allowed.
+1. **Finalizer removal**: once at least `minPeriods` full ticks have elapsed since `activatedAt`, the CostJob removes the finalizer. Kubernetes then garbage-collects the object.
 
 If the Offering did not set `minPeriods`, the finalizer is removed after the next CostJob run following deactivation.
 
 ### Checking the cleanup state
 
-```
+```bash
 kubectl get subscription acme-postgres -n finops-operator-system -o yaml
 ```
 
@@ -58,11 +58,11 @@ If a Subscription has `spec.lifecycle.targetRef` set and the target resource is 
 
 The condition on the Subscription will show `Ready: False` with reason `TargetNotFound` during the window between the target's disappearance and the deactivation being processed.
 
-```
+```bash
 kubectl describe subscription acme-postgres -n finops-operator-system
 ```
 
-```
+```text
 Conditions:
   Type:    Ready
   Status:  False
@@ -71,7 +71,7 @@ Conditions:
 
 After deactivation is recorded:
 
-```
+```text
 Conditions:
   Type:    Deleting
   Status:  True
@@ -82,13 +82,13 @@ Conditions:
 
 After `minPeriods` ticks have elapsed and the CostJob has run, the Subscription object will be gone:
 
-```
+```bash
 kubectl get subscription acme-postgres -n finops-operator-system
 ```
 
 Expected output:
 
-```
+```text
 Error from server (NotFound): subscriptions.finops.stakater.com "acme-postgres" not found
 ```
 

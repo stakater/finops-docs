@@ -22,7 +22,7 @@ The operator maintains a finalizer on every Subscription, which controls the cle
 
 ## Key things to know
 
-- Subscription is namespaced. The referenced Offering defaults to the same namespace unless `offeringRef.namespace` is specified.
+- Subscription is `namespaced`. The referenced Offering defaults to the same namespace unless `offeringRef.namespace` is specified.
 - A Subscription becomes active when its Offering is `Ready: True`, its parent Subscription (if set) is active, and its target resource (if set) exists and is `Ready`.
 - If neither `parent` nor `targetRef` is set, the Subscription activates as soon as it validates against a ready Offering.
 - Charges accrue per tick. The tick formula, alignment, and proration rules are defined by the Offering's `subscriptionFee`. See [Billing model](./billing-model.md).

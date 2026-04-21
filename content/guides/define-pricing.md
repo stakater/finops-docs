@@ -57,7 +57,7 @@ spec:
 
 Apply it:
 
-```
+```bash
 kubectl apply -f pricebook.yaml
 ```
 
@@ -65,7 +65,7 @@ kubectl apply -f pricebook.yaml
 
 Check that the `PriceBook` is active:
 
-```
+```bash
 kubectl get pricebook acme-pricing -n finops-operator-system -o yaml
 ```
 
@@ -81,13 +81,13 @@ status:
 
 Confirm the OpenCost ConfigMap was updated:
 
-```
+```bash
 kubectl get configmap finops-operator-custom-pricing-configs -n finops-operator-system
 ```
 
 The ConfigMap should have a `default.json` key. If the OpenCost pod restarted, you will see a recent `AGE` on the pod:
 
-```
+```bash
 kubectl get pods -n finops-operator-system -l app=opencost
 ```
 

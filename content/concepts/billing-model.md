@@ -4,7 +4,7 @@
 
 Subscription charges accrue in discrete **ticks**. A tick is one complete billing period. Each tick adds `priceMicros` to the total charge. The fee for any time bucket is:
 
-```
+```text
 fee = priceMicros × ticks_in_bucket
 ```
 
@@ -52,7 +52,7 @@ Best for SaaS-style monthly billing where teams expect a consistent charge each 
 
 For alignments that prorate the first tick (`HourBoundary`, `DayBoundary`, `MonthBoundary`), the first-tick charge is:
 
-```
+```text
 first_tick_charge = priceMicros × (seconds from activatedAt to first boundary)
                                 / (seconds in the full period)
 ```
@@ -71,7 +71,7 @@ When a Subscription deactivates, its `deactivatedAt` timestamp is snapped forwar
 
 For example, a Subscription with `HourBoundary` alignment that is deactivated at `09:40:00Z` will have `deactivatedAt` snapped to `10:00:00Z` and will be charged a full tick for the `09:00–10:00` hour.
 
-## minPeriods as a cleanup guard
+## `minPeriods` as a cleanup guard
 
 The `minPeriods` field on an Offering's `subscriptionFee` sets a minimum number of full ticks that must elapse after activation before the operator releases a deleted Subscription for garbage collection. Billing continues normally during this time — `minPeriods` does not change the fee formula, it only controls when the Kubernetes object is removed.
 

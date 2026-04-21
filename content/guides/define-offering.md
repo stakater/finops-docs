@@ -17,14 +17,14 @@ The reason for immutability is billing integrity: active Subscriptions must alwa
 
 **Versioning in practice:**
 
-```
+```text
 managed-postgres-v1   # original; still referenced by existing Subscriptions
 managed-postgres-v2   # new pricing; new Subscriptions reference this one
 ```
 
 When the last Subscription referencing `managed-postgres-v1` is deactivated, you can delete `managed-postgres-v1`.
 
-## The subscriptionFee block
+## The `subscriptionFee` block
 
 The `pricing.subscriptionFee` block is the core of an `Offering`. It defines the recurring charge.
 
@@ -46,7 +46,7 @@ The `pricing.subscriptionFee` block is the core of an `Offering`. It defines the
 
 Values that do not match the expected format for the chosen `tickAlignment` are rejected at admission.
 
-### minPeriods as a cleanup guard
+### `minPeriods` as a cleanup guard
 
 `minPeriods` is not a billing mechanism — it controls when a deleted Subscription is allowed to be garbage-collected. After a Subscription is deleted, the operator keeps the Kubernetes object visible (via a finalizer, a marker that prevents deletion until explicitly released) until at least `minPeriods` full ticks have elapsed since `activatedAt`. Billing continues normally during this window. Once the tick count is reached, the finalizer is removed and Kubernetes deletes the object.
 
@@ -56,7 +56,7 @@ Set `minPeriods: 2` on a monthly Offering to require that any Subscription runs 
 
 The `compatibility.requiredOfferings` list names other `Offerings` that must be active on the parent Subscription or a sibling Subscription before this `Offering` can be activated. This is the mechanism for expressing service dependencies — for example, a "Managed Postgres" offering that requires a "Platform Base" offering to be present.
 
-See [Required offerings](./required-offerings.md) for a detailed walkthrough with examples.
+See [Required offerings](./required-offerings.md) for a detailed walk-through with examples.
 
 ## Lifecycle defaults
 
@@ -119,13 +119,13 @@ spec:
 
 ## Verify it worked
 
-```
+```bash
 kubectl get offering -n finops-operator-system
 ```
 
 Expected output:
 
-```
+```text
 NAME              READY
 managed-postgres  True
 platform-base     True
@@ -133,7 +133,7 @@ platform-base     True
 
 For more detail:
 
-```
+```bash
 kubectl describe offering managed-postgres -n finops-operator-system
 ```
 

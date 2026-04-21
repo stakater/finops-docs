@@ -5,8 +5,8 @@ This section walks you from a fresh cluster to your first active Subscription ac
 ## What you'll do
 
 1. [Confirm prerequisites](./prerequisites.md) — Kubernetes, cert-manager, PostgreSQL, and OpenCost.
-2. [Install the operator via Helm](./installation.md) — add the chart repository, wire in the PostgreSQL Secret, and verify the Deployment is running.
-3. [Walk through the quickstart](./quickstart.md) — create the five CRDs in order and watch a Subscription start accruing charges.
+1. [Install the operator via Helm](./installation.md) — add the chart repository, wire in the PostgreSQL Secret, and verify the Deployment is running.
+1. [Walk through the quickstart](./quickstart.md) — create the five CRDs in order and watch a Subscription start accruing charges.
 
 ## Roughly how long
 

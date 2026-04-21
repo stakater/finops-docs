@@ -6,7 +6,7 @@
 
 ## Scope and name constraints
 
-`PriceBook` is namespaced. Multiple `PriceBook` objects may exist across namespaces, but only the one the operator is configured to use becomes active (reflected by `status.active: true`).
+`PriceBook` is `namespaced`. Multiple `PriceBook` objects may exist across namespaces, but only the one the operator is configured to use becomes active (reflected by `status.active: true`).
 
 ## Spec
 

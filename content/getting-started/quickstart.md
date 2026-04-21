@@ -1,6 +1,6 @@
 # Quickstart
 
-This is a 15-minute walkthrough that takes you from a fresh install to an active Subscription with populated `status.costs`. By the end, the operator is collecting resource cost data, an Offering has a recurring fee, and a Subscription is accruing charges you can read back from its status. The walkthrough assumes the operator is already installed as described in [Installation](./installation.md).
+This is a 15-minute walk-through that takes you from a fresh install to an active Subscription with populated `status.costs`. By the end, the operator is collecting resource cost data, an Offering has a recurring fee, and a Subscription is accruing charges you can read back from its status. The walk-through assumes the operator is already installed as described in [Installation](./installation.md).
 
 All resources in this guide are created in the `finops-operator-system` namespace.
 

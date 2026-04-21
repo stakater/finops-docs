@@ -29,9 +29,9 @@ A Subscription can be tied to any Kubernetes resource — a `Deployment`, a `Sta
 A Subscription becomes active (`ready: True`) when all of the following hold:
 
 1. Its `Offering` exists and is `Ready: True`.
-2. If `parent.subscriptionRef` is set, the parent Subscription is active.
-3. If `lifecycle.targetRef` is set, the referenced resource exists and is `Ready`.
-4. If neither `parent` nor `targetRef` is set, the Subscription activates as soon as it validates.
+1. If `parent.subscriptionRef` is set, the parent Subscription is active.
+1. If `lifecycle.targetRef` is set, the referenced resource exists and is `Ready`.
+1. If neither `parent` nor `targetRef` is set, the Subscription activates as soon as it validates.
 
 If any condition is not met, the Subscription stays `Ready: False` with a descriptive reason in `status.conditions` (for example `OfferingNotReady`, `TargetNotFound`, or `ParentSubscriptionNotReady`).
 
@@ -58,7 +58,7 @@ spec:
 
 Apply it:
 
-```
+```bash
 kubectl apply -f subscription.yaml
 ```
 
@@ -79,20 +79,20 @@ spec:
 
 Check the Subscription's readiness:
 
-```
+```bash
 kubectl get subscription acme-postgres -n finops-operator-system
 ```
 
 Expected output:
 
-```
+```text
 NAME           READY
 acme-postgres  True
 ```
 
 For the full status:
 
-```
+```bash
 kubectl get subscription acme-postgres -n finops-operator-system -o yaml
 ```
 
@@ -138,13 +138,13 @@ See [Read subscription costs](./read-subscription-costs.md) for a full explanati
 
 ## Verify it worked
 
-```
+```bash
 kubectl describe subscription acme-postgres -n finops-operator-system
 ```
 
 The `Conditions` section should show:
 
-```
+```text
 Type:   Ready
 Status: True
 Reason: ActivationSucceeded

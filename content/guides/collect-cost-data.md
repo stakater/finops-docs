@@ -46,13 +46,13 @@ Setting `pricingModelSource: Pricebook` tells the operator to enable OpenCost's 
 
 Apply the appropriate provider:
 
-```
+```bash
 kubectl apply -f finops-provider.yaml
 ```
 
 ### 2. Verify the FinOpsProvider
 
-```
+```bash
 kubectl get finopsprovider default -o yaml
 ```
 
@@ -98,7 +98,7 @@ spec:
 
 Apply it:
 
-```
+```bash
 kubectl apply -f resource-cost-collection.yaml
 ```
 
@@ -138,7 +138,7 @@ spec:
 
 Check the `CostJob` status:
 
-```
+```bash
 kubectl get costjob resource-cost-collection -n finops-operator-system -o yaml
 ```
 
@@ -153,7 +153,7 @@ status:
 
 Confirm the operator created a `CronJob` in the operator's namespace:
 
-```
+```bash
 kubectl get cronjobs -n finops-operator-system
 ```
 

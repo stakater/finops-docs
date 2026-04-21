@@ -8,7 +8,7 @@ This page lists common symptoms, their typical causes, and remedies. For a refer
 
 Inspect the Ready condition to find the specific reason:
 
-```
+```bash
 kubectl describe subscription <name>
 ```
 
@@ -32,7 +32,7 @@ When an Offering cannot be deleted, admission blocks the request and the `Deleti
 
 Identify the dependents:
 
-```
+```bash
 kubectl describe offering <name>
 ```
 
@@ -53,13 +53,13 @@ Two common causes:
 
 1. **No `SubscriptionChargeCollection` CostJob is scheduled.** Check whether an active CostJob of type `SubscriptionChargeCollection` exists:
 
-   ```
+   ```bash
    kubectl get costjob -A
    ```
 
    If none exists, create one. The operator will not compute subscription charges without it.
 
-2. **The Subscription is not active.** Check `status.ready`. If it is `False`, resolve the blocking condition first (see [Subscription stays Ready: False](#subscription-stays-ready-false) above).
+1. **The Subscription is not active.** Check `status.ready`. If it is `False`, resolve the blocking condition first (see [Subscription stays Ready: False](#subscription-stays-ready-false) above).
 
 ### Subscription will not delete
 
@@ -73,7 +73,7 @@ If you need a shorter guard on future Subscriptions, create a new Offering with 
 
 In BYO-OpenCost mode the operator writes pricing data to a ConfigMap named `finops-operator-custom-pricing-configs` and restarts the OpenCost deployment when the ConfigMap changes. If prices appear stale, confirm that the restart completed:
 
-```
+```bash
 kubectl rollout status deployment/<opencost-deployment> -n <opencost-namespace>
 ```
 
@@ -85,12 +85,12 @@ The operator creates a Kubernetes CronJob in the operator's namespace for each C
 
 1. The CronJob exists and is not suspended:
 
-   ```
+   ```bash
    kubectl get cronjob -n finops-operator-system
    ```
 
-2. The operator's own logs for scheduling or connection errors.
-3. The PostgreSQL and OpenCost connection strings in the relevant Secret references — confirm the Secrets exist in the operator's namespace and contain correct values.
+1. The operator's own logs for scheduling or connection errors.
+1. The PostgreSQL and OpenCost connection strings in the relevant Secret references — confirm the Secrets exist in the operator's namespace and contain correct values.
 
 ### Webhook rejection messages
 

@@ -106,7 +106,7 @@ Reading the month bucket: `projected: 28800000000` ($28,800.00) is the operator'
 
 Check your `SubscriptionChargeCollection` CostJob to confirm its schedule:
 
-```
+```bash
 kubectl get costjob -n finops-operator-system
 ```
 

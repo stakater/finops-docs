@@ -18,7 +18,7 @@ In this mode, changes to the FinOpsProvider do not directly affect OpenCost. Pri
 
 ## How to choose
 
-Use MTO-bundled mode if your cluster already uses Stakater's MDO to manage OpenCost. The operator integrates with MDO's reconciliation loop rather than competing with it.
+Use MTO-bundled mode if your cluster already uses Stakater's Multi-Dependency Operator (MDO) to manage OpenCost. The operator integrates with the Multi-Dependency Operator's reconciliation loop rather than competing with it.
 
 Use BYO-OpenCost mode (the default) if you installed OpenCost yourself or through any mechanism other than MDO. This mode does not require any additional operators and is the correct choice for most standalone installations.
 

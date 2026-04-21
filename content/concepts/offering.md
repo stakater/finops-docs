@@ -22,7 +22,7 @@ The lifecycle policy (`onParentDeactivate`) on an Offering sets the default beha
 
 ## Key things to know
 
-- Offering is namespaced. Subscriptions and other Offerings reference it by name and optional namespace.
+- Offering is `namespaced`. Subscriptions and other Offerings reference it by name and optional namespace.
 - `spec` is immutable after creation. To change pricing or compatibility, create a new Offering and migrate Subscriptions to it.
 - `priceMicros` is expressed in micro-currency: `1,000,000` equals 1.00 of the configured currency. The minimum value is `1`.
 - An Offering with a self-reference or a cycle in `requiredOfferings` is rejected at admission.

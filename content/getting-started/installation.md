@@ -55,7 +55,7 @@ helm upgrade finops-operator stakater/finops-operator \
   --set mdoDependencies.enabled=true
 ```
 
-## A richer values.yaml example
+## A richer `values.yaml` example
 
 For production installs, save your configuration to a `values.yaml` file and pass it to Helm. The example below covers the most commonly adjusted settings:
 

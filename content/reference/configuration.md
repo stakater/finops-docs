@@ -19,8 +19,8 @@ The following table lists top-level Helm chart keys. Use dot notation to overrid
 | `controllerManager.manager.containerSecurityContext` | — | Container-level security context. |
 | `imagePullSecrets` | — | Names of Secrets for pulling images from private registries. |
 | `kubernetesClusterDomain` | `cluster.local` | Kubernetes cluster domain for internal DNS names. |
-| `metricsService.*` | (HTTPS on `:8443`) | Service configuration for the metrics endpoint. |
-| `webhookService.*` | (HTTPS on `:443`) | Service configuration for the webhook endpoint. |
+| `metricsService.*` | (`HTTPS` on `:8443`) | Service configuration for the metrics endpoint. |
+| `webhookService.*` | (`HTTPS` on `:443`) | Service configuration for the webhook endpoint. |
 | `certManager.enabled` | `true` | Whether to use cert-manager for webhook certificates. Set to `false` only if you manage certificates manually. |
 | `openshift.enabled` | `false` | Enable OpenShift-specific configuration. |
 | `secrets.prometheus` | — | Name of the Secret containing Prometheus credentials. |
@@ -93,7 +93,7 @@ The manager binary accepts command-line flags to configure its runtime behavior.
 |---|---|---|
 | `--mode` | `controller` | Operating mode. End users set `controller` in the Deployment; the other values are set automatically by the scheduled jobs the operator creates. |
 | `--metrics-bind-address` | `0` (disabled) | Address the metrics endpoint binds to. |
-| `--metrics-secure` | `true` | Serve metrics over HTTPS. |
+| `--metrics-secure` | `true` | Serve metrics over `HTTPS`. |
 | `--health-probe-bind-address` | `:8081` | Liveness and readiness probe endpoint. |
 | `--leader-elect` | `false` | Enable leader election for high-availability deployments. |
 | `--webhook-cert-path` | (empty) | Directory containing the webhook serving certificate. |

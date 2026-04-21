@@ -20,13 +20,13 @@ In BYO-OpenCost mode, the PriceBook is the primary mechanism by which pricing re
 
 ## Key things to know
 
-- PriceBook is namespaced. It typically lives in the same namespace as the operator (`finops-operator-system`).
+- PriceBook is `namespaced`. It typically lives in the same namespace as the operator (`finops-operator-system`).
 - Only `valuationMode: currency` has effect today. The `percent` mode is accepted by the API but not acted on.
 - At most one PriceBook is active at a time. The status field `active: true` marks which PriceBook is currently feeding OpenCost.
 - When a PriceBook changes, the operator rewrites the `finops-operator-custom-pricing-configs` ConfigMap. If the ConfigMap content actually changed, the operator restarts the OpenCost deployment. If the rates are identical, no restart occurs.
 - All rate values are strings representing decimal numbers in the configured currency (for example, `"0.031"` for $0.031 per vCPU-hour).
 - The currency field must be a valid three-letter ISO 4217 code (for example, `USD`, `EUR`).
-- Changing a PriceBook affects future allocation cost computations. Historical data already stored is not retroactively recosted.
+- Changing a PriceBook affects future allocation cost computations. Historical data already stored is not retroactively re-priced.
 
 ## Learn more
 

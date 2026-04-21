@@ -6,7 +6,7 @@
 
 ## Scope and name constraints
 
-`Offering` is namespaced. The `spec` is immutable: once created, no field may be changed. To revise pricing or compatibility rules, create a new Offering and point new Subscriptions at it. Deletion is blocked while any Subscription or other Offering still references this one. `kubectl get offering` shows a Ready column summarizing the Offering's activation status.
+`Offering` is `namespaced`. The `spec` is immutable: once created, no field may be changed. To revise pricing or compatibility rules, create a new Offering and point new Subscriptions at it. Deletion is blocked while any Subscription or other Offering still references this one. `kubectl get offering` shows a Ready column summarizing the Offering's activation status.
 
 ## Spec
 
@@ -14,7 +14,7 @@
 |---|---|---|---|---|
 | `pricing.subscriptionFee` | object | required in practice | — | Recurring fee that accrues while a Subscription is active. See subsection below. |
 | `compatibility.requiredOfferings` | list of object references | optional | — | Other Offerings that must be present (and ready) before this Offering can be subscribed to. See subsection below. |
-| `lifecycle.onParentDeactivate` | enum | optional | `Deactivate` | Default behavior for child Subscriptions when their parent deactivates. One of `Deactivate` or `Orphan`. |
+| `lifecycle.onParentDeactivate` | `enum` | optional | `Deactivate` | Default behavior for child Subscriptions when their parent deactivates. One of `Deactivate` or `Orphan`. |
 | `lifecycle.allowOverride` | boolean | optional | `false` | Whether a Subscription referencing this Offering may set its own `lifecycle.onParentDeactivate`. |
 
 > **Note:** `lifecycle.allowOverride` is accepted by the API but is not currently enforced. A Subscription that sets its own `lifecycle.onParentDeactivate` takes precedence over the Offering's policy regardless of this field's value.
@@ -25,7 +25,7 @@
 |---|---|---|---|---|
 | `priceMicros` | int64 | yes | minimum `1` | Price charged per tick, in micro-currency units. `1000000` equals 1.00 of the configured currency (e.g. `40000000` = $40.00). |
 | `period` | string | yes | Format depends on `tickAlignment` (see below) | The tick interval. |
-| `tickAlignment` | enum | yes | One of `ActivatedAt`, `HourBoundary`, `DayBoundary`, `MonthBoundary` | Where tick boundaries fall relative to the Subscription's activation time. |
+| `tickAlignment` | `enum` | yes | One of `ActivatedAt`, `HourBoundary`, `DayBoundary`, `MonthBoundary` | Where tick boundaries fall relative to the Subscription's activation time. |
 | `minPeriods` | int32 | optional | minimum `1` | Minimum number of full ticks that must elapse after activation before the operator releases a deleted Subscription. This is a cleanup guard, not a billing mechanism — charges accrue normally during this time. |
 
 #### Period format by tick alignment
@@ -120,5 +120,5 @@ spec:
 
 ## Related guides
 
-- [Define an offering](../../guides/define-offering.md) — immutability, the subscriptionFee block, and `minPeriods`.
+- [Define an offering](../../guides/define-offering.md) — immutability, the `subscriptionFee` block, and `minPeriods`.
 - [Required offerings](../../guides/required-offerings.md) — composition via `compatibility.requiredOfferings`.

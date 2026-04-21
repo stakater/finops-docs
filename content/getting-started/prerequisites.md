@@ -10,7 +10,7 @@ Any recent version of Kubernetes works, including OpenShift. The operator does n
 
 ### cert-manager
 
-cert-manager provisions TLS certificates for cluster components. The operator's admission webhooks — which validate and reject invalid CRD configurations before they are stored — rely on cert-manager to provide their serving certificates. You can disable webhooks by setting the environment variable `ENABLE_WEBHOOKS=false`, but this is not recommended because admission validation is your primary safeguard against misconfigured resources. Install cert-manager from [https://cert-manager.io](https://cert-manager.io) before installing the operator.
+cert-manager provisions TLS certificates for cluster components. The operator's admission webhooks — which validate and reject invalid CRD configurations before they are stored — rely on cert-manager to provide their serving certificates. You can disable webhooks by setting the environment variable `ENABLE_WEBHOOKS=false`, but this is not recommended because admission validation is your primary safeguard against incorrectly configured resources. Install cert-manager from [https://cert-manager.io](https://cert-manager.io) before installing the operator.
 
 ### PostgreSQL
 

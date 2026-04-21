@@ -23,7 +23,7 @@ This is the mechanism for expressing service dependencies. For example, a "Manag
 
 When you create Offerings in a batch, there is a short window where the ordering may not have settled. During this time you will see:
 
-```
+```text
 NAME              READY
 managed-postgres  False
 platform-base     True
@@ -86,7 +86,7 @@ spec:
 
 Apply both:
 
-```
+```bash
 kubectl apply -f platform-base.yaml
 kubectl apply -f managed-postgres.yaml
 ```
@@ -95,13 +95,13 @@ If you apply `managed-postgres` before `platform-base` exists, `managed-postgres
 
 ## Verify it worked
 
-```
+```bash
 kubectl get offering -n finops-operator-system
 ```
 
 Expected output once both Offerings are ready:
 
-```
+```text
 NAME              READY
 platform-base     True
 managed-postgres  True
@@ -109,13 +109,13 @@ managed-postgres  True
 
 Check the condition detail:
 
-```
+```bash
 kubectl describe offering managed-postgres -n finops-operator-system
 ```
 
 Look for:
 
-```
+```text
 Conditions:
   Type:    Ready
   Status:  True

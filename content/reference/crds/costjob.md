@@ -6,13 +6,13 @@
 
 ## Scope and name constraints
 
-`CostJob` is namespaced. There are no naming requirements, but each namespace typically contains at most one object of each `type`.
+`CostJob` is `namespaced`. There are no naming requirements, but each namespace typically contains at most one object of each `type`.
 
 ## Spec
 
 | Field | Type | Required | Default | Description |
 |---|---|---|---|---|
-| `type` | enum | no | `ResourceCostCollection` | What the scheduled job does. One of `ResourceCostCollection` or `SubscriptionChargeCollection`. |
+| `type` | `enum` | no | `ResourceCostCollection` | What the scheduled job does. One of `ResourceCostCollection` or `SubscriptionChargeCollection`. |
 | `interval` | duration string | no | `24h` | How often the job runs. See the recognized values table below. |
 | `databaseInitTimeout` | duration string | no | `2m` | Maximum time to wait for the database to initialize. |
 | `kubernetesOperationTimeout` | duration string | no | `1m` | Maximum time for Kubernetes API operations. |
@@ -20,7 +20,7 @@
 | `databaseInsertTimeout` | duration string | no | `3m` | Maximum time for a database write operation. |
 | `databaseViewsRefreshTimeout` | duration string | no | `5m` | Maximum time allowed for the scheduled data-refresh operation. |
 | `statusUpdateTimeout` | duration string | no | `1m` | Maximum time for writing status back to the Kubernetes API. |
-| `httpClientTimeout` | duration string | no | `90s` | Maximum time for outbound HTTP requests. |
+| `httpClientTimeout` | duration string | no | `90s` | Maximum time for outbound `HTTP` requests. |
 
 Each timeout field has a corresponding environment variable on the job pod. See [Configuration](../configuration.md) for the full mapping.
 
@@ -48,7 +48,7 @@ The operator maps `interval` to a Kubernetes `CronJob` schedule expression. Use 
 |---|---|---|
 | `lastExecutionTime` | timestamp | When the most recent run started. |
 | `lastSuccessfulExecutionTime` | timestamp | When the last successful run started. |
-| `lastExecutionStatus` | enum | Outcome of the most recent run. One of `Success`, `Failed`, `Error`, or `Pending`. |
+| `lastExecutionStatus` | `enum` | Outcome of the most recent run. One of `Success`, `Failed`, `Error`, or `Pending`. |
 | `executionHistory` | list | Up to the 10 most recent runs, each with `executionTime`, `status`, `duration`, and `error`. |
 
 ## Validation rules

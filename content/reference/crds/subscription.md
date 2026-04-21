@@ -6,7 +6,7 @@
 
 ## Scope and name constraints
 
-`Subscription` is namespaced. There are no naming requirements beyond standard Kubernetes name constraints. A Subscription cannot reference itself as its own parent, and cannot point `lifecycle.targetRef` at itself — both are enforced at admission (create time only). `kubectl get subscription` shows a Ready column summarizing the Subscription's activation status.
+`Subscription` is `namespaced`. There are no naming requirements beyond standard Kubernetes name constraints. A Subscription cannot reference itself as its own parent, and cannot point `lifecycle.targetRef` at itself — both are enforced at admission (create time only). `kubectl get subscription` shows a Ready column summarizing the Subscription's activation status.
 
 ## Spec
 
@@ -16,7 +16,7 @@
 | `offeringRef.namespace` | string | optional | Subscription's namespace | Namespace of the Offering. Defaults to the Subscription's own namespace. |
 | `parent.subscriptionRef.name` | string | optional | — | Name of the parent Subscription, for traceability and lifecycle cascading. |
 | `parent.subscriptionRef.namespace` | string | optional | Subscription's namespace | Namespace of the parent Subscription. |
-| `lifecycle.onParentDeactivate` | enum | optional | Offering's policy, then `Deactivate` | How this Subscription behaves when its parent deactivates. One of `Deactivate` or `Orphan`. Overrides the Offering's `lifecycle.onParentDeactivate` when set. |
+| `lifecycle.onParentDeactivate` | `enum` | optional | Offering's policy, then `Deactivate` | How this Subscription behaves when its parent deactivates. One of `Deactivate` or `Orphan`. Overrides the Offering's `lifecycle.onParentDeactivate` when set. |
 | `lifecycle.targetRef.apiVersion` | string | optional | — | API version of the Kubernetes resource whose existence gates activation. |
 | `lifecycle.targetRef.kind` | string | optional | — | Kind of the target resource. |
 | `lifecycle.targetRef.namespace` | string | optional | — | Namespace of the target resource. |
@@ -25,9 +25,10 @@
 ### Effective onParentDeactivate precedence
 
 The effective `onParentDeactivate` policy is resolved in this order:
+
 1. `Subscription.spec.lifecycle.onParentDeactivate` (if set on this Subscription).
-2. `Offering.spec.lifecycle.onParentDeactivate` (from the referenced Offering).
-3. `Deactivate` (the built-in default).
+1. `Offering.spec.lifecycle.onParentDeactivate` (from the referenced Offering).
+1. `Deactivate` (the built-in default).
 
 ### Activation rule
 
@@ -60,7 +61,7 @@ When populated, `status.costs` contains exactly three entries, one per granulari
 
 | Field | Type | Description |
 |---|---|---|
-| `granularity` | enum | One of `hour`, `day`, `month`. |
+| `granularity` | `enum` | One of `hour`, `day`, `month`. |
 | `start` | timestamp | Inclusive start of the bucket. |
 | `endExclusive` | timestamp | Exclusive end of the bucket. |
 | `current` | int64 (micro-currency) | Accumulated spend in the bucket so far. |
@@ -73,7 +74,7 @@ Each entry in `breakdown` reports costs for one meter.
 
 | Field | Type | Description |
 |---|---|---|
-| `name` | enum | Meter name. One of: `subscription`, `cpuHour`, `gpuHour`, `ramGbHour`, `pvcGbHour`, `networkIngressGbHour`, `networkEgressGbHour`. |
+| `name` | `enum` | Meter name. One of: `subscription`, `cpuHour`, `gpuHour`, `ramGbHour`, `pvcGbHour`, `networkIngressGbHour`, `networkEgressGbHour`. |
 | `current` | int64 (micro-currency) | Accumulated cost for this meter in the current bucket. |
 | `projected` | int64 (micro-currency) | Projected cost for this meter for the full bucket period. |
 

@@ -2,6 +2,8 @@
 
 Terms used throughout the FinOps Operator docs.
 
+## Terms
+
 ### activation
 
 A Subscription becomes active when its Offering is ready, all parent Subscriptions (if any) are active, and any target Kubernetes resource (if specified) exists and is ready. An active Subscription accrues charges on its meter and begins charging according to its Offering's billing model.
@@ -52,7 +54,7 @@ See: [Subscription](./crds/subscription.md).
 
 Billing values are always stored and reported as integers representing micro-units of the configured ISO 4217 currency. One million micro-units equals 1.00 unit (e.g., 1,000,000 micros = $1.00 USD). This avoids floating-point arithmetic and ensures reproducible billing calculations.
 
-### minPeriods
+### `minPeriods`
 
 A field on an Offering that specifies the minimum number of full billing ticks that must elapse after a Subscription's activation before the operator will allow its deletion. During this minimum period, billing continues normally. After `minPeriods` ticks have passed, the cleanup finalizer is removed and Kubernetes garbage-collects the object.
 
@@ -90,7 +92,7 @@ See: [Offering](./crds/offering.md).
 
 ### ResourceCostCollection
 
-A type of scheduled CostJob that pulls allocation data from OpenCost and stores it for later use. The operator converts the CostJob's interval into a Kubernetes CronJob that runs in cronjob mode and populates the resource cost database.
+A type of scheduled CostJob that pulls allocation data from OpenCost and stores it for later use. The operator converts the CostJob's interval into a Kubernetes `CronJob` that runs in `CronJob` mode and populates the resource cost database.
 
 See: [CostJob](./crds/costjob.md).
 

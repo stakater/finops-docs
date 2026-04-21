@@ -19,7 +19,7 @@
 
 Exactly one of the four option blocks must be set. Providing none or more than one is rejected at admission.
 
-### awsoptions / gcpoptions / azureoptions
+### `awsoptions` / `gcpoptions` / `azureoptions`
 
 These three blocks share the same fields.
 
@@ -28,7 +28,7 @@ These three blocks share the same fields.
 | `cloudIntegrationSecret` | string | optional | — | Name of the Kubernetes Secret that holds cloud billing credentials for OpenCost. |
 | `pricingModelSource` | string | optional | — | How pricing is sourced. Set to `Pricebook` to route pricing through the `PriceBook`-derived ConfigMap. Any other value or omission uses the cloud provider's default pricing. |
 
-### onpremoptions
+### `onpremoptions`
 
 | Field | Type | Required | Default | Description |
 |---|---|---|---|---|

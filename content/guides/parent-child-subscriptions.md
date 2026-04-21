@@ -33,8 +33,8 @@ The `Orphan` policy is useful when a child represents a resource that outlives i
 The effective policy is resolved in this order:
 
 1. `Subscription.spec.lifecycle.onParentDeactivate` (if set on the child Subscription) — takes highest precedence.
-2. The child Offering's `lifecycle.onParentDeactivate` default.
-3. If neither is set: `Deactivate`.
+1. The child Offering's `lifecycle.onParentDeactivate` default.
+1. If neither is set: `Deactivate`.
 
 This means a child Subscription can always override the Offering's default. See [Define an offering](./define-offering.md) for a note on `lifecycle.allowOverride`.
 
@@ -81,7 +81,7 @@ spec:
 
 Apply both in order — the parent first, then the child:
 
-```
+```bash
 kubectl apply -f acme-postgres.yaml
 kubectl apply -f acme-postgres-storage.yaml
 ```
@@ -90,13 +90,13 @@ The child Subscription activates only after the parent is active. If the parent 
 
 ## Verify the relationship
 
-```
+```bash
 kubectl get subscription -n finops-operator-system
 ```
 
 Expected output:
 
-```
+```text
 NAME                    READY
 acme-postgres           True
 acme-postgres-storage   True
@@ -104,7 +104,7 @@ acme-postgres-storage   True
 
 Inspect the child to confirm the parent reference:
 
-```
+```bash
 kubectl describe subscription acme-postgres-storage -n finops-operator-system
 ```
 
@@ -114,13 +114,13 @@ The `Spec` section will show the `parent.subscriptionRef` pointing to `acme-post
 
 Delete the parent Deployment to trigger deactivation via `targetRef`:
 
-```
+```bash
 kubectl delete deployment postgres -n acme
 ```
 
 Then check the child:
 
-```
+```bash
 kubectl get subscription acme-postgres-storage -n finops-operator-system -o yaml
 ```
 

@@ -13,13 +13,13 @@ This guide walks you through safely removing the FinOps Operator from your clust
 
 Before deleting anything, decide how to handle active Subscriptions. Every Subscription has a finalizer that the `SubscriptionChargeCollection` CostJob removes once at least `minPeriods` full ticks have elapsed since `activatedAt`. You have two options:
 
-**Option A — Wait for minPeriods to elapse naturally.** Leave the Subscriptions active until the cleanup guard expires, then delete them. The CostJob removes the finalizer after the next run following expiry. This is the cleanest approach for production environments.
+**Option A — Wait for `minPeriods` to elapse naturally.** Leave the Subscriptions active until the cleanup guard expires, then delete them. The CostJob removes the finalizer after the next run following expiry. This is the cleanest approach for production environments.
 
 **Option B — Delete the CostJobs first, then delete Subscriptions.** If you delete the `SubscriptionChargeCollection` CostJob, the cleanup job will no longer run and finalizers will not be automatically removed. You will then need to manually patch each Subscription to remove the finalizer. Only use this approach when you do not care about the final billing records.
 
 Check how many ticks have elapsed since each Subscription activated:
 
-```
+```bash
 kubectl get subscription -A -o yaml | grep -E "activatedAt|deactivatedAt|minPeriods"
 ```
 
@@ -27,19 +27,19 @@ kubectl get subscription -A -o yaml | grep -E "activatedAt|deactivatedAt|minPeri
 
 Once you are ready to remove Subscriptions:
 
-```
+```bash
 kubectl delete subscription --all -n finops-operator-system
 ```
 
 Repeat for each namespace where Subscriptions exist. Wait until all Subscription objects are fully gone:
 
-```
+```bash
 kubectl get subscription -A
 ```
 
 The output should be empty. If any Subscription is stuck in a terminating state, the `SubscriptionChargeCollection` CostJob has not yet removed its finalizer. Either wait for the next CostJob run or — if you have decided to bypass the cleanup guard — manually remove the finalizer:
 
-```
+```bash
 kubectl patch subscription <name> -n <namespace> \
   -p '{"metadata":{"finalizers":[]}}' \
   --type=merge
@@ -51,7 +51,7 @@ kubectl patch subscription <name> -n <namespace> \
 
 With no Subscriptions remaining, Offerings can be deleted. The operator blocks Offering deletion while any Subscription references it, so Subscriptions must be gone first.
 
-```
+```bash
 kubectl delete offering --all -n finops-operator-system
 ```
 
@@ -59,13 +59,13 @@ If deletion is blocked with reason `DependentSubscriptionsExist`, there are stil
 
 Wait until all Offerings are gone:
 
-```
+```bash
 kubectl get offering -A
 ```
 
 ### 4. Delete the PriceBook
 
-```
+```bash
 kubectl delete pricebook --all -n finops-operator-system
 ```
 
@@ -73,13 +73,13 @@ Repeat for any other namespace where PriceBooks exist.
 
 ### 5. Delete the FinOpsProvider
 
-```
+```bash
 kubectl delete finopsprovider default
 ```
 
 ### 6. Delete all CostJobs
 
-```
+```bash
 kubectl delete costjob --all -n finops-operator-system
 ```
 
@@ -87,7 +87,7 @@ This also causes the operator to remove the managed `CronJob` objects it created
 
 ### 7. Run helm uninstall
 
-```
+```bash
 helm uninstall finops-operator -n finops-operator-system
 ```
 
@@ -97,13 +97,13 @@ This removes the operator Deployment, Services, RBAC resources, and webhook conf
 
 Only remove the CRDs after all custom resources have been fully deleted and all finalizers have been released.
 
-```
+```bash
 kubectl get crds | grep finops.stakater.com
 ```
 
 Delete each CRD:
 
-```
+```bash
 kubectl delete crd finopsproviders.finops.stakater.com
 kubectl delete crd pricebooks.finops.stakater.com
 kubectl delete crd costjobs.finops.stakater.com
@@ -115,7 +115,7 @@ kubectl delete crd subscriptions.finops.stakater.com
 
 ### 9. Verify the cluster is clean
 
-```
+```bash
 kubectl get all -n finops-operator-system
 kubectl get crds | grep finops.stakater.com
 ```
