@@ -2447,34 +2447,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2628,62 +2600,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3410,11 +3326,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <td>Command-line arguments passed to the manager.</td>
 </tr>
 <tr>
-<td><code>controllerManager.manager.env.mtoEnabled</code></td>
-<td><code>false</code></td>
-<td>Set to <code>true</code> to run in MTO-bundled mode; <code>false</code> for bring-your-own OpenCost.</td>
-</tr>
-<tr>
 <td><code>controllerManager.manager.env.opencostDeploymentName</code></td>
 <td><code>finops-operator-opencost</code></td>
 <td>Name of the Deployment that the operator restarts when pricing changes.</td>
@@ -3545,16 +3456,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <td>Rate definitions for pricing.</td>
 </tr>
 <tr>
-<td><code>mdoDependencies.enabled</code></td>
-<td><code>false</code></td>
-<td>Enable the MTO-bundled OpenCost installation.</td>
-</tr>
-<tr>
-<td><code>mdoDependencies.postgres.*</code></td>
-<td>—</td>
-<td>Configuration for the bundled PostgreSQL database.</td>
-</tr>
-<tr>
 <td><code>finopsGatewayGateway</code></td>
 <td>—</td>
 <td>FinOps Gateway Deployment configuration.</td>
@@ -3617,11 +3518,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>MTO_ENABLED</code></td>
-<td><code>false</code></td>
-<td>Set to the literal string <code>"true"</code> to run in MTO-bundled mode. Any other value is treated as bring-your-own OpenCost.</td>
-</tr>
 <tr>
 <td><code>ENABLE_WEBHOOKS</code></td>
 <td><code>true</code></td>

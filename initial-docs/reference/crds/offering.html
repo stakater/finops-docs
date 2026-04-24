@@ -2447,34 +2447,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2628,62 +2600,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3100,17 +3016,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#compatibilityrequiredofferings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        compatibility.requiredOfferings
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3124,6 +3029,40 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolvedpricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resolvedPricing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="resolvedPricing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolvedpricingmeters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resolvedPricing.meters[]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3424,17 +3363,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#compatibilityrequiredofferings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        compatibility.requiredOfferings
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3448,6 +3376,40 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolvedpricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resolvedPricing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="resolvedPricing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolvedpricingmeters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        resolvedPricing.meters[]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3517,9 +3479,9 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 <h1 id="offering-reference">Offering (reference)<a class="headerlink" href="#offering-reference" title="Permanent link">#</a></h1>
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">#</a></h2>
-<p><code>Offering</code> defines a billable service that tenants can subscribe to. It sets the recurring subscription fee, the tick interval and alignment that determine when charges accrue, optional minimum commitment periods, and compatibility constraints that gate which other Offerings must be present before this one can be activated. Create an Offering for each distinct service tier or add-on you want to make available; tenants then create <a href="subscription.html">Subscriptions</a> against it.</p>
+<p><code>Offering</code> defines a billable service that tenants can subscribe to. It sets the recurring subscription fee and the tick interval and alignment that determine when charges accrue. Create an Offering for each distinct service tier or add-on you want to make available; tenants then create <a href="subscription.html">Subscriptions</a> against it.</p>
 <h2 id="scope-and-name-constraints">Scope and name constraints<a class="headerlink" href="#scope-and-name-constraints" title="Permanent link">#</a></h2>
-<p><code>Offering</code> is <code>namespaced</code>. The <code>spec</code> is immutable: once created, no field may be changed. To revise pricing or compatibility rules, create a new Offering and point new Subscriptions at it. Deletion is blocked while any Subscription or other Offering still references this one. <code>kubectl get offering</code> shows a Ready column summarizing the Offering's activation status.</p>
+<p><code>Offering</code> is <code>namespaced</code>. The <code>spec</code> is immutable: once created, no field may be changed. To revise pricing, create a new Offering and point new Subscriptions at it. Deletion is blocked while any Subscription still references this one. <code>kubectl get offering</code> shows a Ready column summarizing the Offering's activation status.</p>
 <h2 id="spec">Spec<a class="headerlink" href="#spec" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -3539,32 +3501,8 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <td>—</td>
 <td>Recurring fee that accrues while a Subscription is active. See subsection below.</td>
 </tr>
-<tr>
-<td><code>compatibility.requiredOfferings</code></td>
-<td>list of object references</td>
-<td>optional</td>
-<td>—</td>
-<td>Other Offerings that must be present (and ready) before this Offering can be subscribed to. See subsection below.</td>
-</tr>
-<tr>
-<td><code>lifecycle.onParentDeactivate</code></td>
-<td><code>enum</code></td>
-<td>optional</td>
-<td><code>Deactivate</code></td>
-<td>Default behavior for child Subscriptions when their parent deactivates. One of <code>Deactivate</code> or <code>Orphan</code>.</td>
-</tr>
-<tr>
-<td><code>lifecycle.allowOverride</code></td>
-<td>boolean</td>
-<td>optional</td>
-<td><code>false</code></td>
-<td>Whether a Subscription referencing this Offering may set its own <code>lifecycle.onParentDeactivate</code>.</td>
-</tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Note:</strong> <code>lifecycle.allowOverride</code> is accepted by the API but is not currently enforced. A Subscription that sets its own <code>lifecycle.onParentDeactivate</code> takes precedence over the Offering's policy regardless of this field's value.</p>
-</blockquote>
 <h3 id="pricingsubscriptionfee">pricing.subscriptionFee<a class="headerlink" href="#pricingsubscriptionfee" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -3645,32 +3583,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </tr>
 </tbody>
 </table>
-<h3 id="compatibilityrequiredofferings">compatibility.requiredOfferings<a class="headerlink" href="#compatibilityrequiredofferings" title="Permanent link">#</a></h3>
-<p>Each entry in <code>compatibility.requiredOfferings</code> is an object reference with the following fields.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>name</code></td>
-<td>string</td>
-<td>yes</td>
-<td>Name of the required Offering.</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>string</td>
-<td>optional</td>
-<td>Namespace of the required Offering. Defaults to the namespace of the referencing Offering.</td>
-</tr>
-</tbody>
-</table>
 <h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -3684,12 +3596,76 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <tr>
 <td><code>ready</code></td>
 <td><code>True</code> / <code>False</code> / <code>Unknown</code></td>
-<td>Whether this Offering is ready to be subscribed to. <code>True</code> means all required Offerings are present and ready and no circular dependency exists.</td>
+<td>Whether this Offering is ready to be subscribed to.</td>
 </tr>
 <tr>
 <td><code>conditions</code></td>
 <td>list</td>
 <td>Standard Kubernetes conditions. See the Ready and Deleting condition reasons below.</td>
+</tr>
+<tr>
+<td><code>resolvedPricing</code></td>
+<td>object</td>
+<td>Effective pricing the operator derived from the Offering spec after resolution. Present once the Offering becomes Ready. See subsection below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resolvedpricing">resolvedPricing<a class="headerlink" href="#resolvedpricing" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>meters</code></td>
+<td>list of object</td>
+<td>Per-meter resolved unit prices. Empty when no resource pricing is configured. Today the <code>subscription</code> meter is populated from <code>spec.pricing.subscriptionFee</code>.</td>
+</tr>
+<tr>
+<td><code>resolvedAt</code></td>
+<td>timestamp</td>
+<td>When pricing was last resolved.</td>
+</tr>
+<tr>
+<td><code>subscriptionFee</code></td>
+<td>object</td>
+<td>Resolved subscription fee, if configured. Same schema as <code>spec.pricing.subscriptionFee</code>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="resolvedpricingmeters">resolvedPricing.meters[]<a class="headerlink" href="#resolvedpricingmeters" title="Permanent link">#</a></h4>
+<p>Each entry in <code>meters</code> reports the effective price for one meter.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td><code>enum</code></td>
+<td>yes</td>
+<td>Meter name. One of: <code>subscription</code>, <code>cpuHour</code>, <code>gpuHour</code>, <code>ramGbHour</code>, <code>pvcGbHour</code>, <code>networkIngressGbHour</code>, <code>networkEgressGbHour</code>.</td>
+</tr>
+<tr>
+<td><code>unitPriceMicros</code></td>
+<td>int64</td>
+<td>yes</td>
+<td>Effective per-unit price in micro-currency units (10^-6).</td>
+</tr>
+<tr>
+<td><code>includedUsage</code></td>
+<td>object</td>
+<td>optional</td>
+<td>Free usage included per subscription for this meter. Contains <code>unit</code> (string, e.g. <code>"GbHour"</code>, <code>"CoreHour"</code>) and <code>value</code> (int64).</td>
 </tr>
 </tbody>
 </table>
@@ -3700,18 +3676,15 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <li><code>period</code> must match the format required by the chosen <code>tickAlignment</code> (duration string vs. plain integer).</li>
 <li><code>priceMicros</code> must be at least <code>1</code>.</li>
 <li><code>minPeriods</code>, when set, must be at least <code>1</code>.</li>
-<li>Self-references in <code>compatibility.requiredOfferings</code> (an Offering listing itself) are rejected at admission.</li>
-<li>Cycles in the <code>requiredOfferings</code> graph are rejected at admission; the reason <code>CircularDependencyDetected</code> is set on the Offering's Ready condition.</li>
-<li>Deleting an Offering while any Subscription or other Offering references it is rejected.</li>
+<li>Deleting an Offering while any Subscription references it is rejected.</li>
 </ul>
 <h2 id="lifecycle-notes">Lifecycle notes<a class="headerlink" href="#lifecycle-notes" title="Permanent link">#</a></h2>
 <p>The operator maintains a finalizer (a marker that prevents Kubernetes from garbage-collecting the object until the operator is done with it) on every Offering. This allows the operator to block deletion while dependents exist.</p>
-<p>When a required Offering is missing or not yet ready, this Offering is marked <code>Ready: False</code> with one of the reasons <code>RequiredOfferingNotFound</code>, <code>RequiredOfferingNotReady</code>, or <code>CircularDependencyDetected</code>. Once the dependency becomes ready, the operator reconciles this Offering back to <code>Ready: True</code>. This transient not-ready state is expected during rollout.</p>
 <p>When this Offering's <code>status.ready</code> is <code>False</code>, <a href="subscription.html">Subscriptions</a> referencing it will not activate.</p>
 <p>See <a href="../status-conditions.html">Status conditions</a> for the full list of reasons this resource emits.</p>
 <p>For how ticks are counted and how the first tick is prorated by alignment, see the <a href="../../concepts/billing-model.html">Billing model</a> concept page.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
-<p>The following example creates an hourly Offering with a $40.00 per-hour fee, activated at subscription time, with a two-hour minimum period, requiring the <code>platform-base</code> Offering to be present.</p>
+<p>The following example creates an hourly Offering with a $40.00 per-hour fee, activated at subscription time, with a two-hour minimum period.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Offering</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -3724,11 +3697,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <span class="w">      </span><span class="nt">tickAlignment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ActivatedAt</span>
 <span class="w">      </span><span class="nt">minPeriods</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 <span class="w">      </span><span class="nt">priceMicros</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span><span class="w">   </span><span class="c1"># $40.00 per hour</span>
-<span class="w">  </span><span class="nt">compatibility</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">requiredOfferings</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
-<span class="w">  </span><span class="nt">lifecycle</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">onParentDeactivate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deactivate</span>
 </code></pre></div>
 <p>The following example creates a monthly Offering, wall-clock aligned to the 1st of each month, at $500.00 per month.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
@@ -3746,7 +3714,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h2 id="related-guides">Related guides<a class="headerlink" href="#related-guides" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="../../guides/define-offering.html">Define an offering</a> — immutability, the <code>subscriptionFee</code> block, and <code>minPeriods</code>.</li>
-<li><a href="../../guides/required-offerings.html">Required offerings</a> — composition via <code>compatibility.requiredOfferings</code>.</li>
 </ul>
 
 

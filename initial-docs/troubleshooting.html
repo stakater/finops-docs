@@ -2445,34 +2445,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2626,62 +2598,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3222,17 +3138,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
         
           <li class="md-nav__item">
-  <a href="#offering-rejected-on-create" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Offering rejected on create
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#subscription-statuscosts-is-empty" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3363,17 +3268,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
         
           <li class="md-nav__item">
-  <a href="#offering-rejected-on-create" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Offering rejected on create
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#subscription-statuscosts-is-empty" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3477,48 +3371,20 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <tr>
 <td><code>OfferingNotReady</code></td>
 <td>The referenced Offering exists but its own <code>Ready</code> condition is <code>False</code>.</td>
-<td>Resolve the Offering's condition first (see <a href="#offering-rejected-on-create">Offering rejected on create</a> below).</td>
-</tr>
-<tr>
-<td><code>ParentSubscriptionNotFound</code></td>
-<td><code>parent.subscriptionRef</code> points to a Subscription that does not exist.</td>
-<td>Create the parent Subscription or correct the reference.</td>
-</tr>
-<tr>
-<td><code>ParentSubscriptionNotReady</code></td>
-<td>The parent Subscription exists but is not yet active.</td>
-<td>Wait for the parent to reach <code>Ready: True</code>, or resolve its blocking condition.</td>
-</tr>
-<tr>
-<td><code>TargetNotFound</code></td>
-<td><code>lifecycle.targetRef</code> points to a resource that does not exist or is not yet present.</td>
-<td>Create the target resource or remove <code>targetRef</code> if targeting is not required.</td>
-</tr>
-<tr>
-<td><code>TargetIsSelfReference</code></td>
-<td><code>lifecycle.targetRef</code> resolves to the Subscription itself.</td>
-<td>Set <code>targetRef</code> to a different resource or remove the field.</td>
+<td>Resolve the Offering's condition first.</td>
 </tr>
 </tbody>
 </table>
 <p>For the full condition vocabulary, see <a href="reference/status-conditions.html">Status conditions</a>.</p>
 <h3 id="offering-stuck-in-deletion">Offering stuck in deletion<a class="headerlink" href="#offering-stuck-in-deletion" title="Permanent link">#</a></h3>
-<p>When an Offering cannot be deleted, admission blocks the request and the <code>Deleting</code> condition carries one of these reasons:</p>
+<p>When an Offering cannot be deleted, admission blocks the request and the <code>Deleting</code> condition carries this reason:</p>
 <ul>
 <li><code>DependentSubscriptionsExist</code> — one or more Subscriptions still reference this Offering.</li>
-<li><code>DependentOfferingsExist</code> — another Offering lists this one in <code>compatibility.requiredOfferings</code>.</li>
 </ul>
 <p>Identify the dependents:</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>offering<span class="w"> </span>&lt;name&gt;
 </code></pre></div>
-<p>The condition message names the blocking resources. Delete or migrate those dependents first, then retry the Offering deletion.</p>
-<h3 id="offering-rejected-on-create">Offering rejected on create<a class="headerlink" href="#offering-rejected-on-create" title="Permanent link">#</a></h3>
-<p>Admission rejects an Offering at creation time when the <code>compatibility.requiredOfferings</code> list contains a cycle or a self-reference:</p>
-<ul>
-<li><code>CircularDependencyDetected</code> — the <code>requiredOfferings</code> graph forms a cycle (for example, Offering A requires B, and B requires A).</li>
-<li>Self-reference — the Offering lists its own name in <code>compatibility.requiredOfferings</code>.</li>
-</ul>
-<p>Remove the cycle or the self-reference from the Offering spec and resubmit.</p>
+<p>The condition message names the blocking resources. Delete or migrate those Subscriptions first, then retry the Offering deletion.</p>
 <h3 id="subscription-statuscosts-is-empty">Subscription <code>status.costs</code> is empty<a class="headerlink" href="#subscription-statuscosts-is-empty" title="Permanent link">#</a></h3>
 <p>Two common causes:</p>
 <ol>
@@ -3535,7 +3401,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p>Wait for <code>minPeriods</code> ticks to elapse. The finalizer is removed automatically once the condition is met and the next collection job runs.</p>
 <p>If you need a shorter guard on future Subscriptions, create a new Offering with a lower <code>minPeriods</code> value. You cannot change <code>minPeriods</code> on the existing Offering — Offering spec is immutable.</p>
 <h3 id="opencost-shows-stale-prices">OpenCost shows stale prices<a class="headerlink" href="#opencost-shows-stale-prices" title="Permanent link">#</a></h3>
-<p>In BYO-OpenCost mode the operator writes pricing data to a ConfigMap named <code>finops-operator-custom-pricing-configs</code> and restarts the OpenCost deployment when the ConfigMap changes. If prices appear stale, confirm that the restart completed:</p>
+<p>The operator writes pricing data to a ConfigMap named <code>finops-operator-custom-pricing-configs</code> and restarts the OpenCost deployment when the ConfigMap changes. If prices appear stale, confirm that the restart completed:</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>rollout<span class="w"> </span>status<span class="w"> </span>deployment/&lt;opencost-deployment&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;opencost-namespace&gt;
 </code></pre></div>
 <p>If the rollout did not happen, check that the operator has permission to restart the OpenCost deployment and that the ConfigMap is in the correct namespace.</p>

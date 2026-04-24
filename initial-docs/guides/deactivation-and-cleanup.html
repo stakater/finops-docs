@@ -2447,34 +2447,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2650,62 +2622,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="read-subscription-costs.html" class="md-nav__link">
         
   
@@ -2820,28 +2736,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-happens-to-children" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What happens to children
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-happens-when-a-targetref-disappears" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What happens when a targetRef disappears
-      
-    </span>
-  </a>
   
 </li>
       
@@ -3339,28 +3233,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-happens-to-children" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What happens to children
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-happens-when-a-targetref-disappears" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What happens when a targetRef disappears
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#verify-cleanup-completed" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3414,12 +3286,11 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 
 <h1 id="deactivation-and-cleanup">Deactivation and cleanup<a class="headerlink" href="#deactivation-and-cleanup" title="Permanent link">#</a></h1>
-<p>This guide explains what happens when a Subscription is deactivated — whether by user action, by a parent Subscription deactivating, or by a target resource disappearing. It covers the deactivation sequence, the snap-forward mechanism, the <code>minPeriods</code> cleanup guard, and how children are handled.</p>
+<p>This guide explains what happens when a Subscription is deactivated by user action. It covers the deactivation sequence, the snap-forward mechanism, the <code>minPeriods</code> cleanup guard, and how to monitor cleanup progress.</p>
 <p><strong>Prerequisites:</strong></p>
 <ul>
 <li>One or more active Subscriptions. See <a href="subscribe-to-offering.html">Subscribe to an offering</a>.</li>
 <li>A <code>CostJob</code> of type <code>SubscriptionChargeCollection</code> running. See <a href="collect-cost-data.html">Collect cost data</a>.</li>
-<li>Familiarity with <a href="parent-child-subscriptions.html">Parent-child subscriptions</a> if you have linked Subscriptions.</li>
 </ul>
 <h2 id="what-happens-when-you-delete-a-subscription">What happens when you delete a Subscription<a class="headerlink" href="#what-happens-when-you-delete-a-subscription" title="Permanent link">#</a></h2>
 <p>Deleting a Subscription does not immediately remove the Kubernetes object. The operator places a <strong>finalizer</strong> on every Subscription at creation time. A finalizer is a marker that prevents the Kubernetes API from deleting an object until the operator explicitly releases it. This gives the operator time to complete billing for any outstanding periods.</p>
@@ -3432,7 +3303,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </ol>
 <p>If the Offering did not set <code>minPeriods</code>, the finalizer is removed after the next CostJob run following deactivation.</p>
 <h3 id="checking-the-cleanup-state">Checking the cleanup state<a class="headerlink" href="#checking-the-cleanup-state" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-postgres<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
 </code></pre></div>
 <p>While waiting for cleanup, you will see:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
@@ -3444,49 +3315,12 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <span class="w">      </span><span class="nt">reason</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WaitingForCollectionJob</span>
 </code></pre></div>
 <p>Once the finalizer is removed, <code>kubectl get</code> will no longer return the object.</p>
-<h2 id="what-happens-to-children">What happens to children<a class="headerlink" href="#what-happens-to-children" title="Permanent link">#</a></h2>
-<p>When a parent Subscription deactivates, the operator applies the effective <code>onParentDeactivate</code> policy to each child:</p>
-<table>
-<thead>
-<tr>
-<th>Effective policy</th>
-<th>Result for the child</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Deactivate</code> (default)</td>
-<td>The child Subscription is deactivated. The <code>Ready</code> condition reason becomes <code>ParentDeactivated</code>. The child then follows its own deactivation sequence (snap-forward, <code>WaitingForCollectionJob</code>, finalizer removal).</td>
-</tr>
-<tr>
-<td><code>Orphan</code></td>
-<td>The child Subscription stays active. The <code>Ready</code> condition reason becomes <code>Orphaned</code>. The child continues accruing charges independently.</td>
-</tr>
-</tbody>
-</table>
-<p>The effective policy is resolved in this order: the child Subscription's own <code>spec.lifecycle.onParentDeactivate</code>, then the child Offering's <code>lifecycle.onParentDeactivate</code>, then <code>Deactivate</code> if neither is set. See <a href="parent-child-subscriptions.html">Parent-child subscriptions</a> for the full precedence explanation.</p>
-<h2 id="what-happens-when-a-targetref-disappears">What happens when a <code>targetRef</code> disappears<a class="headerlink" href="#what-happens-when-a-targetref-disappears" title="Permanent link">#</a></h2>
-<p>If a Subscription has <code>spec.lifecycle.targetRef</code> set and the target resource is deleted, the Subscription deactivates automatically. The sequence is the same as a user-initiated delete: snap-forward, <code>WaitingForCollectionJob</code>, finalizer removal after <code>minPeriods</code>.</p>
-<p>The condition on the Subscription will show <code>Ready: False</code> with reason <code>TargetNotFound</code> during the window between the target's disappearance and the deactivation being processed.</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>subscription<span class="w"> </span>acme-postgres<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Conditions:
-  Type:    Ready
-  Status:  False
-  Reason:  TargetNotFound
-</code></pre></div>
-<p>After deactivation is recorded:</p>
-<div class="highlight"><pre><span></span><code>Conditions:
-  Type:    Deleting
-  Status:  True
-  Reason:  WaitingForCollectionJob
-</code></pre></div>
 <h2 id="verify-cleanup-completed">Verify cleanup completed<a class="headerlink" href="#verify-cleanup-completed" title="Permanent link">#</a></h2>
 <p>After <code>minPeriods</code> ticks have elapsed and the CostJob has run, the Subscription object will be gone:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-postgres<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <p>Expected output:</p>
-<div class="highlight"><pre><span></span><code>Error from server (NotFound): subscriptions.finops.stakater.com "acme-postgres" not found
+<div class="highlight"><pre><span></span><code>Error from server (NotFound): subscriptions.finops.stakater.com "acme-platform-base" not found
 </code></pre></div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
 <p>If the Subscription will not delete and stays in <code>WaitingForCollectionJob</code>, the most likely cause is that <code>minPeriods</code> has not yet elapsed. Check <code>status.activatedAt</code> and count the full ticks. Remember that <code>minPeriods</code> on the Offering is immutable — you cannot lower it on an existing Offering. If you need a different cleanup guard for future Subscriptions, create a new Offering.</p>
@@ -3494,7 +3328,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="subscribe-to-offering.html">Subscribe to an offering</a> — create a Subscription.</li>
-<li><a href="parent-child-subscriptions.html">Parent-child subscriptions</a> — cascading deactivation through parent-child links.</li>
 <li><a href="read-subscription-costs.html">Read subscription costs</a> — understand the final cost snapshot before cleanup.</li>
 <li><a href="uninstall.html">Uninstall</a> — how to handle outstanding Subscriptions before removing the operator.</li>
 <li><a href="../reference/crds/subscription.html">Subscription CRD reference</a></li>

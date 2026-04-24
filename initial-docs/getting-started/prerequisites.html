@@ -2609,34 +2609,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2790,62 +2762,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3479,7 +3395,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h3 id="postgresql">PostgreSQL<a class="headerlink" href="#postgresql" title="Permanent link">#</a></h3>
 <p>The operator requires a reachable PostgreSQL database to store cost and charge data. The Helm chart looks for a Kubernetes Secret named <code>finops-operator-postgres-config</code> by default; that Secret must exist in the same namespace as the operator and must contain a <code>POSTGRES_CONNECTION_STRING</code> key holding the database DSN. See <a href="installation.html">Installation</a> for the exact <code>kubectl</code> command to create this Secret.</p>
 <h3 id="opencost">OpenCost<a class="headerlink" href="#opencost" title="Permanent link">#</a></h3>
-<p>OpenCost is the open-source cost allocation engine the operator queries for resource usage data. You can bring your own OpenCost installation (BYO mode) or let Stakater's Multi-Dependency Operator (MDO) manage it alongside the FinOps Operator (MTO-bundled mode). BYO mode suits teams that already run OpenCost or that want full control over the installation. MTO-bundled mode is convenient when you are deploying the full Stakater platform and want MDO to handle the OpenCost lifecycle. See <a href="../concepts/operating-modes.html">Operating modes</a> for a detailed comparison.</p>
+<p>OpenCost is the open-source cost allocation engine the operator queries for resource usage data. Install and configure OpenCost before installing the FinOps Operator. The operator needs a reachable OpenCost service URL set via the <code>OPENCOST_CONNECTION_STRING</code> environment variable (or the corresponding Helm value).</p>
 <h2 id="optional">Optional<a class="headerlink" href="#optional" title="Permanent link">#</a></h2>
 <h3 id="prometheus">Prometheus<a class="headerlink" href="#prometheus" title="Permanent link">#</a></h3>
 <p>The operator can use a Prometheus endpoint to expose supplementary metrics. If your deployment includes Prometheus, create a Kubernetes Secret named <code>finops-operator-prometheus-config</code> in the operator's namespace containing the endpoint URL. The chart value <code>secrets.prometheus</code> controls which Secret name the operator mounts.</p>

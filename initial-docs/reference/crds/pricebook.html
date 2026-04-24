@@ -2447,34 +2447,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2628,62 +2600,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3578,7 +3494,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h2 id="lifecycle-notes">Lifecycle notes<a class="headerlink" href="#lifecycle-notes" title="Permanent link">#</a></h2>
 <p>When a <code>PriceBook</code> is created or updated, the operator rewrites the <code>finops-operator-custom-pricing-configs</code> ConfigMap (in the namespace where OpenCost is deployed, typically <code>finops-operator-system</code>). If the ConfigMap content changes, the operator restarts the OpenCost deployment so the new rates take effect. If the content is unchanged, no restart occurs.</p>
 <p>The ConfigMap key <code>default.json</code> contains all pricing fields that OpenCost reads, including CPU, GPU, RAM, spot variants, storage, and network egress categories.</p>
-<p>See <a href="../../concepts/operating-modes.html">Operating modes</a> for how <code>PriceBook</code> interacts with <code>FinOpsProvider</code>'s <code>pricingModelSource</code> field.</p>
 <p>See <a href="../status-conditions.html">Status conditions</a> for the full list of reasons this resource emits.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <p>The following example defines a baseline on-premises pricing model with equal unit rates across all resource types.</p>

@@ -2447,34 +2447,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2628,62 +2600,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3463,21 +3379,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <td>No action needed.</td>
 </tr>
 <tr>
-<td><code>RequiredOfferingNotFound</code></td>
-<td>A required Offering is missing.</td>
-<td>Create the missing Offering in the same namespace or in the namespace referenced by <code>compatibility.requiredOfferings[].namespace</code>. The condition clears once the required Offering becomes Ready.</td>
-</tr>
-<tr>
-<td><code>RequiredOfferingNotReady</code></td>
-<td>A required Offering exists but is not ready.</td>
-<td>Investigate the Ready condition on the required Offering. Once it becomes Ready, this condition clears automatically.</td>
-</tr>
-<tr>
-<td><code>CircularDependencyDetected</code></td>
-<td>The <code>requiredOfferings</code> graph contains a cycle.</td>
-<td>Remove the cycle from the Offering's <code>compatibility.requiredOfferings</code> graph. Creation is blocked until the cycle is gone.</td>
-</tr>
-<tr>
 <td><code>ValidationError</code></td>
 <td>A validation step failed for a reason not covered above.</td>
 <td>Inspect the condition message for specifics. Typical causes are field-level validation failures not covered by other reasons.</td>
@@ -3507,12 +3408,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <tr>
 <td><code>DeletionBlocked</code></td>
 <td>Something still references the Offering; admission blocks deletion.</td>
-<td>Something still references this Offering. Inspect the condition message for specifics, or check <code>DependentOfferingsExist</code> or <code>DependentSubscriptionsExist</code>.</td>
-</tr>
-<tr>
-<td><code>DependentOfferingsExist</code></td>
-<td>Another Offering depends on this one.</td>
-<td>Another Offering's <code>compatibility.requiredOfferings</code> still references this one. Remove the dependency or delete the dependent Offering first.</td>
+<td>Something still references this Offering. Inspect the condition message for specifics.</td>
 </tr>
 <tr>
 <td><code>DependentSubscriptionsExist</code></td>
@@ -3558,36 +3454,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <td>Investigate the Ready condition on the referenced Offering. Once it becomes Ready, the Subscription activates automatically.</td>
 </tr>
 <tr>
-<td><code>ParentSubscriptionNotFound</code></td>
-<td><code>parent.subscriptionRef</code> does not resolve.</td>
-<td>Check the Subscription's <code>parent.subscriptionRef</code>. The referenced parent does not exist — create it or correct the reference.</td>
-</tr>
-<tr>
-<td><code>ParentSubscriptionNotReady</code></td>
-<td>Parent exists but is not active.</td>
-<td>Wait for the parent Subscription to become Ready. This Subscription activates once the parent is active.</td>
-</tr>
-<tr>
-<td><code>TargetNotFound</code></td>
-<td><code>lifecycle.targetRef</code> does not resolve.</td>
-<td>The resource referenced by <code>lifecycle.targetRef</code> does not exist. Create it or correct the reference.</td>
-</tr>
-<tr>
-<td><code>TargetIsSelfReference</code></td>
-<td><code>lifecycle.targetRef</code> points to the Subscription itself.</td>
-<td><code>lifecycle.targetRef</code> cannot point at the Subscription itself. Update the reference to a different resource.</td>
-</tr>
-<tr>
-<td><code>Orphaned</code></td>
-<td>Parent deactivated; this Subscription stays active per the <code>Orphan</code> policy.</td>
-<td>Expected when the parent deactivated and this Subscription's effective <code>onParentDeactivate</code> policy is <code>Orphan</code>. No action unless you want the child to deactivate too.</td>
-</tr>
-<tr>
-<td><code>ParentDeactivated</code></td>
-<td>Parent deactivated; this Subscription also deactivated.</td>
-<td>Expected when the parent deactivated and this Subscription's effective policy is <code>Deactivate</code>. Either reactivate the parent or accept the cascade.</td>
-</tr>
-<tr>
 <td><code>MarkedForDeletion</code></td>
 <td>The Subscription has been marked for deletion.</td>
 <td>Expected after a user initiates deletion. The Subscription will be fully removed once <code>minPeriods</code> has elapsed since <code>activatedAt</code>.</td>
@@ -3608,11 +3474,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <td><code>WaitingForCollectionJob</code></td>
 <td>The Subscription is deactivated and pending cleanup by the scheduled <code>SubscriptionChargeCollection</code> job. The <code>minPeriods</code> duration has not yet fully elapsed since <code>activatedAt</code>.</td>
 <td>Expected. The Subscription has been marked for deletion and will be removed once the scheduled <code>SubscriptionChargeCollection</code> CostJob has seen <code>minPeriods</code> full ticks pass since <code>activatedAt</code>.</td>
-</tr>
-<tr>
-<td><code>ErrorFetchingChildSubscriptions</code></td>
-<td>Transient error while handling child deactivation during deletion.</td>
-<td>Transient error while cascading deletion to children. The operator will retry automatically.</td>
 </tr>
 </tbody>
 </table>

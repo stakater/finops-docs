@@ -2262,10 +2262,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-create-a-finopsprovider" class="md-nav__link">
+  <a href="#step-3-create-a-pricebook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Create a FinOpsProvider
+        Step 3: Create a PriceBook
       
     </span>
   </a>
@@ -2273,10 +2273,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-create-a-pricebook" class="md-nav__link">
+  <a href="#step-4-create-a-finopsprovider" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Create a PriceBook
+        Step 4: Create a FinOpsProvider
       
     </span>
   </a>
@@ -2619,34 +2619,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2800,62 +2772,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3371,10 +3287,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-create-a-finopsprovider" class="md-nav__link">
+  <a href="#step-3-create-a-pricebook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Create a FinOpsProvider
+        Step 3: Create a PriceBook
       
     </span>
   </a>
@@ -3382,10 +3298,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-create-a-pricebook" class="md-nav__link">
+  <a href="#step-4-create-a-finopsprovider" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Create a PriceBook
+        Step 4: Create a FinOpsProvider
       
     </span>
   </a>
@@ -3497,7 +3413,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p>Confirm the following are in place before proceeding:</p>
 <ul>
 <li><strong>cert-manager</strong> is installed and its pods are running.</li>
-<li><strong>OpenCost</strong> is reachable from the cluster (either BYO or MDO-managed).</li>
+<li><strong>OpenCost</strong> is reachable from the cluster.</li>
 <li><strong>PostgreSQL</strong> is reachable and the <code>finops-operator-postgres-config</code> Secret exists in <code>finops-operator-system</code>.</li>
 </ul>
 <p>See <a href="prerequisites.html">Prerequisites</a> for installation guidance on each component.</p>
@@ -3508,26 +3424,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </code></pre></div>
 <p>You should see <code>finops-operator-controller-manager</code> with all replicas ready before continuing.</p>
 <hr>
-<h2 id="step-3-create-a-finopsprovider">Step 3: Create a FinOpsProvider<a class="headerlink" href="#step-3-create-a-finopsprovider" title="Permanent link">#</a></h2>
-<p>The <code>FinOpsProvider</code> is a cluster-scoped singleton that tells the operator which environment it is running in and how pricing reaches OpenCost. It must be named exactly <code>default</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># finopsprovider.yaml</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FinOpsProvider</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">onpremoptions</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">pricingModelSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pricebook</span>
-</code></pre></div>
-<p>Apply it:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>finopsprovider.yaml
-</code></pre></div>
-<p>Confirm it synced:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>finopsprovider<span class="w"> </span>default
-</code></pre></div>
-<p>You should see a <code>lastSyncTime</code> in the status within a few seconds, indicating the operator has pushed the configuration to OpenCost.</p>
-<hr>
-<h2 id="step-4-create-a-pricebook">Step 4: Create a PriceBook<a class="headerlink" href="#step-4-create-a-pricebook" title="Permanent link">#</a></h2>
+<h2 id="step-3-create-a-pricebook">Step 3: Create a PriceBook<a class="headerlink" href="#step-3-create-a-pricebook" title="Permanent link">#</a></h2>
 <p>The <code>PriceBook</code> defines per-resource rates that OpenCost uses to cost raw allocation data. Setting <code>valuationMode: currency</code> and providing rates in the <code>currency</code> you choose activates the custom pricing path.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># pricebook.yaml</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
@@ -3552,6 +3449,26 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pricebook<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
 <p>The <code>active</code> field in the status becomes <code>true</code> once the operator has written the pricing configuration to OpenCost.</p>
+<hr>
+<h2 id="step-4-create-a-finopsprovider">Step 4: Create a FinOpsProvider<a class="headerlink" href="#step-4-create-a-finopsprovider" title="Permanent link">#</a></h2>
+<p>The <code>FinOpsProvider</code> is a cluster-scoped singleton that tells the operator which cloud environment it is running in and enables the OpenCost cloud billing integration. It must be named exactly <code>default</code>.</p>
+<p><strong>Note:</strong> This step is needed for cloud setups (AWS, GCP, Azure) to enable OpenCost cloud billing integration and to activate PriceBook-based pricing. On-premises users relying solely on PriceBook rates may skip this step if OpenCost is already configured independently.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># finopsprovider.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FinOpsProvider</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">onpremoptions</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">pricingModelSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pricebook</span>
+</code></pre></div>
+<p>Apply it:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>finopsprovider.yaml
+</code></pre></div>
+<p>Confirm it synced:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>finopsprovider<span class="w"> </span>default
+</code></pre></div>
+<p>You should see a <code>lastSyncTime</code> in the status within a few seconds, indicating the operator has pushed the configuration to OpenCost.</p>
 <hr>
 <h2 id="step-5-create-a-costjob-for-resource-cost-collection">Step 5: Create a CostJob for resource cost collection<a class="headerlink" href="#step-5-create-a-costjob-for-resource-cost-collection" title="Permanent link">#</a></h2>
 <p>A <code>CostJob</code> of type <code>ResourceCostCollection</code> tells the operator how often to pull allocation data from OpenCost and store it for later reporting. The operator converts the <code>interval</code> to a Kubernetes <code>CronJob</code> that runs on that schedule.</p>
@@ -3594,10 +3511,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p>Confirm the Offering is ready:</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>offering<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
-<p>The <code>READY</code> column should show <code>True</code>. A value of <code>False</code> means a required Offering is missing or not yet ready — expected during reconciliation, and recovers automatically once dependencies are satisfied.</p>
+<p>The <code>READY</code> column should show <code>True</code>.</p>
 <hr>
 <h2 id="step-7-create-a-subscription">Step 7: Create a Subscription<a class="headerlink" href="#step-7-create-a-subscription" title="Permanent link">#</a></h2>
-<p>A <code>Subscription</code> binds a workload or tenant to an Offering and starts accruing charges. Because this Subscription has no <code>parent</code> and no <code>lifecycle.targetRef</code>, it activates as soon as the referenced Offering is ready.</p>
+<p>A <code>Subscription</code> binds a workload or tenant to an Offering and starts accruing charges. It activates as soon as the referenced Offering is ready.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># subscription.yaml</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subscription</span>
@@ -3637,46 +3554,47 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p>After the <code>SubscriptionChargeCollection</code> job runs (up to 1 hour after you created it), fetch the Subscription and inspect the costs:</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>my-platform-sub<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
 </code></pre></div>
-<p>The <code>status.costs</code> field contains exactly three rolling buckets: <code>hour</code>, <code>day</code>, and <code>month</code>. Here is a trimmed example of what you will see:</p>
+<p>The <code>status.costs</code> field contains exactly three rolling buckets: <code>hour</code>, <code>day</code>, and <code>month</code>. The example below shows the state 30 minutes after activation at <code>2026-04-01T09:00:00Z</code>, when <code>tickAlignment: ActivatedAt</code> and <code>period: 1h</code> means the first tick boundary is at <code>10:00:00Z</code>. No ticks have completed yet at <code>09:30:00Z</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ready</span><span class="p">:</span><span class="w"> </span><span class="s">"True"</span>
-<span class="w">  </span><span class="nt">activatedAt</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-20T09:00:00Z"</span>
+<span class="w">  </span><span class="nt">activatedAt</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T09:00:00Z"</span>
 <span class="w">  </span><span class="nt">costs</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
-<span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-20T09:00:00Z"</span>
-<span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-20T10:00:00Z"</span>
-<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span><span class="w">        </span><span class="c1"># USD 20.00 accrued so far this hour</span>
-<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span><span class="w">      </span><span class="c1"># USD 40.00 projected for the full hour</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T09:00:00Z"</span>
+<span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T10:00:00Z"</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">              </span><span class="c1"># no ticks settled yet — first tick ends at 10:00:00Z</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span><span class="w">     </span><span class="c1"># USD 40.00 projected for the full hour</span>
 <span class="w">      </span><span class="nt">breakdown</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subscription</span>
-<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span>
+<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
 <span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">day</span>
-<span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-20T00:00:00Z"</span>
-<span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-21T00:00:00Z"</span>
-<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span><span class="w">        </span><span class="c1"># USD 20.00 since midnight</span>
-<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">960000000</span><span class="w">     </span><span class="c1"># USD 960.00 projected for the full day (24 hours × USD 40)</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T00:00:00Z"</span>
+<span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-02T00:00:00Z"</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">              </span><span class="c1"># no ticks settled yet</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">560000000</span><span class="w">    </span><span class="c1"># 14 full ticks until day-end × USD 40.00 = USD 560.00</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">month</span>
 <span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T00:00:00Z"</span>
 <span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-05-01T00:00:00Z"</span>
-<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span><span class="w">        </span><span class="c1"># USD 20.00 since the first of the month</span>
-<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28800000000</span><span class="w">   </span><span class="c1"># USD 28,800 projected for the full month (30 days × 24h × USD 40)</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">              </span><span class="c1"># no ticks settled yet</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28400000000</span><span class="w">  </span><span class="c1"># 710 full ticks until month-end × USD 40.00 = USD 28,400.00</span>
 </code></pre></div>
+<p>Charges settle at tick boundaries. <code>current</code> reflects ticks that have completed inside the bucket; <code>projected</code> extrapolates the number of tick boundaries remaining until the bucket ends. Within a tick, <code>current</code> stays at its last settled value.</p>
 <p>How to read the three buckets:</p>
 <ul>
-<li><strong><code>hour</code></strong> — the current calendar hour. <code>current</code> is what has accrued since the hour started. <code>projected</code> is the estimated total if the Subscription stays active for the full hour.</li>
-<li><strong><code>day</code></strong> — the current calendar day from midnight to midnight. <code>projected</code> accounts for remaining hours.</li>
-<li><strong><code>month</code></strong> — the current calendar month. <code>projected</code> is based on the remaining days in the month.</li>
+<li><strong><code>hour</code></strong> — the current billing hour starting from <code>activatedAt</code>. <code>current</code> is the sum of all ticks that have completed. <code>projected</code> is the estimated total if the Subscription stays active for the full hour.</li>
+<li><strong><code>day</code></strong> — the current calendar day. At <code>09:30:00Z</code> on April 1, there are 14 more full 1-hour tick boundaries before midnight (at <code>10:00</code>, <code>11:00</code>, ..., <code>23:00</code>), giving a projected of 14 × $40.00 = $560.00.</li>
+<li><strong><code>month</code></strong> — the current calendar month. From <code>09:30:00Z</code> on April 1 to <code>00:00:00Z</code> on May 1 is approximately 710.5 hours, so 710 full tick boundaries fit, giving a projected of 710 × $40.00 = $28,400.00.</li>
 </ul>
 <p>All values are in micro-currency. Divide by <code>1,000,000</code> to get the amount in the PriceBook's currency (USD in this example). The <code>breakdown</code> list names individual meters; <code>subscription</code> is the recurring fee from the Offering's <code>subscriptionFee</code>.</p>
 <hr>
 <h2 id="what-you-did">What you did<a class="headerlink" href="#what-you-did" title="Permanent link">#</a></h2>
-<p>You installed the operator, defined an on-premises pricing model with a <code>FinOpsProvider</code> and a <code>PriceBook</code>, configured hourly resource cost collection with a <code>CostJob</code>, created a paid capability with an <code>Offering</code>, subscribed to it with a <code>Subscription</code>, and configured hourly charge computation with a second <code>CostJob</code>. The Subscription's <code>status.costs</code> now shows rolling hour, day, and month buckets with the accumulated and projected charges.</p>
+<p>You installed the operator, defined an on-premises pricing model with a <code>PriceBook</code>, configured the cloud environment with a <code>FinOpsProvider</code>, configured hourly resource cost collection with a <code>CostJob</code>, created a paid capability with an <code>Offering</code>, subscribed to it with a <code>Subscription</code>, and configured hourly charge computation with a second <code>CostJob</code>. The Subscription's <code>status.costs</code> now shows rolling hour, day, and month buckets with the accumulated and projected charges.</p>
 <h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="../concepts/index.html">Concepts</a> — understand the mental model behind the five CRDs.</li>
 <li><a href="../guides/define-offering.html">Define an offering</a> — learn about tick alignment, immutability, and lifecycle rules.</li>
-<li><a href="../guides/parent-child-subscriptions.html">Parent-child subscriptions</a> — model hierarchical billing relationships.</li>
+<li><a href="../guides/read-subscription-costs.html">Read subscription costs</a> — understand how to interpret <code>status.costs</code> in detail.</li>
 <li><a href="../reference/crds/subscription.html">Subscription CRD reference</a> — full field reference including all status fields.</li>
 </ul>
 

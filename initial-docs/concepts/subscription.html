@@ -2553,34 +2553,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2734,62 +2706,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3360,32 +3276,24 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h1 id="subscription">Subscription<a class="headerlink" href="#subscription" title="Permanent link">#</a></h1>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Permanent link">#</a></h2>
 <p>A Subscription is an active binding to an <a href="offering.html">Offering</a>. While it is active, it accrues the recurring fee defined in that Offering. The charges are reported in the Subscription's status across three rolling time buckets — hour, day, and month — so you can see both the charges accumulated so far and a projected total for each period.</p>
-<p>A Subscription can optionally reference a parent Subscription (for traceability and lifecycle cascading) and a Kubernetes target resource (so the Subscription automatically activates and deactivates with the target). This makes it possible to model real workload lifecycles: when a Deployment is created, the Subscription activates; when the Deployment is deleted, the Subscription deactivates.</p>
 <h2 id="when-to-use-it">When to use it<a class="headerlink" href="#when-to-use-it" title="Permanent link">#</a></h2>
-<p>Platform engineers or automation create a Subscription whenever a tenant or workload starts using a service that an Offering represents. Subscriptions are how individual billing relationships are expressed. You create one Subscription per tenant-service binding, optionally nesting child Subscriptions under a parent to model hierarchical cost structures.</p>
-<p>Use <code>parent.subscriptionRef</code> when you want child Subscriptions to cascade deactivation from a parent. Use <code>lifecycle.targetRef</code> when you want the Subscription lifecycle to follow a Kubernetes resource.</p>
+<p>Platform engineers or automation create a Subscription whenever a tenant or workload starts using a service that an Offering represents. Subscriptions are how individual billing relationships are expressed. You create one Subscription per tenant-service binding.</p>
 <h2 id="how-it-fits">How it fits<a class="headerlink" href="#how-it-fits" title="Permanent link">#</a></h2>
 <p>Subscription is the leaf in the resource graph. It references an Offering and inherits the Offering's pricing terms. The <a href="costjob.html">CostJob</a> SubscriptionChargeCollection job visits every active Subscription on each run, computes the charges that have accrued since the last tick, and updates <code>status.costs</code>.</p>
-<p>Subscriptions form trees through the optional <code>parent.subscriptionRef</code> field. A parent's deactivation propagates to children according to the effective <code>onParentDeactivate</code> policy, which is resolved by looking first at the Subscription's own <code>lifecycle.onParentDeactivate</code>, then at the Offering's lifecycle policy, then defaulting to <code>Deactivate</code>.</p>
 <p>The operator maintains a finalizer on every Subscription, which controls the cleanup behavior described below.</p>
 <h2 id="key-things-to-know">Key things to know<a class="headerlink" href="#key-things-to-know" title="Permanent link">#</a></h2>
 <ul>
 <li>Subscription is <code>namespaced</code>. The referenced Offering defaults to the same namespace unless <code>offeringRef.namespace</code> is specified.</li>
-<li>A Subscription becomes active when its Offering is <code>Ready: True</code>, its parent Subscription (if set) is active, and its target resource (if set) exists and is <code>Ready</code>.</li>
-<li>If neither <code>parent</code> nor <code>targetRef</code> is set, the Subscription activates as soon as it validates against a ready Offering.</li>
+<li>A Subscription becomes active (<code>ready: True</code>) when its Offering is <code>Ready: True</code>. If the Offering is not ready, the Subscription stays <code>Ready: False</code>.</li>
 <li>Charges accrue per tick. The tick formula, alignment, and proration rules are defined by the Offering's <code>subscriptionFee</code>. See <a href="billing-model.html">Billing model</a>.</li>
-<li><code>status.costs</code> contains exactly three rolling buckets: <code>hour</code>, <code>day</code>, and <code>month</code>. Each has <code>current</code> (accrued so far) and <code>projected</code> (projected for the full bucket) values in micro-currency.</li>
+<li><code>status.costs</code> contains exactly three rolling buckets: <code>hour</code>, <code>day</code>, and <code>month</code>. Each has <code>current</code> (accrued so far in completed ticks) and <code>projected</code> (projected for the full bucket) values in micro-currency.</li>
 <li>When a Subscription is deleted, the operator does not immediately remove the object. It marks the Subscription as deactivating and keeps the finalizer in place. The <code>SubscriptionChargeCollection</code> job removes the finalizer once at least <code>minPeriods</code> full ticks have elapsed since <code>activatedAt</code>.</li>
 <li><code>deactivatedAt</code> in status is snapped forward to the next tick boundary for the Offering's alignment. There is never a partial final tick — the Subscription is charged for the full final period.</li>
-<li>A Subscription cannot reference itself as its parent or point <code>targetRef</code> at itself. These checks happen at admission (create time).</li>
-<li>Child Subscriptions of a deactivating parent are either also deactivated (with condition reason <code>ParentDeactivated</code>) or left active (reason <code>Orphaned</code>), according to the effective policy.</li>
-<li>Admission checks only run at create time; updates and deletes are not blocked.</li>
 </ul>
 <h2 id="learn-more">Learn more<a class="headerlink" href="#learn-more" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="../reference/crds/subscription.html">Subscription reference</a> — full field specification and status fields.</li>
 <li><a href="../guides/subscribe-to-offering.html">Subscribe to offering</a> — guide that walks through creating and verifying a Subscription.</li>
-<li><a href="../guides/parent-child-subscriptions.html">Parent-child subscriptions</a> — guide for composing nested Subscription trees.</li>
 <li><a href="../guides/read-subscription-costs.html">Read subscription costs</a> — guide for interpreting <code>status.costs</code>.</li>
 <li><a href="billing-model.html">Billing model</a> — explains tick alignment, proration, and the <code>minPeriods</code> cleanup guard.</li>
 </ul>

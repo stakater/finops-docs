@@ -2553,34 +2553,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2734,62 +2706,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3366,7 +3282,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p>To take effect, a PriceBook requires <code>pricingModelSource: Pricebook</code> in the <a href="finops-provider.html">FinOpsProvider</a>. Without that setting, the PriceBook is stored but OpenCost ignores it.</p>
 <h2 id="how-it-fits">How it fits<a class="headerlink" href="#how-it-fits" title="Permanent link">#</a></h2>
 <p>PriceBook feeds pricing into OpenCost, which is then consumed by <a href="costjob.html">CostJob</a> when it pulls allocation data. Subscription charges reported in <a href="subscription.html">Subscription</a> status reflect these rates indirectly — the <code>cpuHour</code>, <code>ramGbHour</code>, and other resource meters in <code>status.costs.breakdown</code> are populated from allocation data costed at PriceBook rates.</p>
-<p>In BYO-OpenCost mode, the PriceBook is the primary mechanism by which pricing reaches OpenCost. In MTO-bundled mode, the <a href="finops-provider.html">FinOpsProvider</a> drives the OpenCost configuration and pricing changes come from the PriceBook ConfigMap update path. See <a href="operating-modes.html">Operating modes</a> for details.</p>
+<p>The PriceBook is the primary mechanism by which pricing reaches OpenCost. When a PriceBook changes, the operator rewrites the OpenCost pricing ConfigMap and restarts OpenCost if the content changed.</p>
 <h2 id="key-things-to-know">Key things to know<a class="headerlink" href="#key-things-to-know" title="Permanent link">#</a></h2>
 <ul>
 <li>PriceBook is <code>namespaced</code>. It typically lives in the same namespace as the operator (<code>finops-operator-system</code>).</li>
@@ -3381,7 +3297,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <ul>
 <li><a href="../reference/crds/pricebook.html">PriceBook reference</a> — full field specification including all rate fields.</li>
 <li><a href="../guides/define-pricing.html">Define pricing</a> — guide that creates a PriceBook alongside a FinOpsProvider.</li>
-<li><a href="operating-modes.html">Operating modes</a> — explains how the PriceBook ConfigMap update path differs between modes.</li>
 </ul>
 
 

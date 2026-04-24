@@ -2447,34 +2447,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2706,28 +2678,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#compatibility-and-required-offerings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compatibility and required offerings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lifecycle-defaults" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lifecycle defaults
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#yaml-examples" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2823,62 +2773,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3422,28 +3316,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#compatibility-and-required-offerings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compatibility and required offerings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lifecycle-defaults" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lifecycle defaults
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#yaml-examples" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3545,7 +3417,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <li><code>kubectl</code> access to the operator namespace (typically <code>finops-operator-system</code>).</li>
 </ul>
 <h2 id="offering-immutability">Offering immutability<a class="headerlink" href="#offering-immutability" title="Permanent link">#</a></h2>
-<p>An <code>Offering</code>'s <code>spec</code> is immutable: once created, you cannot change its pricing, lifecycle defaults, or compatibility rules. If you need different terms, create a new <code>Offering</code> with a new name and migrate new Subscriptions to it. Old Subscriptions continue using the original <code>Offering</code> until they are deactivated.</p>
+<p>An <code>Offering</code>'s <code>spec</code> is immutable: once created, you cannot change its pricing. If you need different terms, create a new <code>Offering</code> with a new name and migrate new Subscriptions to it. Old Subscriptions continue using the original <code>Offering</code> until they are deactivated.</p>
 <p>The reason for immutability is billing integrity: active Subscriptions must always be charged under the exact terms they were activated under.</p>
 <p><strong>Versioning in practice:</strong></p>
 <div class="highlight"><pre><span></span><code>managed-postgres-v1   # original; still referenced by existing Subscriptions
@@ -3631,36 +3503,6 @@ managed-postgres-v2   # new pricing; new Subscriptions reference this one
 <h3 id="minperiods-as-a-cleanup-guard"><code>minPeriods</code> as a cleanup guard<a class="headerlink" href="#minperiods-as-a-cleanup-guard" title="Permanent link">#</a></h3>
 <p><code>minPeriods</code> is not a billing mechanism — it controls when a deleted Subscription is allowed to be garbage-collected. After a Subscription is deleted, the operator keeps the Kubernetes object visible (via a finalizer, a marker that prevents deletion until explicitly released) until at least <code>minPeriods</code> full ticks have elapsed since <code>activatedAt</code>. Billing continues normally during this window. Once the tick count is reached, the finalizer is removed and Kubernetes deletes the object.</p>
 <p>Set <code>minPeriods: 2</code> on a monthly Offering to require that any Subscription runs for at least two full months before it can be cleaned up.</p>
-<h2 id="compatibility-and-required-offerings">Compatibility and required offerings<a class="headerlink" href="#compatibility-and-required-offerings" title="Permanent link">#</a></h2>
-<p>The <code>compatibility.requiredOfferings</code> list names other <code>Offerings</code> that must be active on the parent Subscription or a sibling Subscription before this <code>Offering</code> can be activated. This is the mechanism for expressing service dependencies — for example, a "Managed Postgres" offering that requires a "Platform Base" offering to be present.</p>
-<p>See <a href="required-offerings.html">Required offerings</a> for a detailed walk-through with examples.</p>
-<h2 id="lifecycle-defaults">Lifecycle defaults<a class="headerlink" href="#lifecycle-defaults" title="Permanent link">#</a></h2>
-<p>The <code>lifecycle</code> block sets default behavior for child Subscriptions when this Offering's Subscriptions are deactivated:</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>lifecycle.onParentDeactivate</code></td>
-<td><code>Deactivate</code></td>
-<td>Whether child Subscriptions deactivate (<code>Deactivate</code>) or stay active (<code>Orphan</code>) when their parent deactivates.</td>
-</tr>
-<tr>
-<td><code>lifecycle.allowOverride</code></td>
-<td><code>false</code></td>
-<td>Whether the Subscription may override <code>onParentDeactivate</code>.</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Note:</strong> <code>lifecycle.allowOverride</code> is accepted by the API but is not currently enforced by the operator. A Subscription can always set its own <code>lifecycle.onParentDeactivate</code>, and it will take precedence over the Offering's default regardless of <code>allowOverride</code>. Do not rely on <code>allowOverride: false</code> to prevent Subscriptions from overriding cascade behavior.</p>
-</blockquote>
-<p>See <a href="parent-child-subscriptions.html">Parent-child subscriptions</a> for a full explanation of the cascade rules.</p>
 <h2 id="yaml-examples">YAML examples<a class="headerlink" href="#yaml-examples" title="Permanent link">#</a></h2>
 <h3 id="activatedat-hourly-offering">ActivatedAt hourly Offering<a class="headerlink" href="#activatedat-hourly-offering" title="Permanent link">#</a></h3>
 <p>Charges $40.00 per hour from the moment of activation, with no proration. Requires at least two full ticks before cleanup:</p>
@@ -3676,11 +3518,6 @@ managed-postgres-v2   # new pricing; new Subscriptions reference this one
 <span class="w">      </span><span class="nt">tickAlignment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ActivatedAt</span>
 <span class="w">      </span><span class="nt">priceMicros</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span>
 <span class="w">      </span><span class="nt">minPeriods</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
-<span class="w">  </span><span class="nt">compatibility</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">requiredOfferings</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
-<span class="w">  </span><span class="nt">lifecycle</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">onParentDeactivate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deactivate</span>
 </code></pre></div>
 <h3 id="monthboundary-monthly-offering">MonthBoundary monthly Offering<a class="headerlink" href="#monthboundary-monthly-offering" title="Permanent link">#</a></h3>
 <p>Charges $500.00 per calendar month, aligned to the 1st of each month. The first tick is prorated from the activation date to the 1st of the next month:</p>
@@ -3695,8 +3532,6 @@ managed-postgres-v2   # new pricing; new Subscriptions reference this one
 <span class="w">      </span><span class="nt">period</span><span class="p">:</span><span class="w"> </span><span class="s">"1"</span>
 <span class="w">      </span><span class="nt">tickAlignment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MonthBoundary</span>
 <span class="w">      </span><span class="nt">priceMicros</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500000000</span>
-<span class="w">  </span><span class="nt">lifecycle</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">onParentDeactivate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deactivate</span>
 </code></pre></div>
 <h2 id="verify-it-worked">Verify it worked<a class="headerlink" href="#verify-it-worked" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>offering<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
@@ -3709,14 +3544,12 @@ platform-base     True
 <p>For more detail:</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>offering<span class="w"> </span>managed-postgres<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
-<p>Look for a <code>Ready</code> condition with <code>status: "True"</code> and reason <code>ValidationSucceeded</code>. If the Offering references <code>requiredOfferings</code> and those are not yet ready, you will see <code>Ready: False</code> with reason <code>RequiredOfferingNotFound</code> or <code>RequiredOfferingNotReady</code> — this is expected while the referenced Offerings are being created.</p>
+<p>Look for a <code>Ready</code> condition with <code>status: "True"</code> and reason <code>ValidationSucceeded</code>.</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
 <p>If the <code>Offering</code> stays <code>Ready: False</code> or is rejected on creation, see <a href="../troubleshooting.html">Troubleshooting</a> and <a href="../reference/status-conditions.html">Status conditions reference</a>.</p>
 <h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="subscribe-to-offering.html">Subscribe to an offering</a> — create a Subscription that references this Offering.</li>
-<li><a href="required-offerings.html">Required offerings</a> — configure <code>compatibility.requiredOfferings</code> with a concrete example.</li>
-<li><a href="parent-child-subscriptions.html">Parent-child subscriptions</a> — understand lifecycle cascade options.</li>
 <li><a href="../reference/crds/offering.html">Offering CRD reference</a></li>
 </ul>
 

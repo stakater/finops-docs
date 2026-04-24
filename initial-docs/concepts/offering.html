@@ -2553,34 +2553,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2734,62 +2706,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3359,31 +3275,25 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 <h1 id="offering">Offering<a class="headerlink" href="#offering" title="Permanent link">#</a></h1>
 <h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Permanent link">#</a></h2>
-<p>An Offering is a named, immutable pricing contract for something that costs money. It defines the recurring fee that a Subscription accrues while active, the tick alignment that governs when billing periods start and end, and optional compatibility rules that constrain which Subscriptions can use it. Examples include a managed database tier, a GPU workload slot, or a platform base fee that every tenant must carry.</p>
-<p>Because an Offering's <code>spec</code> is immutable after creation, it acts as a stable contract. Changing pricing or compatibility rules requires creating a new Offering. This immutability gives you a clear audit trail: a Subscription's charges are always traceable to the exact Offering spec that was in effect when the Subscription was created.</p>
+<p>An Offering is a named, immutable pricing contract for something that costs money. It defines the recurring fee that a Subscription accrues while active and the tick alignment that governs when billing periods start and end. Examples include a managed database tier, a GPU workload slot, or a platform base fee.</p>
+<p>Because an Offering's <code>spec</code> is immutable after creation, it acts as a stable contract. Changing pricing rules requires creating a new Offering. This immutability gives you a clear audit trail: a Subscription's charges are always traceable to the exact Offering spec that was in effect when the Subscription was created.</p>
 <h2 id="when-to-use-it">When to use it<a class="headerlink" href="#when-to-use-it" title="Permanent link">#</a></h2>
 <p>Platform engineers create Offerings to represent the distinct services or cost categories they want to charge for. You define an Offering once, then many Subscriptions can bind to it. If you offer several tiers of a service (for example, small, medium, and large database plans), each tier is its own Offering.</p>
-<p>Use <code>compatibility.requiredOfferings</code> when a service depends on another being present — for example, a database add-on that requires a platform base Offering to already be active on the parent Subscription.</p>
 <h2 id="how-it-fits">How it fits<a class="headerlink" href="#how-it-fits" title="Permanent link">#</a></h2>
 <p>Offering sits between the billing model and individual subscribers. <a href="subscription.html">Subscriptions</a> reference an Offering by name and namespace. The Offering's <code>priceMicros</code>, <code>period</code>, and <code>tickAlignment</code> determine the charge formula that the <a href="costjob.html">CostJob</a> SubscriptionChargeCollection job applies when computing costs.</p>
-<p>An Offering can reference other Offerings via <code>compatibility.requiredOfferings</code>. The operator validates the dependency graph at admission and at reconciliation time, marking an Offering <code>Ready: False</code> if any required Offering is missing or not yet ready. The operator also maintains a finalizer on every Offering so that deletion is blocked while any Subscription or other Offering still references it.</p>
-<p>The lifecycle policy (<code>onParentDeactivate</code>) on an Offering sets the default behavior for child Subscriptions when their parent deactivates. Individual Subscriptions can override this policy.</p>
+<p>The operator also maintains a finalizer on every Offering so that deletion is blocked while any Subscription still references it.</p>
 <h2 id="key-things-to-know">Key things to know<a class="headerlink" href="#key-things-to-know" title="Permanent link">#</a></h2>
 <ul>
-<li>Offering is <code>namespaced</code>. Subscriptions and other Offerings reference it by name and optional namespace.</li>
-<li><code>spec</code> is immutable after creation. To change pricing or compatibility, create a new Offering and migrate Subscriptions to it.</li>
+<li>Offering is <code>namespaced</code>. Subscriptions reference it by name and optional namespace.</li>
+<li><code>spec</code> is immutable after creation. To change pricing, create a new Offering and migrate Subscriptions to it.</li>
 <li><code>priceMicros</code> is expressed in micro-currency: <code>1,000,000</code> equals 1.00 of the configured currency. The minimum value is <code>1</code>.</li>
-<li>An Offering with a self-reference or a cycle in <code>requiredOfferings</code> is rejected at admission.</li>
-<li>Deleting an Offering is rejected at admission while any Subscription or any other Offering references it. The operator maintains a finalizer for this purpose.</li>
-<li>An Offering whose required Offerings are missing or not yet ready is marked <code>Ready: False</code>. This is expected during reconciliation; it returns to <code>Ready: True</code> once the referenced Offerings become ready.</li>
-<li>The <code>lifecycle.allowOverride</code> field is accepted by the API but is not currently enforced: Subscriptions may set their own <code>lifecycle.onParentDeactivate</code> and it takes precedence regardless of this field.</li>
-<li>The lifecycle policy cascades to child Subscriptions unless the child Subscription overrides it with its own policy.</li>
+<li>Deleting an Offering is rejected at admission while any Subscription references it. The operator maintains a finalizer for this purpose.</li>
+<li>The operator publishes resolved per-meter prices on <code>status.resolvedPricing</code> once the Offering becomes Ready.</li>
 </ul>
 <h2 id="learn-more">Learn more<a class="headerlink" href="#learn-more" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="../reference/crds/offering.html">Offering reference</a> — full field specification including <code>period</code> format rules per tick alignment.</li>
-<li><a href="../guides/define-offering.html">Define an offering</a> — guide that walks through creating Offerings including required Offerings.</li>
-<li><a href="../guides/required-offerings.html">Required offerings</a> — guide for composing Offerings with dependencies.</li>
+<li><a href="../guides/define-offering.html">Define an offering</a> — guide that walks through creating Offerings.</li>
 <li><a href="billing-model.html">Billing model</a> — explains how <code>priceMicros</code>, <code>period</code>, and <code>tickAlignment</code> determine the charge formula.</li>
 </ul>
 

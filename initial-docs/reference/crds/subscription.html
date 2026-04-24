@@ -2447,34 +2447,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2628,62 +2600,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3101,32 +3017,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#effective-onparentdeactivate-precedence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Effective onParentDeactivate precedence
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#activation-rule" class="md-nav__link">
     <span class="md-ellipsis">
       
         Activation rule
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deactivation-triggers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deactivation triggers
       
     </span>
   </a>
@@ -3419,32 +3313,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#effective-onparentdeactivate-precedence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Effective onParentDeactivate precedence
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#activation-rule" class="md-nav__link">
     <span class="md-ellipsis">
       
         Activation rule
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deactivation-triggers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deactivation triggers
       
     </span>
   </a>
@@ -3561,9 +3433,9 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 <h1 id="subscription-reference">Subscription (reference)<a class="headerlink" href="#subscription-reference" title="Permanent link">#</a></h1>
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">#</a></h2>
-<p><code>Subscription</code> ties a tenant workload to an <a href="offering.html">Offering</a> and drives charge accrual. The operator activates the Subscription when its prerequisites are met, accumulates costs tick by tick according to the Offering's pricing rules, and writes rolling cost summaries into <code>status.costs</code>. Create a Subscription for each workload or tenant that should be billed against a defined Offering.</p>
+<p><code>Subscription</code> ties a tenant or workload to an <a href="offering.html">Offering</a> and drives charge accrual. The operator activates the Subscription when its Offering is ready, accumulates costs tick by tick according to the Offering's pricing rules, and writes rolling cost summaries into <code>status.costs</code>. Create a Subscription for each workload or tenant that should be billed against a defined Offering.</p>
 <h2 id="scope-and-name-constraints">Scope and name constraints<a class="headerlink" href="#scope-and-name-constraints" title="Permanent link">#</a></h2>
-<p><code>Subscription</code> is <code>namespaced</code>. There are no naming requirements beyond standard Kubernetes name constraints. A Subscription cannot reference itself as its own parent, and cannot point <code>lifecycle.targetRef</code> at itself — both are enforced at admission (create time only). <code>kubectl get subscription</code> shows a Ready column summarizing the Subscription's activation status.</p>
+<p><code>Subscription</code> is <code>namespaced</code>. There are no naming requirements beyond standard Kubernetes name constraints. <code>kubectl get subscription</code> shows a Ready column summarizing the Subscription's activation status.</p>
 <h2 id="spec">Spec<a class="headerlink" href="#spec" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -3590,78 +3462,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <td>Subscription's namespace</td>
 <td>Namespace of the Offering. Defaults to the Subscription's own namespace.</td>
 </tr>
-<tr>
-<td><code>parent.subscriptionRef.name</code></td>
-<td>string</td>
-<td>optional</td>
-<td>—</td>
-<td>Name of the parent Subscription, for traceability and lifecycle cascading.</td>
-</tr>
-<tr>
-<td><code>parent.subscriptionRef.namespace</code></td>
-<td>string</td>
-<td>optional</td>
-<td>Subscription's namespace</td>
-<td>Namespace of the parent Subscription.</td>
-</tr>
-<tr>
-<td><code>lifecycle.onParentDeactivate</code></td>
-<td><code>enum</code></td>
-<td>optional</td>
-<td>Offering's policy, then <code>Deactivate</code></td>
-<td>How this Subscription behaves when its parent deactivates. One of <code>Deactivate</code> or <code>Orphan</code>. Overrides the Offering's <code>lifecycle.onParentDeactivate</code> when set.</td>
-</tr>
-<tr>
-<td><code>lifecycle.targetRef.apiVersion</code></td>
-<td>string</td>
-<td>optional</td>
-<td>—</td>
-<td>API version of the Kubernetes resource whose existence gates activation.</td>
-</tr>
-<tr>
-<td><code>lifecycle.targetRef.kind</code></td>
-<td>string</td>
-<td>optional</td>
-<td>—</td>
-<td>Kind of the target resource.</td>
-</tr>
-<tr>
-<td><code>lifecycle.targetRef.namespace</code></td>
-<td>string</td>
-<td>optional</td>
-<td>—</td>
-<td>Namespace of the target resource.</td>
-</tr>
-<tr>
-<td><code>lifecycle.targetRef.name</code></td>
-<td>string</td>
-<td>optional</td>
-<td>—</td>
-<td>Name of the target resource.</td>
-</tr>
 </tbody>
 </table>
-<h3 id="effective-onparentdeactivate-precedence">Effective onParentDeactivate precedence<a class="headerlink" href="#effective-onparentdeactivate-precedence" title="Permanent link">#</a></h3>
-<p>The effective <code>onParentDeactivate</code> policy is resolved in this order:</p>
-<ol>
-<li><code>Subscription.spec.lifecycle.onParentDeactivate</code> (if set on this Subscription).</li>
-<li><code>Offering.spec.lifecycle.onParentDeactivate</code> (from the referenced Offering).</li>
-<li><code>Deactivate</code> (the built-in default).</li>
-</ol>
 <h3 id="activation-rule">Activation rule<a class="headerlink" href="#activation-rule" title="Permanent link">#</a></h3>
-<p>A Subscription becomes active (<code>ready: True</code>) when all of the following are satisfied:</p>
-<ul>
-<li>Its Offering exists and is <code>Ready: True</code>.</li>
-<li>If <code>parent.subscriptionRef</code> is set, the parent Subscription is active.</li>
-<li>If <code>lifecycle.targetRef</code> is set, the referenced Kubernetes resource exists and is <code>Ready</code>.</li>
-<li>If neither <code>parent</code> nor <code>targetRef</code> is set, the Subscription activates as soon as it validates.</li>
-</ul>
-<h3 id="deactivation-triggers">Deactivation triggers<a class="headerlink" href="#deactivation-triggers" title="Permanent link">#</a></h3>
-<ul>
-<li>The parent Subscription deactivates and the effective <code>onParentDeactivate</code> policy is <code>Deactivate</code>. If the policy is <code>Orphan</code>, this Subscription stays active.</li>
-<li>The resource referenced by <code>lifecycle.targetRef</code> disappears.</li>
-<li>The user deletes the Subscription (see lifecycle notes below for what happens next).</li>
-</ul>
+<p>A Subscription becomes active (<code>ready: True</code>) when its Offering exists and is <code>Ready: True</code>. If the Offering is missing or not ready, the Subscription stays <code>Ready: False</code> with a descriptive reason in <code>status.conditions</code> (for example <code>OfferingNotFound</code> or <code>OfferingNotReady</code>).</p>
 <h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -3728,7 +3532,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <tr>
 <td><code>current</code></td>
 <td>int64 (micro-currency)</td>
-<td>Accumulated spend in the bucket so far.</td>
+<td>Accumulated spend from completed ticks in the bucket so far.</td>
 </tr>
 <tr>
 <td><code>projected</code></td>
@@ -3783,50 +3587,24 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h2 id="validation-rules">Validation rules<a class="headerlink" href="#validation-rules" title="Permanent link">#</a></h2>
 <ul>
 <li><code>offeringRef.name</code> is required.</li>
-<li>A Subscription cannot reference itself as its own parent (<code>parent.subscriptionRef</code> pointing to itself).</li>
-<li><code>lifecycle.targetRef</code> cannot point to the Subscription itself.</li>
-<li>Self-reference checks are enforced at create time only; updates and deletes are not checked.</li>
-<li><code>lifecycle.onParentDeactivate</code> must be one of <code>Deactivate</code> or <code>Orphan</code> when set.</li>
 </ul>
 <h2 id="lifecycle-notes">Lifecycle notes<a class="headerlink" href="#lifecycle-notes" title="Permanent link">#</a></h2>
 <p>The operator maintains a finalizer on every Subscription. A finalizer is a marker that prevents Kubernetes from removing an object until the operator explicitly releases it.</p>
 <p><strong>Deletion flow:</strong> when a user deletes a Subscription, the object is not immediately removed. The operator marks it deactivated (status condition <code>Deleting</code> with reason <code>MarkedForDeletion</code>) and keeps the finalizer in place. The <code>SubscriptionChargeCollection</code> scheduled job removes the finalizer once at least <code>minPeriods</code> full ticks have elapsed since <code>activatedAt</code>. Until that threshold is reached, the condition reason is <code>WaitingForCollectionJob</code>. Once the finalizer is removed, Kubernetes garbage-collects the object.</p>
-<p><strong>Parent deactivation cascade:</strong> when a parent Subscription deactivates, child Subscriptions with the effective policy <code>Deactivate</code> are also deactivated (reason <code>ParentDeactivated</code>). Children with the effective policy <code>Orphan</code> remain active (reason <code>Orphaned</code>).</p>
 <p><strong>Deactivation snap:</strong> <code>deactivatedAt</code> is set to the next tick boundary after the actual deactivation moment. The Subscription is charged for the full final tick — there are no partial final ticks.</p>
 <p>See <a href="../status-conditions.html">Status conditions</a> for the full list of reasons this resource emits.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
-<p>The following example creates a Subscription for a PostgreSQL deployment in the <code>acme</code> namespace, billed against the <code>managed-postgres</code> Offering. The Subscription activates when the referenced Deployment exists and is ready.</p>
+<p>The following example creates a Subscription for an ACME tenant, billed against the <code>platform-base</code> Offering. The Subscription activates as soon as the Offering is Ready.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subscription</span>
 <span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acme-postgres</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acme-platform</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">managed-postgres</span>
-<span class="w">  </span><span class="nt">lifecycle</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">targetRef</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
-<span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
-<span class="w">      </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acme</span>
-<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
 </code></pre></div>
-<p>The following example creates a child Subscription for add-on storage, linked to the <code>acme-postgres</code> parent Subscription, with an <code>Orphan</code> policy so that it remains active if the parent deactivates.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subscription</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acme-postgres-storage</span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">managed-postgres-storage</span>
-<span class="w">  </span><span class="nt">parent</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">subscriptionRef</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acme-postgres</span>
-<span class="w">  </span><span class="nt">lifecycle</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">onParentDeactivate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Orphan</span>
-</code></pre></div>
-<p>The following illustrates what <code>status.costs</code> looks like after the <code>SubscriptionChargeCollection</code> job has run for an hourly $40.00 Offering activated at 09:00 UTC.</p>
+<p>The following illustrates what <code>status.costs</code> looks like 30 minutes after activation, before the first tick has completed. With <code>tickAlignment: ActivatedAt</code> and <code>period: 1h</code>, the first tick boundary is at <code>10:00:00Z</code>. At <code>09:30:00Z</code>, no ticks have settled yet.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ready</span><span class="p">:</span><span class="w"> </span><span class="s">"True"</span>
 <span class="w">  </span><span class="nt">activatedAt</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T09:00:00Z"</span>
@@ -3834,27 +3612,27 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
 <span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T09:00:00Z"</span>
 <span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T10:00:00Z"</span>
-<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span><span class="w">        </span><span class="c1"># $20.00 accumulated so far this hour</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">               </span><span class="c1"># no ticks settled yet</span>
 <span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span><span class="w">      </span><span class="c1"># $40.00 projected for the full hour</span>
 <span class="w">      </span><span class="nt">breakdown</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subscription</span>
-<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span>
+<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
 <span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">day</span>
 <span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T00:00:00Z"</span>
 <span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-02T00:00:00Z"</span>
-<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span>
-<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600000000</span><span class="w">     </span><span class="c1"># $600.00 projected for the full day</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">               </span><span class="c1"># no ticks settled yet</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">560000000</span><span class="w">     </span><span class="c1"># 14 full ticks until day-end × $40.00</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">month</span>
 <span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T00:00:00Z"</span>
 <span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-05-01T00:00:00Z"</span>
-<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span>
-<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28800000000</span><span class="w">   </span><span class="c1"># $28,800.00 projected for the full month</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">               </span><span class="c1"># no ticks settled yet</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28400000000</span><span class="w">   </span><span class="c1"># 710 full ticks until month-end × $40.00</span>
 </code></pre></div>
+<p>Charges settle at tick boundaries. <code>current</code> reflects ticks that have completed inside the bucket; <code>projected</code> extrapolates the number of tick boundaries remaining until the bucket ends. Within a tick, <code>current</code> stays at its last settled value.</p>
 <h2 id="related-guides">Related guides<a class="headerlink" href="#related-guides" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="../../guides/subscribe-to-offering.html">Subscribe to an offering</a> — create a Subscription, link to a workload, and read costs.</li>
-<li><a href="../../guides/parent-child-subscriptions.html">Parent-child subscriptions</a> — hierarchy and the Deactivate vs Orphan choice.</li>
+<li><a href="../../guides/subscribe-to-offering.html">Subscribe to an offering</a> — create a Subscription and read costs.</li>
 <li><a href="../../guides/deactivation-and-cleanup.html">Deactivation and cleanup</a> — what happens on delete, the snap-forward, and the <code>minPeriods</code> cleanup guard.</li>
 <li><a href="../../guides/read-subscription-costs.html">Read subscription costs</a> — interpreting <code>status.costs</code>.</li>
 </ul>

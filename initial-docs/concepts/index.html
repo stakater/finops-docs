@@ -2520,34 +2520,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2701,62 +2673,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3298,7 +3214,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p><a href="pricebook.html"><strong>PriceBook</strong></a> defines per-resource rates — CPU-hour, RAM GB-hour, GPU-hour, storage, and network — in a chosen ISO 4217 currency. The operator uses these rates to configure OpenCost's custom-pricing path so that raw allocation data is costed at your declared rates rather than cloud-provider list prices.</p>
 <p><a href="costjob.html"><strong>CostJob</strong></a> is a schedule. It tells the operator how often to pull allocation data from OpenCost and how often to compute subscription charges. The operator turns each CostJob into a Kubernetes CronJob that runs on the specified interval.</p>
 <p><a href="offering.html"><strong>Offering</strong></a> is a named, immutable pricing contract for something that costs money — for example, a managed database tier, a GPU workload, or a platform base fee. An Offering carries a recurring subscription fee and optional compatibility and lifecycle rules for its subscribers.</p>
-<p><a href="subscription.html"><strong>Subscription</strong></a> is an active binding to an Offering. It can optionally reference a parent Subscription and a Kubernetes target resource. When a Subscription is active, it accrues charges reported in its status across three rolling time buckets: hour, day, and month.</p>
+<p><a href="subscription.html"><strong>Subscription</strong></a> is an active binding to an Offering. When a Subscription is active, it accrues charges reported in its status across three rolling time buckets: hour, day, and month.</p>
 <h2 id="how-they-relate">How they relate<a class="headerlink" href="#how-they-relate" title="Permanent link">#</a></h2>
 <pre class="mermaid"><code>flowchart LR
     FP[FinOpsProvider&lt;br/&gt;cluster-scoped] --&gt; OC[OpenCost]
@@ -3306,10 +3222,8 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     CJ[CostJob] -. schedules .-&gt; Collect[(Collection job)]
     Collect --&gt; OC
     Sub[Subscription] --&gt; Off[Offering]
-    Sub -. optional .-&gt; Target[Workload or resource]
-    Sub -. optional parent .-&gt; Sub
     Collect --&gt; Sub
-    classDef crd fill:#f0f5ff,stroke:#5b7fd6,color:#000;
+    classDef crd stroke:#5b7fd6,stroke-width:2px;
     class FP,PB,CJ,Sub,Off crd;</code></pre>
 <p>For a hands-on walk-through that creates each of these resources in order, see <a href="../getting-started/index.html">Getting started</a>.</p>
 

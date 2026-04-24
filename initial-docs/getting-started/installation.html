@@ -2212,17 +2212,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#add-the-helm-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Add the Helm repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#install-with-default-values" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2238,17 +2227,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <span class="md-ellipsis">
       
         Wire in the PostgreSQL Secret
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pick-mto-bundled-or-byo-opencost-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pick MTO-bundled or BYO-OpenCost mode
       
     </span>
   </a>
@@ -2575,34 +2553,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2756,62 +2706,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3305,17 +3199,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#add-the-helm-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Add the Helm repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#install-with-default-values" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3331,17 +3214,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <span class="md-ellipsis">
       
         Wire in the PostgreSQL Secret
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pick-mto-bundled-or-byo-opencost-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pick MTO-bundled or BYO-OpenCost mode
       
     </span>
   </a>
@@ -3403,14 +3275,9 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h1>
 <p>The Helm chart installs both the operator and its CRDs in a single step. After the chart is applied, the operator Deployment starts and begins reconciling any CRDs you create.</p>
-<h2 id="add-the-helm-repository">Add the Helm repository<a class="headerlink" href="#add-the-helm-repository" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>stakater<span class="w"> </span>&lt;chart-repo-url&gt;
-helm<span class="w"> </span>repo<span class="w"> </span>update
-</code></pre></div>
-<p>Replace <code>&lt;chart-repo-url&gt;</code> with the address of the chart repository where the operator is published.</p>
 <h2 id="install-with-default-values">Install with default values<a class="headerlink" href="#install-with-default-values" title="Permanent link">#</a></h2>
-<p>The default installation runs the operator in BYO-OpenCost mode with <code>MTO_ENABLED</code> unset, meaning the operator manages OpenCost by rewriting the <code>finops-operator-custom-pricing-configs</code> ConfigMap and restarting the OpenCost Deployment when pricing changes. No <code>CostJob</code> and no <code>PriceBook</code> are created by the chart by default; you create those yourself as part of the quickstart.</p>
-<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>install<span class="w"> </span>finops-operator<span class="w"> </span>stakater/finops-operator<span class="w"> </span><span class="se">\</span>
+<p>The default installation runs the operator managing OpenCost by rewriting the <code>finops-operator-custom-pricing-configs</code> ConfigMap and restarting the OpenCost Deployment when pricing changes. No <code>CostJob</code> and no <code>PriceBook</code> are created by the chart by default; you create those yourself as part of the quickstart.</p>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>install<span class="w"> </span>finops-operator<span class="w"> </span>oci://ghcr.io/stakater/public/charts/finops-operator<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--namespace<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--create-namespace
 </code></pre></div>
@@ -3422,18 +3289,6 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 <span class="w">  </span>--from-literal<span class="o">=</span><span class="nv">POSTGRES_CONNECTION_STRING</span><span class="o">=</span><span class="s1">'postgres://user:password@host:5432/dbname?sslmode=require'</span>
 </code></pre></div>
 <p>If you change the Secret name, update the <code>secrets.postgres</code> chart value to match.</p>
-<h2 id="pick-mto-bundled-or-byo-opencost-mode">Pick MTO-bundled or BYO-OpenCost mode<a class="headerlink" href="#pick-mto-bundled-or-byo-opencost-mode" title="Permanent link">#</a></h2>
-<p>In BYO-OpenCost mode (the default) the operator manages pricing by writing a ConfigMap and restarting the OpenCost Deployment directly. In MTO-bundled mode, the operator patches an OpenCost custom resource managed by MDO instead. See <a href="../concepts/operating-modes.html">Operating modes</a> for a full comparison.</p>
-<p>To switch to MTO-bundled mode:</p>
-<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>finops-operator<span class="w"> </span>stakater/finops-operator<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--namespace<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--set<span class="w"> </span>controllerManager.manager.env.mtoEnabled<span class="o">=</span><span class="nb">true</span>
-</code></pre></div>
-<p>To let MDO manage the OpenCost installation alongside the operator:</p>
-<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>finops-operator<span class="w"> </span>stakater/finops-operator<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--namespace<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--set<span class="w"> </span>mdoDependencies.enabled<span class="o">=</span><span class="nb">true</span>
-</code></pre></div>
 <h2 id="a-richer-valuesyaml-example">A richer <code>values.yaml</code> example<a class="headerlink" href="#a-richer-valuesyaml-example" title="Permanent link">#</a></h2>
 <p>For production installs, save your configuration to a <code>values.yaml</code> file and pass it to Helm. The example below covers the most commonly adjusted settings:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># values.yaml</span>
@@ -3450,8 +3305,6 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 <span class="nt">controllerManager</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">manager</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">env</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># Set to "true" for MTO-bundled mode; leave unset or "false" for BYO-OpenCost mode</span>
-<span class="w">      </span><span class="nt">mtoEnabled</span><span class="p">:</span><span class="w"> </span><span class="s">"false"</span>
 <span class="w">      </span><span class="c1"># Name and namespace of the OpenCost Deployment the operator restarts on pricing changes</span>
 <span class="w">      </span><span class="nt">opencostDeploymentName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-opencost</span>
 <span class="w">      </span><span class="nt">opencostDeploymentNamespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
@@ -3469,7 +3322,7 @@ helm<span class="w"> </span>repo<span class="w"> </span>update
 <span class="w">    </span><span class="nt">networkGiB</span><span class="p">:</span><span class="w"> </span><span class="s">"0.09"</span>
 </code></pre></div>
 <p>Install or upgrade with the file:</p>
-<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>--install<span class="w"> </span>finops-operator<span class="w"> </span>stakater/finops-operator<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>--install<span class="w"> </span>finops-operator<span class="w"> </span>oci://ghcr.io/stakater/public/charts/finops-operator<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--namespace<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--create-namespace<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-f<span class="w"> </span>values.yaml

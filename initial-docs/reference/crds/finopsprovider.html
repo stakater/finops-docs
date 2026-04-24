@@ -2447,34 +2447,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2628,62 +2600,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3608,11 +3524,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <li><code>onpremoptions</code> does not accept <code>cloudIntegrationSecret</code>.</li>
 </ul>
 <h2 id="lifecycle-notes">Lifecycle notes<a class="headerlink" href="#lifecycle-notes" title="Permanent link">#</a></h2>
-<p>Behavior depends on the operating mode the operator is running in. See <a href="../../concepts/operating-modes.html">Operating modes</a> for the distinction between MTO-bundled and BYO-OpenCost modes.</p>
-<ul>
-<li><strong>MTO-bundled mode:</strong> creating or updating <code>FinOpsProvider</code> patches the OpenCost custom resource, enabling <code>cloudCost</code> (and, when <code>pricingModelSource: Pricebook</code>, <code>customPricing</code>). The operator then triggers an OpenCost restart after the managed deployment has reconciled.</li>
-<li><strong>BYO-OpenCost mode:</strong> changes to <code>FinOpsProvider</code> do not directly affect OpenCost. Pricing changes are applied when the active PriceBook is updated.</li>
-</ul>
+<p>Creating or updating <code>FinOpsProvider</code> configures the cloud integration for OpenCost. When <code>pricingModelSource: Pricebook</code> is set, the operator enables OpenCost's custom-pricing path so that <a href="pricebook.html">PriceBook</a>-derived rates are used for resource cost allocation.</p>
 <p>See <a href="../status-conditions.html">Status conditions</a> for the full list of reasons this resource emits.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <p>The following example configures the operator for an on-premises environment using a custom <code>PriceBook</code> for pricing.</p>

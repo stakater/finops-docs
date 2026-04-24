@@ -8,7 +8,7 @@
         <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/guides/read-subscription-costs.html">
       
       
-        <link rel="prev" href="required-offerings.html">
+        <link rel="prev" href="subscribe-to-offering.html">
       
       
         <link rel="next" href="deactivation-and-cleanup.html">
@@ -2447,34 +2447,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2630,62 +2602,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3468,15 +3384,15 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <tbody>
 <tr>
 <td><code>current</code></td>
-<td>Accumulated spend in the bucket up to the last time the job ran.</td>
+<td>Accumulated spend from completed ticks in the bucket. Increases only when a tick boundary is crossed.</td>
 </tr>
 <tr>
 <td><code>projected</code></td>
-<td>Estimated spend for the full bucket duration, extrapolated from the current rate.</td>
+<td>Estimated spend for the full bucket duration, based on the number of tick boundaries remaining until the bucket ends.</td>
 </tr>
 </tbody>
 </table>
-<p><code>current</code> increases each time the collection job runs. <code>projected</code> gives you an estimate of where you will end the period if the current rate continues.</p>
+<p><code>current</code> increases only at tick boundaries — within a tick, it stays at its last settled value. <code>projected</code> gives you an estimate of where you will end the period if the Subscription stays active.</p>
 <h2 id="the-breakdown-meters">The breakdown meters<a class="headerlink" href="#the-breakdown-meters" title="Permanent link">#</a></h2>
 <p>Each bucket optionally contains a <code>breakdown</code> list. Each entry names a meter and reports <code>current</code> and <code>projected</code> for that meter alone.</p>
 <table>
@@ -3552,7 +3468,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </tbody>
 </table>
 <h2 id="illustrative-statuscosts-output">Illustrative status.costs output<a class="headerlink" href="#illustrative-statuscosts-output" title="Permanent link">#</a></h2>
-<p>The following example shows a Subscription activated at <code>09:00:00Z</code> on <code>2026-04-01</code>, with an Offering charging <code>$40.00</code> per hour (<code>priceMicros: 40000000</code>, <code>tickAlignment: ActivatedAt</code>). The collection job ran at <code>09:30:00Z</code>, halfway through the first hour.</p>
+<p>The following example shows a Subscription activated at <code>09:00:00Z</code> on <code>2026-04-01</code>, with an Offering charging <code>$40.00</code> per hour (<code>priceMicros: 40000000</code>, <code>tickAlignment: ActivatedAt</code>, <code>period: 1h</code>). The collection job ran at <code>09:30:00Z</code> — 30 minutes into the first hour. With <code>ActivatedAt</code> alignment the first tick boundary is at <code>10:00:00Z</code>, so no ticks have completed yet.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ready</span><span class="p">:</span><span class="w"> </span><span class="s">"True"</span>
 <span class="w">  </span><span class="nt">activatedAt</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T09:00:00Z"</span>
@@ -3560,33 +3476,34 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
 <span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T09:00:00Z"</span>
 <span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T10:00:00Z"</span>
-<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span>
-<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">              </span><span class="c1"># no ticks settled yet — first tick ends at 10:00:00Z</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span><span class="w">     </span><span class="c1"># $40.00 projected for the full hour</span>
 <span class="w">      </span><span class="nt">breakdown</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subscription</span>
-<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span>
+<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
 <span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">day</span>
 <span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T00:00:00Z"</span>
 <span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-02T00:00:00Z"</span>
-<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span>
-<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600000000</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">              </span><span class="c1"># no ticks settled yet</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">560000000</span><span class="w">    </span><span class="c1"># 14 full ticks until day-end × $40.00 = $560.00</span>
 <span class="w">      </span><span class="nt">breakdown</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subscription</span>
-<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span>
-<span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600000000</span>
+<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">560000000</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">month</span>
 <span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T00:00:00Z"</span>
 <span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-05-01T00:00:00Z"</span>
-<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span>
-<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28800000000</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">              </span><span class="c1"># no ticks settled yet</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28400000000</span><span class="w">  </span><span class="c1"># 710 full ticks until month-end × $40.00 = $28,400.00</span>
 <span class="w">      </span><span class="nt">breakdown</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subscription</span>
-<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20000000</span>
-<span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28800000000</span>
+<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28400000000</span>
 </code></pre></div>
-<p>Reading the hour bucket: <code>current: 20000000</code> ($20.00) reflects half of the $40.00 hourly fee accumulated since activation. <code>projected: 40000000</code> ($40.00) is the projected full-hour charge.</p>
-<p>Reading the month bucket: <code>projected: 28800000000</code> ($28,800.00) is the operator's estimate of the full April charge if the Subscription stays active at $40.00/hour for all 720 hours of April.</p>
+<p>Reading the hour bucket: at <code>09:30:00Z</code>, the first tick has not yet completed (it will settle at <code>10:00:00Z</code>), so <code>current: 0</code>. <code>projected: 40000000</code> ($40.00) is the projected charge for the one full tick that fits in this hour bucket.</p>
+<p>Reading the day bucket: from <code>09:30:00Z</code> to midnight there are 14 full hour boundaries (<code>10:00</code>, <code>11:00</code>, ..., <code>23:00</code>), so <code>projected: 560000000</code> ($560.00).</p>
+<p>Reading the month bucket: from <code>09:30:00Z</code> on April 1 to May 1 <code>00:00:00Z</code> is approximately 710.5 hours, so 710 full tick boundaries fit, giving <code>projected: 28400000000</code> ($28,400.00).</p>
 <h2 id="how-frequently-statuscosts-updates">How frequently status.costs updates<a class="headerlink" href="#how-frequently-statuscosts-updates" title="Permanent link">#</a></h2>
 <p><code>status.costs</code> is updated each time the <code>SubscriptionChargeCollection</code> CostJob runs. If your CostJob has <code>interval: 1h</code>, costs update at the top of each hour. If you need more frequent updates, set a shorter interval such as <code>5m</code>, but be aware that shorter intervals increase load on the database.</p>
 <p>Check your <code>SubscriptionChargeCollection</code> CostJob to confirm its schedule:</p>

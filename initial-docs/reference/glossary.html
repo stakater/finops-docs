@@ -2447,34 +2447,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/operating-modes.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operating modes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2628,62 +2600,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/parent-child-subscriptions.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parent-child subscriptions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/required-offerings.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Required offerings
   
 
     
@@ -3202,17 +3118,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
         
           <li class="md-nav__item">
-  <a href="#byo-opencost-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        BYO-OpenCost mode
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#deactivation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3279,54 +3184,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
         
           <li class="md-nav__item">
-  <a href="#mto-bundled-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MTO-bundled mode
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#orphan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        orphan
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parentchild-subscription" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        parent/child subscription
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#proration" class="md-nav__link">
     <span class="md-ellipsis">
       
         proration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#required-offering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        required offering
       
     </span>
   </a>
@@ -3499,17 +3360,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
         
           <li class="md-nav__item">
-  <a href="#byo-opencost-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        BYO-OpenCost mode
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#deactivation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3576,54 +3426,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
         
           <li class="md-nav__item">
-  <a href="#mto-bundled-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MTO-bundled mode
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#orphan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        orphan
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parentchild-subscription" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        parent/child subscription
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#proration" class="md-nav__link">
     <span class="md-ellipsis">
       
         proration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#required-offering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        required offering
       
     </span>
   </a>
@@ -3703,18 +3509,15 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p>Terms used throughout the FinOps Operator docs.</p>
 <h2 id="terms">Terms<a class="headerlink" href="#terms" title="Permanent link">#</a></h2>
 <h3 id="activation">activation<a class="headerlink" href="#activation" title="Permanent link">#</a></h3>
-<p>A Subscription becomes active when its Offering is ready, all parent Subscriptions (if any) are active, and any target Kubernetes resource (if specified) exists and is ready. An active Subscription accrues charges on its meter and begins charging according to its Offering's billing model.</p>
+<p>A Subscription becomes active when its Offering is ready. An active Subscription accrues charges on its meter and begins charging according to its Offering's billing model.</p>
 <p>See: <a href="crds/subscription.html">Subscription</a>.</p>
 <h3 id="active-pricebook">active PriceBook<a class="headerlink" href="#active-pricebook" title="Permanent link">#</a></h3>
 <p>The PriceBook currently feeding pricing data to OpenCost. When a PriceBook is created or changed, the operator marks it active and rewrites the OpenCost pricing configuration. Only one PriceBook is active at a time per Kubernetes cluster.</p>
 <p>See: <a href="crds/pricebook.html">PriceBook</a>.</p>
 <h3 id="allocation">allocation<a class="headerlink" href="#allocation" title="Permanent link">#</a></h3>
 <p>Cost data calculated by OpenCost for cluster resources (CPU, RAM, storage, GPU, network). The FinOps Operator queries allocation data and uses it to report per-Subscription costs. Allocation is distinct from billing: it tracks actual resource usage, while billing applies pricing and subscription fees.</p>
-<h3 id="byo-opencost-mode">BYO-OpenCost mode<a class="headerlink" href="#byo-opencost-mode" title="Permanent link">#</a></h3>
-<p>An operating mode where the operator writes pricing data to a ConfigMap in the OpenCost namespace. This mode is the default when the <code>MTO_ENABLED</code> environment variable is not set or is set to anything other than the literal string <code>"true"</code>. The operator manages the entire OpenCost deployment lifecycle.</p>
-<p>See: <a href="../concepts/operating-modes.html">Operating Modes</a>.</p>
 <h3 id="deactivation">deactivation<a class="headerlink" href="#deactivation" title="Permanent link">#</a></h3>
-<p>A Subscription becomes inactive when its parent Subscription deactivates (if <code>onParentDeactivate: Deactivate</code> applies), its target Kubernetes resource disappears, or the user deletes it. Once deactivated, a Subscription stops accruing new charges (though its status continues to be updated until cleanup).</p>
+<p>A Subscription becomes inactive when the user deletes it. Once deactivated, a Subscription stops accruing new charges (though its status continues to be updated until cleanup).</p>
 <p>See: <a href="crds/subscription.html">Subscription</a>.</p>
 <h3 id="deactivation-snap">deactivation snap<a class="headerlink" href="#deactivation-snap" title="Permanent link">#</a></h3>
 <p>When a Subscription deactivates, its <code>deactivatedAt</code> timestamp is snapped forward to the next tick boundary for its billing alignment. This ensures the Subscription is always charged for a complete final tick — there is never a partial final tick charge.</p>
@@ -3730,21 +3533,9 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <h3 id="minperiods"><code>minPeriods</code><a class="headerlink" href="#minperiods" title="Permanent link">#</a></h3>
 <p>A field on an Offering that specifies the minimum number of full billing ticks that must elapse after a Subscription's activation before the operator will allow its deletion. During this minimum period, billing continues normally. After <code>minPeriods</code> ticks have passed, the cleanup finalizer is removed and Kubernetes garbage-collects the object.</p>
 <p>See: <a href="crds/offering.html">Offering</a>.</p>
-<h3 id="mto-bundled-mode">MTO-bundled mode<a class="headerlink" href="#mto-bundled-mode" title="Permanent link">#</a></h3>
-<p>An operating mode where the operator patches a separate OpenCost Custom Resource managed by Stakater's Multi-Dependency Operator (MDO). MDO handles OpenCost reconciliation, and the FinOps Operator restarts OpenCost after MDO applies changes. Enabled when <code>MTO_ENABLED=true</code>.</p>
-<p>See: <a href="../concepts/operating-modes.html">Operating Modes</a>.</p>
-<h3 id="orphan">orphan<a class="headerlink" href="#orphan" title="Permanent link">#</a></h3>
-<p>A child Subscription that remains active after its parent Subscription deactivates. This happens when the child's effective <code>onParentDeactivate</code> policy is <code>Orphan</code> rather than <code>Deactivate</code>. Orphaned Subscriptions continue to accrue charges independently.</p>
-<p>See: <a href="crds/subscription.html">Subscription</a>.</p>
-<h3 id="parentchild-subscription">parent/child subscription<a class="headerlink" href="#parentchild-subscription" title="Permanent link">#</a></h3>
-<p>A hierarchical relationship between Subscriptions. A child Subscription references its parent via <code>spec.parent.subscriptionRef</code>. When the parent deactivates, the child either deactivates or becomes orphaned based on the effective <code>onParentDeactivate</code> policy. Parent/child relationships enable hierarchical cost tracking and cascading lifecycle management.</p>
-<p>See: <a href="crds/subscription.html">Subscription</a>.</p>
 <h3 id="proration">proration<a class="headerlink" href="#proration" title="Permanent link">#</a></h3>
 <p>Partial billing for a tick when activation or deactivation occurs mid-period. Prorated charges are calculated as <code>priceMicros × (seconds elapsed) / (seconds in full period)</code>. Proration applies to the first tick after activation with <code>HourBoundary</code>, <code>DayBoundary</code>, or <code>MonthBoundary</code> alignment, and is not used with <code>ActivatedAt</code> alignment.</p>
 <p>See: <a href="../concepts/billing-model.html">Billing Model</a>.</p>
-<h3 id="required-offering">required offering<a class="headerlink" href="#required-offering" title="Permanent link">#</a></h3>
-<p>An Offering that must be present (and ready) on a parent Subscription or sibling Subscription for another Offering to be considered ready. Required Offerings are declared via <code>spec.compatibility.requiredOfferings[]</code> and enforce compatibility constraints between offerings.</p>
-<p>See: <a href="crds/offering.html">Offering</a>.</p>
 <h3 id="resourcecostcollection">ResourceCostCollection<a class="headerlink" href="#resourcecostcollection" title="Permanent link">#</a></h3>
 <p>A type of scheduled CostJob that pulls allocation data from OpenCost and stores it for later use. The operator converts the CostJob's interval into a Kubernetes <code>CronJob</code> that runs in <code>CronJob</code> mode and populates the resource cost database.</p>
 <p>See: <a href="crds/costjob.html">CostJob</a>.</p>
