@@ -12,7 +12,7 @@ This section explains the mental model behind the FinOps Operator. The operator 
 
 [**Offering**](./offering.md) is a named, immutable pricing contract for something that costs money — for example, a managed database tier, a GPU workload, or a platform base fee. An Offering carries a recurring subscription fee and optional compatibility and lifecycle rules for its subscribers.
 
-[**Subscription**](./subscription.md) is an active binding to an Offering. It can optionally reference a parent Subscription and a Kubernetes target resource. When a Subscription is active, it accrues charges reported in its status across three rolling time buckets: hour, day, and month.
+[**Subscription**](./subscription.md) is an active binding to an Offering. When a Subscription is active, it accrues charges reported in its status across three rolling time buckets: hour, day, and month.
 
 ## How they relate
 
@@ -23,10 +23,8 @@ flowchart LR
     CJ[CostJob] -. schedules .-> Collect[(Collection job)]
     Collect --> OC
     Sub[Subscription] --> Off[Offering]
-    Sub -. optional .-> Target[Workload or resource]
-    Sub -. optional parent .-> Sub
     Collect --> Sub
-    classDef crd fill:#f0f5ff,stroke:#5b7fd6,color:#000;
+    classDef crd stroke:#5b7fd6,stroke-width:2px;
     class FP,PB,CJ,Sub,Off crd;
 ```
 

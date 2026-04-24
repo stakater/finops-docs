@@ -9,7 +9,6 @@ The following table lists top-level Helm chart keys. Use dot notation to overrid
 | Key | Default | Purpose |
 |---|---|---|
 | `controllerManager.manager.args` | (flags for metrics, leader-elect, health probe, webhook cert) | Command-line arguments passed to the manager. |
-| `controllerManager.manager.env.mtoEnabled` | `false` | Set to `true` to run in MTO-bundled mode; `false` for bring-your-own OpenCost. |
 | `controllerManager.manager.env.opencostDeploymentName` | `finops-operator-opencost` | Name of the Deployment that the operator restarts when pricing changes. |
 | `controllerManager.manager.env.opencostDeploymentNamespace` | `finops-operator-system` | Namespace containing the OpenCost Deployment and pricing ConfigMap. |
 | `controllerManager.manager.image.repository` | — | Container image repository. |
@@ -36,8 +35,6 @@ The following table lists top-level Helm chart keys. Use dot notation to overrid
 | `priceBook.currency` | — | ISO 4217 currency code (e.g. `USD`). |
 | `priceBook.valuationMode` | — | Pricing valuation mode. |
 | `priceBook.rates.*` | — | Rate definitions for pricing. |
-| `mdoDependencies.enabled` | `false` | Enable the MTO-bundled OpenCost installation. |
-| `mdoDependencies.postgres.*` | — | Configuration for the bundled PostgreSQL database. |
 | `finopsGatewayGateway` | — | FinOps Gateway Deployment configuration. |
 | `finopsGatewayService` | — | FinOps Gateway Service configuration. |
 | `finopsGatewayIngress` | — | FinOps Gateway Ingress configuration. |
@@ -66,7 +63,6 @@ These variables have sensible defaults and are only needed in special configurat
 
 | Variable | Default | Purpose |
 |---|---|---|
-| `MTO_ENABLED` | `false` | Set to the literal string `"true"` to run in MTO-bundled mode. Any other value is treated as bring-your-own OpenCost. |
 | `ENABLE_WEBHOOKS` | `true` | Set to `"false"` to disable webhook registration (local development only). |
 
 ### Scheduled-job environment variables

@@ -1,6 +1,6 @@
 # Subscribe to an offering
 
-This guide walks you through creating a `Subscription` that binds a workload to an `Offering`. When the Subscription becomes active, it begins accruing charges according to the Offering's pricing terms, and those charges appear in `status.costs`.
+This guide walks you through creating a `Subscription` that binds a tenant or workload to an `Offering`. When the Subscription becomes active, it begins accruing charges according to the Offering's pricing terms, and those charges appear in `status.costs`.
 
 **Prerequisites:**
 
@@ -15,54 +15,13 @@ This guide walks you through creating a `Subscription` that binds a workload to 
 
 Every Subscription must declare `spec.offeringRef.name`. This is the name of the `Offering` the Subscription binds to. The namespace defaults to the Subscription's own namespace; set `spec.offeringRef.namespace` explicitly if the `Offering` lives in a different namespace.
 
-### 2. Optionally bind to a target resource
+### 2. Understand the activation rule
 
-A Subscription can be tied to any Kubernetes resource — a `Deployment`, a `StatefulSet`, a custom resource — via `spec.lifecycle.targetRef`. When a `targetRef` is set:
+A Subscription becomes active (`ready: True`) when its `Offering` exists and is `Ready: True`. If the Offering is missing or not ready, the Subscription stays `Ready: False` with a descriptive reason in `status.conditions` (for example `OfferingNotFound` or `OfferingNotReady`).
 
-- The Subscription only activates once the target resource exists and its own `status.conditions` include a `Ready` condition with `status: "True"`.
-- If the target resource is deleted, the Subscription deactivates automatically.
+### 3. Apply the Subscription
 
-`targetRef` accepts any Kubernetes resource by `apiVersion`, `kind`, `namespace`, and `name`. It does not need to be in the same namespace as the Subscription.
-
-### 3. Understand the activation rule
-
-A Subscription becomes active (`ready: True`) when all of the following hold:
-
-1. Its `Offering` exists and is `Ready: True`.
-1. If `parent.subscriptionRef` is set, the parent Subscription is active.
-1. If `lifecycle.targetRef` is set, the referenced resource exists and is `Ready`.
-1. If neither `parent` nor `targetRef` is set, the Subscription activates as soon as it validates.
-
-If any condition is not met, the Subscription stays `Ready: False` with a descriptive reason in `status.conditions` (for example `OfferingNotReady`, `TargetNotFound`, or `ParentSubscriptionNotReady`).
-
-### 4. Apply the Subscription
-
-A Subscription tied to a `Deployment` in the `acme` namespace:
-
-```yaml
-apiVersion: finops.stakater.com/v1alpha1
-kind: Subscription
-metadata:
-  name: acme-postgres
-  namespace: finops-operator-system
-spec:
-  offeringRef:
-    name: managed-postgres
-  lifecycle:
-    targetRef:
-      apiVersion: apps/v1
-      kind: Deployment
-      namespace: acme
-      name: postgres
-```
-
-Apply it:
-
-```bash
-kubectl apply -f subscription.yaml
-```
-
-A Subscription without a target (activates immediately, useful for platform-level charges):
+A simple Subscription that activates as soon as the Offering is ready:
 
 ```yaml
 apiVersion: finops.stakater.com/v1alpha1
@@ -75,25 +34,31 @@ spec:
     name: platform-base
 ```
 
-### 5. Verify activation
+Apply it:
+
+```bash
+kubectl apply -f subscription.yaml
+```
+
+### 4. Verify activation
 
 Check the Subscription's readiness:
 
 ```bash
-kubectl get subscription acme-postgres -n finops-operator-system
+kubectl get subscription acme-platform-base -n finops-operator-system
 ```
 
 Expected output:
 
 ```text
-NAME           READY
-acme-postgres  True
+NAME                READY
+acme-platform-base  True
 ```
 
 For the full status:
 
 ```bash
-kubectl get subscription acme-postgres -n finops-operator-system -o yaml
+kubectl get subscription acme-platform-base -n finops-operator-system -o yaml
 ```
 
 Look for:
@@ -106,7 +71,7 @@ status:
 
 `activatedAt` records the moment the Subscription transitioned to active. All billing calculations use this timestamp as the origin.
 
-### 6. Read the first costs update
+### 5. Read the first costs update
 
 The `status.costs` field is populated by the `SubscriptionChargeCollection` `CostJob` on its configured schedule. After the first run following activation, you will see three rolling buckets:
 
@@ -118,17 +83,17 @@ status:
     - granularity: hour
       start: "2026-04-20T10:00:00Z"
       endExclusive: "2026-04-20T11:00:00Z"
-      current: 20000000
+      current: 0
       projected: 40000000
     - granularity: day
       start: "2026-04-20T00:00:00Z"
       endExclusive: "2026-04-21T00:00:00Z"
-      current: 20000000
+      current: 0
       projected: 600000000
     - granularity: month
       start: "2026-04-01T00:00:00Z"
       endExclusive: "2026-05-01T00:00:00Z"
-      current: 20000000
+      current: 0
       projected: 28800000000
 ```
 
@@ -139,7 +104,7 @@ See [Read subscription costs](./read-subscription-costs.md) for a full explanati
 ## Verify it worked
 
 ```bash
-kubectl describe subscription acme-postgres -n finops-operator-system
+kubectl describe subscription acme-platform-base -n finops-operator-system
 ```
 
 The `Conditions` section should show:
@@ -150,7 +115,7 @@ Status: True
 Reason: ActivationSucceeded
 ```
 
-If the Subscription has not yet activated, the reason will indicate what is blocking it. Common reasons are `OfferingNotFound`, `OfferingNotReady`, and `TargetNotFound`.
+If the Subscription has not yet activated, the reason will indicate what is blocking it. Common reasons are `OfferingNotFound` and `OfferingNotReady`.
 
 ## Troubleshooting
 
@@ -159,7 +124,6 @@ If the Subscription stays `Ready: False`, check the condition reason and see [Tr
 ## Related
 
 - [Define an offering](./define-offering.md) — create the `Offering` this Subscription references.
-- [Parent-child subscriptions](./parent-child-subscriptions.md) — link Subscriptions together for traceability and lifecycle cascading.
 - [Read subscription costs](./read-subscription-costs.md) — interpret `status.costs` in detail.
 - [Deactivation and cleanup](./deactivation-and-cleanup.md) — understand what happens when you delete a Subscription.
 - [Subscription CRD reference](../reference/crds/subscription.md)

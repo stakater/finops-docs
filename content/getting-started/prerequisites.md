@@ -18,7 +18,7 @@ The operator requires a reachable PostgreSQL database to store cost and charge d
 
 ### OpenCost
 
-OpenCost is the open-source cost allocation engine the operator queries for resource usage data. You can bring your own OpenCost installation (BYO mode) or let Stakater's Multi-Dependency Operator (MDO) manage it alongside the FinOps Operator (MTO-bundled mode). BYO mode suits teams that already run OpenCost or that want full control over the installation. MTO-bundled mode is convenient when you are deploying the full Stakater platform and want MDO to handle the OpenCost lifecycle. See [Operating modes](../concepts/operating-modes.md) for a detailed comparison.
+OpenCost is the open-source cost allocation engine the operator queries for resource usage data. Install and configure OpenCost before installing the FinOps Operator. The operator needs a reachable OpenCost service URL set via the `OPENCOST_CONNECTION_STRING` environment variable (or the corresponding Helm value).
 
 ## Optional
 

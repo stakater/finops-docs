@@ -34,11 +34,10 @@ flowchart LR
     Ops --> crds
     Ops --> OC
     Ops --> PG
-    Sub -. optional target .-> Work
     CJ -. schedules collection .-> OC
     PB --> OC
     FP --> OC
-    classDef crdStyle fill:#f0f5ff,stroke:#5b7fd6,color:#000;
+    classDef crdStyle stroke:#5b7fd6,stroke-width:2px;
     class FP,PB,CJ,Off,Sub crdStyle;
 ```
 

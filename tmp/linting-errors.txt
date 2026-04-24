@@ -1,6 +1,0 @@
-Error: content/changelog.md:5 MD036/no-emphasis-as-heading Emphasis used instead of a heading [Context: "February 27, 2026"]
-Error: content/changelog.md:11 MD036/no-emphasis-as-heading Emphasis used instead of a heading [Context: "February 27, 2026"]
-Error: content/changelog.md:18 MD036/no-emphasis-as-heading Emphasis used instead of a heading [Context: "February 23, 2026"]
-Error: content/changelog.md:24 MD036/no-emphasis-as-heading Emphasis used instead of a heading [Context: "February 19, 2026"]
-Error: content/changelog.md:32 MD036/no-emphasis-as-heading Emphasis used instead of a heading [Context: "December 19, 2025"]
-Error: content/changelog.md:38 MD036/no-emphasis-as-heading Emphasis used instead of a heading [Context: "December 18, 2025"]

@@ -16,7 +16,7 @@ To take effect, a PriceBook requires `pricingModelSource: Pricebook` in the [Fin
 
 PriceBook feeds pricing into OpenCost, which is then consumed by [CostJob](./costjob.md) when it pulls allocation data. Subscription charges reported in [Subscription](./subscription.md) status reflect these rates indirectly — the `cpuHour`, `ramGbHour`, and other resource meters in `status.costs.breakdown` are populated from allocation data costed at PriceBook rates.
 
-In BYO-OpenCost mode, the PriceBook is the primary mechanism by which pricing reaches OpenCost. In MTO-bundled mode, the [FinOpsProvider](./finops-provider.md) drives the OpenCost configuration and pricing changes come from the PriceBook ConfigMap update path. See [Operating modes](./operating-modes.md) for details.
+The PriceBook is the primary mechanism by which pricing reaches OpenCost. When a PriceBook changes, the operator rewrites the OpenCost pricing ConfigMap and restarts OpenCost if the content changed.
 
 ## Key things to know
 
@@ -32,4 +32,3 @@ In BYO-OpenCost mode, the PriceBook is the primary mechanism by which pricing re
 
 - [PriceBook reference](../reference/crds/pricebook.md) — full field specification including all rate fields.
 - [Define pricing](../guides/define-pricing.md) — guide that creates a PriceBook alongside a FinOpsProvider.
-- [Operating modes](./operating-modes.md) — explains how the PriceBook ConfigMap update path differs between modes.

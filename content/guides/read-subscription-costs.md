@@ -26,10 +26,10 @@ Each bucket has two cost figures:
 
 | Field | Meaning |
 |---|---|
-| `current` | Accumulated spend in the bucket up to the last time the job ran. |
-| `projected` | Estimated spend for the full bucket duration, extrapolated from the current rate. |
+| `current` | Accumulated spend from completed ticks in the bucket. Increases only when a tick boundary is crossed. |
+| `projected` | Estimated spend for the full bucket duration, based on the number of tick boundaries remaining until the bucket ends. |
 
-`current` increases each time the collection job runs. `projected` gives you an estimate of where you will end the period if the current rate continues.
+`current` increases only at tick boundaries — within a tick, it stays at its last settled value. `projected` gives you an estimate of where you will end the period if the Subscription stays active.
 
 ## The breakdown meters
 
@@ -60,7 +60,7 @@ All values in `status.costs` are integers in micro-currency. Divide by `1,000,00
 
 ## Illustrative status.costs output
 
-The following example shows a Subscription activated at `09:00:00Z` on `2026-04-01`, with an Offering charging `$40.00` per hour (`priceMicros: 40000000`, `tickAlignment: ActivatedAt`). The collection job ran at `09:30:00Z`, halfway through the first hour.
+The following example shows a Subscription activated at `09:00:00Z` on `2026-04-01`, with an Offering charging `$40.00` per hour (`priceMicros: 40000000`, `tickAlignment: ActivatedAt`, `period: 1h`). The collection job ran at `09:30:00Z` — 30 minutes into the first hour. With `ActivatedAt` alignment the first tick boundary is at `10:00:00Z`, so no ticks have completed yet.
 
 ```yaml
 status:
@@ -70,35 +70,37 @@ status:
     - granularity: hour
       start: "2026-04-01T09:00:00Z"
       endExclusive: "2026-04-01T10:00:00Z"
-      current: 20000000
-      projected: 40000000
+      current: 0              # no ticks settled yet — first tick ends at 10:00:00Z
+      projected: 40000000     # $40.00 projected for the full hour
       breakdown:
         - name: subscription
-          current: 20000000
+          current: 0
           projected: 40000000
     - granularity: day
       start: "2026-04-01T00:00:00Z"
       endExclusive: "2026-04-02T00:00:00Z"
-      current: 20000000
-      projected: 600000000
+      current: 0              # no ticks settled yet
+      projected: 560000000    # 14 full ticks until day-end × $40.00 = $560.00
       breakdown:
         - name: subscription
-          current: 20000000
-          projected: 600000000
+          current: 0
+          projected: 560000000
     - granularity: month
       start: "2026-04-01T00:00:00Z"
       endExclusive: "2026-05-01T00:00:00Z"
-      current: 20000000
-      projected: 28800000000
+      current: 0              # no ticks settled yet
+      projected: 28400000000  # 710 full ticks until month-end × $40.00 = $28,400.00
       breakdown:
         - name: subscription
-          current: 20000000
-          projected: 28800000000
+          current: 0
+          projected: 28400000000
 ```
 
-Reading the hour bucket: `current: 20000000` ($20.00) reflects half of the $40.00 hourly fee accumulated since activation. `projected: 40000000` ($40.00) is the projected full-hour charge.
+Reading the hour bucket: at `09:30:00Z`, the first tick has not yet completed (it will settle at `10:00:00Z`), so `current: 0`. `projected: 40000000` ($40.00) is the projected charge for the one full tick that fits in this hour bucket.
 
-Reading the month bucket: `projected: 28800000000` ($28,800.00) is the operator's estimate of the full April charge if the Subscription stays active at $40.00/hour for all 720 hours of April.
+Reading the day bucket: from `09:30:00Z` to midnight there are 14 full hour boundaries (`10:00`, `11:00`, ..., `23:00`), so `projected: 560000000` ($560.00).
+
+Reading the month bucket: from `09:30:00Z` on April 1 to May 1 `00:00:00Z` is approximately 710.5 hours, so 710 full tick boundaries fit, giving `projected: 28400000000` ($28,400.00).
 
 ## How frequently status.costs updates
 

@@ -2,21 +2,12 @@
 
 The Helm chart installs both the operator and its CRDs in a single step. After the chart is applied, the operator Deployment starts and begins reconciling any CRDs you create.
 
-## Add the Helm repository
-
-```bash
-helm repo add stakater <chart-repo-url>
-helm repo update
-```
-
-Replace `<chart-repo-url>` with the address of the chart repository where the operator is published.
-
 ## Install with default values
 
-The default installation runs the operator in BYO-OpenCost mode with `MTO_ENABLED` unset, meaning the operator manages OpenCost by rewriting the `finops-operator-custom-pricing-configs` ConfigMap and restarting the OpenCost Deployment when pricing changes. No `CostJob` and no `PriceBook` are created by the chart by default; you create those yourself as part of the quickstart.
+The default installation runs the operator managing OpenCost by rewriting the `finops-operator-custom-pricing-configs` ConfigMap and restarting the OpenCost Deployment when pricing changes. No `CostJob` and no `PriceBook` are created by the chart by default; you create those yourself as part of the quickstart.
 
 ```bash
-helm install finops-operator stakater/finops-operator \
+helm install finops-operator oci://ghcr.io/stakater/public/charts/finops-operator \
   --namespace finops-operator-system \
   --create-namespace
 ```
@@ -34,26 +25,6 @@ kubectl create secret generic finops-operator-postgres-config \
 ```
 
 If you change the Secret name, update the `secrets.postgres` chart value to match.
-
-## Pick MTO-bundled or BYO-OpenCost mode
-
-In BYO-OpenCost mode (the default) the operator manages pricing by writing a ConfigMap and restarting the OpenCost Deployment directly. In MTO-bundled mode, the operator patches an OpenCost custom resource managed by MDO instead. See [Operating modes](../concepts/operating-modes.md) for a full comparison.
-
-To switch to MTO-bundled mode:
-
-```bash
-helm upgrade finops-operator stakater/finops-operator \
-  --namespace finops-operator-system \
-  --set controllerManager.manager.env.mtoEnabled=true
-```
-
-To let MDO manage the OpenCost installation alongside the operator:
-
-```bash
-helm upgrade finops-operator stakater/finops-operator \
-  --namespace finops-operator-system \
-  --set mdoDependencies.enabled=true
-```
 
 ## A richer `values.yaml` example
 
@@ -74,8 +45,6 @@ imagePullSecrets:
 controllerManager:
   manager:
     env:
-      # Set to "true" for MTO-bundled mode; leave unset or "false" for BYO-OpenCost mode
-      mtoEnabled: "false"
       # Name and namespace of the OpenCost Deployment the operator restarts on pricing changes
       opencostDeploymentName: finops-operator-opencost
       opencostDeploymentNamespace: finops-operator-system
@@ -96,7 +65,7 @@ priceBook:
 Install or upgrade with the file:
 
 ```bash
-helm upgrade --install finops-operator stakater/finops-operator \
+helm upgrade --install finops-operator oci://ghcr.io/stakater/public/charts/finops-operator \
   --namespace finops-operator-system \
   --create-namespace \
   -f values.yaml

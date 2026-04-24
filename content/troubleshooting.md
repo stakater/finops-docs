@@ -15,20 +15,15 @@ kubectl describe subscription <name>
 | Reason | Cause | Remedy |
 |---|---|---|
 | `OfferingNotFound` | `offeringRef` does not resolve to an existing Offering. | Create the Offering or correct the name in `offeringRef`. |
-| `OfferingNotReady` | The referenced Offering exists but its own `Ready` condition is `False`. | Resolve the Offering's condition first (see [Offering rejected on create](#offering-rejected-on-create) below). |
-| `ParentSubscriptionNotFound` | `parent.subscriptionRef` points to a Subscription that does not exist. | Create the parent Subscription or correct the reference. |
-| `ParentSubscriptionNotReady` | The parent Subscription exists but is not yet active. | Wait for the parent to reach `Ready: True`, or resolve its blocking condition. |
-| `TargetNotFound` | `lifecycle.targetRef` points to a resource that does not exist or is not yet present. | Create the target resource or remove `targetRef` if targeting is not required. |
-| `TargetIsSelfReference` | `lifecycle.targetRef` resolves to the Subscription itself. | Set `targetRef` to a different resource or remove the field. |
+| `OfferingNotReady` | The referenced Offering exists but its own `Ready` condition is `False`. | Resolve the Offering's condition first. |
 
 For the full condition vocabulary, see [Status conditions](reference/status-conditions.md).
 
 ### Offering stuck in deletion
 
-When an Offering cannot be deleted, admission blocks the request and the `Deleting` condition carries one of these reasons:
+When an Offering cannot be deleted, admission blocks the request and the `Deleting` condition carries this reason:
 
 - `DependentSubscriptionsExist` — one or more Subscriptions still reference this Offering.
-- `DependentOfferingsExist` — another Offering lists this one in `compatibility.requiredOfferings`.
 
 Identify the dependents:
 
@@ -36,16 +31,7 @@ Identify the dependents:
 kubectl describe offering <name>
 ```
 
-The condition message names the blocking resources. Delete or migrate those dependents first, then retry the Offering deletion.
-
-### Offering rejected on create
-
-Admission rejects an Offering at creation time when the `compatibility.requiredOfferings` list contains a cycle or a self-reference:
-
-- `CircularDependencyDetected` — the `requiredOfferings` graph forms a cycle (for example, Offering A requires B, and B requires A).
-- Self-reference — the Offering lists its own name in `compatibility.requiredOfferings`.
-
-Remove the cycle or the self-reference from the Offering spec and resubmit.
+The condition message names the blocking resources. Delete or migrate those Subscriptions first, then retry the Offering deletion.
 
 ### Subscription `status.costs` is empty
 
@@ -71,7 +57,7 @@ If you need a shorter guard on future Subscriptions, create a new Offering with 
 
 ### OpenCost shows stale prices
 
-In BYO-OpenCost mode the operator writes pricing data to a ConfigMap named `finops-operator-custom-pricing-configs` and restarts the OpenCost deployment when the ConfigMap changes. If prices appear stale, confirm that the restart completed:
+The operator writes pricing data to a ConfigMap named `finops-operator-custom-pricing-configs` and restarts the OpenCost deployment when the ConfigMap changes. If prices appear stale, confirm that the restart completed:
 
 ```bash
 kubectl rollout status deployment/<opencost-deployment> -n <opencost-namespace>

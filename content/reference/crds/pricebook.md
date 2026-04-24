@@ -49,8 +49,6 @@ When a `PriceBook` is created or updated, the operator rewrites the `finops-oper
 
 The ConfigMap key `default.json` contains all pricing fields that OpenCost reads, including CPU, GPU, RAM, spot variants, storage, and network egress categories.
 
-See [Operating modes](../../concepts/operating-modes.md) for how `PriceBook` interacts with `FinOpsProvider`'s `pricingModelSource` field.
-
 See [Status conditions](../status-conditions.md) for the full list of reasons this resource emits.
 
 ## Examples

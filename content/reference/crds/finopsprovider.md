@@ -49,10 +49,7 @@ These three blocks share the same fields.
 
 ## Lifecycle notes
 
-Behavior depends on the operating mode the operator is running in. See [Operating modes](../../concepts/operating-modes.md) for the distinction between MTO-bundled and BYO-OpenCost modes.
-
-- **MTO-bundled mode:** creating or updating `FinOpsProvider` patches the OpenCost custom resource, enabling `cloudCost` (and, when `pricingModelSource: Pricebook`, `customPricing`). The operator then triggers an OpenCost restart after the managed deployment has reconciled.
-- **BYO-OpenCost mode:** changes to `FinOpsProvider` do not directly affect OpenCost. Pricing changes are applied when the active PriceBook is updated.
+Creating or updating `FinOpsProvider` configures the cloud integration for OpenCost. When `pricingModelSource: Pricebook` is set, the operator enables OpenCost's custom-pricing path so that [PriceBook](./pricebook.md)-derived rates are used for resource cost allocation.
 
 See [Status conditions](../status-conditions.md) for the full list of reasons this resource emits.
 

@@ -6,7 +6,7 @@ Terms used throughout the FinOps Operator docs.
 
 ### activation
 
-A Subscription becomes active when its Offering is ready, all parent Subscriptions (if any) are active, and any target Kubernetes resource (if specified) exists and is ready. An active Subscription accrues charges on its meter and begins charging according to its Offering's billing model.
+A Subscription becomes active when its Offering is ready. An active Subscription accrues charges on its meter and begins charging according to its Offering's billing model.
 
 See: [Subscription](./crds/subscription.md).
 
@@ -20,15 +20,9 @@ See: [PriceBook](./crds/pricebook.md).
 
 Cost data calculated by OpenCost for cluster resources (CPU, RAM, storage, GPU, network). The FinOps Operator queries allocation data and uses it to report per-Subscription costs. Allocation is distinct from billing: it tracks actual resource usage, while billing applies pricing and subscription fees.
 
-### BYO-OpenCost mode
-
-An operating mode where the operator writes pricing data to a ConfigMap in the OpenCost namespace. This mode is the default when the `MTO_ENABLED` environment variable is not set or is set to anything other than the literal string `"true"`. The operator manages the entire OpenCost deployment lifecycle.
-
-See: [Operating Modes](../concepts/operating-modes.md).
-
 ### deactivation
 
-A Subscription becomes inactive when its parent Subscription deactivates (if `onParentDeactivate: Deactivate` applies), its target Kubernetes resource disappears, or the user deletes it. Once deactivated, a Subscription stops accruing new charges (though its status continues to be updated until cleanup).
+A Subscription becomes inactive when the user deletes it. Once deactivated, a Subscription stops accruing new charges (though its status continues to be updated until cleanup).
 
 See: [Subscription](./crds/subscription.md).
 
@@ -60,35 +54,11 @@ A field on an Offering that specifies the minimum number of full billing ticks t
 
 See: [Offering](./crds/offering.md).
 
-### MTO-bundled mode
-
-An operating mode where the operator patches a separate OpenCost Custom Resource managed by Stakater's Multi-Dependency Operator (MDO). MDO handles OpenCost reconciliation, and the FinOps Operator restarts OpenCost after MDO applies changes. Enabled when `MTO_ENABLED=true`.
-
-See: [Operating Modes](../concepts/operating-modes.md).
-
-### orphan
-
-A child Subscription that remains active after its parent Subscription deactivates. This happens when the child's effective `onParentDeactivate` policy is `Orphan` rather than `Deactivate`. Orphaned Subscriptions continue to accrue charges independently.
-
-See: [Subscription](./crds/subscription.md).
-
-### parent/child subscription
-
-A hierarchical relationship between Subscriptions. A child Subscription references its parent via `spec.parent.subscriptionRef`. When the parent deactivates, the child either deactivates or becomes orphaned based on the effective `onParentDeactivate` policy. Parent/child relationships enable hierarchical cost tracking and cascading lifecycle management.
-
-See: [Subscription](./crds/subscription.md).
-
 ### proration
 
 Partial billing for a tick when activation or deactivation occurs mid-period. Prorated charges are calculated as `priceMicros × (seconds elapsed) / (seconds in full period)`. Proration applies to the first tick after activation with `HourBoundary`, `DayBoundary`, or `MonthBoundary` alignment, and is not used with `ActivatedAt` alignment.
 
 See: [Billing Model](../concepts/billing-model.md).
-
-### required offering
-
-An Offering that must be present (and ready) on a parent Subscription or sibling Subscription for another Offering to be considered ready. Required Offerings are declared via `spec.compatibility.requiredOfferings[]` and enforce compatibility constraints between offerings.
-
-See: [Offering](./crds/offering.md).
 
 ### ResourceCostCollection
 

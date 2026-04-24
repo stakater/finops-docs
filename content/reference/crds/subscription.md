@@ -2,11 +2,11 @@
 
 ## Purpose
 
-`Subscription` ties a tenant workload to an [Offering](./offering.md) and drives charge accrual. The operator activates the Subscription when its prerequisites are met, accumulates costs tick by tick according to the Offering's pricing rules, and writes rolling cost summaries into `status.costs`. Create a Subscription for each workload or tenant that should be billed against a defined Offering.
+`Subscription` ties a tenant or workload to an [Offering](./offering.md) and drives charge accrual. The operator activates the Subscription when its Offering is ready, accumulates costs tick by tick according to the Offering's pricing rules, and writes rolling cost summaries into `status.costs`. Create a Subscription for each workload or tenant that should be billed against a defined Offering.
 
 ## Scope and name constraints
 
-`Subscription` is `namespaced`. There are no naming requirements beyond standard Kubernetes name constraints. A Subscription cannot reference itself as its own parent, and cannot point `lifecycle.targetRef` at itself — both are enforced at admission (create time only). `kubectl get subscription` shows a Ready column summarizing the Subscription's activation status.
+`Subscription` is `namespaced`. There are no naming requirements beyond standard Kubernetes name constraints. `kubectl get subscription` shows a Ready column summarizing the Subscription's activation status.
 
 ## Spec
 
@@ -14,36 +14,10 @@
 |---|---|---|---|---|
 | `offeringRef.name` | string | yes | — | Name of the [Offering](./offering.md) this Subscription is billed against. |
 | `offeringRef.namespace` | string | optional | Subscription's namespace | Namespace of the Offering. Defaults to the Subscription's own namespace. |
-| `parent.subscriptionRef.name` | string | optional | — | Name of the parent Subscription, for traceability and lifecycle cascading. |
-| `parent.subscriptionRef.namespace` | string | optional | Subscription's namespace | Namespace of the parent Subscription. |
-| `lifecycle.onParentDeactivate` | `enum` | optional | Offering's policy, then `Deactivate` | How this Subscription behaves when its parent deactivates. One of `Deactivate` or `Orphan`. Overrides the Offering's `lifecycle.onParentDeactivate` when set. |
-| `lifecycle.targetRef.apiVersion` | string | optional | — | API version of the Kubernetes resource whose existence gates activation. |
-| `lifecycle.targetRef.kind` | string | optional | — | Kind of the target resource. |
-| `lifecycle.targetRef.namespace` | string | optional | — | Namespace of the target resource. |
-| `lifecycle.targetRef.name` | string | optional | — | Name of the target resource. |
-
-### Effective onParentDeactivate precedence
-
-The effective `onParentDeactivate` policy is resolved in this order:
-
-1. `Subscription.spec.lifecycle.onParentDeactivate` (if set on this Subscription).
-1. `Offering.spec.lifecycle.onParentDeactivate` (from the referenced Offering).
-1. `Deactivate` (the built-in default).
 
 ### Activation rule
 
-A Subscription becomes active (`ready: True`) when all of the following are satisfied:
-
-- Its Offering exists and is `Ready: True`.
-- If `parent.subscriptionRef` is set, the parent Subscription is active.
-- If `lifecycle.targetRef` is set, the referenced Kubernetes resource exists and is `Ready`.
-- If neither `parent` nor `targetRef` is set, the Subscription activates as soon as it validates.
-
-### Deactivation triggers
-
-- The parent Subscription deactivates and the effective `onParentDeactivate` policy is `Deactivate`. If the policy is `Orphan`, this Subscription stays active.
-- The resource referenced by `lifecycle.targetRef` disappears.
-- The user deletes the Subscription (see lifecycle notes below for what happens next).
+A Subscription becomes active (`ready: True`) when its Offering exists and is `Ready: True`. If the Offering is missing or not ready, the Subscription stays `Ready: False` with a descriptive reason in `status.conditions` (for example `OfferingNotFound` or `OfferingNotReady`).
 
 ## Status
 
@@ -64,7 +38,7 @@ When populated, `status.costs` contains exactly three entries, one per granulari
 | `granularity` | `enum` | One of `hour`, `day`, `month`. |
 | `start` | timestamp | Inclusive start of the bucket. |
 | `endExclusive` | timestamp | Exclusive end of the bucket. |
-| `current` | int64 (micro-currency) | Accumulated spend in the bucket so far. |
+| `current` | int64 (micro-currency) | Accumulated spend from completed ticks in the bucket so far. |
 | `projected` | int64 (micro-currency) | Projected spend for the full bucket period. |
 | `breakdown` | list | Per-meter cost entries. Omitted when there is nothing to report. |
 
@@ -92,10 +66,6 @@ The `subscription` meter is always populated when the Offering has a `subscripti
 ## Validation rules
 
 - `offeringRef.name` is required.
-- A Subscription cannot reference itself as its own parent (`parent.subscriptionRef` pointing to itself).
-- `lifecycle.targetRef` cannot point to the Subscription itself.
-- Self-reference checks are enforced at create time only; updates and deletes are not checked.
-- `lifecycle.onParentDeactivate` must be one of `Deactivate` or `Orphan` when set.
 
 ## Lifecycle notes
 
@@ -103,52 +73,26 @@ The operator maintains a finalizer on every Subscription. A finalizer is a marke
 
 **Deletion flow:** when a user deletes a Subscription, the object is not immediately removed. The operator marks it deactivated (status condition `Deleting` with reason `MarkedForDeletion`) and keeps the finalizer in place. The `SubscriptionChargeCollection` scheduled job removes the finalizer once at least `minPeriods` full ticks have elapsed since `activatedAt`. Until that threshold is reached, the condition reason is `WaitingForCollectionJob`. Once the finalizer is removed, Kubernetes garbage-collects the object.
 
-**Parent deactivation cascade:** when a parent Subscription deactivates, child Subscriptions with the effective policy `Deactivate` are also deactivated (reason `ParentDeactivated`). Children with the effective policy `Orphan` remain active (reason `Orphaned`).
-
 **Deactivation snap:** `deactivatedAt` is set to the next tick boundary after the actual deactivation moment. The Subscription is charged for the full final tick — there are no partial final ticks.
 
 See [Status conditions](../status-conditions.md) for the full list of reasons this resource emits.
 
 ## Examples
 
-The following example creates a Subscription for a PostgreSQL deployment in the `acme` namespace, billed against the `managed-postgres` Offering. The Subscription activates when the referenced Deployment exists and is ready.
+The following example creates a Subscription for an ACME tenant, billed against the `platform-base` Offering. The Subscription activates as soon as the Offering is Ready.
 
 ```yaml
 apiVersion: finops.stakater.com/v1alpha1
 kind: Subscription
 metadata:
-  name: acme-postgres
+  name: acme-platform
   namespace: finops-operator-system
 spec:
   offeringRef:
-    name: managed-postgres
-  lifecycle:
-    targetRef:
-      apiVersion: apps/v1
-      kind: Deployment
-      namespace: acme
-      name: postgres
+    name: platform-base
 ```
 
-The following example creates a child Subscription for add-on storage, linked to the `acme-postgres` parent Subscription, with an `Orphan` policy so that it remains active if the parent deactivates.
-
-```yaml
-apiVersion: finops.stakater.com/v1alpha1
-kind: Subscription
-metadata:
-  name: acme-postgres-storage
-  namespace: finops-operator-system
-spec:
-  offeringRef:
-    name: managed-postgres-storage
-  parent:
-    subscriptionRef:
-      name: acme-postgres
-  lifecycle:
-    onParentDeactivate: Orphan
-```
-
-The following illustrates what `status.costs` looks like after the `SubscriptionChargeCollection` job has run for an hourly $40.00 Offering activated at 09:00 UTC.
+The following illustrates what `status.costs` looks like 30 minutes after activation, before the first tick has completed. With `tickAlignment: ActivatedAt` and `period: 1h`, the first tick boundary is at `10:00:00Z`. At `09:30:00Z`, no ticks have settled yet.
 
 ```yaml
 status:
@@ -158,27 +102,28 @@ status:
     - granularity: hour
       start: "2026-04-01T09:00:00Z"
       endExclusive: "2026-04-01T10:00:00Z"
-      current: 20000000        # $20.00 accumulated so far this hour
+      current: 0               # no ticks settled yet
       projected: 40000000      # $40.00 projected for the full hour
       breakdown:
         - name: subscription
-          current: 20000000
+          current: 0
           projected: 40000000
     - granularity: day
       start: "2026-04-01T00:00:00Z"
       endExclusive: "2026-04-02T00:00:00Z"
-      current: 20000000
-      projected: 600000000     # $600.00 projected for the full day
+      current: 0               # no ticks settled yet
+      projected: 560000000     # 14 full ticks until day-end × $40.00
     - granularity: month
       start: "2026-04-01T00:00:00Z"
       endExclusive: "2026-05-01T00:00:00Z"
-      current: 20000000
-      projected: 28800000000   # $28,800.00 projected for the full month
+      current: 0               # no ticks settled yet
+      projected: 28400000000   # 710 full ticks until month-end × $40.00
 ```
+
+Charges settle at tick boundaries. `current` reflects ticks that have completed inside the bucket; `projected` extrapolates the number of tick boundaries remaining until the bucket ends. Within a tick, `current` stays at its last settled value.
 
 ## Related guides
 
-- [Subscribe to an offering](../../guides/subscribe-to-offering.md) — create a Subscription, link to a workload, and read costs.
-- [Parent-child subscriptions](../../guides/parent-child-subscriptions.md) — hierarchy and the Deactivate vs Orphan choice.
+- [Subscribe to an offering](../../guides/subscribe-to-offering.md) — create a Subscription and read costs.
 - [Deactivation and cleanup](../../guides/deactivation-and-cleanup.md) — what happens on delete, the snap-forward, and the `minPeriods` cleanup guard.
 - [Read subscription costs](../../guides/read-subscription-costs.md) — interpreting `status.costs`.

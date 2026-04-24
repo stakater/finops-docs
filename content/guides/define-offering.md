@@ -11,7 +11,7 @@ This guide explains how to create an `Offering` — a named, immutable pricing c
 
 ## Offering immutability
 
-An `Offering`'s `spec` is immutable: once created, you cannot change its pricing, lifecycle defaults, or compatibility rules. If you need different terms, create a new `Offering` with a new name and migrate new Subscriptions to it. Old Subscriptions continue using the original `Offering` until they are deactivated.
+An `Offering`'s `spec` is immutable: once created, you cannot change its pricing. If you need different terms, create a new `Offering` with a new name and migrate new Subscriptions to it. Old Subscriptions continue using the original `Offering` until they are deactivated.
 
 The reason for immutability is billing integrity: active Subscriptions must always be charged under the exact terms they were activated under.
 
@@ -52,25 +52,6 @@ Values that do not match the expected format for the chosen `tickAlignment` are 
 
 Set `minPeriods: 2` on a monthly Offering to require that any Subscription runs for at least two full months before it can be cleaned up.
 
-## Compatibility and required offerings
-
-The `compatibility.requiredOfferings` list names other `Offerings` that must be active on the parent Subscription or a sibling Subscription before this `Offering` can be activated. This is the mechanism for expressing service dependencies — for example, a "Managed Postgres" offering that requires a "Platform Base" offering to be present.
-
-See [Required offerings](./required-offerings.md) for a detailed walk-through with examples.
-
-## Lifecycle defaults
-
-The `lifecycle` block sets default behavior for child Subscriptions when this Offering's Subscriptions are deactivated:
-
-| Field | Default | Description |
-|---|---|---|
-| `lifecycle.onParentDeactivate` | `Deactivate` | Whether child Subscriptions deactivate (`Deactivate`) or stay active (`Orphan`) when their parent deactivates. |
-| `lifecycle.allowOverride` | `false` | Whether the Subscription may override `onParentDeactivate`. |
-
-> **Note:** `lifecycle.allowOverride` is accepted by the API but is not currently enforced by the operator. A Subscription can always set its own `lifecycle.onParentDeactivate`, and it will take precedence over the Offering's default regardless of `allowOverride`. Do not rely on `allowOverride: false` to prevent Subscriptions from overriding cascade behavior.
-
-See [Parent-child subscriptions](./parent-child-subscriptions.md) for a full explanation of the cascade rules.
-
 ## YAML examples
 
 ### ActivatedAt hourly Offering
@@ -90,11 +71,6 @@ spec:
       tickAlignment: ActivatedAt
       priceMicros: 40000000
       minPeriods: 2
-  compatibility:
-    requiredOfferings:
-      - name: platform-base
-  lifecycle:
-    onParentDeactivate: Deactivate
 ```
 
 ### MonthBoundary monthly Offering
@@ -113,8 +89,6 @@ spec:
       period: "1"
       tickAlignment: MonthBoundary
       priceMicros: 500000000
-  lifecycle:
-    onParentDeactivate: Deactivate
 ```
 
 ## Verify it worked
@@ -137,7 +111,7 @@ For more detail:
 kubectl describe offering managed-postgres -n finops-operator-system
 ```
 
-Look for a `Ready` condition with `status: "True"` and reason `ValidationSucceeded`. If the Offering references `requiredOfferings` and those are not yet ready, you will see `Ready: False` with reason `RequiredOfferingNotFound` or `RequiredOfferingNotReady` — this is expected while the referenced Offerings are being created.
+Look for a `Ready` condition with `status: "True"` and reason `ValidationSucceeded`.
 
 ## Troubleshooting
 
@@ -146,6 +120,4 @@ If the `Offering` stays `Ready: False` or is rejected on creation, see [Troubles
 ## Related
 
 - [Subscribe to an offering](./subscribe-to-offering.md) — create a Subscription that references this Offering.
-- [Required offerings](./required-offerings.md) — configure `compatibility.requiredOfferings` with a concrete example.
-- [Parent-child subscriptions](./parent-child-subscriptions.md) — understand lifecycle cascade options.
 - [Offering CRD reference](../reference/crds/offering.md)
