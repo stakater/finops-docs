@@ -42,7 +42,7 @@ The format of `period` depends on `tickAlignment`. Values that do not match the 
 | `conditions` | list | Standard Kubernetes conditions. See the Ready and Deleting condition reasons below. |
 | `resolvedPricing` | object | Effective pricing the operator derived from the Offering spec after resolution. Present once the Offering becomes Ready. See subsection below. |
 
-### resolvedPricing
+### `resolvedPricing`
 
 | Field | Type | Description |
 |---|---|---|
