@@ -1,5 +1,10 @@
 [
   {
+    "version": "renovate-main-npm-minimatch-vulnerability",
+    "title": "renovate-main-npm-minimatch-vulnerability",
+    "aliases": []
+  },
+  {
     "version": "initial-docs",
     "title": "initial-docs",
     "aliases": [
