@@ -20,6 +20,11 @@
     "aliases": []
   },
   {
+    "version": "renovate-main-nginxinc-nginx-unprivileged-1.x",
+    "title": "renovate-main-nginxinc-nginx-unprivileged-1.x",
+    "aliases": []
+  },
+  {
     "version": "renovate-main-dotenv-16.x-lockfile",
     "title": "renovate-main-dotenv-16.x-lockfile",
     "aliases": [
