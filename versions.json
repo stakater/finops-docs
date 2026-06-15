@@ -2,7 +2,9 @@
   {
     "version": "renovate-main-testcafe-3.x-lockfile",
     "title": "renovate-main-testcafe-3.x-lockfile",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "renovate-main-stakater-vale-package-0.x",
@@ -37,9 +39,7 @@
   {
     "version": "renovate-main-docker-login-action-4.x",
     "title": "renovate-main-docker-login-action-4.x",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "renovate-main-actions-checkout-6.x",
