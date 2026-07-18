@@ -7,9 +7,7 @@
   {
     "version": "renovate-main-stakater-vale-package-0.x",
     "title": "renovate-main-stakater-vale-package-0.x",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "renovate-main-stakater-.github-0.x",
@@ -34,7 +32,9 @@
   {
     "version": "renovate-main-minimatch-10.x-lockfile",
     "title": "renovate-main-minimatch-10.x-lockfile",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "renovate-main-dotenv-16.x-lockfile",
