@@ -2,7 +2,9 @@
   {
     "version": "renovate-main-testcafe-3.x-lockfile",
     "title": "renovate-main-testcafe-3.x-lockfile",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "renovate-main-stakater-vale-package-0.x",
@@ -32,9 +34,7 @@
   {
     "version": "renovate-main-minimatch-10.x-lockfile",
     "title": "renovate-main-minimatch-10.x-lockfile",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "renovate-main-dotenv-16.x-lockfile",
