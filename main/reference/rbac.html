@@ -1,32 +1,35 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
       
+        <link rel="canonical" href="https://docs.stakater.com/finops/main/reference/rbac.html">
       
+      
+        <link rel="prev" href="configuration.html">
+      
+      
+        <link rel="next" href="security-model.html">
       
       
         
       
       
-      <link rel="icon" href="/finops/main/assets/images/favicon.svg">
+      <link rel="icon" href="../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
-        <title>FinOps Operator</title>
+        <title>RBAC - FinOps Operator</title>
       
     
     
-      <link rel="stylesheet" href="/finops/main/assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="/finops/main/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -39,17 +42,17 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Grotesk:300,300i,400,400i,700,700i%7CMonospace:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Grotesk:300,300i,400,400i,700,700i%7CMonospace:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Space Grotesk";--md-code-font:"Monospace"}</style>
       
     
     
-      <link rel="stylesheet" href="/finops/main/stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="/finops/main/stylesheets/pills.css">
+      <link rel="stylesheet" href="../stylesheets/pills.css">
     
-    <script>__md_scope=new URL("/finops/main",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -65,7 +68,17 @@
 
     
     
-  </head>
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -83,23 +96,28 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#rbac" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
     </div>
     
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
         
           <aside class="md-banner md-banner--warning">
             <div class="md-banner__inner md-grid md-typeset">
               
 This documentation is either for an old version, or for the unreleased 'main' version.
-<a href="..//finops/main">
+<a href="../..">
   <strong>Click here to go to the latest version.</strong>
 </a>
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("/finops/main"),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -323,8 +341,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   <nav class="md-header__inner md-grid" aria-label="Header">
 
     <!-- Link to home -->
-    <a href="/finops/main/." title="FinOps Operator"
-      class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       <!-- 
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -335,7 +352,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
     <label class="md-header__button md-icon" for="__drawer">
       
       <div class="md-header__drawer-hamburger-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
       </div>
     </label>
 
@@ -345,10 +362,10 @@ This documentation is either for an old version, or for the unreleased 'main' ve
         <!-- Logo -->
         <div class="md-header__topic">
           
-          <img class="md-header__logo_light" src="/finops/main/assets/images/logo-light.png#only-light" alt="logo" />
+          <img class="md-header__logo_light" src="../assets/images/logo-light.png#only-light" alt="logo">
           
           
-          <img class="md-header__logo_dark" src="/finops/main/assets/images/logo-dark.png#only-dark" alt="logo" />
+          <img class="md-header__logo_dark" src="../assets/images/logo-dark.png#only-dark" alt="logo">
           
           
           <div class="header-site-name">
@@ -702,12 +719,12 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                 &nbsp;
                 <span class="dropdown-arrow">
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"/>
+<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"></path>
 </svg>
                 </span>
                 <span class="dropdown-arrow-sm">
                     <svg width="8" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"/>
+<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"></path>
 </svg>
                 </span>
             </a>
@@ -717,8 +734,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                     <div class="dropdown-content-column">
                         <h3 class="dropdown-content-column-title">Products</h3>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/saap-kubernetes-openshift"
-                                class="dropdown-item-link-text hover-underline">Stakater
+                            <a href="https://www.stakater.com/saap-kubernetes-openshift" class="dropdown-item-link-text hover-underline">Stakater
                                 App
                                 Agility
                                 Platform (SAAP)</a>
@@ -729,8 +745,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                                 Operator</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://docs.stakater.com/tronador"
-                                class="dropdown-item-link-text hover-underline">Tronador
+                            <a href="https://docs.stakater.com/tronador" class="dropdown-item-link-text hover-underline">Tronador
                             </a>
                         </div>
                     </div>
@@ -738,28 +753,23 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                     <div class="dropdown-content-column">
                         <h3 class="dropdown-content-column-title">Services</h3>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-consultancy"
-                                class="dropdown-item-link-text hover-underline">Kubernetes
+                            <a href="https://www.stakater.com/kubernetes-consultancy" class="dropdown-item-link-text hover-underline">Kubernetes
                                 Consultancy</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-platform-assessment"
-                                class="dropdown-item-link-text hover-underline">Platform
+                            <a href="https://www.stakater.com/kubernetes-platform-assessment" class="dropdown-item-link-text hover-underline">Platform
                                 Assessment</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/openshift-as-a-service"
-                                class="dropdown-item-link-text hover-underline">OpenShift
+                            <a href="https://www.stakater.com/openshift-as-a-service" class="dropdown-item-link-text hover-underline">OpenShift
                                 Consultancy</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/secure-your-kubernetes-infrastructure"
-                                class="dropdown-item-link-text hover-underline">Secret
+                            <a href="https://www.stakater.com/secure-your-kubernetes-infrastructure" class="dropdown-item-link-text hover-underline">Secret
                                 Management Service</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-consultancy"
-                                class="dropdown-item-link-text hover-underline">Platform
+                            <a href="https://www.stakater.com/kubernetes-consultancy" class="dropdown-item-link-text hover-underline">Platform
                                 Engineering</a>
                         </div>
                     </div>
@@ -768,16 +778,13 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                         <h3 class="dropdown-content-column-title">Open Source</h3>
 
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/Reloader"
-                                class="dropdown-item-link-text hover-underline">Reloader</a>
+                            <a href="https://github.com/stakater/Reloader" class="dropdown-item-link-text hover-underline">Reloader</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/IngressMonitorController"
-                                class="dropdown-item-link-text hover-underline">IMC</a>
+                            <a href="https://github.com/stakater/IngressMonitorController" class="dropdown-item-link-text hover-underline">IMC</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/forecastle"
-                                class="dropdown-item-link-text hover-underline">Forecastle</a>
+                            <a href="https://github.com/stakater/forecastle" class="dropdown-item-link-text hover-underline">Forecastle</a>
                         </div>
                     </div>
                     <!-- Column 4 -->
@@ -786,8 +793,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                             <a href="https://github.com/stakater/" class="dropdown-content-dev-links-anchor">GitHub</a>
                         </div>
                         <div class="dropdown-content-dev-links-anchor-container">
-                            <a href="https://docs.stakater.com/"
-                                class="dropdown-content-dev-links-anchor">Documentation</a>
+                            <a href="https://docs.stakater.com/" class="dropdown-content-dev-links-anchor">Documentation</a>
                         </div>
                         <div class="dropdown-content-dev-links-anchor-container">
                             <a href="https://employee.stakater.com/" class="dropdown-content-dev-links-anchor">Employee
@@ -1087,42 +1093,30 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
   
-  <input class="md-option" data-md-color-media="(prefers-color-scheme)"
-    data-md-color-scheme="default" data-md-color-primary="indigo"
-    data-md-color-accent="indigo"  aria-label="Switch to system preference"
-     type="radio" name="__palette" id="__palette_0" />
+  <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_0">
   
-  <label class="md-header__button md-icon" title="Switch to system preference"
-    for="__palette_1" hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+  <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_1" hidden="">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
   </label>
   
   
   
   
   
-  <input class="md-option" data-md-color-media="(prefers-color-scheme: light)"
-    data-md-color-scheme="default" data-md-color-primary="custom"
-    data-md-color-accent="custom"  aria-label="Switch to light mode"
-     type="radio" name="__palette" id="__palette_1" />
+  <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
   
-  <label class="md-header__button md-icon" title="Switch to light mode"
-    for="__palette_2" hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+  <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden="">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
   </label>
   
   
   
   
   
-  <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)"
-    data-md-color-scheme="slate" data-md-color-primary="custom"
-    data-md-color-accent="custom"  aria-label="Switch to dark mode"
-     type="radio" name="__palette" id="__palette_2" />
+  <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_2">
   
-  <label class="md-header__button md-icon" title="Switch to dark mode"
-    for="__palette_0" hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54s-2.94 8.27-7 9.54c.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2"/></svg>
+  <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden="">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54s-2.94 8.27-7 9.54c.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2"></path></svg>
   </label>
   
   
@@ -1162,31 +1156,31 @@ This documentation is either for an old version, or for the unreleased 'main' ve
     
     <label class="md-header__button md-icon" for="__search">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
     </label>
     <!-- Search interface -->
     <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -1541,12 +1535,12 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                 &nbsp;
                 <span class="dropdown-arrow">
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"/>
+<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"></path>
 </svg>
                 </span>
                 <span class="dropdown-arrow-sm">
                     <svg width="8" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"/>
+<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"></path>
 </svg>
                 </span>
             </a>
@@ -1556,8 +1550,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                     <div class="dropdown-content-column">
                         <h3 class="dropdown-content-column-title">Products</h3>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/saap-kubernetes-openshift"
-                                class="dropdown-item-link-text hover-underline">Stakater
+                            <a href="https://www.stakater.com/saap-kubernetes-openshift" class="dropdown-item-link-text hover-underline">Stakater
                                 App
                                 Agility
                                 Platform (SAAP)</a>
@@ -1568,8 +1561,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                                 Operator</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://docs.stakater.com/tronador"
-                                class="dropdown-item-link-text hover-underline">Tronador
+                            <a href="https://docs.stakater.com/tronador" class="dropdown-item-link-text hover-underline">Tronador
                             </a>
                         </div>
                     </div>
@@ -1577,28 +1569,23 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                     <div class="dropdown-content-column">
                         <h3 class="dropdown-content-column-title">Services</h3>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-consultancy"
-                                class="dropdown-item-link-text hover-underline">Kubernetes
+                            <a href="https://www.stakater.com/kubernetes-consultancy" class="dropdown-item-link-text hover-underline">Kubernetes
                                 Consultancy</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-platform-assessment"
-                                class="dropdown-item-link-text hover-underline">Platform
+                            <a href="https://www.stakater.com/kubernetes-platform-assessment" class="dropdown-item-link-text hover-underline">Platform
                                 Assessment</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/openshift-as-a-service"
-                                class="dropdown-item-link-text hover-underline">OpenShift
+                            <a href="https://www.stakater.com/openshift-as-a-service" class="dropdown-item-link-text hover-underline">OpenShift
                                 Consultancy</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/secure-your-kubernetes-infrastructure"
-                                class="dropdown-item-link-text hover-underline">Secret
+                            <a href="https://www.stakater.com/secure-your-kubernetes-infrastructure" class="dropdown-item-link-text hover-underline">Secret
                                 Management Service</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-consultancy"
-                                class="dropdown-item-link-text hover-underline">Platform
+                            <a href="https://www.stakater.com/kubernetes-consultancy" class="dropdown-item-link-text hover-underline">Platform
                                 Engineering</a>
                         </div>
                     </div>
@@ -1607,16 +1594,13 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                         <h3 class="dropdown-content-column-title">Open Source</h3>
 
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/Reloader"
-                                class="dropdown-item-link-text hover-underline">Reloader</a>
+                            <a href="https://github.com/stakater/Reloader" class="dropdown-item-link-text hover-underline">Reloader</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/IngressMonitorController"
-                                class="dropdown-item-link-text hover-underline">IMC</a>
+                            <a href="https://github.com/stakater/IngressMonitorController" class="dropdown-item-link-text hover-underline">IMC</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/forecastle"
-                                class="dropdown-item-link-text hover-underline">Forecastle</a>
+                            <a href="https://github.com/stakater/forecastle" class="dropdown-item-link-text hover-underline">Forecastle</a>
                         </div>
                     </div>
                     <!-- Column 4 -->
@@ -1625,8 +1609,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                             <a href="https://github.com/stakater/" class="dropdown-content-dev-links-anchor">GitHub</a>
                         </div>
                         <div class="dropdown-content-dev-links-anchor-container">
-                            <a href="https://docs.stakater.com/"
-                                class="dropdown-content-dev-links-anchor">Documentation</a>
+                            <a href="https://docs.stakater.com/" class="dropdown-content-dev-links-anchor">Documentation</a>
                         </div>
                         <div class="dropdown-content-dev-links-anchor-container">
                             <a href="https://employee.stakater.com/" class="dropdown-content-dev-links-anchor">Employee
@@ -1997,7 +1980,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2006,10 +1989,10 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/finops/main/." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     FinOps Operator
@@ -2019,7 +2002,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       <a href="https://github.com/stakater/finops-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -2027,7 +2010,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </a>
     </div>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -2044,7 +2027,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -2074,7 +2057,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2083,7 +2066,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -2111,7 +2094,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/overview/key-features.html" class="md-nav__link">
+      <a href="../overview/key-features.html" class="md-nav__link">
         
   
   
@@ -2139,7 +2122,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/overview/use-cases.html" class="md-nav__link">
+      <a href="../overview/use-cases.html" class="md-nav__link">
         
   
   
@@ -2182,7 +2165,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -2212,7 +2195,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2221,7 +2204,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/architecture.html" class="md-nav__link">
+      <a href="../concepts/architecture.html" class="md-nav__link">
         
   
   
@@ -2249,7 +2232,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/terminology.html" class="md-nav__link">
+      <a href="../concepts/terminology.html" class="md-nav__link">
         
   
   
@@ -2277,7 +2260,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/finops-provider.html" class="md-nav__link">
+      <a href="../concepts/finops-provider.html" class="md-nav__link">
         
   
   
@@ -2305,7 +2288,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/pricebook.html" class="md-nav__link">
+      <a href="../concepts/pricebook.html" class="md-nav__link">
         
   
   
@@ -2333,7 +2316,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/costjob.html" class="md-nav__link">
+      <a href="../concepts/costjob.html" class="md-nav__link">
         
   
   
@@ -2361,7 +2344,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/offering.html" class="md-nav__link">
+      <a href="../concepts/offering.html" class="md-nav__link">
         
   
   
@@ -2389,7 +2372,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/subscription.html" class="md-nav__link">
+      <a href="../concepts/subscription.html" class="md-nav__link">
         
   
   
@@ -2417,7 +2400,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/billing-model.html" class="md-nav__link">
+      <a href="../concepts/billing-model.html" class="md-nav__link">
         
   
   
@@ -2445,7 +2428,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/compatibility-and-hierarchy.html" class="md-nav__link">
+      <a href="../concepts/compatibility-and-hierarchy.html" class="md-nav__link">
         
   
   
@@ -2488,7 +2471,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -2518,7 +2501,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2527,7 +2510,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/getting-started/quick-start.html" class="md-nav__link">
+      <a href="../getting-started/quick-start.html" class="md-nav__link">
         
   
   
@@ -2563,7 +2546,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -2593,7 +2576,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2602,7 +2585,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/getting-started/installation/overview.html" class="md-nav__link">
+      <a href="../getting-started/installation/overview.html" class="md-nav__link">
         
   
   
@@ -2630,7 +2613,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/getting-started/installation/openshift.html" class="md-nav__link">
+      <a href="../getting-started/installation/openshift.html" class="md-nav__link">
         
   
   
@@ -2658,7 +2641,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/getting-started/installation/kubernetes.html" class="md-nav__link">
+      <a href="../getting-started/installation/kubernetes.html" class="md-nav__link">
         
   
   
@@ -2694,7 +2677,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/getting-started/uninstalling.html" class="md-nav__link">
+      <a href="../getting-started/uninstalling.html" class="md-nav__link">
         
   
   
@@ -2737,7 +2720,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2767,7 +2750,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2776,7 +2759,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/define-pricing.html" class="md-nav__link">
+      <a href="../guides/define-pricing.html" class="md-nav__link">
         
   
   
@@ -2804,7 +2787,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/switch-active-pricebook.html" class="md-nav__link">
+      <a href="../guides/switch-active-pricebook.html" class="md-nav__link">
         
   
   
@@ -2832,7 +2815,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/collect-cost-data.html" class="md-nav__link">
+      <a href="../guides/collect-cost-data.html" class="md-nav__link">
         
   
   
@@ -2860,7 +2843,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/define-offering.html" class="md-nav__link">
+      <a href="../guides/define-offering.html" class="md-nav__link">
         
   
   
@@ -2888,7 +2871,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/price-resource-usage.html" class="md-nav__link">
+      <a href="../guides/price-resource-usage.html" class="md-nav__link">
         
   
   
@@ -2916,7 +2899,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/subscribe-to-offering.html" class="md-nav__link">
+      <a href="../guides/subscribe-to-offering.html" class="md-nav__link">
         
   
   
@@ -2944,7 +2927,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/compose-subscriptions.html" class="md-nav__link">
+      <a href="../guides/compose-subscriptions.html" class="md-nav__link">
         
   
   
@@ -2972,7 +2955,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/read-subscription-costs.html" class="md-nav__link">
+      <a href="../guides/read-subscription-costs.html" class="md-nav__link">
         
   
   
@@ -3000,7 +2983,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/deactivate-a-subscription.html" class="md-nav__link">
+      <a href="../guides/deactivate-a-subscription.html" class="md-nav__link">
         
   
   
@@ -3032,18 +3015,20 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -3064,7 +3049,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3073,7 +3058,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -3082,7 +3067,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/reference/api.html" class="md-nav__link">
+      <a href="api.html" class="md-nav__link">
         
   
   
@@ -3110,7 +3095,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/reference/configuration.html" class="md-nav__link">
+      <a href="configuration.html" class="md-nav__link">
         
   
   
@@ -3135,10 +3120,37 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/finops/main/reference/rbac.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RBAC
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="rbac.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3154,6 +3166,94 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#the-manager-clusterrole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The manager ClusterRole
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-each-rule-is-there" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why each rule is there
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-cluster-scoped-and-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is cluster-scoped, and why
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrics-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metrics roles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-for-your-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles for your users
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3166,7 +3266,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/reference/security-model.html" class="md-nav__link">
+      <a href="security-model.html" class="md-nav__link">
         
   
   
@@ -3194,7 +3294,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/reference/metrics.html" class="md-nav__link">
+      <a href="metrics.html" class="md-nav__link">
         
   
   
@@ -3222,7 +3322,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/reference/webhooks.html" class="md-nav__link">
+      <a href="webhooks.html" class="md-nav__link">
         
   
   
@@ -3250,7 +3350,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/reference/status-conditions.html" class="md-nav__link">
+      <a href="status-conditions.html" class="md-nav__link">
         
   
   
@@ -3285,7 +3385,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/troubleshooting.html" class="md-nav__link">
+      <a href="../troubleshooting.html" class="md-nav__link">
         
   
   
@@ -3312,7 +3412,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/release-notes.html" class="md-nav__link">
+      <a href="../release-notes.html" class="md-nav__link">
         
   
   
@@ -3339,7 +3439,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/eula.html" class="md-nav__link">
+      <a href="../eula.html" class="md-nav__link">
         
   
   
@@ -3367,7 +3467,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3378,6 +3478,82 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#the-manager-clusterrole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The manager ClusterRole
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-each-rule-is-there" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why each rule is there
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-cluster-scoped-and-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is cluster-scoped, and why
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrics-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metrics roles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-for-your-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles for your users
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3390,9 +3566,173 @@ This documentation is either for an old version, or for the unreleased 'main' ve
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>4xx - Page does not exist or has restricted access or rights</h1>
-  <p>This page does not exist or may have been deprecated or moved. Please use the search to find anything in the documentation.</p>
+                  
 
+
+  
+  
+
+
+<h1 id="rbac">RBAC<a class="headerlink" href="#rbac" title="Permanent link">#</a></h1>
+<p>Everything the FinOps Operator does to your cluster goes through a single ServiceAccount, <code>finops-operator-controller-manager</code>, created in the release namespace. Three bindings attach to it: a ClusterRoleBinding to <code>finops-operator-manager-role</code>, which carries all of the operator's real authority; a RoleBinding in the release namespace to <code>finops-operator-leader-election-role</code>; and a ClusterRoleBinding to <code>finops-operator-metrics-auth-role</code>, used only by the filter in front of the metrics endpoint.</p>
+<p>The pod template of every CronJob the operator generates names that same ServiceAccount, so a collection run holds exactly the permissions the manager holds. There is no separate, narrower identity for the jobs.</p>
+<h2 id="the-manager-clusterrole">The manager ClusterRole<a class="headerlink" href="#the-manager-clusterrole" title="Permanent link">#</a></h2>
+<p><code>finops-operator-manager-role</code> is generated from the <code>+kubebuilder:rbac</code> markers on the five reconcilers, so it is the union of what they declare rather than a hand-tuned list. It contains nine rules.</p>
+<table>
+<thead>
+<tr>
+<th>API group</th>
+<th>Resources</th>
+<th>Verbs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>finops.stakater.com</code></td>
+<td><code>costjobs</code>, <code>finopsproviders</code>, <code>offerings</code>, <code>pricebooks</code>, <code>subscriptions</code></td>
+<td>create, delete, get, list, patch, update, watch</td>
+</tr>
+<tr>
+<td><code>finops.stakater.com</code></td>
+<td><code>costjobs/status</code>, <code>finopsproviders/status</code>, <code>offerings/status</code>, <code>pricebooks/status</code>, <code>subscriptions/status</code></td>
+<td>get, patch, update</td>
+</tr>
+<tr>
+<td><code>finops.stakater.com</code></td>
+<td><code>costjobs/finalizers</code>, <code>offerings/finalizers</code>, <code>pricebooks/finalizers</code>, <code>subscriptions/finalizers</code></td>
+<td>update</td>
+</tr>
+<tr>
+<td><code>""</code> (core)</td>
+<td><code>configmaps</code>, <code>secrets</code>, <code>serviceaccounts</code></td>
+<td>create, delete, get, list, patch, update, watch</td>
+</tr>
+<tr>
+<td><code>""</code> (core)</td>
+<td><code>namespaces</code></td>
+<td>get, list, watch</td>
+</tr>
+<tr>
+<td><code>apps</code></td>
+<td><code>deployments</code></td>
+<td>create, delete, get, list, patch, update, watch</td>
+</tr>
+<tr>
+<td><code>batch</code></td>
+<td><code>cronjobs</code></td>
+<td>create, delete, get, list, patch, update, watch</td>
+</tr>
+<tr>
+<td><code>dependencies.tenantoperator.stakater.com</code></td>
+<td><code>opencosts</code></td>
+<td>get, list, patch</td>
+</tr>
+<tr>
+<td><code>rbac.authorization.k8s.io</code></td>
+<td><code>roles</code>, <code>rolebindings</code></td>
+<td>create, delete, get, list, patch, update, watch</td>
+</tr>
+</tbody>
+</table>
+<h2 id="why-each-rule-is-there">Why each rule is there<a class="headerlink" href="#why-each-rule-is-there" title="Permanent link">#</a></h2>
+<p>The three <code>finops.stakater.com</code> rules cover the operator reconciling its own API. The first watches and updates the five kinds, the second writes the conditions and status fields described in <a href="status-conditions.html">status conditions</a>, and the third manages the finalizers that hold an Offering or a Subscription open while dependents remain or hours are still to be charged. Status and finalizer writes go through their own API endpoints, so they are their own rules, and splitting them keeps the object rule from implying more than it grants.</p>
+<p><code>configmaps</code> is how the active PriceBook reaches OpenCost. The PriceBook reconciler renders the winning book's rates into a <code>default.json</code> document and applies it to the <code>finops-operator-custom-pricing-configs</code> ConfigMap in the OpenCost deployment's namespace with a create-or-patch, which is why the rule carries <code>create</code> as well as <code>patch</code>. <a href="../concepts/architecture.html#how-the-active-pricebook-reaches-opencost">How the active PriceBook reaches OpenCost</a> covers the mechanism.</p>
+<p><code>secrets</code> is a write permission rather than a read one, and this is the rule most often misread. The operator never reads the PostgreSQL, OpenCost, or Prometheus dependency Secrets through the API: the kubelet resolves those <code>secretKeyRef</code> entries when it starts the manager pod, so their values arrive as environment variables and need no RBAC at all. What the operator does with this rule is create and update one Secret per CostJob, named <code>&lt;costjob-name&gt;-costjob-secret</code> in the CostJob's own namespace, holding the <code>POSTGRES_CONNECTION_STRING</code> key that the generated pod reads. <a href="security-model.html#credentials-the-operator-holds">Credentials the operator holds</a> covers what that copy means.</p>
+<p><code>deployments</code> exists so the operator can restart OpenCost after a pricing change. The restart is a patch of the OpenCost Deployment's pod template annotation <code>finops.stakater.com/restartedAt</code>, applied only when the pricing document actually changed. Reads and that patch are all the code performs; <code>create</code> and <code>delete</code> come from a broad marker on the FinOpsProvider reconciler and nothing exercises them.</p>
+<p><code>cronjobs</code> is how a <code>CostJob</code> becomes work. The CostJob reconciler creates or updates <code>&lt;costjob-name&gt;-cronjob</code> in the CostJob's namespace and sets itself as controller owner, so the CronJob is garbage-collected with its CostJob. There is deliberately no grant on <code>batch/jobs</code>: the Kubernetes CronJob controller creates the Jobs, and the operator neither reads nor manages the Jobs or the pods that follow from them. To inspect a run you go to the Jobs yourself.</p>
+<p><code>namespaces</code> is read-only, and narrower in purpose than it looks. The Subscription reconciler fetches the Namespace object of each Subscription it reconciles so it can capture that namespace's labels and mirror them alongside the Subscription into PostgreSQL. Nothing else in the operator reads a Namespace.</p>
+<p><code>opencosts</code> in the <code>dependencies.tenantoperator.stakater.com</code> group applies only when <code>MTO_ENABLED</code> is exactly <code>"true"</code>. In that mode the FinOpsProvider reconciler patches the <code>OpenCost</code> custom resource to carry the cloud integration secret and to switch custom pricing on. Outside that mode the rule is unused, and if the CRD is absent the group never resolves.</p>
+<p><code>roles</code> and <code>rolebindings</code>, together with <code>serviceaccounts</code> in the core rule, come from markers on the CostJob reconciler and are not used. No code path in the operator creates, reads, or modifies a Role, a RoleBinding, or a ServiceAccount. If your cluster policy objects to an operator holding RBAC write permissions, these are the rules to trim first, and removing them changes no behaviour on either install path.</p>
+<h2 id="what-is-cluster-scoped-and-why">What is cluster-scoped, and why<a class="headerlink" href="#what-is-cluster-scoped-and-why" title="Permanent link">#</a></h2>
+<p><code>FinOpsProvider</code> is declared with <code>scope=Cluster</code>, so it has no namespace and can only be granted through a ClusterRole. <code>Offering</code>, <code>Subscription</code>, <code>PriceBook</code>, and <code>CostJob</code> are namespace-scoped, but the operator watches all four across every namespace rather than in one, so their rules also have to be cluster-wide. Reading <code>namespaces</code> is cluster-scoped by definition.</p>
+<p>That leaves one namespace-scoped Role, <code>finops-operator-leader-election-role</code>, bound in the release namespace.</p>
+<table>
+<thead>
+<tr>
+<th>API group</th>
+<th>Resources</th>
+<th>Verbs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>coordination.k8s.io</code></td>
+<td><code>leases</code></td>
+<td>get, list, watch, create, update, patch, delete</td>
+</tr>
+<tr>
+<td><code>""</code> (core)</td>
+<td><code>configmaps</code></td>
+<td>get, list, watch, create, update, patch, delete</td>
+</tr>
+<tr>
+<td><code>""</code> (core)</td>
+<td><code>events</code></td>
+<td>create, patch</td>
+</tr>
+</tbody>
+</table>
+<p>The Lease is what <code>--leader-elect</code> acquires, under the election ID <code>4f7ee504.stakater.com</code>. The chart passes that flag, so a chart install holds a Lease in the release namespace and any extra replicas stand by. The <code>configmaps</code> and <code>events</code> entries come with the election Role as it is generated, rather than being something the operator drives: no reconciler registers an event recorder, so the operator emits no Kubernetes events of its own and conditions are the only signal it writes.</p>
+<h2 id="metrics-roles">Metrics roles<a class="headerlink" href="#metrics-roles" title="Permanent link">#</a></h2>
+<p>Two more ClusterRoles ship for the metrics endpoint, and only one of them is bound.</p>
+<p><code>finops-operator-metrics-auth-role</code> grants <code>create</code> on <code>tokenreviews</code> in <code>authentication.k8s.io</code> and on <code>subjectaccessreviews</code> in <code>authorization.k8s.io</code>, and it is bound to the manager's ServiceAccount. The manager needs it because <code>--metrics-secure</code> defaults to true, which puts an authentication and authorization filter in front of the endpoint; the filter validates a scraper's bearer token and checks its access by calling those two APIs on the operator's own behalf.</p>
+<p><code>finops-operator-metrics-reader</code> grants <code>get</code> on the non-resource URL <code>/metrics</code> and ships with no binding at all. It is the role you bind to whatever identity scrapes the endpoint. <a href="metrics.html">Metrics</a> covers the endpoint itself.</p>
+<h2 id="roles-for-your-users">Roles for your users<a class="headerlink" href="#roles-for-your-users" title="Permanent link">#</a></h2>
+<p>The chart also installs fifteen unbound ClusterRoles, three for each of the five kinds, named <code>finops-operator-&lt;kind&gt;-admin-role</code>, <code>-editor-role</code>, and <code>-viewer-role</code>. The operator does not use them; they exist so you can delegate access without writing rules yourself.</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>On the resource</th>
+<th>On its status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>admin</td>
+<td><code>*</code></td>
+<td>get</td>
+</tr>
+<tr>
+<td>editor</td>
+<td>create, delete, get, list, patch, update, watch</td>
+<td>get</td>
+</tr>
+<tr>
+<td>viewer</td>
+<td>get, list, watch</td>
+<td>get</td>
+</tr>
+</tbody>
+</table>
+<p>Because they are ClusterRoles, a RoleBinding scopes one to a single namespace while a ClusterRoleBinding grants it everywhere. For the four namespace-scoped kinds a RoleBinding is usually what you want:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>rolebinding<span class="w"> </span>acme-subscription-editor<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--clusterrole<span class="o">=</span>finops-operator-subscription-editor-role<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--user<span class="o">=</span>alice<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="o">=</span>acme-billing
+</code></pre></div>
+<p><code>FinOpsProvider</code> is cluster-scoped, so <code>finops-operator-finopsprovider-admin-role</code> only takes effect through a ClusterRoleBinding. Granting it is granting control over how the whole cluster is priced. <a href="security-model.html#who-can-create-what">Who can create what</a> explains why the two scopes are worth treating differently.</p>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="security-model.html">Security model</a> for the trust boundaries these permissions draw.</li>
+<li><a href="configuration.html">Configuration reference</a> for the flags and Secret names this page refers to.</li>
+<li><a href="metrics.html">Metrics</a> for the endpoint the metrics roles protect.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
               </article>
             </div>
           
@@ -3400,9 +3740,9 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -3662,7 +4002,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </style>
 
 <footer class="md-footer">
-    <div class="md-footer__inner mlr-auto" aria-label="Footer" >
+    <div class="md-footer__inner mlr-auto" aria-label="Footer">
         <!-- Footer content container-->
         <div class="footer-content-container">
             <!-- Flex-container with columns -->
@@ -3671,33 +4011,27 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                 <div class="flex-2">
                     <div class="logo-footer-container">
                         
-                        <img class="md-header__logo_light" src="/finops/main/assets/images/footer-logo-light.png#only-light"
-                            alt="logo" />
+                        <img class="md-header__logo_light" src="../assets/images/footer-logo-light.png#only-light" alt="logo">
                         
                         
-                        <img src="/finops/main/assets/images/footer-logo-dark.png#only-dark" alt="logo" />
+                        <img src="../assets/images/footer-logo-dark.png#only-dark" alt="logo">
                         
                     </div>
 
                     <div class="collaborations-img-container">
                         <div class="display-flex">
                             
-                            <img class="csa-logo-dark"
-                                src="/finops/main/assets/images/CSA_dark.png#only-dark" alt="CSA" />
+                            <img class="csa-logo-dark" src="../assets/images/CSA_dark.png#only-dark" alt="CSA">
                             
                             
-                            <img class="csa-logo-light"
-                                src="/finops/main/assets/images/CSA_light.png#only-light"
-                                alt="CSA" />
+                            <img class="csa-logo-light" src="../assets/images/CSA_light.png#only-light" alt="CSA">
                             
 
                             
-                            <img class="hc-logo-dark" src="/finops/main/assets/images/HC_dark.png#only-dark"
-                                alt="HC" />
+                            <img class="hc-logo-dark" src="../assets/images/HC_dark.png#only-dark" alt="HC">
                             
                             
-                            <img class="hc-logo-light"
-                                src="/finops/main/assets/images/HC_light.png#only-light" alt="HC" />
+                            <img class="hc-logo-light" src="../assets/images/HC_light.png#only-light" alt="HC">
                             
                         </div>
                     </div>
@@ -3895,8 +4229,8 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
-<path class="cls-2" d="M24.91,11.22A9.84,9.84,0,0,0,21.3,7.61a9.68,9.68,0,0,0-5-1.33,9.68,9.68,0,0,0-5,1.33A9.9,9.9,0,0,0,6.4,16.19,9.61,9.61,0,0,0,8.3,22a9.73,9.73,0,0,0,4.88,3.58.6.6,0,0,0,.52-.09.51.51,0,0,0,.17-.39s0-.26,0-.7,0-.82,0-1.15l-.29.06a3.78,3.78,0,0,1-.72,0,4.73,4.73,0,0,1-.9-.09,1.86,1.86,0,0,1-.86-.39,1.58,1.58,0,0,1-.57-.79l-.13-.3a3,3,0,0,0-.41-.66,1.55,1.55,0,0,0-.56-.49l-.09-.06a1.25,1.25,0,0,1-.17-.16A.58.58,0,0,1,9,20.26q0-.09.06-.15a1.07,1.07,0,0,1,.38-.05l.26,0a1.75,1.75,0,0,1,.63.3,2.05,2.05,0,0,1,.63.68,2.26,2.26,0,0,0,.72.8,1.48,1.48,0,0,0,.84.28,4,4,0,0,0,.74-.06,2.64,2.64,0,0,0,.58-.2,2.14,2.14,0,0,1,.63-1.33,9,9,0,0,1-1.32-.23,5.09,5.09,0,0,1-1.21-.5,3.42,3.42,0,0,1-1-.87,4,4,0,0,1-.68-1.35A6.36,6.36,0,0,1,10,15.68,3.77,3.77,0,0,1,11,13a3.57,3.57,0,0,1,.09-2.64,1.87,1.87,0,0,1,1.12.18,6.56,6.56,0,0,1,1.07.5c.23.13.41.25.55.34a9.48,9.48,0,0,1,5,0l.49-.31a7.36,7.36,0,0,1,1.19-.56,1.72,1.72,0,0,1,1.05-.15,3.48,3.48,0,0,1,.1,2.64,3.77,3.77,0,0,1,1,2.66,6.36,6.36,0,0,1-.27,1.94A3.84,3.84,0,0,1,21.7,19a3.73,3.73,0,0,1-1.05.86,5.09,5.09,0,0,1-1.21.5,9,9,0,0,1-1.32.23,2.34,2.34,0,0,1,.67,1.84v2.72a.51.51,0,0,0,.16.39.58.58,0,0,0,.51.09,9.91,9.91,0,0,0,6.78-9.42A9.67,9.67,0,0,0,24.91,11.22Z"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
+<path class="cls-2" d="M24.91,11.22A9.84,9.84,0,0,0,21.3,7.61a9.68,9.68,0,0,0-5-1.33,9.68,9.68,0,0,0-5,1.33A9.9,9.9,0,0,0,6.4,16.19,9.61,9.61,0,0,0,8.3,22a9.73,9.73,0,0,0,4.88,3.58.6.6,0,0,0,.52-.09.51.51,0,0,0,.17-.39s0-.26,0-.7,0-.82,0-1.15l-.29.06a3.78,3.78,0,0,1-.72,0,4.73,4.73,0,0,1-.9-.09,1.86,1.86,0,0,1-.86-.39,1.58,1.58,0,0,1-.57-.79l-.13-.3a3,3,0,0,0-.41-.66,1.55,1.55,0,0,0-.56-.49l-.09-.06a1.25,1.25,0,0,1-.17-.16A.58.58,0,0,1,9,20.26q0-.09.06-.15a1.07,1.07,0,0,1,.38-.05l.26,0a1.75,1.75,0,0,1,.63.3,2.05,2.05,0,0,1,.63.68,2.26,2.26,0,0,0,.72.8,1.48,1.48,0,0,0,.84.28,4,4,0,0,0,.74-.06,2.64,2.64,0,0,0,.58-.2,2.14,2.14,0,0,1,.63-1.33,9,9,0,0,1-1.32-.23,5.09,5.09,0,0,1-1.21-.5,3.42,3.42,0,0,1-1-.87,4,4,0,0,1-.68-1.35A6.36,6.36,0,0,1,10,15.68,3.77,3.77,0,0,1,11,13a3.57,3.57,0,0,1,.09-2.64,1.87,1.87,0,0,1,1.12.18,6.56,6.56,0,0,1,1.07.5c.23.13.41.25.55.34a9.48,9.48,0,0,1,5,0l.49-.31a7.36,7.36,0,0,1,1.19-.56,1.72,1.72,0,0,1,1.05-.15,3.48,3.48,0,0,1,.1,2.64,3.77,3.77,0,0,1,1,2.66,6.36,6.36,0,0,1-.27,1.94A3.84,3.84,0,0,1,21.7,19a3.73,3.73,0,0,1-1.05.86,5.09,5.09,0,0,1-1.21.5,9,9,0,0,1-1.32.23,2.34,2.34,0,0,1,.67,1.84v2.72a.51.51,0,0,0,.16.39.58.58,0,0,0,.51.09,9.91,9.91,0,0,0,6.78-9.42A9.67,9.67,0,0,0,24.91,11.22Z"></path>
 </g>
 </g>
 </svg>
@@ -3915,11 +4249,11 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
 <g id="_10.Linkedin" data-name="10.Linkedin">
-<path class="cls-2" d="M24.13,24.13v-6c0-2.92-.63-5.16-4.05-5.16a3.55,3.55,0,0,0-3.19,1.75h0V13.28H13.62V24.13H17V18.74c0-1.42.26-2.78,2-2.78s1.74,1.6,1.74,2.86v5.29h3.38Z"/>
-<path class="cls-2" d="M8.14,13.28h3.37V24.13H8.14Z"/>
-<path class="cls-2" d="M9.82,7.87a2,2,0,1,0,1.95,2A2,2,0,0,0,9.82,7.87Z"/>
+<path class="cls-2" d="M24.13,24.13v-6c0-2.92-.63-5.16-4.05-5.16a3.55,3.55,0,0,0-3.19,1.75h0V13.28H13.62V24.13H17V18.74c0-1.42.26-2.78,2-2.78s1.74,1.6,1.74,2.86v5.29h3.38Z"></path>
+<path class="cls-2" d="M8.14,13.28h3.37V24.13H8.14Z"></path>
+<path class="cls-2" d="M9.82,7.87a2,2,0,1,0,1.95,2A2,2,0,0,0,9.82,7.87Z"></path>
 </g>
 </g>
 </g>
@@ -3939,8 +4273,8 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
-<path class="cls-2" d="M20.28,9.28h2.28l-5,5.69,5.86,7.75H18.85L15.25,18l-4.11,4.7H8.86l5.33-6.09L8.56,9.28h4.71l3.25,4.29Zm-.8,12.08h1.26L12.58,10.57H11.23l8.25,10.79Z"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
+<path class="cls-2" d="M20.28,9.28h2.28l-5,5.69,5.86,7.75H18.85L15.25,18l-4.11,4.7H8.86l5.33-6.09L8.56,9.28h4.71l3.25,4.29Zm-.8,12.08h1.26L12.58,10.57H11.23l8.25,10.79Z"></path>
 </g>
 </g>
 </svg>
@@ -3959,16 +4293,16 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
-<path id="f" class="cls-2" d="M17.35,24.72V16.77H20l.4-3.11H17.35v-2c0-.89.25-1.51,1.54-1.51h1.64V7.4a21.51,21.51,0,0,0-2.39-.12,3.73,3.73,0,0,0-4,4.1v2.28H11.47v3.11h2.68v8Z"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
+<path id="f" class="cls-2" d="M17.35,24.72V16.77H20l.4-3.11H17.35v-2c0-.89.25-1.51,1.54-1.51h1.64V7.4a21.51,21.51,0,0,0-2.39-.12,3.73,3.73,0,0,0-4,4.1v2.28H11.47v3.11h2.68v8Z"></path>
 </g>
 </g>
 </svg>
                         </a>
                         <a href="https://www.instagram.com/stakater.se/" class="svg-container" title="Instagram">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M16.0008 7.4668C13.6833 7.4668 13.3924 7.47693 12.4822 7.51835C11.5737 7.55995 10.9536 7.70378 10.4111 7.9148C9.8498 8.13276 9.37371 8.42432 8.89939 8.89881C8.42472 9.37313 8.13316 9.84922 7.91449 10.4103C7.70294 10.9531 7.55893 11.5733 7.51805 12.4814C7.47733 13.3917 7.46667 13.6827 7.46667 16.0002C7.46667 18.3178 7.47698 18.6077 7.51822 19.5179C7.56 20.4264 7.70383 21.0465 7.91467 21.5891C8.13281 22.1503 8.42437 22.6264 8.89886 23.1007C9.373 23.5754 9.84909 23.8677 10.41 24.0856C10.9529 24.2967 11.5732 24.4405 12.4815 24.4821C13.3917 24.5235 13.6824 24.5336 15.9997 24.5336C18.3174 24.5336 18.6074 24.5235 19.5176 24.4821C20.4261 24.4405 21.0469 24.2967 21.5898 24.0856C22.1509 23.8677 22.6263 23.5754 23.1004 23.1007C23.5751 22.6264 23.8667 22.1503 24.0853 21.5893C24.2951 21.0465 24.4391 20.4262 24.4818 19.5181C24.5227 18.6079 24.5333 18.3178 24.5333 16.0002C24.5333 13.6827 24.5227 13.3918 24.4818 12.4816C24.4391 11.5732 24.2951 10.9531 24.0853 10.4105C23.8667 9.84922 23.5751 9.37313 23.1004 8.89881C22.6258 8.42414 22.1511 8.13258 21.5893 7.9148C21.0453 7.70378 20.4248 7.55995 19.5164 7.51835C18.6062 7.47693 18.3164 7.4668 15.9981 7.4668H16.0008ZM15.2352 9.00457C15.4624 9.00421 15.716 9.00457 16.0008 9.00457C18.2792 9.00457 18.5492 9.01274 19.449 9.05363C20.281 9.09168 20.7325 9.2307 21.0333 9.3475C21.4316 9.50217 21.7155 9.68706 22.014 9.98573C22.3127 10.2844 22.4975 10.5688 22.6526 10.9671C22.7694 11.2675 22.9086 11.7191 22.9464 12.5511C22.9873 13.4507 22.9962 13.7209 22.9962 15.9982C22.9962 18.2756 22.9873 18.5458 22.9464 19.4454C22.9084 20.2774 22.7694 20.729 22.6526 21.0294C22.4979 21.4276 22.3127 21.7112 22.014 22.0097C21.7153 22.3084 21.4318 22.4932 21.0333 22.6479C20.7329 22.7652 20.281 22.9039 19.449 22.942C18.5494 22.9828 18.2792 22.9917 16.0008 22.9917C13.7222 22.9917 13.4521 22.9828 12.5526 22.942C11.7205 22.9036 11.269 22.7645 10.968 22.6477C10.5698 22.4931 10.2853 22.3082 9.98666 22.0095C9.68799 21.7108 9.5031 21.4271 9.34807 21.0287C9.23127 20.7282 9.09207 20.2767 9.0542 19.4447C9.01331 18.5451 9.00514 18.2749 9.00514 15.9961C9.00514 13.7173 9.01331 13.4485 9.0542 12.549C9.09225 11.717 9.23127 11.2654 9.34807 10.9646C9.50274 10.5664 9.68799 10.2819 9.98666 9.98324C10.2853 9.68457 10.5698 9.49968 10.968 9.34466C11.2688 9.22732 11.7205 9.08866 12.5526 9.05043C13.3398 9.01488 13.6448 9.00421 15.2352 9.00243V9.00457ZM20.5558 10.4215C19.9905 10.4215 19.5318 10.8796 19.5318 11.4451C19.5318 12.0105 19.9905 12.4691 20.5558 12.4691C21.1212 12.4691 21.5798 12.0105 21.5798 11.4451C21.5798 10.8798 21.1212 10.4215 20.5558 10.4215ZM16.0008 11.6179C13.5807 11.6179 11.6185 13.5801 11.6185 16.0002C11.6185 18.4203 13.5807 20.3816 16.0008 20.3816C18.4209 20.3816 20.3824 18.4203 20.3824 16.0002C20.3824 13.5801 18.4209 11.6179 16.0008 11.6179ZM16.0008 13.1557C17.5716 13.1557 18.8453 14.4292 18.8453 16.0002C18.8453 17.5711 17.5716 18.8447 16.0008 18.8447C14.4297 18.8447 13.1563 17.5711 13.1563 16.0002C13.1563 14.4292 14.4297 13.1557 16.0008 13.1557Z" fill="#EA7845"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.0008 7.4668C13.6833 7.4668 13.3924 7.47693 12.4822 7.51835C11.5737 7.55995 10.9536 7.70378 10.4111 7.9148C9.8498 8.13276 9.37371 8.42432 8.89939 8.89881C8.42472 9.37313 8.13316 9.84922 7.91449 10.4103C7.70294 10.9531 7.55893 11.5733 7.51805 12.4814C7.47733 13.3917 7.46667 13.6827 7.46667 16.0002C7.46667 18.3178 7.47698 18.6077 7.51822 19.5179C7.56 20.4264 7.70383 21.0465 7.91467 21.5891C8.13281 22.1503 8.42437 22.6264 8.89886 23.1007C9.373 23.5754 9.84909 23.8677 10.41 24.0856C10.9529 24.2967 11.5732 24.4405 12.4815 24.4821C13.3917 24.5235 13.6824 24.5336 15.9997 24.5336C18.3174 24.5336 18.6074 24.5235 19.5176 24.4821C20.4261 24.4405 21.0469 24.2967 21.5898 24.0856C22.1509 23.8677 22.6263 23.5754 23.1004 23.1007C23.5751 22.6264 23.8667 22.1503 24.0853 21.5893C24.2951 21.0465 24.4391 20.4262 24.4818 19.5181C24.5227 18.6079 24.5333 18.3178 24.5333 16.0002C24.5333 13.6827 24.5227 13.3918 24.4818 12.4816C24.4391 11.5732 24.2951 10.9531 24.0853 10.4105C23.8667 9.84922 23.5751 9.37313 23.1004 8.89881C22.6258 8.42414 22.1511 8.13258 21.5893 7.9148C21.0453 7.70378 20.4248 7.55995 19.5164 7.51835C18.6062 7.47693 18.3164 7.4668 15.9981 7.4668H16.0008ZM15.2352 9.00457C15.4624 9.00421 15.716 9.00457 16.0008 9.00457C18.2792 9.00457 18.5492 9.01274 19.449 9.05363C20.281 9.09168 20.7325 9.2307 21.0333 9.3475C21.4316 9.50217 21.7155 9.68706 22.014 9.98573C22.3127 10.2844 22.4975 10.5688 22.6526 10.9671C22.7694 11.2675 22.9086 11.7191 22.9464 12.5511C22.9873 13.4507 22.9962 13.7209 22.9962 15.9982C22.9962 18.2756 22.9873 18.5458 22.9464 19.4454C22.9084 20.2774 22.7694 20.729 22.6526 21.0294C22.4979 21.4276 22.3127 21.7112 22.014 22.0097C21.7153 22.3084 21.4318 22.4932 21.0333 22.6479C20.7329 22.7652 20.281 22.9039 19.449 22.942C18.5494 22.9828 18.2792 22.9917 16.0008 22.9917C13.7222 22.9917 13.4521 22.9828 12.5526 22.942C11.7205 22.9036 11.269 22.7645 10.968 22.6477C10.5698 22.4931 10.2853 22.3082 9.98666 22.0095C9.68799 21.7108 9.5031 21.4271 9.34807 21.0287C9.23127 20.7282 9.09207 20.2767 9.0542 19.4447C9.01331 18.5451 9.00514 18.2749 9.00514 15.9961C9.00514 13.7173 9.01331 13.4485 9.0542 12.549C9.09225 11.717 9.23127 11.2654 9.34807 10.9646C9.50274 10.5664 9.68799 10.2819 9.98666 9.98324C10.2853 9.68457 10.5698 9.49968 10.968 9.34466C11.2688 9.22732 11.7205 9.08866 12.5526 9.05043C13.3398 9.01488 13.6448 9.00421 15.2352 9.00243V9.00457ZM20.5558 10.4215C19.9905 10.4215 19.5318 10.8796 19.5318 11.4451C19.5318 12.0105 19.9905 12.4691 20.5558 12.4691C21.1212 12.4691 21.5798 12.0105 21.5798 11.4451C21.5798 10.8798 21.1212 10.4215 20.5558 10.4215ZM16.0008 11.6179C13.5807 11.6179 11.6185 13.5801 11.6185 16.0002C11.6185 18.4203 13.5807 20.3816 16.0008 20.3816C18.4209 20.3816 20.3824 18.4203 20.3824 16.0002C20.3824 13.5801 18.4209 11.6179 16.0008 11.6179ZM16.0008 13.1557C17.5716 13.1557 18.8453 14.4292 18.8453 16.0002C18.8453 17.5711 17.5716 18.8447 16.0008 18.8447C14.4297 18.8447 13.1563 17.5711 13.1563 16.0002C13.1563 14.4292 14.4297 13.1557 16.0008 13.1557Z" fill="#EA7845"></path>
 </svg>
                         </a>
                         <a href="https://www.reddit.com/user/stakater/" class="svg-container" title="Reddit">
@@ -3985,9 +4319,9 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
 <g id="_32.Reddit" data-name="32.Reddit">
-<path id="Icon" class="cls-2" d="M26,16.16a2.18,2.18,0,0,0-3.69-1.53,10.65,10.65,0,0,0-5.79-1.84l1-4.67,3.22.65A1.49,1.49,0,1,0,22,7.12a1.47,1.47,0,0,0-1.12.72l-3.67-.72a.46.46,0,0,0-.55.35l-1.1,5.22a10.71,10.71,0,0,0-5.86,1.84,2.19,2.19,0,0,0-3,3.2,2.73,2.73,0,0,0,.6.4,3.53,3.53,0,0,0,0,.65c0,3.37,3.92,6.11,8.76,6.11s8.76-2.72,8.76-6.11a2.36,2.36,0,0,0,0-.65A2.14,2.14,0,0,0,26,16.16Zm-15,1.52a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,10.93,17.68Zm8.74,4.14A5.7,5.7,0,0,1,16,23a5.75,5.75,0,0,1-3.69-1.15.4.4,0,0,1,.57-.57A5,5,0,0,0,16,22.2a4.89,4.89,0,0,0,3.15-.93.42.42,0,1,1,.6.6v-.05Zm-.25-2.57a1.06,1.06,0,1,1,0,.05h-.08Z"/>
+<path id="Icon" class="cls-2" d="M26,16.16a2.18,2.18,0,0,0-3.69-1.53,10.65,10.65,0,0,0-5.79-1.84l1-4.67,3.22.65A1.49,1.49,0,1,0,22,7.12a1.47,1.47,0,0,0-1.12.72l-3.67-.72a.46.46,0,0,0-.55.35l-1.1,5.22a10.71,10.71,0,0,0-5.86,1.84,2.19,2.19,0,0,0-3,3.2,2.73,2.73,0,0,0,.6.4,3.53,3.53,0,0,0,0,.65c0,3.37,3.92,6.11,8.76,6.11s8.76-2.72,8.76-6.11a2.36,2.36,0,0,0,0-.65A2.14,2.14,0,0,0,26,16.16Zm-15,1.52a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,10.93,17.68Zm8.74,4.14A5.7,5.7,0,0,1,16,23a5.75,5.75,0,0,1-3.69-1.15.4.4,0,0,1,.57-.57A5,5,0,0,0,16,22.2a4.89,4.89,0,0,0,3.15-.93.42.42,0,1,1,.6.6v-.05Zm-.25-2.57a1.06,1.06,0,1,1,0,.05h-.08Z"></path>
 </g>
 </g>
 </g>
@@ -4007,7 +4341,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
     </div>
     
     
-      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden="">
         <div class="md-consent__overlay"></div>
         <aside class="md-consent__inner">
           <form class="md-consent__form md-grid md-typeset" name="consent">
@@ -4017,7 +4351,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 
 <h4>Cookie consent</h4>
 <p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
-<input class="md-toggle" type="checkbox" id="__settings" >
+<input class="md-toggle" type="checkbox" id="__settings">
 <div class="md-consent__settings">
   <ul class="task-list">
     
@@ -4031,7 +4365,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   <li class="task-list-item">
     <label class="task-list-control">
-      <input type="checkbox" name="analytics" checked>
+      <input type="checkbox" name="analytics" checked="">
       <span class="task-list-indicator"></span>
       Google Analytics
     </label>
@@ -4049,7 +4383,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   <li class="task-list-item">
     <label class="task-list-control">
-      <input type="checkbox" name="github" checked>
+      <input type="checkbox" name="github" checked="">
       <span class="task-list-indicator"></span>
       GitHub
     </label>
@@ -4089,11 +4423,13 @@ This documentation is either for an old version, or for the unreleased 'main' ve
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/finops/main", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "/finops/main/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="/finops/main/assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,32 +1,35 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
       
+        <link rel="canonical" href="https://docs.stakater.com/finops/main/reference/configuration.html">
       
+      
+        <link rel="prev" href="api.html">
+      
+      
+        <link rel="next" href="rbac.html">
       
       
         
       
       
-      <link rel="icon" href="/finops/main/assets/images/favicon.svg">
+      <link rel="icon" href="../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
-        <title>FinOps Operator</title>
+        <title>Configuration reference - FinOps Operator</title>
       
     
     
-      <link rel="stylesheet" href="/finops/main/assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="/finops/main/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -39,17 +42,17 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Grotesk:300,300i,400,400i,700,700i%7CMonospace:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Grotesk:300,300i,400,400i,700,700i%7CMonospace:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Space Grotesk";--md-code-font:"Monospace"}</style>
       
     
     
-      <link rel="stylesheet" href="/finops/main/stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="/finops/main/stylesheets/pills.css">
+      <link rel="stylesheet" href="../stylesheets/pills.css">
     
-    <script>__md_scope=new URL("/finops/main",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -65,7 +68,17 @@
 
     
     
-  </head>
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -83,23 +96,28 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#configuration-reference" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
     </div>
     
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
         
           <aside class="md-banner md-banner--warning">
             <div class="md-banner__inner md-grid md-typeset">
               
 This documentation is either for an old version, or for the unreleased 'main' version.
-<a href="..//finops/main">
+<a href="../..">
   <strong>Click here to go to the latest version.</strong>
 </a>
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("/finops/main"),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -323,8 +341,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   <nav class="md-header__inner md-grid" aria-label="Header">
 
     <!-- Link to home -->
-    <a href="/finops/main/." title="FinOps Operator"
-      class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       <!-- 
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -335,7 +352,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
     <label class="md-header__button md-icon" for="__drawer">
       
       <div class="md-header__drawer-hamburger-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
       </div>
     </label>
 
@@ -345,10 +362,10 @@ This documentation is either for an old version, or for the unreleased 'main' ve
         <!-- Logo -->
         <div class="md-header__topic">
           
-          <img class="md-header__logo_light" src="/finops/main/assets/images/logo-light.png#only-light" alt="logo" />
+          <img class="md-header__logo_light" src="../assets/images/logo-light.png#only-light" alt="logo">
           
           
-          <img class="md-header__logo_dark" src="/finops/main/assets/images/logo-dark.png#only-dark" alt="logo" />
+          <img class="md-header__logo_dark" src="../assets/images/logo-dark.png#only-dark" alt="logo">
           
           
           <div class="header-site-name">
@@ -702,12 +719,12 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                 &nbsp;
                 <span class="dropdown-arrow">
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"/>
+<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"></path>
 </svg>
                 </span>
                 <span class="dropdown-arrow-sm">
                     <svg width="8" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"/>
+<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"></path>
 </svg>
                 </span>
             </a>
@@ -717,8 +734,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                     <div class="dropdown-content-column">
                         <h3 class="dropdown-content-column-title">Products</h3>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/saap-kubernetes-openshift"
-                                class="dropdown-item-link-text hover-underline">Stakater
+                            <a href="https://www.stakater.com/saap-kubernetes-openshift" class="dropdown-item-link-text hover-underline">Stakater
                                 App
                                 Agility
                                 Platform (SAAP)</a>
@@ -729,8 +745,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                                 Operator</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://docs.stakater.com/tronador"
-                                class="dropdown-item-link-text hover-underline">Tronador
+                            <a href="https://docs.stakater.com/tronador" class="dropdown-item-link-text hover-underline">Tronador
                             </a>
                         </div>
                     </div>
@@ -738,28 +753,23 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                     <div class="dropdown-content-column">
                         <h3 class="dropdown-content-column-title">Services</h3>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-consultancy"
-                                class="dropdown-item-link-text hover-underline">Kubernetes
+                            <a href="https://www.stakater.com/kubernetes-consultancy" class="dropdown-item-link-text hover-underline">Kubernetes
                                 Consultancy</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-platform-assessment"
-                                class="dropdown-item-link-text hover-underline">Platform
+                            <a href="https://www.stakater.com/kubernetes-platform-assessment" class="dropdown-item-link-text hover-underline">Platform
                                 Assessment</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/openshift-as-a-service"
-                                class="dropdown-item-link-text hover-underline">OpenShift
+                            <a href="https://www.stakater.com/openshift-as-a-service" class="dropdown-item-link-text hover-underline">OpenShift
                                 Consultancy</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/secure-your-kubernetes-infrastructure"
-                                class="dropdown-item-link-text hover-underline">Secret
+                            <a href="https://www.stakater.com/secure-your-kubernetes-infrastructure" class="dropdown-item-link-text hover-underline">Secret
                                 Management Service</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-consultancy"
-                                class="dropdown-item-link-text hover-underline">Platform
+                            <a href="https://www.stakater.com/kubernetes-consultancy" class="dropdown-item-link-text hover-underline">Platform
                                 Engineering</a>
                         </div>
                     </div>
@@ -768,16 +778,13 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                         <h3 class="dropdown-content-column-title">Open Source</h3>
 
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/Reloader"
-                                class="dropdown-item-link-text hover-underline">Reloader</a>
+                            <a href="https://github.com/stakater/Reloader" class="dropdown-item-link-text hover-underline">Reloader</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/IngressMonitorController"
-                                class="dropdown-item-link-text hover-underline">IMC</a>
+                            <a href="https://github.com/stakater/IngressMonitorController" class="dropdown-item-link-text hover-underline">IMC</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/forecastle"
-                                class="dropdown-item-link-text hover-underline">Forecastle</a>
+                            <a href="https://github.com/stakater/forecastle" class="dropdown-item-link-text hover-underline">Forecastle</a>
                         </div>
                     </div>
                     <!-- Column 4 -->
@@ -786,8 +793,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                             <a href="https://github.com/stakater/" class="dropdown-content-dev-links-anchor">GitHub</a>
                         </div>
                         <div class="dropdown-content-dev-links-anchor-container">
-                            <a href="https://docs.stakater.com/"
-                                class="dropdown-content-dev-links-anchor">Documentation</a>
+                            <a href="https://docs.stakater.com/" class="dropdown-content-dev-links-anchor">Documentation</a>
                         </div>
                         <div class="dropdown-content-dev-links-anchor-container">
                             <a href="https://employee.stakater.com/" class="dropdown-content-dev-links-anchor">Employee
@@ -1087,42 +1093,30 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
   
-  <input class="md-option" data-md-color-media="(prefers-color-scheme)"
-    data-md-color-scheme="default" data-md-color-primary="indigo"
-    data-md-color-accent="indigo"  aria-label="Switch to system preference"
-     type="radio" name="__palette" id="__palette_0" />
+  <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_0">
   
-  <label class="md-header__button md-icon" title="Switch to system preference"
-    for="__palette_1" hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+  <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_1" hidden="">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
   </label>
   
   
   
   
   
-  <input class="md-option" data-md-color-media="(prefers-color-scheme: light)"
-    data-md-color-scheme="default" data-md-color-primary="custom"
-    data-md-color-accent="custom"  aria-label="Switch to light mode"
-     type="radio" name="__palette" id="__palette_1" />
+  <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
   
-  <label class="md-header__button md-icon" title="Switch to light mode"
-    for="__palette_2" hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+  <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden="">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
   </label>
   
   
   
   
   
-  <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)"
-    data-md-color-scheme="slate" data-md-color-primary="custom"
-    data-md-color-accent="custom"  aria-label="Switch to dark mode"
-     type="radio" name="__palette" id="__palette_2" />
+  <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_2">
   
-  <label class="md-header__button md-icon" title="Switch to dark mode"
-    for="__palette_0" hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54s-2.94 8.27-7 9.54c.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2"/></svg>
+  <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden="">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54s-2.94 8.27-7 9.54c.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2"></path></svg>
   </label>
   
   
@@ -1162,31 +1156,31 @@ This documentation is either for an old version, or for the unreleased 'main' ve
     
     <label class="md-header__button md-icon" for="__search">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
     </label>
     <!-- Search interface -->
     <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -1541,12 +1535,12 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                 &nbsp;
                 <span class="dropdown-arrow">
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"/>
+<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"></path>
 </svg>
                 </span>
                 <span class="dropdown-arrow-sm">
                     <svg width="8" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"/>
+<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"></path>
 </svg>
                 </span>
             </a>
@@ -1556,8 +1550,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                     <div class="dropdown-content-column">
                         <h3 class="dropdown-content-column-title">Products</h3>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/saap-kubernetes-openshift"
-                                class="dropdown-item-link-text hover-underline">Stakater
+                            <a href="https://www.stakater.com/saap-kubernetes-openshift" class="dropdown-item-link-text hover-underline">Stakater
                                 App
                                 Agility
                                 Platform (SAAP)</a>
@@ -1568,8 +1561,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                                 Operator</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://docs.stakater.com/tronador"
-                                class="dropdown-item-link-text hover-underline">Tronador
+                            <a href="https://docs.stakater.com/tronador" class="dropdown-item-link-text hover-underline">Tronador
                             </a>
                         </div>
                     </div>
@@ -1577,28 +1569,23 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                     <div class="dropdown-content-column">
                         <h3 class="dropdown-content-column-title">Services</h3>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-consultancy"
-                                class="dropdown-item-link-text hover-underline">Kubernetes
+                            <a href="https://www.stakater.com/kubernetes-consultancy" class="dropdown-item-link-text hover-underline">Kubernetes
                                 Consultancy</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-platform-assessment"
-                                class="dropdown-item-link-text hover-underline">Platform
+                            <a href="https://www.stakater.com/kubernetes-platform-assessment" class="dropdown-item-link-text hover-underline">Platform
                                 Assessment</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/openshift-as-a-service"
-                                class="dropdown-item-link-text hover-underline">OpenShift
+                            <a href="https://www.stakater.com/openshift-as-a-service" class="dropdown-item-link-text hover-underline">OpenShift
                                 Consultancy</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/secure-your-kubernetes-infrastructure"
-                                class="dropdown-item-link-text hover-underline">Secret
+                            <a href="https://www.stakater.com/secure-your-kubernetes-infrastructure" class="dropdown-item-link-text hover-underline">Secret
                                 Management Service</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-consultancy"
-                                class="dropdown-item-link-text hover-underline">Platform
+                            <a href="https://www.stakater.com/kubernetes-consultancy" class="dropdown-item-link-text hover-underline">Platform
                                 Engineering</a>
                         </div>
                     </div>
@@ -1607,16 +1594,13 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                         <h3 class="dropdown-content-column-title">Open Source</h3>
 
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/Reloader"
-                                class="dropdown-item-link-text hover-underline">Reloader</a>
+                            <a href="https://github.com/stakater/Reloader" class="dropdown-item-link-text hover-underline">Reloader</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/IngressMonitorController"
-                                class="dropdown-item-link-text hover-underline">IMC</a>
+                            <a href="https://github.com/stakater/IngressMonitorController" class="dropdown-item-link-text hover-underline">IMC</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/forecastle"
-                                class="dropdown-item-link-text hover-underline">Forecastle</a>
+                            <a href="https://github.com/stakater/forecastle" class="dropdown-item-link-text hover-underline">Forecastle</a>
                         </div>
                     </div>
                     <!-- Column 4 -->
@@ -1625,8 +1609,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                             <a href="https://github.com/stakater/" class="dropdown-content-dev-links-anchor">GitHub</a>
                         </div>
                         <div class="dropdown-content-dev-links-anchor-container">
-                            <a href="https://docs.stakater.com/"
-                                class="dropdown-content-dev-links-anchor">Documentation</a>
+                            <a href="https://docs.stakater.com/" class="dropdown-content-dev-links-anchor">Documentation</a>
                         </div>
                         <div class="dropdown-content-dev-links-anchor-container">
                             <a href="https://employee.stakater.com/" class="dropdown-content-dev-links-anchor">Employee
@@ -1997,7 +1980,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2006,10 +1989,10 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/finops/main/." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     FinOps Operator
@@ -2019,7 +2002,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       <a href="https://github.com/stakater/finops-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -2027,7 +2010,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </a>
     </div>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -2044,7 +2027,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -2074,7 +2057,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2083,7 +2066,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -2111,7 +2094,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/overview/key-features.html" class="md-nav__link">
+      <a href="../overview/key-features.html" class="md-nav__link">
         
   
   
@@ -2139,7 +2122,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/overview/use-cases.html" class="md-nav__link">
+      <a href="../overview/use-cases.html" class="md-nav__link">
         
   
   
@@ -2182,7 +2165,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -2212,7 +2195,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2221,7 +2204,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/architecture.html" class="md-nav__link">
+      <a href="../concepts/architecture.html" class="md-nav__link">
         
   
   
@@ -2249,7 +2232,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/terminology.html" class="md-nav__link">
+      <a href="../concepts/terminology.html" class="md-nav__link">
         
   
   
@@ -2277,7 +2260,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/finops-provider.html" class="md-nav__link">
+      <a href="../concepts/finops-provider.html" class="md-nav__link">
         
   
   
@@ -2305,7 +2288,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/pricebook.html" class="md-nav__link">
+      <a href="../concepts/pricebook.html" class="md-nav__link">
         
   
   
@@ -2333,7 +2316,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/costjob.html" class="md-nav__link">
+      <a href="../concepts/costjob.html" class="md-nav__link">
         
   
   
@@ -2361,7 +2344,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/offering.html" class="md-nav__link">
+      <a href="../concepts/offering.html" class="md-nav__link">
         
   
   
@@ -2389,7 +2372,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/subscription.html" class="md-nav__link">
+      <a href="../concepts/subscription.html" class="md-nav__link">
         
   
   
@@ -2417,7 +2400,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/billing-model.html" class="md-nav__link">
+      <a href="../concepts/billing-model.html" class="md-nav__link">
         
   
   
@@ -2445,7 +2428,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/concepts/compatibility-and-hierarchy.html" class="md-nav__link">
+      <a href="../concepts/compatibility-and-hierarchy.html" class="md-nav__link">
         
   
   
@@ -2488,7 +2471,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -2518,7 +2501,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2527,7 +2510,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/getting-started/quick-start.html" class="md-nav__link">
+      <a href="../getting-started/quick-start.html" class="md-nav__link">
         
   
   
@@ -2563,7 +2546,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -2593,7 +2576,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2602,7 +2585,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/getting-started/installation/overview.html" class="md-nav__link">
+      <a href="../getting-started/installation/overview.html" class="md-nav__link">
         
   
   
@@ -2630,7 +2613,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/getting-started/installation/openshift.html" class="md-nav__link">
+      <a href="../getting-started/installation/openshift.html" class="md-nav__link">
         
   
   
@@ -2658,7 +2641,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/getting-started/installation/kubernetes.html" class="md-nav__link">
+      <a href="../getting-started/installation/kubernetes.html" class="md-nav__link">
         
   
   
@@ -2694,7 +2677,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/getting-started/uninstalling.html" class="md-nav__link">
+      <a href="../getting-started/uninstalling.html" class="md-nav__link">
         
   
   
@@ -2737,7 +2720,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2767,7 +2750,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2776,7 +2759,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/define-pricing.html" class="md-nav__link">
+      <a href="../guides/define-pricing.html" class="md-nav__link">
         
   
   
@@ -2804,7 +2787,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/switch-active-pricebook.html" class="md-nav__link">
+      <a href="../guides/switch-active-pricebook.html" class="md-nav__link">
         
   
   
@@ -2832,7 +2815,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/collect-cost-data.html" class="md-nav__link">
+      <a href="../guides/collect-cost-data.html" class="md-nav__link">
         
   
   
@@ -2860,7 +2843,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/define-offering.html" class="md-nav__link">
+      <a href="../guides/define-offering.html" class="md-nav__link">
         
   
   
@@ -2888,7 +2871,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/price-resource-usage.html" class="md-nav__link">
+      <a href="../guides/price-resource-usage.html" class="md-nav__link">
         
   
   
@@ -2916,7 +2899,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/subscribe-to-offering.html" class="md-nav__link">
+      <a href="../guides/subscribe-to-offering.html" class="md-nav__link">
         
   
   
@@ -2944,7 +2927,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/compose-subscriptions.html" class="md-nav__link">
+      <a href="../guides/compose-subscriptions.html" class="md-nav__link">
         
   
   
@@ -2972,7 +2955,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/read-subscription-costs.html" class="md-nav__link">
+      <a href="../guides/read-subscription-costs.html" class="md-nav__link">
         
   
   
@@ -3000,7 +2983,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/guides/deactivate-a-subscription.html" class="md-nav__link">
+      <a href="../guides/deactivate-a-subscription.html" class="md-nav__link">
         
   
   
@@ -3032,18 +3015,20 @@ This documentation is either for an old version, or for the unreleased 'main' ve
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -3064,7 +3049,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3073,7 +3058,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -3082,7 +3067,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/reference/api.html" class="md-nav__link">
+      <a href="api.html" class="md-nav__link">
         
   
   
@@ -3107,10 +3092,37 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/finops/main/reference/configuration.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="configuration.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3126,6 +3138,228 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#helm-chart-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helm chart values
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Helm chart values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controller-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controller manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certificates-and-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificates and platform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-secret-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependency Secret names
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starter-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starter resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finops-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FinOps Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundled-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bundled dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-controller-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The controller manager
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The controller manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prometheus_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PROMETHEUS_URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-allocation-cronjob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The allocation CronJob
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The allocation CronJob">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#databaseviewsrefreshtimeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        databaseViewsRefreshTimeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hours_lookback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HOURS_LOOKBACK
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-collection-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The collection job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manager-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manager flags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3138,7 +3372,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/reference/rbac.html" class="md-nav__link">
+      <a href="rbac.html" class="md-nav__link">
         
   
   
@@ -3166,7 +3400,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/reference/security-model.html" class="md-nav__link">
+      <a href="security-model.html" class="md-nav__link">
         
   
   
@@ -3194,7 +3428,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/reference/metrics.html" class="md-nav__link">
+      <a href="metrics.html" class="md-nav__link">
         
   
   
@@ -3222,7 +3456,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/reference/webhooks.html" class="md-nav__link">
+      <a href="webhooks.html" class="md-nav__link">
         
   
   
@@ -3250,7 +3484,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/reference/status-conditions.html" class="md-nav__link">
+      <a href="status-conditions.html" class="md-nav__link">
         
   
   
@@ -3285,7 +3519,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/troubleshooting.html" class="md-nav__link">
+      <a href="../troubleshooting.html" class="md-nav__link">
         
   
   
@@ -3312,7 +3546,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/release-notes.html" class="md-nav__link">
+      <a href="../release-notes.html" class="md-nav__link">
         
   
   
@@ -3339,7 +3573,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
     <li class="md-nav__item">
-      <a href="/finops/main/eula.html" class="md-nav__link">
+      <a href="../eula.html" class="md-nav__link">
         
   
   
@@ -3367,7 +3601,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3378,6 +3612,216 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#helm-chart-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helm chart values
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Helm chart values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controller-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controller manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certificates-and-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificates and platform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-secret-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependency Secret names
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starter-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starter resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finops-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FinOps Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundled-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bundled dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-controller-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The controller manager
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The controller manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prometheus_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PROMETHEUS_URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-allocation-cronjob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The allocation CronJob
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The allocation CronJob">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#databaseviewsrefreshtimeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        databaseViewsRefreshTimeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hours_lookback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HOURS_LOOKBACK
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-collection-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The collection job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manager-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manager flags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3390,9 +3834,725 @@ This documentation is either for an old version, or for the unreleased 'main' ve
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>4xx - Page does not exist or has restricted access or rights</h1>
-  <p>This page does not exist or may have been deprecated or moved. Please use the search to find anything in the documentation.</p>
+                  
 
+
+  
+  
+
+
+<h1 id="configuration-reference">Configuration reference<a class="headerlink" href="#configuration-reference" title="Permanent link">#</a></h1>
+<p>The FinOps Operator ships one binary that runs in three modes, and each mode reads its own configuration. A platform engineer configures the long-lived controller manager through Helm values, which the chart turns into container arguments and environment variables. The two short-lived job modes are configured by the operator itself, from the <code>CostJob</code> you author plus the pod template the operator embeds, so their environment is something you read rather than something you set. <a href="../concepts/architecture.html#the-three-binary-modes">The three binary modes</a> explains the split.</p>
+<p>This page is the exhaustive surface: every key in the chart's <code>values.yaml</code>, every environment variable the code reads, and every flag the binary registers. <a href="../getting-started/installation/kubernetes.html">On Kubernetes</a> covers the practical subset you are likely to change.</p>
+<h2 id="helm-chart-values">Helm chart values<a class="headerlink" href="#helm-chart-values" title="Permanent link">#</a></h2>
+<p>The chart is generated from the operator's Kubernetes manifests and then post-processed, so <code>values.yaml</code> is the authoritative list of keys rather than a hand-written interface. Read the shipped defaults for the version you are installing with <code>helm show values oci://ghcr.io/stakater/public/charts/finops-operator</code>.</p>
+<h3 id="controller-manager">Controller manager<a class="headerlink" href="#controller-manager" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>controllerManager.replicas</code></td>
+<td><code>1</code></td>
+<td>Replicas of the manager Deployment. Leader election is on by default, so extra replicas stand by rather than share work.</td>
+</tr>
+<tr>
+<td><code>controllerManager.manager.args</code></td>
+<td><code>--metrics-bind-address=:8443</code>, <code>--leader-elect</code>, <code>--health-probe-bind-address=:8081</code>, <code>--webhook-cert-path=/tmp/k8s-webhook-server/serving-certs</code></td>
+<td>The manager's command line, replaced wholesale when you set it. See <a href="#manager-flags">manager flags</a>.</td>
+</tr>
+<tr>
+<td><code>controllerManager.manager.image.repository</code></td>
+<td><code>ghcr.io/stakater/finops-operator</code></td>
+<td>Manager image. The same coordinate is passed to generated CronJob pods through <code>OPERATOR_IMAGE</code>.</td>
+</tr>
+<tr>
+<td><code>controllerManager.manager.image.tag</code></td>
+<td><code>v0.1.16</code></td>
+<td>Image tag. It falls back to the chart's <code>appVersion</code> when empty, and the shipped value moves with each chart release.</td>
+</tr>
+<tr>
+<td><code>controllerManager.manager.env.opencostDeploymentName</code></td>
+<td><code>finops-operator-opencost</code></td>
+<td>Becomes <code>OPENCOST_DEPLOYMENT_NAME</code>. The Deployment the PriceBook reconciler restarts after a pricing change.</td>
+</tr>
+<tr>
+<td><code>controllerManager.manager.env.opencostDeploymentNamespace</code></td>
+<td><code>finops-operator-system</code></td>
+<td>Becomes <code>OPENCOST_DEPLOYMENT_NAMESPACE</code>. Where that Deployment and the pricing ConfigMap live.</td>
+</tr>
+<tr>
+<td><code>controllerManager.manager.env.mtoEnabled</code></td>
+<td><code>"false"</code></td>
+<td>Becomes <code>MTO_ENABLED</code>. Only the exact string <code>"true"</code> switches the operator to the Multi Tenant Operator path.</td>
+</tr>
+<tr>
+<td><code>controllerManager.manager.extraEnv</code></td>
+<td><code>[]</code></td>
+<td>Raw <code>env</code> entries appended to the manager container. The only way to set a variable the chart has no named key for, such as <code>ENABLE_WEBHOOKS</code> or <code>CLUSTER_ID</code>.</td>
+</tr>
+<tr>
+<td><code>controllerManager.manager.containerSecurityContext</code></td>
+<td><code>allowPrivilegeEscalation: false</code>, <code>capabilities.drop: [ALL]</code></td>
+<td>Container security context.</td>
+</tr>
+<tr>
+<td><code>controllerManager.podSecurityContext</code></td>
+<td><code>runAsNonRoot: true</code>, <code>seccompProfile.type: RuntimeDefault</code></td>
+<td>Pod security context.</td>
+</tr>
+<tr>
+<td><code>controllerManager.serviceAccount.annotations</code></td>
+<td><code>{}</code></td>
+<td>Annotations on the <code>finops-operator-controller-manager</code> ServiceAccount.</td>
+</tr>
+<tr>
+<td><code>imagePullSecrets</code></td>
+<td><code>[]</code></td>
+<td>Pull secrets set on both Deployments, and serialized into the manager's <code>IMAGE_PULL_SECRETS</code> variable so generated CronJob pods inherit them.</td>
+</tr>
+<tr>
+<td><code>kubernetesClusterDomain</code></td>
+<td><code>cluster.local</code></td>
+<td>Used to build the certificate DNS names. Also passed to both containers as <code>KUBERNETES_CLUSTER_DOMAIN</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>The chart sets no resource requests or limits on the manager container. Add them through your own values if the namespace enforces a quota.</p>
+<h3 id="certificates-and-platform">Certificates and platform<a class="headerlink" href="#certificates-and-platform" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>certManager.enabled</code></td>
+<td><code>true</code></td>
+<td>Creates the self-signed <code>Issuer</code>, the webhook serving <code>Certificate</code>, and the metrics <code>Certificate</code>, and adds the cert-manager CA injection annotation to the <code>ValidatingWebhookConfiguration</code>.</td>
+</tr>
+<tr>
+<td><code>openshift.enabled</code></td>
+<td><code>false</code></td>
+<td>Annotates the webhook Service for OpenShift's service serving certificates and switches CA injection to <code>service.beta.openshift.io/inject-cabundle</code>. Use instead of cert-manager, not alongside it.</td>
+</tr>
+<tr>
+<td><code>webhookService.type</code></td>
+<td><code>ClusterIP</code></td>
+<td>Service type for the webhook endpoint.</td>
+</tr>
+<tr>
+<td><code>webhookService.ports</code></td>
+<td>port <code>443</code>, <code>targetPort</code> <code>9443</code>, <code>TCP</code></td>
+<td>The webhook Service's ports. The manager serves admission on 9443.</td>
+</tr>
+<tr>
+<td><code>metricsService.type</code></td>
+<td><code>ClusterIP</code></td>
+<td>Service type for the metrics endpoint.</td>
+</tr>
+<tr>
+<td><code>metricsService.ports</code></td>
+<td>port <code>8443</code>, <code>targetPort</code> <code>8443</code>, <code>TCP</code>, named <code>https</code></td>
+<td>The metrics Service's ports.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dependency-secret-names">Dependency Secret names<a class="headerlink" href="#dependency-secret-names" title="Permanent link">#</a></h3>
+<p>The manager's <code>secretKeyRef</code> entries are not optional, so a missing Secret or a missing key leaves the pod unable to start.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>secrets.postgres</code></td>
+<td><code>finops-operator-postgres-config</code></td>
+<td>Secret holding key <code>POSTGRES_CONNECTION_STRING</code>. Wired into the manager as that variable and into the gateway as <code>PG_CONNECTION_STRING</code>.</td>
+</tr>
+<tr>
+<td><code>secrets.opencost</code></td>
+<td><code>finops-operator-opencost-config</code></td>
+<td>Secret holding key <code>OPENCOST_CONNECTION_STRING</code>. Mandatory: the manager refuses to start without a value.</td>
+</tr>
+<tr>
+<td><code>secrets.prometheus</code></td>
+<td><code>finops-operator-prometheus-config</code></td>
+<td>Referenced by no chart template, so it changes nothing on the Helm path.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>secrets.prometheus</code> is inert under Helm but not under Operator Lifecycle Manager. The bundle's ClusterServiceVersion wires a <code>PROMETHEUS_URL</code> variable from that Secret with a non-optional <code>secretKeyRef</code>, so an OLM install needs the Secret to exist and to carry a <code>PROMETHEUS_URL</code> key even though nothing in the operator reads the value. See <a href="#prometheus_url">PROMETHEUS_URL</a>.</p>
+</div>
+<h3 id="starter-resources">Starter resources<a class="headerlink" href="#starter-resources" title="Permanent link">#</a></h3>
+<p>The chart can create one <code>CostJob</code> of each type and one <code>PriceBook</code>. All three are off by default, so a default install reconciles nothing until you author those resources yourself.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>costJob.enabled</code></td>
+<td><code>false</code></td>
+<td>Creates <code>&lt;release&gt;-daily-scraping-job</code>, a <code>ResourceCostCollection</code> CostJob, in the release namespace.</td>
+</tr>
+<tr>
+<td><code>costJob.interval</code></td>
+<td><code>1m</code></td>
+<td>Its <code>spec.interval</code>.</td>
+</tr>
+<tr>
+<td><code>chargeCollectionJob.enabled</code></td>
+<td><code>false</code></td>
+<td>Creates <code>&lt;release&gt;-charge-collection-job</code>, a <code>SubscriptionChargeCollection</code> CostJob, in the release namespace.</td>
+</tr>
+<tr>
+<td><code>chargeCollectionJob.interval</code></td>
+<td><code>1m</code></td>
+<td>Its <code>spec.interval</code>.</td>
+</tr>
+<tr>
+<td><code>priceBook.enabled</code></td>
+<td><code>false</code></td>
+<td>Creates <code>&lt;release&gt;-default-pricing</code> in the release namespace.</td>
+</tr>
+<tr>
+<td><code>priceBook.currency</code></td>
+<td><code>USD</code></td>
+<td>Its <code>spec.currency</code>.</td>
+</tr>
+<tr>
+<td><code>priceBook.valuationMode</code></td>
+<td><code>currency</code></td>
+<td>Its <code>spec.valuationMode</code>. Only <code>currency</code> prices an Offering.</td>
+</tr>
+<tr>
+<td><code>priceBook.rates.cpuHour</code></td>
+<td><code>""</code></td>
+<td>Rate per CPU-hour. Empty rates are omitted from the object rather than written as zero.</td>
+</tr>
+<tr>
+<td><code>priceBook.rates.spotCPUHour</code></td>
+<td><code>""</code></td>
+<td>Rate per spot CPU-hour.</td>
+</tr>
+<tr>
+<td><code>priceBook.rates.ramGbHour</code></td>
+<td><code>""</code></td>
+<td>Rate per GB-hour of memory.</td>
+</tr>
+<tr>
+<td><code>priceBook.rates.spotRAMGbHour</code></td>
+<td><code>""</code></td>
+<td>Rate per spot GB-hour of memory.</td>
+</tr>
+<tr>
+<td><code>priceBook.rates.pvGbHour</code></td>
+<td><code>""</code></td>
+<td>Rate per GB-hour of persistent volume.</td>
+</tr>
+<tr>
+<td><code>priceBook.rates.gpuHour</code></td>
+<td><code>""</code></td>
+<td>Rate per GPU-hour.</td>
+</tr>
+<tr>
+<td><code>priceBook.rates.networkGiB</code></td>
+<td><code>""</code></td>
+<td>Rate per GiB of network transfer.</td>
+</tr>
+</tbody>
+</table>
+<p>Both CostJob templates also expose seven timeout keys, each empty by default and each omitted from the generated object when empty: <code>databaseInitTimeout</code>, <code>k8sOperationTimeout</code>, <code>openCostFetchTimeout</code>, <code>databaseInsertTimeout</code>, <code>databaseViewsRefreshTimeout</code>, <code>statusUpdateTimeout</code>, and <code>httpClientTimeout</code>, under both <code>costJob</code> and <code>chargeCollectionJob</code>. Five of the seven take effect. <a href="../concepts/costjob.html#timeouts">Timeouts</a> gives what each one bounds.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Two of those keys change nothing, and neither one tells you so. <code>k8sOperationTimeout</code> renders a field of that name onto the <code>CostJob</code>, but the CRD calls the field <code>kubernetesOperationTimeout</code>, so the API server prunes the unknown field; set <code>kubernetesOperationTimeout</code> on the <code>CostJob</code> object directly instead. <code>databaseViewsRefreshTimeout</code> does reach the object, and then bounds nothing: the materialized view it used to refresh has been dropped and the collection run no longer refreshes any view. See <a href="#databaseviewsrefreshtimeout">databaseViewsRefreshTimeout</a>.</p>
+</div>
+<p>Two more things are worth knowing before you turn the starter resources on. An interval of <code>1m</code> maps to the cron expression <code>* * * * *</code>, so an unchanged default runs collection every minute; <a href="../concepts/costjob.html#from-interval-to-schedule">from interval to schedule</a> lists the intervals the operator recognises. And the chart writes the active marker on its <code>PriceBook</code> as a label while the operator reads an annotation, so the chart's marker does not pin the book; <a href="../concepts/pricebook.html#choosing-the-active-pricebook">choosing the active PriceBook</a> covers what happens instead.</p>
+<h3 id="finops-gateway">FinOps Gateway<a class="headerlink" href="#finops-gateway" title="Permanent link">#</a></h3>
+<p>The chart deploys a second workload, the FinOps Gateway, which reads the same PostgreSQL Secret key and listens on port 8080.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>finopsGatewayGateway.replicas</code></td>
+<td><code>1</code></td>
+<td>Replicas of the gateway Deployment.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.image.repository</code></td>
+<td><code>ghcr.io/stakater/finops-gateway</code></td>
+<td>Gateway image.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.image.tag</code></td>
+<td><code>v0.1.0</code></td>
+<td>Gateway image tag, falling back to the chart's <code>appVersion</code> when empty.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.env.port</code></td>
+<td><code>"8080"</code></td>
+<td>Becomes <code>PORT</code>.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.env.enableAuth</code></td>
+<td><code>"false"</code></td>
+<td>Becomes <code>ENABLE_AUTH</code>.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.env.mtoGatewayUrl</code></td>
+<td><code>""</code></td>
+<td>Becomes <code>MTO_GATEWAY_URL</code>.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.env.allowedOrigins</code></td>
+<td><code>""</code></td>
+<td>Becomes <code>ALLOWED_ORIGINS</code>.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.extraEnv</code></td>
+<td><code>[]</code></td>
+<td>Raw <code>env</code> entries appended to the gateway container.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.containerSecurityContext</code></td>
+<td><code>{}</code></td>
+<td>Container security context for the gateway.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayService.type</code></td>
+<td><code>ClusterIP</code></td>
+<td>Gateway Service type.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayService.ports</code></td>
+<td>port <code>8080</code>, <code>targetPort</code> <code>8080</code>, named <code>http</code></td>
+<td>Gateway Service ports.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayIngress.enabled</code></td>
+<td><code>false</code></td>
+<td>Creates an Ingress for the gateway Service.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayIngress.className</code></td>
+<td><code>""</code></td>
+<td>Sets <code>spec.ingressClassName</code> when non-empty.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayIngress.annotations</code></td>
+<td><code>{}</code></td>
+<td>Annotations on the Ingress.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayIngress.tls</code></td>
+<td><code>[]</code></td>
+<td>Copied into the Ingress <code>spec.tls</code>.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayIngress.rules</code></td>
+<td><code>[]</code></td>
+<td>Copied into the Ingress <code>spec.rules</code>. An Ingress with no rules routes nothing, so set this whenever you enable the Ingress.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayIngress.hosts</code></td>
+<td><code>[]</code></td>
+<td>Declared in <code>values.yaml</code> and read by no template. Put hostnames in <code>rules</code> instead.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bundled-dependencies">Bundled dependencies<a class="headerlink" href="#bundled-dependencies" title="Permanent link">#</a></h3>
+<p>Setting <code>mdoDependencies.enabled</code> pulls in the <code>mto-dependencies-operator</code> dependency chart and creates PostgreSQL, OpenCost, Prometheus, and the three dependency Secrets, so the operator has something to talk to on a fresh cluster.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mdoDependencies.enabled</code></td>
+<td><code>false</code></td>
+<td>Enables the dependency chart and the objects that go with it.</td>
+</tr>
+<tr>
+<td><code>mdoDependencies.postgres.database</code></td>
+<td><code>finopsdb</code></td>
+<td>Database created, and the database named in the generated connection string.</td>
+</tr>
+<tr>
+<td><code>mdoDependencies.postgres.username</code></td>
+<td><code>finopsuser</code></td>
+<td>Application user, also used in the generated connection string.</td>
+</tr>
+<tr>
+<td><code>mdoDependencies.postgres.password</code></td>
+<td><code>superfinopspassword1234</code></td>
+<td>That user's password.</td>
+</tr>
+<tr>
+<td><code>mdoDependencies.postgres.postgresPassword</code></td>
+<td><code>supersecurepassword1234</code></td>
+<td>The <code>postgres</code> superuser password.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The two password defaults are placeholders that ship with the chart, and the generated connection string uses <code>sslmode=disable</code>. Treat <code>mdoDependencies</code> as a way to get a cluster running, not as a production database.</p>
+</div>
+<h2 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">#</a></h2>
+<p>Every variable below is one the code actually reads, at the call site named in the description. Which process reads it matters, because the three modes share a binary but not a configuration surface.</p>
+<h3 id="the-controller-manager">The controller manager<a class="headerlink" href="#the-controller-manager" title="Permanent link">#</a></h3>
+<p>The manager validates four variables at startup and exits if any is empty, so these are hard requirements rather than defaults.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Required</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POSTGRES_CONNECTION_STRING</code></td>
+<td>Yes</td>
+<td>none</td>
+<td>PostgreSQL DSN. Also used to apply migrations at startup unless <code>--skipDBConnection</code> is set.</td>
+</tr>
+<tr>
+<td><code>OPENCOST_CONNECTION_STRING</code></td>
+<td>Yes</td>
+<td>none</td>
+<td>Base URL of the OpenCost service, for example <code>http://finops-operator-opencost.finops-operator-system.svc.cluster.local:9003</code>. Passed on to generated CronJob pods.</td>
+</tr>
+<tr>
+<td><code>OPENCOST_DEPLOYMENT_NAME</code></td>
+<td>Yes</td>
+<td>none</td>
+<td>Deployment restarted after the pricing ConfigMap changes.</td>
+</tr>
+<tr>
+<td><code>OPENCOST_DEPLOYMENT_NAMESPACE</code></td>
+<td>Yes</td>
+<td>none</td>
+<td>Namespace of that Deployment and of the pricing ConfigMap.</td>
+</tr>
+<tr>
+<td><code>MTO_ENABLED</code></td>
+<td>No</td>
+<td>unset, treated as false</td>
+<td>Only the exact string <code>"true"</code> enables the Multi Tenant Operator path. Any other value, including <code>"True"</code>, leaves it off.</td>
+</tr>
+<tr>
+<td><code>CLUSTER_ID</code></td>
+<td>No</td>
+<td><code>default</code></td>
+<td>Identifier stamped on the rows the operator mirrors into PostgreSQL. The chart has no key for it, so set it through <code>extraEnv</code> if one database serves several clusters.</td>
+</tr>
+<tr>
+<td><code>ENABLE_WEBHOOKS</code></td>
+<td>No</td>
+<td>unset, webhooks on</td>
+<td>Both validating webhooks are registered unless this is exactly <code>"false"</code>. Anything else, including an empty value, registers them.</td>
+</tr>
+<tr>
+<td><code>IMAGE_PULL_SECRETS</code></td>
+<td>No</td>
+<td>unset</td>
+<td>A JSON array of local object references, applied to the pod template of every CronJob the operator generates. Malformed JSON fails the CostJob reconcile.</td>
+</tr>
+<tr>
+<td><code>OPERATOR_IMAGE</code></td>
+<td>No</td>
+<td>unset</td>
+<td>The image written into generated CronJob pods, and passed through to them as a variable of the same name. An empty value produces a CronJob with an empty image.</td>
+</tr>
+<tr>
+<td><code>FINOPS_MIGRATION_DIR</code></td>
+<td>No</td>
+<td><code>/migrations</code></td>
+<td>Directory the migration files are read from. Useful when running the binary outside its image.</td>
+</tr>
+</tbody>
+</table>
+<p><code>KUBERNETES_CLUSTER_DOMAIN</code> is set on both containers by the chart and read by no code in the operator.</p>
+<h4 id="prometheus_url">PROMETHEUS_URL<a class="headerlink" href="#prometheus_url" title="Permanent link">#</a></h4>
+<p><code>PROMETHEUS_URL</code> is not required in controller mode. It appears nowhere in the operator's Go source, and the startup validation covers only the four variables above, so the manager starts and runs without it. Prometheus is a dependency of OpenCost rather than of the operator: OpenCost queries it, and the operator queries OpenCost.</p>
+<p>The name survives in one place. The bundle's ClusterServiceVersion still declares a <code>PROMETHEUS_URL</code> variable sourced from the Prometheus Secret with a non-optional <code>secretKeyRef</code>, so on the OLM path the Secret and the key must exist for the pod to start even though the value is never used. On the Helm path no template references it at all.</p>
+<h3 id="the-allocation-cronjob">The allocation CronJob<a class="headerlink" href="#the-allocation-cronjob" title="Permanent link">#</a></h3>
+<p>Pods of a <code>ResourceCostCollection</code> run start in <code>--mode=cronjob</code>. Four variables are required and the run aborts without them; the rest are read with a fallback. The reconciler overlays what it computes onto the operator's pod template by name, so a variable the template sets and the reconciler does not name reaches the pod with the template's value, and the compiled-in fallback applies only when neither supplies it.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Set by</th>
+<th>Effective value in the generated pod</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COSTJOB_NAME</code></td>
+<td>Reconciler</td>
+<td>The CostJob's name. Required.</td>
+</tr>
+<tr>
+<td><code>COSTJOB_NAMESPACE</code></td>
+<td>Reconciler</td>
+<td>The CostJob's namespace. Required.</td>
+</tr>
+<tr>
+<td><code>POSTGRES_CONNECTION_STRING</code></td>
+<td>Reconciler</td>
+<td>A <code>secretKeyRef</code> into <code>&lt;costjob-name&gt;-costjob-secret</code>. Required.</td>
+</tr>
+<tr>
+<td><code>OPENCOST_CONNECTION_STRING</code></td>
+<td>Reconciler</td>
+<td>The manager's own OpenCost URL, with any trailing slash trimmed. Required.</td>
+</tr>
+<tr>
+<td><code>OPERATOR_IMAGE</code></td>
+<td>Reconciler</td>
+<td>The manager's <code>OPERATOR_IMAGE</code>. Carried but not read in this mode.</td>
+</tr>
+<tr>
+<td><code>CLUSTER_ID</code></td>
+<td>Template</td>
+<td><code>default</code>. The compiled-in fallback is also <code>default</code>.</td>
+</tr>
+<tr>
+<td><code>HOURS_LOOKBACK</code></td>
+<td>Template</td>
+<td><code>5</code>. See <a href="#hours_lookback">HOURS_LOOKBACK</a>.</td>
+</tr>
+<tr>
+<td><code>OPENCOST_AGGREGATE</code></td>
+<td>Template</td>
+<td><code>namespace,pod,container</code>, matching the compiled-in fallback. The dimensions each allocation row is grouped by.</td>
+</tr>
+<tr>
+<td><code>OPENCOST_STEP</code></td>
+<td>Template</td>
+<td><code>1h</code>, matching the compiled-in fallback. The step of each OpenCost query.</td>
+</tr>
+<tr>
+<td><code>OPENCOST_RESOLUTION</code></td>
+<td>Template</td>
+<td><code>1m</code>, matching the compiled-in fallback. The resolution of each OpenCost query.</td>
+</tr>
+<tr>
+<td><code>SCHEDULED_TIMESTAMP</code></td>
+<td>Template</td>
+<td>A <code>fieldRef</code> to the <code>batch.kubernetes.io/cronjob-scheduled-timestamp</code> annotation. Parsed as RFC 3339 and truncated to the hour to pin the window a retry works on. An empty value, or one that does not parse, falls back to the current hour, which is why a hand-run pod processes now rather than a past window.</td>
+</tr>
+</tbody>
+</table>
+<p>Six timeout variables are written onto the pod, each only when the matching <code>CostJob</code> field is set, and each falling back to the default on the type otherwise.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th><code>CostJob</code> field</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DATABASE_INIT_TIMEOUT</code></td>
+<td><code>databaseInitTimeout</code></td>
+<td><code>2m</code></td>
+</tr>
+<tr>
+<td><code>K8S_OPERATION_TIMEOUT</code></td>
+<td><code>kubernetesOperationTimeout</code></td>
+<td><code>1m</code></td>
+</tr>
+<tr>
+<td><code>OPENCOST_FETCH_TIMEOUT</code></td>
+<td><code>openCostFetchTimeout</code></td>
+<td><code>2m</code></td>
+</tr>
+<tr>
+<td><code>DATABASE_INSERT_TIMEOUT</code></td>
+<td><code>databaseInsertTimeout</code></td>
+<td><code>3m</code></td>
+</tr>
+<tr>
+<td><code>STATUS_UPDATE_TIMEOUT</code></td>
+<td><code>statusUpdateTimeout</code></td>
+<td><code>1m</code></td>
+</tr>
+<tr>
+<td><code>HTTP_CLIENT_TIMEOUT</code></td>
+<td><code>httpClientTimeout</code></td>
+<td><code>90s</code></td>
+</tr>
+</tbody>
+</table>
+<p>A duration that does not parse is logged and the default is kept, so a typo degrades to the default rather than failing the run.</p>
+<h4 id="databaseviewsrefreshtimeout">databaseViewsRefreshTimeout<a class="headerlink" href="#databaseviewsrefreshtimeout" title="Permanent link">#</a></h4>
+<p>The <code>CostJob</code> type carries a seventh timeout field, <code>databaseViewsRefreshTimeout</code>, which is retained for API compatibility and does nothing. There is no <code>DATABASE_VIEWS_REFRESH_TIMEOUT</code> variable on the pod: the reconciler no longer writes one, the job configuration no longer holds the value, and no code reads it.</p>
+<p>The reason is that the work it bounded is gone. Collection runs used to rebuild the <code>mv_provider_allocations_summary</code> materialized view on every tick, which meant a full re-scan and re-aggregate of <code>provider_allocations</code> growing with retained history. Nothing read that view any more, so it was dropped in the operator's fourteenth migration and the refresh step was removed with it.</p>
+<p>The field is still settable, on the object and through the chart's <code>costJob.databaseViewsRefreshTimeout</code> and <code>chargeCollectionJob.databaseViewsRefreshTimeout</code> keys, and it carries no default. Setting it is accepted, is not pruned, and changes nothing. Treat it as vestigial, and expect to find it on <code>CostJob</code> objects created before it was deprecated.</p>
+<p><code>OPENCOST_HOSTNAME</code> and <code>OPENCOST_PORT</code> are also on the pod, carried over from the template, and read by no code. The OpenCost address comes from <code>OPENCOST_CONNECTION_STRING</code> alone.</p>
+<h4 id="hours_lookback">HOURS_LOOKBACK<a class="headerlink" href="#hours_lookback" title="Permanent link">#</a></h4>
+<p><code>HOURS_LOOKBACK</code> decides how many hours before the scheduled hour a run revisits, so that hours which were empty or failed earlier get another chance before they are finalized. It has two layers. The operator's pod template sets it to <code>5</code>, and the Go fallback is <code>2</code>. Because the reconciler merges its overrides onto the template by name and does not name this variable, the template's value survives and the effective default in a generated CronJob is <strong>5</strong>. The fallback of <code>2</code> applies only if the variable is absent from the pod altogether, which is what happens when you run the binary in that mode yourself.</p>
+<h3 id="the-collection-job">The collection job<a class="headerlink" href="#the-collection-job" title="Permanent link">#</a></h3>
+<p>Pods of a <code>SubscriptionChargeCollection</code> run start in <code>--mode=collectionjob</code> and read a much smaller set. The reconciler builds their environment with the same code, so a collection-job pod also carries <code>COSTJOB_NAME</code>, <code>COSTJOB_NAMESPACE</code>, <code>OPENCOST_CONNECTION_STRING</code>, and whichever timeout variables the <code>CostJob</code> set, and reads none of them.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Required</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POSTGRES_CONNECTION_STRING</code></td>
+<td>Yes</td>
+<td>none</td>
+<td>The charges and allocations are read and written through this connection.</td>
+</tr>
+<tr>
+<td><code>CLUSTER_ID</code></td>
+<td>No</td>
+<td><code>default</code></td>
+<td>Scopes the charge rows and the summary queries. Note the generated pod inherits <code>default</code> from the template, not the manager's value.</td>
+</tr>
+<tr>
+<td><code>SCHEDULED_TIMESTAMP</code></td>
+<td>No</td>
+<td>current hour</td>
+<td>Pinned once at construction and truncated to the hour, so every retry of a Job targets the same window.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="manager-flags">Manager flags<a class="headerlink" href="#manager-flags" title="Permanent link">#</a></h2>
+<p>The binary registers the same flags in every mode, but only the controller uses most of them. The chart passes four of them through <code>controllerManager.manager.args</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--mode</code></td>
+<td><code>controller</code></td>
+<td>One of <code>controller</code>, <code>cronjob</code>, or <code>collectionjob</code>. An unrecognised value exits with an error. The operator sets the job modes on the CronJobs it generates.</td>
+</tr>
+<tr>
+<td><code>--skipDBConnection</code></td>
+<td><code>false</code></td>
+<td>Skip database initialization and migrations. For local debugging.</td>
+</tr>
+<tr>
+<td><code>--metrics-bind-address</code></td>
+<td><code>0</code></td>
+<td>Address the metrics endpoint binds to. <code>0</code> disables it; the chart passes <code>:8443</code>.</td>
+</tr>
+<tr>
+<td><code>--metrics-secure</code></td>
+<td><code>true</code></td>
+<td>Serve metrics over TLS, with authentication and authorization filters in front.</td>
+</tr>
+<tr>
+<td><code>--health-probe-bind-address</code></td>
+<td><code>:8081</code></td>
+<td>Address the liveness and readiness endpoints bind to.</td>
+</tr>
+<tr>
+<td><code>--leader-elect</code></td>
+<td><code>false</code></td>
+<td>Enable leader election. The chart passes it, so a chart install has it on.</td>
+</tr>
+<tr>
+<td><code>--webhook-cert-path</code></td>
+<td><code>""</code></td>
+<td>Directory holding the webhook serving certificate. Empty means no certificate watcher is started; the chart passes <code>/tmp/k8s-webhook-server/serving-certs</code>.</td>
+</tr>
+<tr>
+<td><code>--webhook-cert-name</code></td>
+<td><code>tls.crt</code></td>
+<td>Certificate filename inside that directory.</td>
+</tr>
+<tr>
+<td><code>--webhook-cert-key</code></td>
+<td><code>tls.key</code></td>
+<td>Private key filename inside that directory.</td>
+</tr>
+<tr>
+<td><code>--metrics-cert-path</code></td>
+<td><code>""</code></td>
+<td>Directory holding the metrics serving certificate. Empty means the metrics server uses its own generated certificate.</td>
+</tr>
+<tr>
+<td><code>--metrics-cert-name</code></td>
+<td><code>tls.crt</code></td>
+<td>Certificate filename inside that directory.</td>
+</tr>
+<tr>
+<td><code>--metrics-cert-key</code></td>
+<td><code>tls.key</code></td>
+<td>Private key filename inside that directory.</td>
+</tr>
+</tbody>
+</table>
+<p>The controller-runtime logging flags are registered as well: <code>--zap-devel</code>, <code>--zap-encoder</code>, <code>--zap-log-level</code>, <code>--zap-stacktrace-level</code>, and <code>--zap-time-encoding</code>. The operator builds its logger with development mode off, so <code>--zap-devel</code> defaults to <code>false</code> and logs are JSON at info level unless you change it.</p>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../getting-started/installation/kubernetes.html">On Kubernetes</a> for the values a real install sets, and why the two dependency Secrets are not optional.</li>
+<li><a href="../concepts/costjob.html">CostJob</a> for what the generated CronJob looks like and what each timeout bounds.</li>
+<li><a href="api.html#costjobspec"><code>CostJobSpec</code></a> and <a href="api.html#pricebookspec"><code>PriceBookSpec</code></a> for the field-level schema behind the starter resources.</li>
+<li><a href="status-conditions.html">Status conditions</a> for reading back what the configuration produced.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
               </article>
             </div>
           
@@ -3400,9 +4560,9 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -3662,7 +4822,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </style>
 
 <footer class="md-footer">
-    <div class="md-footer__inner mlr-auto" aria-label="Footer" >
+    <div class="md-footer__inner mlr-auto" aria-label="Footer">
         <!-- Footer content container-->
         <div class="footer-content-container">
             <!-- Flex-container with columns -->
@@ -3671,33 +4831,27 @@ This documentation is either for an old version, or for the unreleased 'main' ve
                 <div class="flex-2">
                     <div class="logo-footer-container">
                         
-                        <img class="md-header__logo_light" src="/finops/main/assets/images/footer-logo-light.png#only-light"
-                            alt="logo" />
+                        <img class="md-header__logo_light" src="../assets/images/footer-logo-light.png#only-light" alt="logo">
                         
                         
-                        <img src="/finops/main/assets/images/footer-logo-dark.png#only-dark" alt="logo" />
+                        <img src="../assets/images/footer-logo-dark.png#only-dark" alt="logo">
                         
                     </div>
 
                     <div class="collaborations-img-container">
                         <div class="display-flex">
                             
-                            <img class="csa-logo-dark"
-                                src="/finops/main/assets/images/CSA_dark.png#only-dark" alt="CSA" />
+                            <img class="csa-logo-dark" src="../assets/images/CSA_dark.png#only-dark" alt="CSA">
                             
                             
-                            <img class="csa-logo-light"
-                                src="/finops/main/assets/images/CSA_light.png#only-light"
-                                alt="CSA" />
+                            <img class="csa-logo-light" src="../assets/images/CSA_light.png#only-light" alt="CSA">
                             
 
                             
-                            <img class="hc-logo-dark" src="/finops/main/assets/images/HC_dark.png#only-dark"
-                                alt="HC" />
+                            <img class="hc-logo-dark" src="../assets/images/HC_dark.png#only-dark" alt="HC">
                             
                             
-                            <img class="hc-logo-light"
-                                src="/finops/main/assets/images/HC_light.png#only-light" alt="HC" />
+                            <img class="hc-logo-light" src="../assets/images/HC_light.png#only-light" alt="HC">
                             
                         </div>
                     </div>
@@ -3895,8 +5049,8 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
-<path class="cls-2" d="M24.91,11.22A9.84,9.84,0,0,0,21.3,7.61a9.68,9.68,0,0,0-5-1.33,9.68,9.68,0,0,0-5,1.33A9.9,9.9,0,0,0,6.4,16.19,9.61,9.61,0,0,0,8.3,22a9.73,9.73,0,0,0,4.88,3.58.6.6,0,0,0,.52-.09.51.51,0,0,0,.17-.39s0-.26,0-.7,0-.82,0-1.15l-.29.06a3.78,3.78,0,0,1-.72,0,4.73,4.73,0,0,1-.9-.09,1.86,1.86,0,0,1-.86-.39,1.58,1.58,0,0,1-.57-.79l-.13-.3a3,3,0,0,0-.41-.66,1.55,1.55,0,0,0-.56-.49l-.09-.06a1.25,1.25,0,0,1-.17-.16A.58.58,0,0,1,9,20.26q0-.09.06-.15a1.07,1.07,0,0,1,.38-.05l.26,0a1.75,1.75,0,0,1,.63.3,2.05,2.05,0,0,1,.63.68,2.26,2.26,0,0,0,.72.8,1.48,1.48,0,0,0,.84.28,4,4,0,0,0,.74-.06,2.64,2.64,0,0,0,.58-.2,2.14,2.14,0,0,1,.63-1.33,9,9,0,0,1-1.32-.23,5.09,5.09,0,0,1-1.21-.5,3.42,3.42,0,0,1-1-.87,4,4,0,0,1-.68-1.35A6.36,6.36,0,0,1,10,15.68,3.77,3.77,0,0,1,11,13a3.57,3.57,0,0,1,.09-2.64,1.87,1.87,0,0,1,1.12.18,6.56,6.56,0,0,1,1.07.5c.23.13.41.25.55.34a9.48,9.48,0,0,1,5,0l.49-.31a7.36,7.36,0,0,1,1.19-.56,1.72,1.72,0,0,1,1.05-.15,3.48,3.48,0,0,1,.1,2.64,3.77,3.77,0,0,1,1,2.66,6.36,6.36,0,0,1-.27,1.94A3.84,3.84,0,0,1,21.7,19a3.73,3.73,0,0,1-1.05.86,5.09,5.09,0,0,1-1.21.5,9,9,0,0,1-1.32.23,2.34,2.34,0,0,1,.67,1.84v2.72a.51.51,0,0,0,.16.39.58.58,0,0,0,.51.09,9.91,9.91,0,0,0,6.78-9.42A9.67,9.67,0,0,0,24.91,11.22Z"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
+<path class="cls-2" d="M24.91,11.22A9.84,9.84,0,0,0,21.3,7.61a9.68,9.68,0,0,0-5-1.33,9.68,9.68,0,0,0-5,1.33A9.9,9.9,0,0,0,6.4,16.19,9.61,9.61,0,0,0,8.3,22a9.73,9.73,0,0,0,4.88,3.58.6.6,0,0,0,.52-.09.51.51,0,0,0,.17-.39s0-.26,0-.7,0-.82,0-1.15l-.29.06a3.78,3.78,0,0,1-.72,0,4.73,4.73,0,0,1-.9-.09,1.86,1.86,0,0,1-.86-.39,1.58,1.58,0,0,1-.57-.79l-.13-.3a3,3,0,0,0-.41-.66,1.55,1.55,0,0,0-.56-.49l-.09-.06a1.25,1.25,0,0,1-.17-.16A.58.58,0,0,1,9,20.26q0-.09.06-.15a1.07,1.07,0,0,1,.38-.05l.26,0a1.75,1.75,0,0,1,.63.3,2.05,2.05,0,0,1,.63.68,2.26,2.26,0,0,0,.72.8,1.48,1.48,0,0,0,.84.28,4,4,0,0,0,.74-.06,2.64,2.64,0,0,0,.58-.2,2.14,2.14,0,0,1,.63-1.33,9,9,0,0,1-1.32-.23,5.09,5.09,0,0,1-1.21-.5,3.42,3.42,0,0,1-1-.87,4,4,0,0,1-.68-1.35A6.36,6.36,0,0,1,10,15.68,3.77,3.77,0,0,1,11,13a3.57,3.57,0,0,1,.09-2.64,1.87,1.87,0,0,1,1.12.18,6.56,6.56,0,0,1,1.07.5c.23.13.41.25.55.34a9.48,9.48,0,0,1,5,0l.49-.31a7.36,7.36,0,0,1,1.19-.56,1.72,1.72,0,0,1,1.05-.15,3.48,3.48,0,0,1,.1,2.64,3.77,3.77,0,0,1,1,2.66,6.36,6.36,0,0,1-.27,1.94A3.84,3.84,0,0,1,21.7,19a3.73,3.73,0,0,1-1.05.86,5.09,5.09,0,0,1-1.21.5,9,9,0,0,1-1.32.23,2.34,2.34,0,0,1,.67,1.84v2.72a.51.51,0,0,0,.16.39.58.58,0,0,0,.51.09,9.91,9.91,0,0,0,6.78-9.42A9.67,9.67,0,0,0,24.91,11.22Z"></path>
 </g>
 </g>
 </svg>
@@ -3915,11 +5069,11 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
 <g id="_10.Linkedin" data-name="10.Linkedin">
-<path class="cls-2" d="M24.13,24.13v-6c0-2.92-.63-5.16-4.05-5.16a3.55,3.55,0,0,0-3.19,1.75h0V13.28H13.62V24.13H17V18.74c0-1.42.26-2.78,2-2.78s1.74,1.6,1.74,2.86v5.29h3.38Z"/>
-<path class="cls-2" d="M8.14,13.28h3.37V24.13H8.14Z"/>
-<path class="cls-2" d="M9.82,7.87a2,2,0,1,0,1.95,2A2,2,0,0,0,9.82,7.87Z"/>
+<path class="cls-2" d="M24.13,24.13v-6c0-2.92-.63-5.16-4.05-5.16a3.55,3.55,0,0,0-3.19,1.75h0V13.28H13.62V24.13H17V18.74c0-1.42.26-2.78,2-2.78s1.74,1.6,1.74,2.86v5.29h3.38Z"></path>
+<path class="cls-2" d="M8.14,13.28h3.37V24.13H8.14Z"></path>
+<path class="cls-2" d="M9.82,7.87a2,2,0,1,0,1.95,2A2,2,0,0,0,9.82,7.87Z"></path>
 </g>
 </g>
 </g>
@@ -3939,8 +5093,8 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
-<path class="cls-2" d="M20.28,9.28h2.28l-5,5.69,5.86,7.75H18.85L15.25,18l-4.11,4.7H8.86l5.33-6.09L8.56,9.28h4.71l3.25,4.29Zm-.8,12.08h1.26L12.58,10.57H11.23l8.25,10.79Z"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
+<path class="cls-2" d="M20.28,9.28h2.28l-5,5.69,5.86,7.75H18.85L15.25,18l-4.11,4.7H8.86l5.33-6.09L8.56,9.28h4.71l3.25,4.29Zm-.8,12.08h1.26L12.58,10.57H11.23l8.25,10.79Z"></path>
 </g>
 </g>
 </svg>
@@ -3959,16 +5113,16 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
-<path id="f" class="cls-2" d="M17.35,24.72V16.77H20l.4-3.11H17.35v-2c0-.89.25-1.51,1.54-1.51h1.64V7.4a21.51,21.51,0,0,0-2.39-.12,3.73,3.73,0,0,0-4,4.1v2.28H11.47v3.11h2.68v8Z"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
+<path id="f" class="cls-2" d="M17.35,24.72V16.77H20l.4-3.11H17.35v-2c0-.89.25-1.51,1.54-1.51h1.64V7.4a21.51,21.51,0,0,0-2.39-.12,3.73,3.73,0,0,0-4,4.1v2.28H11.47v3.11h2.68v8Z"></path>
 </g>
 </g>
 </svg>
                         </a>
                         <a href="https://www.instagram.com/stakater.se/" class="svg-container" title="Instagram">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M16.0008 7.4668C13.6833 7.4668 13.3924 7.47693 12.4822 7.51835C11.5737 7.55995 10.9536 7.70378 10.4111 7.9148C9.8498 8.13276 9.37371 8.42432 8.89939 8.89881C8.42472 9.37313 8.13316 9.84922 7.91449 10.4103C7.70294 10.9531 7.55893 11.5733 7.51805 12.4814C7.47733 13.3917 7.46667 13.6827 7.46667 16.0002C7.46667 18.3178 7.47698 18.6077 7.51822 19.5179C7.56 20.4264 7.70383 21.0465 7.91467 21.5891C8.13281 22.1503 8.42437 22.6264 8.89886 23.1007C9.373 23.5754 9.84909 23.8677 10.41 24.0856C10.9529 24.2967 11.5732 24.4405 12.4815 24.4821C13.3917 24.5235 13.6824 24.5336 15.9997 24.5336C18.3174 24.5336 18.6074 24.5235 19.5176 24.4821C20.4261 24.4405 21.0469 24.2967 21.5898 24.0856C22.1509 23.8677 22.6263 23.5754 23.1004 23.1007C23.5751 22.6264 23.8667 22.1503 24.0853 21.5893C24.2951 21.0465 24.4391 20.4262 24.4818 19.5181C24.5227 18.6079 24.5333 18.3178 24.5333 16.0002C24.5333 13.6827 24.5227 13.3918 24.4818 12.4816C24.4391 11.5732 24.2951 10.9531 24.0853 10.4105C23.8667 9.84922 23.5751 9.37313 23.1004 8.89881C22.6258 8.42414 22.1511 8.13258 21.5893 7.9148C21.0453 7.70378 20.4248 7.55995 19.5164 7.51835C18.6062 7.47693 18.3164 7.4668 15.9981 7.4668H16.0008ZM15.2352 9.00457C15.4624 9.00421 15.716 9.00457 16.0008 9.00457C18.2792 9.00457 18.5492 9.01274 19.449 9.05363C20.281 9.09168 20.7325 9.2307 21.0333 9.3475C21.4316 9.50217 21.7155 9.68706 22.014 9.98573C22.3127 10.2844 22.4975 10.5688 22.6526 10.9671C22.7694 11.2675 22.9086 11.7191 22.9464 12.5511C22.9873 13.4507 22.9962 13.7209 22.9962 15.9982C22.9962 18.2756 22.9873 18.5458 22.9464 19.4454C22.9084 20.2774 22.7694 20.729 22.6526 21.0294C22.4979 21.4276 22.3127 21.7112 22.014 22.0097C21.7153 22.3084 21.4318 22.4932 21.0333 22.6479C20.7329 22.7652 20.281 22.9039 19.449 22.942C18.5494 22.9828 18.2792 22.9917 16.0008 22.9917C13.7222 22.9917 13.4521 22.9828 12.5526 22.942C11.7205 22.9036 11.269 22.7645 10.968 22.6477C10.5698 22.4931 10.2853 22.3082 9.98666 22.0095C9.68799 21.7108 9.5031 21.4271 9.34807 21.0287C9.23127 20.7282 9.09207 20.2767 9.0542 19.4447C9.01331 18.5451 9.00514 18.2749 9.00514 15.9961C9.00514 13.7173 9.01331 13.4485 9.0542 12.549C9.09225 11.717 9.23127 11.2654 9.34807 10.9646C9.50274 10.5664 9.68799 10.2819 9.98666 9.98324C10.2853 9.68457 10.5698 9.49968 10.968 9.34466C11.2688 9.22732 11.7205 9.08866 12.5526 9.05043C13.3398 9.01488 13.6448 9.00421 15.2352 9.00243V9.00457ZM20.5558 10.4215C19.9905 10.4215 19.5318 10.8796 19.5318 11.4451C19.5318 12.0105 19.9905 12.4691 20.5558 12.4691C21.1212 12.4691 21.5798 12.0105 21.5798 11.4451C21.5798 10.8798 21.1212 10.4215 20.5558 10.4215ZM16.0008 11.6179C13.5807 11.6179 11.6185 13.5801 11.6185 16.0002C11.6185 18.4203 13.5807 20.3816 16.0008 20.3816C18.4209 20.3816 20.3824 18.4203 20.3824 16.0002C20.3824 13.5801 18.4209 11.6179 16.0008 11.6179ZM16.0008 13.1557C17.5716 13.1557 18.8453 14.4292 18.8453 16.0002C18.8453 17.5711 17.5716 18.8447 16.0008 18.8447C14.4297 18.8447 13.1563 17.5711 13.1563 16.0002C13.1563 14.4292 14.4297 13.1557 16.0008 13.1557Z" fill="#EA7845"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.0008 7.4668C13.6833 7.4668 13.3924 7.47693 12.4822 7.51835C11.5737 7.55995 10.9536 7.70378 10.4111 7.9148C9.8498 8.13276 9.37371 8.42432 8.89939 8.89881C8.42472 9.37313 8.13316 9.84922 7.91449 10.4103C7.70294 10.9531 7.55893 11.5733 7.51805 12.4814C7.47733 13.3917 7.46667 13.6827 7.46667 16.0002C7.46667 18.3178 7.47698 18.6077 7.51822 19.5179C7.56 20.4264 7.70383 21.0465 7.91467 21.5891C8.13281 22.1503 8.42437 22.6264 8.89886 23.1007C9.373 23.5754 9.84909 23.8677 10.41 24.0856C10.9529 24.2967 11.5732 24.4405 12.4815 24.4821C13.3917 24.5235 13.6824 24.5336 15.9997 24.5336C18.3174 24.5336 18.6074 24.5235 19.5176 24.4821C20.4261 24.4405 21.0469 24.2967 21.5898 24.0856C22.1509 23.8677 22.6263 23.5754 23.1004 23.1007C23.5751 22.6264 23.8667 22.1503 24.0853 21.5893C24.2951 21.0465 24.4391 20.4262 24.4818 19.5181C24.5227 18.6079 24.5333 18.3178 24.5333 16.0002C24.5333 13.6827 24.5227 13.3918 24.4818 12.4816C24.4391 11.5732 24.2951 10.9531 24.0853 10.4105C23.8667 9.84922 23.5751 9.37313 23.1004 8.89881C22.6258 8.42414 22.1511 8.13258 21.5893 7.9148C21.0453 7.70378 20.4248 7.55995 19.5164 7.51835C18.6062 7.47693 18.3164 7.4668 15.9981 7.4668H16.0008ZM15.2352 9.00457C15.4624 9.00421 15.716 9.00457 16.0008 9.00457C18.2792 9.00457 18.5492 9.01274 19.449 9.05363C20.281 9.09168 20.7325 9.2307 21.0333 9.3475C21.4316 9.50217 21.7155 9.68706 22.014 9.98573C22.3127 10.2844 22.4975 10.5688 22.6526 10.9671C22.7694 11.2675 22.9086 11.7191 22.9464 12.5511C22.9873 13.4507 22.9962 13.7209 22.9962 15.9982C22.9962 18.2756 22.9873 18.5458 22.9464 19.4454C22.9084 20.2774 22.7694 20.729 22.6526 21.0294C22.4979 21.4276 22.3127 21.7112 22.014 22.0097C21.7153 22.3084 21.4318 22.4932 21.0333 22.6479C20.7329 22.7652 20.281 22.9039 19.449 22.942C18.5494 22.9828 18.2792 22.9917 16.0008 22.9917C13.7222 22.9917 13.4521 22.9828 12.5526 22.942C11.7205 22.9036 11.269 22.7645 10.968 22.6477C10.5698 22.4931 10.2853 22.3082 9.98666 22.0095C9.68799 21.7108 9.5031 21.4271 9.34807 21.0287C9.23127 20.7282 9.09207 20.2767 9.0542 19.4447C9.01331 18.5451 9.00514 18.2749 9.00514 15.9961C9.00514 13.7173 9.01331 13.4485 9.0542 12.549C9.09225 11.717 9.23127 11.2654 9.34807 10.9646C9.50274 10.5664 9.68799 10.2819 9.98666 9.98324C10.2853 9.68457 10.5698 9.49968 10.968 9.34466C11.2688 9.22732 11.7205 9.08866 12.5526 9.05043C13.3398 9.01488 13.6448 9.00421 15.2352 9.00243V9.00457ZM20.5558 10.4215C19.9905 10.4215 19.5318 10.8796 19.5318 11.4451C19.5318 12.0105 19.9905 12.4691 20.5558 12.4691C21.1212 12.4691 21.5798 12.0105 21.5798 11.4451C21.5798 10.8798 21.1212 10.4215 20.5558 10.4215ZM16.0008 11.6179C13.5807 11.6179 11.6185 13.5801 11.6185 16.0002C11.6185 18.4203 13.5807 20.3816 16.0008 20.3816C18.4209 20.3816 20.3824 18.4203 20.3824 16.0002C20.3824 13.5801 18.4209 11.6179 16.0008 11.6179ZM16.0008 13.1557C17.5716 13.1557 18.8453 14.4292 18.8453 16.0002C18.8453 17.5711 17.5716 18.8447 16.0008 18.8447C14.4297 18.8447 13.1563 17.5711 13.1563 16.0002C13.1563 14.4292 14.4297 13.1557 16.0008 13.1557Z" fill="#EA7845"></path>
 </svg>
                         </a>
                         <a href="https://www.reddit.com/user/stakater/" class="svg-container" title="Reddit">
@@ -3985,9 +5139,9 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
 <g id="_32.Reddit" data-name="32.Reddit">
-<path id="Icon" class="cls-2" d="M26,16.16a2.18,2.18,0,0,0-3.69-1.53,10.65,10.65,0,0,0-5.79-1.84l1-4.67,3.22.65A1.49,1.49,0,1,0,22,7.12a1.47,1.47,0,0,0-1.12.72l-3.67-.72a.46.46,0,0,0-.55.35l-1.1,5.22a10.71,10.71,0,0,0-5.86,1.84,2.19,2.19,0,0,0-3,3.2,2.73,2.73,0,0,0,.6.4,3.53,3.53,0,0,0,0,.65c0,3.37,3.92,6.11,8.76,6.11s8.76-2.72,8.76-6.11a2.36,2.36,0,0,0,0-.65A2.14,2.14,0,0,0,26,16.16Zm-15,1.52a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,10.93,17.68Zm8.74,4.14A5.7,5.7,0,0,1,16,23a5.75,5.75,0,0,1-3.69-1.15.4.4,0,0,1,.57-.57A5,5,0,0,0,16,22.2a4.89,4.89,0,0,0,3.15-.93.42.42,0,1,1,.6.6v-.05Zm-.25-2.57a1.06,1.06,0,1,1,0,.05h-.08Z"/>
+<path id="Icon" class="cls-2" d="M26,16.16a2.18,2.18,0,0,0-3.69-1.53,10.65,10.65,0,0,0-5.79-1.84l1-4.67,3.22.65A1.49,1.49,0,1,0,22,7.12a1.47,1.47,0,0,0-1.12.72l-3.67-.72a.46.46,0,0,0-.55.35l-1.1,5.22a10.71,10.71,0,0,0-5.86,1.84,2.19,2.19,0,0,0-3,3.2,2.73,2.73,0,0,0,.6.4,3.53,3.53,0,0,0,0,.65c0,3.37,3.92,6.11,8.76,6.11s8.76-2.72,8.76-6.11a2.36,2.36,0,0,0,0-.65A2.14,2.14,0,0,0,26,16.16Zm-15,1.52a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,10.93,17.68Zm8.74,4.14A5.7,5.7,0,0,1,16,23a5.75,5.75,0,0,1-3.69-1.15.4.4,0,0,1,.57-.57A5,5,0,0,0,16,22.2a4.89,4.89,0,0,0,3.15-.93.42.42,0,1,1,.6.6v-.05Zm-.25-2.57a1.06,1.06,0,1,1,0,.05h-.08Z"></path>
 </g>
 </g>
 </g>
@@ -4007,7 +5161,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
     </div>
     
     
-      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden="">
         <div class="md-consent__overlay"></div>
         <aside class="md-consent__inner">
           <form class="md-consent__form md-grid md-typeset" name="consent">
@@ -4017,7 +5171,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
 
 <h4>Cookie consent</h4>
 <p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
-<input class="md-toggle" type="checkbox" id="__settings" >
+<input class="md-toggle" type="checkbox" id="__settings">
 <div class="md-consent__settings">
   <ul class="task-list">
     
@@ -4031,7 +5185,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   <li class="task-list-item">
     <label class="task-list-control">
-      <input type="checkbox" name="analytics" checked>
+      <input type="checkbox" name="analytics" checked="">
       <span class="task-list-indicator"></span>
       Google Analytics
     </label>
@@ -4049,7 +5203,7 @@ This documentation is either for an old version, or for the unreleased 'main' ve
   
   <li class="task-list-item">
     <label class="task-list-control">
-      <input type="checkbox" name="github" checked>
+      <input type="checkbox" name="github" checked="">
       <span class="task-list-indicator"></span>
       GitHub
     </label>
@@ -4089,11 +5243,13 @@ This documentation is either for an old version, or for the unreleased 'main' ve
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/finops/main", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "/finops/main/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="/finops/main/assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
