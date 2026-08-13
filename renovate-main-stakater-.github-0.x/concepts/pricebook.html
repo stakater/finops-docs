@@ -5,29 +5,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.stakater.com/finops/renovate-main-stakater-.github-0.x/index.html">
+        <link rel="canonical" href="https://docs.stakater.com/finops/renovate-main-stakater-.github-0.x/concepts/pricebook.html">
       
       
+        <link rel="prev" href="finops-provider.html">
       
-        <link rel="next" href="overview/key-features.html">
+      
+        <link rel="next" href="costjob.html">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.svg">
+      <link rel="icon" href="../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
-        <title>Introduction - FinOps Operator</title>
+        <title>PriceBook - FinOps Operator</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -46,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="stylesheets/pills.css">
+      <link rel="stylesheet" href="../stylesheets/pills.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -66,7 +68,7 @@
 
     
     
-  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -95,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#finops-operator" class="md-skip">
+        <a href="#pricebook" class="md-skip">
           Skip to content
         </a>
       
@@ -340,7 +342,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <nav class="md-header__inner md-grid" aria-label="Header">
 
     <!-- Link to home -->
-    <a href="." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       <!-- 
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -361,10 +363,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
         <!-- Logo -->
         <div class="md-header__topic">
           
-          <img class="md-header__logo_light" src="assets/images/logo-light.png#only-light" alt="logo">
+          <img class="md-header__logo_light" src="../assets/images/logo-light.png#only-light" alt="logo">
           
           
-          <img class="md-header__logo_dark" src="assets/images/logo-dark.png#only-dark" alt="logo">
+          <img class="md-header__logo_dark" src="../assets/images/logo-dark.png#only-dark" alt="logo">
           
           
           <div class="header-site-name">
@@ -1988,7 +1990,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -2015,20 +2017,18 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -2049,7 +2049,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2064,37 +2064,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -2110,50 +2083,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#opencost-and-postgresql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OpenCost and PostgreSQL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2166,7 +2095,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="overview/key-features.html" class="md-nav__link">
+      <a href="../overview/key-features.html" class="md-nav__link">
         
   
   
@@ -2194,7 +2123,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="overview/use-cases.html" class="md-nav__link">
+      <a href="../overview/use-cases.html" class="md-nav__link">
         
   
   
@@ -2226,18 +2155,20 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -2258,7 +2189,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2276,7 +2207,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/architecture.html" class="md-nav__link">
+      <a href="architecture.html" class="md-nav__link">
         
   
   
@@ -2304,7 +2235,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/terminology.html" class="md-nav__link">
+      <a href="terminology.html" class="md-nav__link">
         
   
   
@@ -2332,7 +2263,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/finops-provider.html" class="md-nav__link">
+      <a href="finops-provider.html" class="md-nav__link">
         
   
   
@@ -2357,10 +2288,37 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="concepts/pricebook.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PriceBook
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="pricebook.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2376,6 +2334,105 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currency-and-valuation-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Currency and valuation mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-active-pricebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing the active PriceBook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-the-active-book-is-not-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When the active book is not ready
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-operator-writes-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the operator writes back
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-rates-later" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing rates later
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2388,7 +2445,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/costjob.html" class="md-nav__link">
+      <a href="costjob.html" class="md-nav__link">
         
   
   
@@ -2416,7 +2473,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/offering.html" class="md-nav__link">
+      <a href="offering.html" class="md-nav__link">
         
   
   
@@ -2444,7 +2501,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/subscription.html" class="md-nav__link">
+      <a href="subscription.html" class="md-nav__link">
         
   
   
@@ -2472,7 +2529,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/billing-model.html" class="md-nav__link">
+      <a href="billing-model.html" class="md-nav__link">
         
   
   
@@ -2500,7 +2557,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/compatibility-and-hierarchy.html" class="md-nav__link">
+      <a href="compatibility-and-hierarchy.html" class="md-nav__link">
         
   
   
@@ -2582,7 +2639,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/quick-start.html" class="md-nav__link">
+      <a href="../getting-started/quick-start.html" class="md-nav__link">
         
   
   
@@ -2657,7 +2714,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/installation/overview.html" class="md-nav__link">
+      <a href="../getting-started/installation/overview.html" class="md-nav__link">
         
   
   
@@ -2685,7 +2742,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/installation/openshift.html" class="md-nav__link">
+      <a href="../getting-started/installation/openshift.html" class="md-nav__link">
         
   
   
@@ -2713,7 +2770,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/installation/kubernetes.html" class="md-nav__link">
+      <a href="../getting-started/installation/kubernetes.html" class="md-nav__link">
         
   
   
@@ -2749,7 +2806,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/uninstalling.html" class="md-nav__link">
+      <a href="../getting-started/uninstalling.html" class="md-nav__link">
         
   
   
@@ -2831,7 +2888,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/define-pricing.html" class="md-nav__link">
+      <a href="../guides/define-pricing.html" class="md-nav__link">
         
   
   
@@ -2859,7 +2916,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/switch-active-pricebook.html" class="md-nav__link">
+      <a href="../guides/switch-active-pricebook.html" class="md-nav__link">
         
   
   
@@ -2887,7 +2944,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/collect-cost-data.html" class="md-nav__link">
+      <a href="../guides/collect-cost-data.html" class="md-nav__link">
         
   
   
@@ -2915,7 +2972,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/define-offering.html" class="md-nav__link">
+      <a href="../guides/define-offering.html" class="md-nav__link">
         
   
   
@@ -2943,7 +3000,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/price-resource-usage.html" class="md-nav__link">
+      <a href="../guides/price-resource-usage.html" class="md-nav__link">
         
   
   
@@ -2971,7 +3028,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/subscribe-to-offering.html" class="md-nav__link">
+      <a href="../guides/subscribe-to-offering.html" class="md-nav__link">
         
   
   
@@ -2999,7 +3056,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/compose-subscriptions.html" class="md-nav__link">
+      <a href="../guides/compose-subscriptions.html" class="md-nav__link">
         
   
   
@@ -3027,7 +3084,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/read-subscription-costs.html" class="md-nav__link">
+      <a href="../guides/read-subscription-costs.html" class="md-nav__link">
         
   
   
@@ -3055,7 +3112,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/deactivate-a-subscription.html" class="md-nav__link">
+      <a href="../guides/deactivate-a-subscription.html" class="md-nav__link">
         
   
   
@@ -3137,7 +3194,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/api.html" class="md-nav__link">
+      <a href="../reference/api.html" class="md-nav__link">
         
   
   
@@ -3165,7 +3222,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/configuration.html" class="md-nav__link">
+      <a href="../reference/configuration.html" class="md-nav__link">
         
   
   
@@ -3193,7 +3250,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/rbac.html" class="md-nav__link">
+      <a href="../reference/rbac.html" class="md-nav__link">
         
   
   
@@ -3221,7 +3278,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/security-model.html" class="md-nav__link">
+      <a href="../reference/security-model.html" class="md-nav__link">
         
   
   
@@ -3249,7 +3306,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/metrics.html" class="md-nav__link">
+      <a href="../reference/metrics.html" class="md-nav__link">
         
   
   
@@ -3277,7 +3334,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/webhooks.html" class="md-nav__link">
+      <a href="../reference/webhooks.html" class="md-nav__link">
         
   
   
@@ -3305,7 +3362,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/status-conditions.html" class="md-nav__link">
+      <a href="../reference/status-conditions.html" class="md-nav__link">
         
   
   
@@ -3340,7 +3397,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting.html" class="md-nav__link">
+      <a href="../troubleshooting.html" class="md-nav__link">
         
   
   
@@ -3367,7 +3424,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="release-notes.html" class="md-nav__link">
+      <a href="../release-notes.html" class="md-nav__link">
         
   
   
@@ -3394,7 +3451,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="eula.html" class="md-nav__link">
+      <a href="../eula.html" class="md-nav__link">
         
   
   
@@ -3443,10 +3500,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#opencost-and-postgresql" class="md-nav__link">
+  <a href="#rates" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OpenCost and PostgreSQL
+        Rates
       
     </span>
   </a>
@@ -3454,10 +3511,65 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
+  <a href="#currency-and-valuation-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Next
+        Currency and valuation mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-active-pricebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing the active PriceBook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-the-active-book-is-not-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When the active book is not ready
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-operator-writes-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the operator writes back
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-rates-later" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing rates later
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
       
     </span>
   </a>
@@ -3484,53 +3596,142 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
 
-<h1 id="finops-operator">FinOps Operator<a class="headerlink" href="#finops-operator" title="Permanent link">#</a></h1>
-<p>The FinOps Operator performs cost accounting for Kubernetes workloads. It collects allocation data for what actually ran in the cluster, prices that usage against rates you declare, and bills the result to whoever subscribed to it. The whole model is expressed as Kubernetes resources, so a platform engineer, SRE, or FinOps practitioner who is comfortable with <code>kubectl</code> can publish an internal price list, attach it to a service, and read accrued charges back from a resource status without leaving the cluster.</p>
-<p>Five custom resources in the <code>finops.stakater.com/v1alpha1</code> API group carry that model.</p>
+<h1 id="pricebook">PriceBook<a class="headerlink" href="#pricebook" title="Permanent link">#</a></h1>
+<p>A <code>PriceBook</code> is one currency and a set of per-unit rates, held as a namespace-scoped resource so a price list is reviewed and rolled out through the same manifests as everything else. Any number of PriceBooks can exist across the cluster; exactly one of them is active, and the active one is the rate source that OpenCost values usage with and that Offering pricing resolves against.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PriceBook</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">onprem-standard</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">finops.stakater.com/active</span><span class="p">:</span><span class="w"> </span><span class="s">"true"</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">currency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">USD</span>
+<span class="w">  </span><span class="nt">valuationMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">currency</span>
+<span class="w">  </span><span class="nt">rates</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">cpuHour</span><span class="p">:</span><span class="w"> </span><span class="s">"0.031"</span>
+<span class="w">    </span><span class="nt">ramGbHour</span><span class="p">:</span><span class="w"> </span><span class="s">"0.004"</span>
+<span class="w">    </span><span class="nt">pvGbHour</span><span class="p">:</span><span class="w"> </span><span class="s">"0.00012"</span>
+<span class="w">    </span><span class="nt">gpuHour</span><span class="p">:</span><span class="w"> </span><span class="s">"1.8"</span>
+<span class="w">    </span><span class="nt">networkGiB</span><span class="p">:</span><span class="w"> </span><span class="s">"0.09"</span>
+</code></pre></div>
+<h2 id="rates">Rates<a class="headerlink" href="#rates" title="Permanent link">#</a></h2>
+<p>Rates are decimal strings rather than numbers, so the value you write is the value the operator parses. Each one is converted to micro-currency before any arithmetic happens, which keeps <code>"0.031"</code> exactly 31,000 micros instead of a floating-point approximation of it.</p>
 <table>
 <thead>
 <tr>
-<th>Resource</th>
-<th>What it is</th>
+<th>Field</th>
+<th>Rate is per</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="concepts/finops-provider.html"><code>FinOpsProvider</code></a></td>
-<td>A cluster-scoped singleton, always named <code>default</code>, that declares where the cluster runs, exactly one of AWS, GCP, Azure, or on-premises, and configures the OpenCost integration.</td>
+<td><code>cpuHour</code></td>
+<td>vCPU-hour</td>
+<td><code>"0.031"</code></td>
 </tr>
 <tr>
-<td><a href="concepts/pricebook.html"><code>PriceBook</code></a></td>
-<td>A currency and a set of per-unit rates for CPU, GPU, RAM, persistent volumes, and network transfer, with separate spot rates for CPU and RAM. One PriceBook at a time is the active one, and its rates are what everything else prices against.</td>
+<td><code>spotCPUHour</code></td>
+<td>vCPU-hour on spot capacity</td>
+<td><code>"0.011"</code></td>
 </tr>
 <tr>
-<td><a href="concepts/costjob.html"><code>CostJob</code></a></td>
-<td>A collection schedule. The operator turns each CostJob into a Kubernetes <code>CronJob</code> that either pulls allocation data out of OpenCost or computes subscription charges.</td>
+<td><code>ramGbHour</code></td>
+<td>GB-hour of memory</td>
+<td><code>"0.004"</code></td>
 </tr>
 <tr>
-<td><a href="concepts/offering.html"><code>Offering</code></a></td>
-<td>A cost-driving entity and the rules for pricing it: a recurring subscription fee, per-meter margins on measured usage, or both. Its spec is immutable once created.</td>
+<td><code>spotRAMGbHour</code></td>
+<td>GB-hour of memory on spot capacity</td>
+<td><code>"0.002"</code></td>
 </tr>
 <tr>
-<td><a href="concepts/subscription.html"><code>Subscription</code></a></td>
-<td>A binding to an Offering that represents active consumption. While it is active it accrues charges, and it can hang off a parent Subscription to model add-ons.</td>
+<td><code>pvGbHour</code></td>
+<td>GB-hour of persistent volume</td>
+<td><code>"0.00012"</code></td>
+</tr>
+<tr>
+<td><code>gpuHour</code></td>
+<td>GPU-hour</td>
+<td><code>"1.8"</code></td>
+</tr>
+<tr>
+<td><code>networkGiB</code></td>
+<td>GiB of data transferred</td>
+<td><code>"0.09"</code></td>
 </tr>
 </tbody>
 </table>
-<p>An Offering is the catalogue entry and a Subscription is the thing being billed, so pricing is authored once and consumed many times.</p>
-<h2 id="opencost-and-postgresql">OpenCost and PostgreSQL<a class="headerlink" href="#opencost-and-postgresql" title="Permanent link">#</a></h2>
-<p>The operator does not measure resource consumption itself. <a href="https://opencost.io">OpenCost</a> does that, and the operator drives it from two directions: <code>FinOpsProvider</code> configures the OpenCost integration for the cluster's provider, and the active <code>PriceBook</code> is rendered into OpenCost's custom pricing document so OpenCost values usage with your rates rather than a public cloud price list. Subscription charges are then computed from the PriceBook rates directly rather than from OpenCost's own cost figures, which keeps billing arithmetic independent of how OpenCost happens to interpret the document.</p>
-<p>PostgreSQL is where anything durable lands. The collection CronJobs write OpenCost allocation rows there, controllers mirror every version of every Offering and Subscription into it, and the charge collector writes one row per subscription, per hour, per charge source. Rolling summaries for the current hour, day, and month are copied back onto <code>Subscription.status.costs</code> so the cheap answer is available from <code>kubectl</code> without querying the database.</p>
-<pre class="mermaid"><code>flowchart LR
-    FP[FinOpsProvider] --&gt;|configures| OC[OpenCost]
-    PB[PriceBook] --&gt;|custom pricing| OC
-    PB --&gt;|base rates| Off[Offering]
-    Off --&gt;|resolved pricing| Sub[Subscription]
-    OC --&gt;|allocation data| CJ[CostJob]
-    CJ --&gt;|writes charge rows| DB[(PostgreSQL)]
-    CJ --&gt;|writes cost summaries| Sub</code></pre>
-<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">#</a></h2>
-<p>Start with the <a href="getting-started/installation/overview.html">installation overview</a>, then work through the <a href="getting-started/quick-start.html">quick start</a> to get a price list, an offering, and a subscription in place.</p>
+<p>All seven are optional and all share the pattern <code>^([0-9]+(\.[0-9]+)?)?$</code>, which admits an empty string and rejects a negative number, an exponent, a thousands separator, and a currency symbol. Empty means unset, not free: an unset rate parses to zero micros, and it is written into OpenCost's pricing document as <code>"0"</code> so the document never carries a blank value.</p>
+<p>Two of the seven only ever reach OpenCost. <code>spotCPUHour</code> and <code>spotRAMGbHour</code> are rendered into the <code>spotCPU</code> and <code>spotRAM</code> fields of the pricing document, and they are parsed and validated along with the rest, but no meter reads them: charges for CPU and memory are priced from <code>cpuHour</code> and <code>ramGbHour</code> whatever kind of node the workload ran on. <code>networkGiB</code> backs the <code>networkGb</code> meter and also fills all three of OpenCost's egress fields, so zone, region, and internet egress are priced identically. The <code>subscription</code> meter takes nothing from here, since a recurring fee is priced entirely from its Offering.</p>
+<h2 id="currency-and-valuation-mode">Currency and valuation mode<a class="headerlink" href="#currency-and-valuation-mode" title="Permanent link">#</a></h2>
+<p><code>currency</code> is required and matched against <code>^[A-Z]{3}$</code>, so it takes an ISO 4217 code such as <code>USD</code> or <code>EUR</code>. It is a label, not a conversion instruction. Nothing in the operator holds an exchange rate. The currency is stamped onto every allocation row the rates price, and every micro-currency figure downstream, including a charge row's unit price, is denominated in it implicitly, so mixing currencies across PriceBooks means mixing them in your reports too.</p>
+<p><code>valuationMode</code> is required as well, and the only values it accepts are <code>currency</code> and <code>percent</code>. Only <code>currency</code> has an implementation behind it, and a <code>percent</code> book is not inert in the way you might hope: it still competes for the active slot, it is treated as ready without any rate parsing, and if it wins the slot its rates are still rendered into OpenCost's pricing document. What it cannot do is price an Offering, because pricing resolution passes over every book whose mode is not <code>currency</code>, so a percent book holding the active slot leaves each metered Offering not ready with <code>NoActivePricebook</code>. Keep the mode <code>currency</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>rates</code> is optional in the schema and nothing rejects a PriceBook that omits it, but the reconcile that renders the active book reads its rate fields unconditionally. Give every PriceBook a <code>rates</code> block, even a partial one.</p>
+</div>
+<h2 id="choosing-the-active-pricebook">Choosing the active PriceBook<a class="headerlink" href="#choosing-the-active-pricebook" title="Permanent link">#</a></h2>
+<p><code>status.active</code> belongs to the operator. The annotation <code>finops.stakater.com/active: "true"</code> belongs to you. On every PriceBook event the reconciler lists all books cluster-wide and picks one in three tiers, first match winning:</p>
+<ol>
+<li><strong>Annotated.</strong> A book carrying the annotation wins outright. An explicit choice always beats the operator's own.</li>
+<li><strong>Sticky incumbent.</strong> Failing that, a book already holding <code>status.active: true</code> keeps it. A newly created book never displaces a working one on its own.</li>
+<li><strong>Election.</strong> Failing both, the newest book is bootstrapped active. This is what happens on a fresh cluster and after the active book is deleted.</li>
+</ol>
+<p>Where several books compete inside one tier, the newest <code>creationTimestamp</code> wins, tie-broken on namespace then name ascending. That tie-break is why annotating a second book without removing the annotation from the first does not mean "whichever I annotated last": annotations carry no timestamp, so the operator falls back to creation time and the newer book wins.</p>
+<p>The chosen book is patched <code>status.active: true</code> with an <code>Active</code> condition whose reason is <code>Activated</code>. Every other book is patched <code>status.active: false</code> with reason <code>Demoted</code>, and a demoted book has its <code>status.activePricing</code> cleared, because it no longer describes what OpenCost is using. Editing rates on the book that is already active needs no annotation change at all: it stays active and re-prices.</p>
+<h2 id="when-the-active-book-is-not-ready">When the active book is not ready<a class="headerlink" href="#when-the-active-book-is-not-ready" title="Permanent link">#</a></h2>
+<p>Readiness is per-object and separate from selection. Each reconcile parses that one book's rates and records <code>Ready</code>. A rate that will not parse gives <code>Ready=False</code> with reason <code>PricebookParseFailed</code> and a message naming the first field that failed and the value it held. The pattern already turns away malformed shapes at admission, so what reaches this check is a value too large to express in micros. A book whose mode is not <code>currency</code> is ready trivially, having nothing to parse.</p>
+<p>Selection ignores readiness on purpose. A book that wins selection while unready stays active and surfaces its error instead of failing over, so a typo produces a visible failure rather than a silent switch to different prices. While that is the case, the operator leaves the last good pricing document in place rather than pushing rates it could not read, and metered Offerings that try to resolve against the book go not ready with the same <code>PricebookParseFailed</code> reason. An Offering with metered resources and no active <code>currency</code> book at all goes not ready with <code>NoActivePricebook</code>.</p>
+<h2 id="what-the-operator-writes-back">What the operator writes back<a class="headerlink" href="#what-the-operator-writes-back" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What it holds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status.active</code></td>
+<td><code>true</code> on the one selected book, <code>false</code> on the rest. Printed as the <code>Active</code> column by <code>kubectl get pricebooks</code>.</td>
+</tr>
+<tr>
+<td><code>status.ready</code></td>
+<td><code>True</code> or <code>False</code> from parsing this book's own rates. Printed as the <code>Ready</code> column.</td>
+</tr>
+<tr>
+<td><code>status.conditions</code></td>
+<td><code>Ready</code>, and <code>Active</code> with reason <code>Activated</code> or <code>Demoted</code>. Each condition carries the generation it was written for.</td>
+</tr>
+<tr>
+<td><code>status.activePricing</code></td>
+<td>A flat map mirroring the <code>default.json</code> document this book applied to OpenCost. Populated only on the active, ready book, and cleared on demotion, so it is the field to read when you want to know what OpenCost is actually costing with.</td>
+</tr>
+<tr>
+<td><code>status.observedGeneration</code></td>
+<td>Declared in the API but not populated at this release. Use the <code>observedGeneration</code> on the conditions instead.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="changing-rates-later">Changing rates later<a class="headerlink" href="#changing-rates-later" title="Permanent link">#</a></h2>
+<p>An edit re-renders the pricing document and, when the content genuinely changed, restarts OpenCost so it reads the new one. What an edit does not do is re-price history, and the reasons are worth keeping straight:</p>
+<ul>
+<li>Every charge row records the unit price it was written with, and the collector resumes from each Subscription's last finalized hour, so hours already billed keep the prices they were billed at.</li>
+<li>An Offering resolves <code>status.resolvedPricing</code> once and then keeps it, since its spec is immutable. A rate change does not update the unit prices an already-resolved Offering publishes; an Offering created afterwards picks the new rates up.</li>
+<li>Hours not yet finalized are recomputed from the new rates, and a usage charge takes its rate from the <code>pricebooks</code> table rather than from <code>status.resolvedPricing</code>. After an edit an old Offering can therefore publish one unit price while new charges are computed from another.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>One path does not consult <code>status.active</code>. An allocation-collecting run resolves its rates by listing PriceBooks in its own CostJob's namespace and taking the first one the API server returns, copying that book's rates into the <code>pricebooks</code> table and stamping the row's id onto every allocation it writes. Usage charges later read their per-unit rate through that stamp, so where several books share a namespace with a <code>ResourceCostCollection</code> CostJob, usage can be priced from a book that is not the active one. Keep a single PriceBook in any namespace that runs one. Two related edges: a book with no <code>rates</code> block at all fails the run outright, and a namespace with no PriceBook at all makes the run stamp an id of <code>0</code>, which matches no rate row, so its allocations carry no rate and are dropped when charges are computed.</p>
+</div>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../guides/switch-active-pricebook.html">Switch the active PriceBook</a> for moving the annotation, and <a href="../guides/define-pricing.html">define pricing</a> for authoring the first book.</li>
+<li><a href="architecture.html#how-the-active-pricebook-reaches-opencost">How the active PriceBook reaches OpenCost</a> for the ConfigMap and restart mechanics.</li>
+<li><a href="../reference/api.html#pricerates"><code>PriceRates</code></a> and <a href="../reference/api.html#pricebookstatus"><code>PriceBookStatus</code></a> for the field-level reference.</li>
+</ul>
 
 
 
@@ -3824,27 +4025,27 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 <div class="flex-2">
                     <div class="logo-footer-container">
                         
-                        <img class="md-header__logo_light" src="assets/images/footer-logo-light.png#only-light" alt="logo">
+                        <img class="md-header__logo_light" src="../assets/images/footer-logo-light.png#only-light" alt="logo">
                         
                         
-                        <img src="assets/images/footer-logo-dark.png#only-dark" alt="logo">
+                        <img src="../assets/images/footer-logo-dark.png#only-dark" alt="logo">
                         
                     </div>
 
                     <div class="collaborations-img-container">
                         <div class="display-flex">
                             
-                            <img class="csa-logo-dark" src="assets/images/CSA_dark.png#only-dark" alt="CSA">
+                            <img class="csa-logo-dark" src="../assets/images/CSA_dark.png#only-dark" alt="CSA">
                             
                             
-                            <img class="csa-logo-light" src="assets/images/CSA_light.png#only-light" alt="CSA">
+                            <img class="csa-logo-light" src="../assets/images/CSA_light.png#only-light" alt="CSA">
                             
 
                             
-                            <img class="hc-logo-dark" src="assets/images/HC_dark.png#only-dark" alt="HC">
+                            <img class="hc-logo-dark" src="../assets/images/HC_dark.png#only-dark" alt="HC">
                             
                             
-                            <img class="hc-logo-light" src="assets/images/HC_light.png#only-light" alt="HC">
+                            <img class="hc-logo-light" src="../assets/images/HC_light.png#only-light" alt="HC">
                             
                         </div>
                     </div>
@@ -4236,10 +4437,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   

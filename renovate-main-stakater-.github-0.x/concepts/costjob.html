@@ -5,29 +5,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.stakater.com/finops/renovate-main-stakater-.github-0.x/index.html">
+        <link rel="canonical" href="https://docs.stakater.com/finops/renovate-main-stakater-.github-0.x/concepts/costjob.html">
       
       
+        <link rel="prev" href="pricebook.html">
       
-        <link rel="next" href="overview/key-features.html">
+      
+        <link rel="next" href="offering.html">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.svg">
+      <link rel="icon" href="../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
-        <title>Introduction - FinOps Operator</title>
+        <title>CostJob - FinOps Operator</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -46,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="stylesheets/pills.css">
+      <link rel="stylesheet" href="../stylesheets/pills.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -66,7 +68,7 @@
 
     
     
-  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -95,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#finops-operator" class="md-skip">
+        <a href="#costjob" class="md-skip">
           Skip to content
         </a>
       
@@ -340,7 +342,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <nav class="md-header__inner md-grid" aria-label="Header">
 
     <!-- Link to home -->
-    <a href="." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       <!-- 
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -361,10 +363,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
         <!-- Logo -->
         <div class="md-header__topic">
           
-          <img class="md-header__logo_light" src="assets/images/logo-light.png#only-light" alt="logo">
+          <img class="md-header__logo_light" src="../assets/images/logo-light.png#only-light" alt="logo">
           
           
-          <img class="md-header__logo_dark" src="assets/images/logo-dark.png#only-dark" alt="logo">
+          <img class="md-header__logo_dark" src="../assets/images/logo-dark.png#only-dark" alt="logo">
           
           
           <div class="header-site-name">
@@ -1988,7 +1990,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -2015,20 +2017,18 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -2049,7 +2049,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2064,37 +2064,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -2110,50 +2083,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#opencost-and-postgresql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OpenCost and PostgreSQL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2166,7 +2095,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="overview/key-features.html" class="md-nav__link">
+      <a href="../overview/key-features.html" class="md-nav__link">
         
   
   
@@ -2194,7 +2123,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="overview/use-cases.html" class="md-nav__link">
+      <a href="../overview/use-cases.html" class="md-nav__link">
         
   
   
@@ -2226,18 +2155,20 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -2258,7 +2189,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2276,7 +2207,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/architecture.html" class="md-nav__link">
+      <a href="architecture.html" class="md-nav__link">
         
   
   
@@ -2304,7 +2235,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/terminology.html" class="md-nav__link">
+      <a href="terminology.html" class="md-nav__link">
         
   
   
@@ -2332,7 +2263,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/finops-provider.html" class="md-nav__link">
+      <a href="finops-provider.html" class="md-nav__link">
         
   
   
@@ -2360,7 +2291,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/pricebook.html" class="md-nav__link">
+      <a href="pricebook.html" class="md-nav__link">
         
   
   
@@ -2385,10 +2316,37 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="concepts/costjob.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CostJob
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="costjob.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2404,6 +2362,105 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#the-two-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The two types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-interval-to-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From interval to schedule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-cronjob-the-operator-generates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The CronJob the operator generates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-for-the-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources for the run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timeouts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-a-runs-outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading a run's outcome
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2416,7 +2473,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/offering.html" class="md-nav__link">
+      <a href="offering.html" class="md-nav__link">
         
   
   
@@ -2444,7 +2501,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/subscription.html" class="md-nav__link">
+      <a href="subscription.html" class="md-nav__link">
         
   
   
@@ -2472,7 +2529,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/billing-model.html" class="md-nav__link">
+      <a href="billing-model.html" class="md-nav__link">
         
   
   
@@ -2500,7 +2557,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/compatibility-and-hierarchy.html" class="md-nav__link">
+      <a href="compatibility-and-hierarchy.html" class="md-nav__link">
         
   
   
@@ -2582,7 +2639,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/quick-start.html" class="md-nav__link">
+      <a href="../getting-started/quick-start.html" class="md-nav__link">
         
   
   
@@ -2657,7 +2714,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/installation/overview.html" class="md-nav__link">
+      <a href="../getting-started/installation/overview.html" class="md-nav__link">
         
   
   
@@ -2685,7 +2742,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/installation/openshift.html" class="md-nav__link">
+      <a href="../getting-started/installation/openshift.html" class="md-nav__link">
         
   
   
@@ -2713,7 +2770,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/installation/kubernetes.html" class="md-nav__link">
+      <a href="../getting-started/installation/kubernetes.html" class="md-nav__link">
         
   
   
@@ -2749,7 +2806,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/uninstalling.html" class="md-nav__link">
+      <a href="../getting-started/uninstalling.html" class="md-nav__link">
         
   
   
@@ -2831,7 +2888,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/define-pricing.html" class="md-nav__link">
+      <a href="../guides/define-pricing.html" class="md-nav__link">
         
   
   
@@ -2859,7 +2916,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/switch-active-pricebook.html" class="md-nav__link">
+      <a href="../guides/switch-active-pricebook.html" class="md-nav__link">
         
   
   
@@ -2887,7 +2944,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/collect-cost-data.html" class="md-nav__link">
+      <a href="../guides/collect-cost-data.html" class="md-nav__link">
         
   
   
@@ -2915,7 +2972,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/define-offering.html" class="md-nav__link">
+      <a href="../guides/define-offering.html" class="md-nav__link">
         
   
   
@@ -2943,7 +3000,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/price-resource-usage.html" class="md-nav__link">
+      <a href="../guides/price-resource-usage.html" class="md-nav__link">
         
   
   
@@ -2971,7 +3028,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/subscribe-to-offering.html" class="md-nav__link">
+      <a href="../guides/subscribe-to-offering.html" class="md-nav__link">
         
   
   
@@ -2999,7 +3056,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/compose-subscriptions.html" class="md-nav__link">
+      <a href="../guides/compose-subscriptions.html" class="md-nav__link">
         
   
   
@@ -3027,7 +3084,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/read-subscription-costs.html" class="md-nav__link">
+      <a href="../guides/read-subscription-costs.html" class="md-nav__link">
         
   
   
@@ -3055,7 +3112,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/deactivate-a-subscription.html" class="md-nav__link">
+      <a href="../guides/deactivate-a-subscription.html" class="md-nav__link">
         
   
   
@@ -3137,7 +3194,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/api.html" class="md-nav__link">
+      <a href="../reference/api.html" class="md-nav__link">
         
   
   
@@ -3165,7 +3222,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/configuration.html" class="md-nav__link">
+      <a href="../reference/configuration.html" class="md-nav__link">
         
   
   
@@ -3193,7 +3250,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/rbac.html" class="md-nav__link">
+      <a href="../reference/rbac.html" class="md-nav__link">
         
   
   
@@ -3221,7 +3278,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/security-model.html" class="md-nav__link">
+      <a href="../reference/security-model.html" class="md-nav__link">
         
   
   
@@ -3249,7 +3306,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/metrics.html" class="md-nav__link">
+      <a href="../reference/metrics.html" class="md-nav__link">
         
   
   
@@ -3277,7 +3334,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/webhooks.html" class="md-nav__link">
+      <a href="../reference/webhooks.html" class="md-nav__link">
         
   
   
@@ -3305,7 +3362,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/status-conditions.html" class="md-nav__link">
+      <a href="../reference/status-conditions.html" class="md-nav__link">
         
   
   
@@ -3340,7 +3397,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting.html" class="md-nav__link">
+      <a href="../troubleshooting.html" class="md-nav__link">
         
   
   
@@ -3367,7 +3424,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="release-notes.html" class="md-nav__link">
+      <a href="../release-notes.html" class="md-nav__link">
         
   
   
@@ -3394,7 +3451,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="eula.html" class="md-nav__link">
+      <a href="../eula.html" class="md-nav__link">
         
   
   
@@ -3443,10 +3500,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#opencost-and-postgresql" class="md-nav__link">
+  <a href="#the-two-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OpenCost and PostgreSQL
+        The two types
       
     </span>
   </a>
@@ -3454,10 +3511,65 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
+  <a href="#from-interval-to-schedule" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Next
+        From interval to schedule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-cronjob-the-operator-generates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The CronJob the operator generates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-for-the-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources for the run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timeouts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-a-runs-outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading a run's outcome
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
       
     </span>
   </a>
@@ -3484,53 +3596,167 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
 
-<h1 id="finops-operator">FinOps Operator<a class="headerlink" href="#finops-operator" title="Permanent link">#</a></h1>
-<p>The FinOps Operator performs cost accounting for Kubernetes workloads. It collects allocation data for what actually ran in the cluster, prices that usage against rates you declare, and bills the result to whoever subscribed to it. The whole model is expressed as Kubernetes resources, so a platform engineer, SRE, or FinOps practitioner who is comfortable with <code>kubectl</code> can publish an internal price list, attach it to a service, and read accrued charges back from a resource status without leaving the cluster.</p>
-<p>Five custom resources in the <code>finops.stakater.com/v1alpha1</code> API group carry that model.</p>
+<h1 id="costjob">CostJob<a class="headerlink" href="#costjob" title="Permanent link">#</a></h1>
+<p>A <code>CostJob</code> is a schedule, not a job. You declare how often a collection task should run and which task it is, and the reconciler turns that into a Kubernetes <code>CronJob</code> it owns; the work itself happens in the short-lived pods that CronJob fires. CostJob is scoped to a namespace, and a typical cluster runs two of them in the operator's namespace, because the two task types are separate objects.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CostJob</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">allocation-collection</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceCostCollection</span>
+<span class="w">  </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+</code></pre></div>
+<h2 id="the-two-types">The two types<a class="headerlink" href="#the-two-types" title="Permanent link">#</a></h2>
+<p><code>spec.type</code> decides which of the operator binary's one-shot modes the pod runs in. It defaults to <code>ResourceCostCollection</code>.</p>
 <table>
 <thead>
 <tr>
-<th>Resource</th>
-<th>What it is</th>
+<th><code>spec.type</code></th>
+<th>Pod mode</th>
+<th>What one run does</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="concepts/finops-provider.html"><code>FinOpsProvider</code></a></td>
-<td>A cluster-scoped singleton, always named <code>default</code>, that declares where the cluster runs, exactly one of AWS, GCP, Azure, or on-premises, and configures the OpenCost integration.</td>
+<td><code>ResourceCostCollection</code></td>
+<td><code>--mode=cronjob</code></td>
+<td>Fetches allocation data hour by hour from OpenCost, copies a PriceBook's rates into the <code>pricebooks</code> table and stamps that book and its currency onto every row it writes to <code>provider_allocations</code>, then reports the outcome back onto the CostJob's status.</td>
 </tr>
 <tr>
-<td><a href="concepts/pricebook.html"><code>PriceBook</code></a></td>
-<td>A currency and a set of per-unit rates for CPU, GPU, RAM, persistent volumes, and network transfer, with separate spot rates for CPU and RAM. One PriceBook at a time is the active one, and its rates are what everything else prices against.</td>
-</tr>
-<tr>
-<td><a href="concepts/costjob.html"><code>CostJob</code></a></td>
-<td>A collection schedule. The operator turns each CostJob into a Kubernetes <code>CronJob</code> that either pulls allocation data out of OpenCost or computes subscription charges.</td>
-</tr>
-<tr>
-<td><a href="concepts/offering.html"><code>Offering</code></a></td>
-<td>A cost-driving entity and the rules for pricing it: a recurring subscription fee, per-meter margins on measured usage, or both. Its spec is immutable once created.</td>
-</tr>
-<tr>
-<td><a href="concepts/subscription.html"><code>Subscription</code></a></td>
-<td>A binding to an Offering that represents active consumption. While it is active it accrues charges, and it can hang off a parent Subscription to model add-ons.</td>
+<td><code>SubscriptionChargeCollection</code></td>
+<td><code>--mode=collectionjob</code></td>
+<td>Prices every activated Subscription hour by hour, writes the charge rows, refreshes each <code>Subscription.status.costs</code>, and releases the finalizer of Subscriptions whose charges have settled.</td>
 </tr>
 </tbody>
 </table>
-<p>An Offering is the catalogue entry and a Subscription is the thing being billed, so pricing is authored once and consumed many times.</p>
-<h2 id="opencost-and-postgresql">OpenCost and PostgreSQL<a class="headerlink" href="#opencost-and-postgresql" title="Permanent link">#</a></h2>
-<p>The operator does not measure resource consumption itself. <a href="https://opencost.io">OpenCost</a> does that, and the operator drives it from two directions: <code>FinOpsProvider</code> configures the OpenCost integration for the cluster's provider, and the active <code>PriceBook</code> is rendered into OpenCost's custom pricing document so OpenCost values usage with your rates rather than a public cloud price list. Subscription charges are then computed from the PriceBook rates directly rather than from OpenCost's own cost figures, which keeps billing arithmetic independent of how OpenCost happens to interpret the document.</p>
-<p>PostgreSQL is where anything durable lands. The collection CronJobs write OpenCost allocation rows there, controllers mirror every version of every Offering and Subscription into it, and the charge collector writes one row per subscription, per hour, per charge source. Rolling summaries for the current hour, day, and month are copied back onto <code>Subscription.status.costs</code> so the cheap answer is available from <code>kubectl</code> without querying the database.</p>
-<pre class="mermaid"><code>flowchart LR
-    FP[FinOpsProvider] --&gt;|configures| OC[OpenCost]
-    PB[PriceBook] --&gt;|custom pricing| OC
-    PB --&gt;|base rates| Off[Offering]
-    Off --&gt;|resolved pricing| Sub[Subscription]
-    OC --&gt;|allocation data| CJ[CostJob]
-    CJ --&gt;|writes charge rows| DB[(PostgreSQL)]
-    CJ --&gt;|writes cost summaries| Sub</code></pre>
-<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">#</a></h2>
-<p>Start with the <a href="getting-started/installation/overview.html">installation overview</a>, then work through the <a href="getting-started/quick-start.html">quick start</a> to get a price list, an offering, and a subscription in place.</p>
+<p>The second type is the one that bills, and it is also the only component that removes Subscription finalizers. A cluster with no <code>SubscriptionChargeCollection</code> CostJob therefore accrues no charges and leaves deleted Subscriptions sitting in deletion for as long as it stays missing; each of them reports <code>Deleting=False</code> with reason <code>WaitingForCollectionJob</code>, which is the condition to look for when a Subscription will not go away. <a href="architecture.html#how-charges-reach-subscriptionstatuscosts">How charges reach <code>Subscription.status.costs</code></a> covers what each run computes.</p>
+<h2 id="from-interval-to-schedule">From interval to schedule<a class="headerlink" href="#from-interval-to-schedule" title="Permanent link">#</a></h2>
+<p><code>spec.interval</code> is a duration, but it is not translated arithmetically. The reconciler matches the parsed duration against a fixed set of values and writes the matching cron expression onto the CronJob.</p>
+<table>
+<thead>
+<tr>
+<th><code>spec.interval</code></th>
+<th>Schedule written</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1h</code></td>
+<td><code>0 * * * *</code></td>
+</tr>
+<tr>
+<td><code>6h</code></td>
+<td><code>0 */6 * * *</code></td>
+</tr>
+<tr>
+<td><code>12h</code></td>
+<td><code>0 */12 * * *</code></td>
+</tr>
+<tr>
+<td><code>24h</code> (the default)</td>
+<td><code>0 0 * * *</code></td>
+</tr>
+<tr>
+<td><code>1m</code></td>
+<td><code>* * * * *</code></td>
+</tr>
+<tr>
+<td><code>5m</code></td>
+<td><code>*/5 * * * *</code></td>
+</tr>
+<tr>
+<td>anything else</td>
+<td><code>0 0 * * *</code></td>
+</tr>
+</tbody>
+</table>
+<p>Because the match is on the parsed duration rather than on the string, <code>60m</code> behaves exactly like <code>1h</code> and <code>1440m</code> like <code>24h</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>An unrecognised interval is not rejected. <code>2h</code>, <code>30m</code>, and <code>8h</code> are all accepted by the API and then fall through to the daily <code>0 0 * * *</code>, with nothing on the CostJob to say the value was ignored. After changing an interval, read the schedule back off the generated CronJob to confirm you got what you meant.</p>
+</div>
+<p><code>1m</code> and <code>5m</code> exist for debugging. A run's unit of work is a whole hour, and it works on the hour it starts in, so a sub-hourly interval recomputes the current hour repeatedly rather than producing finer-grained data.</p>
+<h2 id="the-cronjob-the-operator-generates">The CronJob the operator generates<a class="headerlink" href="#the-cronjob-the-operator-generates" title="Permanent link">#</a></h2>
+<p>The generated CronJob is named <code>&lt;costjob-name&gt;-cronjob</code> and lives in the CostJob's namespace, with the CostJob as its controller owner reference, so deleting the CostJob takes the CronJob with it. Each reconcile overwrites the CronJob's <code>spec</code> and labels from the operator's template plus your CostJob's values, so hand edits to the CronJob do not survive the next reconcile; change the CostJob instead. Alongside the labels identifying the CostJob it came from, the operator sets <code>app.kubernetes.io/managed-by: finops-operator</code>.</p>
+<p>Inside the pod template, the <code>loader</code> container gets the operator image, the <code>--mode</code> argument derived from <code>spec.type</code>, and the run's configuration as environment variables. The PostgreSQL connection string is not one of them: it goes into a Secret named <code>&lt;costjob-name&gt;-costjob-secret</code> in the same namespace, also owned by the CostJob, and reaches the container through a <code>secretKeyRef</code>.</p>
+<p>That environment is merged by name rather than replaced. The reconciler overlays the variables it builds — the CostJob's own name and namespace, the OpenCost URL, the operator image, whichever timeouts are set, and the connection string reference — onto the variables already in the shipped pod template. Where a name appears in both, the entry the reconciler built wins and replaces the variable whole rather than field by field, because a literal value and a <code>valueFrom</code> reference cannot coexist. Where a name appears only in the template, it survives the merge and reaches the pod with the template's value. That is how <code>SCHEDULED_TIMESTAMP</code>, which the template wires to the CronJob's scheduled-timestamp annotation through a <code>fieldRef</code>, and <code>HOURS_LOOKBACK</code>, which the template sets to <code>5</code>, arrive on the container even though the reconciler never names them.</p>
+<p>The merge runs against the operator's embedded template, though, never against the CronJob as it currently stands in the cluster, so a variable you add to the generated CronJob by hand is gone at the next reconcile whether or not the reconciler names it. <a href="../reference/configuration.html#the-allocation-cronjob">The allocation CronJob</a> lists what ends up on the pod and which layer each value comes from.</p>
+<h2 id="resources-for-the-run">Resources for the run<a class="headerlink" href="#resources-for-the-run" title="Permanent link">#</a></h2>
+<p><code>spec.resources</code> is an optional override for the compute resources of the generated CronJob's <code>loader</code> container. It takes an ordinary Kubernetes <code>ResourceRequirements</code> value, so the shape is the <code>requests</code> and <code>limits</code> you would write on any container.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CostJob</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">allocation-collection</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceCostCollection</span>
+<span class="w">  </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+<span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200m</span>
+<span class="w">      </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">256Mi</span>
+<span class="w">    </span><span class="nt">limits</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">"1"</span>
+<span class="w">      </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
+</code></pre></div>
+<p>Unlike the environment, this is not merged. Setting <code>spec.resources</code> replaces the container's whole resources block, so a partial value does not inherit the template's defaults for the keys it leaves out: a <code>spec.resources</code> naming only <code>requests</code> produces a container with requests and no limits at all. Write out every request and limit you want the pod to have. Leaving the field unset is the way to keep the operator's own defaults, which the shipped pod template sets to requests of <code>50m</code> CPU and <code>64Mi</code> memory against limits of <code>500m</code> CPU and <code>256Mi</code> memory.</p>
+<p>The override applies to either job type, because both generate their CronJob from the same template and the reconciler matches the <code>loader</code> container by name. Like the rest of the CronJob's <code>spec</code>, it is reapplied on every reconcile, so raising it on the CostJob is the only way to make it stick.</p>
+<h2 id="timeouts">Timeouts<a class="headerlink" href="#timeouts" title="Permanent link">#</a></h2>
+<p>Six optional fields bound the phases of a run. Each is a duration with a default set on the type, and the reconciler copies whatever is set onto the pod's environment; a field left unset falls back to that default.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default</th>
+<th>What it bounds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>databaseInitTimeout</code></td>
+<td><code>2m</code></td>
+<td>Opening the PostgreSQL connection</td>
+</tr>
+<tr>
+<td><code>kubernetesOperationTimeout</code></td>
+<td><code>1m</code></td>
+<td>Reading the CostJob back from the API server</td>
+</tr>
+<tr>
+<td><code>openCostFetchTimeout</code></td>
+<td><code>2m</code></td>
+<td>The OpenCost client, and each hour's fetch-and-stream</td>
+</tr>
+<tr>
+<td><code>databaseInsertTimeout</code></td>
+<td><code>3m</code></td>
+<td>Finalizing allocation rows left over from earlier runs</td>
+</tr>
+<tr>
+<td><code>statusUpdateTimeout</code></td>
+<td><code>1m</code></td>
+<td>Writing the execution record back to the CostJob</td>
+</tr>
+<tr>
+<td><code>httpClientTimeout</code></td>
+<td><code>90s</code></td>
+<td>Nothing today. It is parsed and carried, but no request reads it; OpenCost calls are bounded by <code>openCostFetchTimeout</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>These are read by the <code>ResourceCostCollection</code> run. The charge collector does not consult them, so raising a timeout on a <code>SubscriptionChargeCollection</code> CostJob has no effect.</p>
+<p>A seventh field, <code>databaseViewsRefreshTimeout</code>, is retained for API compatibility and does nothing. It carries no default, the reconciler writes no variable for it onto the pod, and no code reads it, because the materialized view it used to refresh had no readers and was dropped. The field is still settable and is not pruned, so setting it is accepted and changes nothing. <a href="../reference/configuration.html#databaseviewsrefreshtimeout">databaseViewsRefreshTimeout</a> covers why it is still there, and distinguishes it from <code>k8sOperationTimeout</code>, a chart key that renders a field name the CRD does not have and is therefore pruned outright.</p>
+<h2 id="reading-a-runs-outcome">Reading a run's outcome<a class="headerlink" href="#reading-a-runs-outcome" title="Permanent link">#</a></h2>
+<p>A <code>ResourceCostCollection</code> run records its outcome as an <code>ExecutionRecord</code> on its CostJob: the time it started, <code>Success</code> or <code>Failed</code>, how long it took, and, on failure, the error. The record goes on the front of <code>status.executionHistory</code>, which is capped at ten, so the list reads newest first and the eleventh run pushes the oldest out. The schema also permits <code>Error</code> on a record and <code>Pending</code> on <code>status.lastExecutionStatus</code>; nothing writes either, so treat <code>Failed</code> as the only failure value you will see.</p>
+<p><code>status.lastExecutionTime</code> and <code>status.lastExecutionStatus</code> track the most recent record whatever it says, and <code>status.lastSuccessfulExecutionTime</code> only moves on a <code>Success</code>. Comparing the two timestamps is the quickest way to spot a job that is running on schedule and failing every time.</p>
+<p>The charge collector writes none of this. A <code>SubscriptionChargeCollection</code> CostJob's status therefore stays empty; watch its Jobs and pod logs, and the <code>CostsResolved</code> condition on the Subscriptions it prices, instead.</p>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../guides/collect-cost-data.html">Collect cost data</a> walks through creating both CostJobs and checking that they ran.</li>
+<li><a href="architecture.html#how-allocation-data-reaches-postgresql">How allocation data reaches PostgreSQL</a> describes what one collection run writes.</li>
+<li><a href="../reference/api.html#costjobspec"><code>CostJobSpec</code></a> and <a href="../reference/api.html#executionrecord"><code>ExecutionRecord</code></a> carry the field-level reference.</li>
+</ul>
 
 
 
@@ -3824,27 +4050,27 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 <div class="flex-2">
                     <div class="logo-footer-container">
                         
-                        <img class="md-header__logo_light" src="assets/images/footer-logo-light.png#only-light" alt="logo">
+                        <img class="md-header__logo_light" src="../assets/images/footer-logo-light.png#only-light" alt="logo">
                         
                         
-                        <img src="assets/images/footer-logo-dark.png#only-dark" alt="logo">
+                        <img src="../assets/images/footer-logo-dark.png#only-dark" alt="logo">
                         
                     </div>
 
                     <div class="collaborations-img-container">
                         <div class="display-flex">
                             
-                            <img class="csa-logo-dark" src="assets/images/CSA_dark.png#only-dark" alt="CSA">
+                            <img class="csa-logo-dark" src="../assets/images/CSA_dark.png#only-dark" alt="CSA">
                             
                             
-                            <img class="csa-logo-light" src="assets/images/CSA_light.png#only-light" alt="CSA">
+                            <img class="csa-logo-light" src="../assets/images/CSA_light.png#only-light" alt="CSA">
                             
 
                             
-                            <img class="hc-logo-dark" src="assets/images/HC_dark.png#only-dark" alt="HC">
+                            <img class="hc-logo-dark" src="../assets/images/HC_dark.png#only-dark" alt="HC">
                             
                             
-                            <img class="hc-logo-light" src="assets/images/HC_light.png#only-light" alt="HC">
+                            <img class="hc-logo-light" src="../assets/images/HC_light.png#only-light" alt="HC">
                             
                         </div>
                     </div>
@@ -4236,10 +4462,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   

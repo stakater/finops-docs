@@ -5,29 +5,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.stakater.com/finops/renovate-main-stakater-.github-0.x/index.html">
+        <link rel="canonical" href="https://docs.stakater.com/finops/renovate-main-stakater-.github-0.x/guides/read-subscription-costs.html">
       
       
+        <link rel="prev" href="compose-subscriptions.html">
       
-        <link rel="next" href="overview/key-features.html">
+      
+        <link rel="next" href="deactivate-a-subscription.html">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.svg">
+      <link rel="icon" href="../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
-        <title>Introduction - FinOps Operator</title>
+        <title>Read subscription costs - FinOps Operator</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -46,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="stylesheets/pills.css">
+      <link rel="stylesheet" href="../stylesheets/pills.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -66,7 +68,7 @@
 
     
     
-  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -95,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#finops-operator" class="md-skip">
+        <a href="#read-subscription-costs" class="md-skip">
           Skip to content
         </a>
       
@@ -340,7 +342,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <nav class="md-header__inner md-grid" aria-label="Header">
 
     <!-- Link to home -->
-    <a href="." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       <!-- 
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -361,10 +363,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
         <!-- Logo -->
         <div class="md-header__topic">
           
-          <img class="md-header__logo_light" src="assets/images/logo-light.png#only-light" alt="logo">
+          <img class="md-header__logo_light" src="../assets/images/logo-light.png#only-light" alt="logo">
           
           
-          <img class="md-header__logo_dark" src="assets/images/logo-dark.png#only-dark" alt="logo">
+          <img class="md-header__logo_dark" src="../assets/images/logo-dark.png#only-dark" alt="logo">
           
           
           <div class="header-site-name">
@@ -1988,7 +1990,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -2015,20 +2017,18 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -2049,7 +2049,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2064,37 +2064,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -2110,50 +2083,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#opencost-and-postgresql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OpenCost and PostgreSQL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2166,7 +2095,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="overview/key-features.html" class="md-nav__link">
+      <a href="../overview/key-features.html" class="md-nav__link">
         
   
   
@@ -2194,7 +2123,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="overview/use-cases.html" class="md-nav__link">
+      <a href="../overview/use-cases.html" class="md-nav__link">
         
   
   
@@ -2276,7 +2205,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/architecture.html" class="md-nav__link">
+      <a href="../concepts/architecture.html" class="md-nav__link">
         
   
   
@@ -2304,7 +2233,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/terminology.html" class="md-nav__link">
+      <a href="../concepts/terminology.html" class="md-nav__link">
         
   
   
@@ -2332,7 +2261,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/finops-provider.html" class="md-nav__link">
+      <a href="../concepts/finops-provider.html" class="md-nav__link">
         
   
   
@@ -2360,7 +2289,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/pricebook.html" class="md-nav__link">
+      <a href="../concepts/pricebook.html" class="md-nav__link">
         
   
   
@@ -2388,7 +2317,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/costjob.html" class="md-nav__link">
+      <a href="../concepts/costjob.html" class="md-nav__link">
         
   
   
@@ -2416,7 +2345,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/offering.html" class="md-nav__link">
+      <a href="../concepts/offering.html" class="md-nav__link">
         
   
   
@@ -2444,7 +2373,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/subscription.html" class="md-nav__link">
+      <a href="../concepts/subscription.html" class="md-nav__link">
         
   
   
@@ -2472,7 +2401,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/billing-model.html" class="md-nav__link">
+      <a href="../concepts/billing-model.html" class="md-nav__link">
         
   
   
@@ -2500,7 +2429,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/compatibility-and-hierarchy.html" class="md-nav__link">
+      <a href="../concepts/compatibility-and-hierarchy.html" class="md-nav__link">
         
   
   
@@ -2582,7 +2511,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/quick-start.html" class="md-nav__link">
+      <a href="../getting-started/quick-start.html" class="md-nav__link">
         
   
   
@@ -2657,7 +2586,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/installation/overview.html" class="md-nav__link">
+      <a href="../getting-started/installation/overview.html" class="md-nav__link">
         
   
   
@@ -2685,7 +2614,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/installation/openshift.html" class="md-nav__link">
+      <a href="../getting-started/installation/openshift.html" class="md-nav__link">
         
   
   
@@ -2713,7 +2642,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/installation/kubernetes.html" class="md-nav__link">
+      <a href="../getting-started/installation/kubernetes.html" class="md-nav__link">
         
   
   
@@ -2749,7 +2678,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/uninstalling.html" class="md-nav__link">
+      <a href="../getting-started/uninstalling.html" class="md-nav__link">
         
   
   
@@ -2781,18 +2710,20 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2813,7 +2744,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2831,7 +2762,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/define-pricing.html" class="md-nav__link">
+      <a href="define-pricing.html" class="md-nav__link">
         
   
   
@@ -2859,7 +2790,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/switch-active-pricebook.html" class="md-nav__link">
+      <a href="switch-active-pricebook.html" class="md-nav__link">
         
   
   
@@ -2887,7 +2818,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/collect-cost-data.html" class="md-nav__link">
+      <a href="collect-cost-data.html" class="md-nav__link">
         
   
   
@@ -2915,7 +2846,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/define-offering.html" class="md-nav__link">
+      <a href="define-offering.html" class="md-nav__link">
         
   
   
@@ -2943,7 +2874,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/price-resource-usage.html" class="md-nav__link">
+      <a href="price-resource-usage.html" class="md-nav__link">
         
   
   
@@ -2971,7 +2902,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/subscribe-to-offering.html" class="md-nav__link">
+      <a href="subscribe-to-offering.html" class="md-nav__link">
         
   
   
@@ -2999,7 +2930,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/compose-subscriptions.html" class="md-nav__link">
+      <a href="compose-subscriptions.html" class="md-nav__link">
         
   
   
@@ -3024,10 +2955,37 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="guides/read-subscription-costs.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Read subscription costs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="read-subscription-costs.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3043,6 +3001,149 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-read-the-buckets-off-the-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Read the buckets off the Subscription
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-place-the-three-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Place the three windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-separate-current-from-projected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Separate current from projected
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-convert-micro-currency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Convert micro-currency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-split-a-bucket-by-meter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Split a bucket by meter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-check-the-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Check the arithmetic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-know-when-the-numbers-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Know when the numbers move
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-same-charges-are-stored" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the same charges are stored
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-a-bucket-or-a-meter-is-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When a bucket or a meter is missing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related guides
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3055,7 +3156,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/deactivate-a-subscription.html" class="md-nav__link">
+      <a href="deactivate-a-subscription.html" class="md-nav__link">
         
   
   
@@ -3137,7 +3238,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/api.html" class="md-nav__link">
+      <a href="../reference/api.html" class="md-nav__link">
         
   
   
@@ -3165,7 +3266,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/configuration.html" class="md-nav__link">
+      <a href="../reference/configuration.html" class="md-nav__link">
         
   
   
@@ -3193,7 +3294,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/rbac.html" class="md-nav__link">
+      <a href="../reference/rbac.html" class="md-nav__link">
         
   
   
@@ -3221,7 +3322,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/security-model.html" class="md-nav__link">
+      <a href="../reference/security-model.html" class="md-nav__link">
         
   
   
@@ -3249,7 +3350,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/metrics.html" class="md-nav__link">
+      <a href="../reference/metrics.html" class="md-nav__link">
         
   
   
@@ -3277,7 +3378,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/webhooks.html" class="md-nav__link">
+      <a href="../reference/webhooks.html" class="md-nav__link">
         
   
   
@@ -3305,7 +3406,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/status-conditions.html" class="md-nav__link">
+      <a href="../reference/status-conditions.html" class="md-nav__link">
         
   
   
@@ -3340,7 +3441,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting.html" class="md-nav__link">
+      <a href="../troubleshooting.html" class="md-nav__link">
         
   
   
@@ -3367,7 +3468,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="release-notes.html" class="md-nav__link">
+      <a href="../release-notes.html" class="md-nav__link">
         
   
   
@@ -3394,7 +3495,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="eula.html" class="md-nav__link">
+      <a href="../eula.html" class="md-nav__link">
         
   
   
@@ -3443,10 +3544,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#opencost-and-postgresql" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OpenCost and PostgreSQL
+        Prerequisites
       
     </span>
   </a>
@@ -3454,10 +3555,109 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
+  <a href="#step-1-read-the-buckets-off-the-subscription" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Next
+        Step 1: Read the buckets off the Subscription
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-place-the-three-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Place the three windows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-separate-current-from-projected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Separate current from projected
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-convert-micro-currency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Convert micro-currency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-split-a-bucket-by-meter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Split a bucket by meter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-check-the-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Check the arithmetic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-know-when-the-numbers-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Know when the numbers move
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-same-charges-are-stored" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the same charges are stored
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-a-bucket-or-a-meter-is-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When a bucket or a meter is missing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related guides
       
     </span>
   </a>
@@ -3484,53 +3684,235 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
 
-<h1 id="finops-operator">FinOps Operator<a class="headerlink" href="#finops-operator" title="Permanent link">#</a></h1>
-<p>The FinOps Operator performs cost accounting for Kubernetes workloads. It collects allocation data for what actually ran in the cluster, prices that usage against rates you declare, and bills the result to whoever subscribed to it. The whole model is expressed as Kubernetes resources, so a platform engineer, SRE, or FinOps practitioner who is comfortable with <code>kubectl</code> can publish an internal price list, attach it to a service, and read accrued charges back from a resource status without leaving the cluster.</p>
-<p>Five custom resources in the <code>finops.stakater.com/v1alpha1</code> API group carry that model.</p>
+<h1 id="read-subscription-costs">Read subscription costs<a class="headerlink" href="#read-subscription-costs" title="Permanent link">#</a></h1>
+<p><code>status.costs</code> is the operator's answer to what a subscriber is costing right now, and it is written by the <code>SubscriptionChargeCollection</code> CostJob rather than by the reconciler. It holds three rolling buckets, each carrying an accumulated figure, a projected figure, and a split by meter, all in micro-currency. This guide reads one bucket at a time, converts the numbers, checks the arithmetic against the Offering's terms, and says what each figure does and does not include. It is for whoever owns the billing data: a platform engineer checking an accrual, or the person writing the report that consumes it.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
+<ul>
+<li>A <code>Subscription</code> that has activated, so <code>status.activatedAt</code> is set. <a href="subscribe-to-offering.html">Subscribe to an offering</a> creates one.</li>
+<li>A <a href="collect-cost-data.html"><code>SubscriptionChargeCollection</code> CostJob</a> that has completed at least one run. Nothing else writes <code>status.costs</code>.</li>
+<li><code>kubectl</code> read access to the namespace the Subscription lives in.</li>
+</ul>
+<p>Every figure below comes from one scenario, the same one the <a href="../getting-started/quick-start.html">quick start</a> leaves you with: an Offering charging 40.00 an hour with <code>tickAlignment: ActivatedAt</code> and <code>period: 1h</code>, a Subscription that activated at <code>2026-04-01T09:00:00Z</code>, and a collection run scheduled for <code>13:00:00Z</code> the same day.</p>
+<h2 id="step-1-read-the-buckets-off-the-subscription">Step 1: Read the buckets off the Subscription<a class="headerlink" href="#step-1-read-the-buckets-off-the-subscription" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ready</span><span class="p">:</span><span class="w"> </span><span class="s">"True"</span>
+<span class="w">  </span><span class="nt">activatedAt</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T09:00:00Z"</span>
+<span class="w">  </span><span class="nt">costs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T13:00:00Z"</span>
+<span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T14:00:00Z"</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span>
+<span class="w">      </span><span class="nt">breakdown</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subscription</span>
+<span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">day</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T00:00:00Z"</span>
+<span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-02T00:00:00Z"</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">160000000</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600000000</span>
+<span class="w">      </span><span class="nt">breakdown</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subscription</span>
+<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">160000000</span>
+<span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600000000</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">month</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T00:00:00Z"</span>
+<span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-05-01T00:00:00Z"</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">160000000</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28440000000</span>
+<span class="w">      </span><span class="nt">breakdown</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subscription</span>
+<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">160000000</span>
+<span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28440000000</span>
+</code></pre></div>
+<p>There are always exactly three buckets once anything is written, one per granularity, and they are written together. <code>current</code>, <code>projected</code> and <code>breakdown</code> are all omitted when they are zero, which is why the <code>hour</code> bucket above shows a projection and no accumulation rather than a <code>current: 0</code>. An absent field means zero, not unknown.</p>
+<h2 id="step-2-place-the-three-windows">Step 2: Place the three windows<a class="headerlink" href="#step-2-place-the-three-windows" title="Permanent link">#</a></h2>
+<p>Each bucket covers the half-open window from <code>start</code> to <code>endExclusive</code>, and all three are anchored to the hour the collection run was scheduled for, not to the moment you read the object:</p>
 <table>
 <thead>
 <tr>
-<th>Resource</th>
-<th>What it is</th>
+<th><code>granularity</code></th>
+<th>Window</th>
+<th>Anchor</th>
+<th>In the example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="concepts/finops-provider.html"><code>FinOpsProvider</code></a></td>
-<td>A cluster-scoped singleton, always named <code>default</code>, that declares where the cluster runs, exactly one of AWS, GCP, Azure, or on-premises, and configures the OpenCost integration.</td>
+<td><code>hour</code></td>
+<td>The scheduled hour itself, one hour long</td>
+<td>The run's scheduled timestamp, truncated to the hour</td>
+<td><code>13:00:00Z</code> to <code>14:00:00Z</code></td>
 </tr>
 <tr>
-<td><a href="concepts/pricebook.html"><code>PriceBook</code></a></td>
-<td>A currency and a set of per-unit rates for CPU, GPU, RAM, persistent volumes, and network transfer, with separate spot rates for CPU and RAM. One PriceBook at a time is the active one, and its rates are what everything else prices against.</td>
+<td><code>day</code></td>
+<td>Midnight UTC to the next midnight UTC</td>
+<td>The UTC date the scheduled hour falls on</td>
+<td><code>2026-04-01T00:00:00Z</code> to <code>2026-04-02T00:00:00Z</code></td>
 </tr>
 <tr>
-<td><a href="concepts/costjob.html"><code>CostJob</code></a></td>
-<td>A collection schedule. The operator turns each CostJob into a Kubernetes <code>CronJob</code> that either pulls allocation data out of OpenCost or computes subscription charges.</td>
-</tr>
-<tr>
-<td><a href="concepts/offering.html"><code>Offering</code></a></td>
-<td>A cost-driving entity and the rules for pricing it: a recurring subscription fee, per-meter margins on measured usage, or both. Its spec is immutable once created.</td>
-</tr>
-<tr>
-<td><a href="concepts/subscription.html"><code>Subscription</code></a></td>
-<td>A binding to an Offering that represents active consumption. While it is active it accrues charges, and it can hang off a parent Subscription to model add-ons.</td>
+<td><code>month</code></td>
+<td>The 1st at 00:00 UTC to the 1st of the next month</td>
+<td>The UTC calendar month the scheduled hour falls in</td>
+<td><code>2026-04-01T00:00:00Z</code> to <code>2026-05-01T00:00:00Z</code></td>
 </tr>
 </tbody>
 </table>
-<p>An Offering is the catalogue entry and a Subscription is the thing being billed, so pricing is authored once and consumed many times.</p>
-<h2 id="opencost-and-postgresql">OpenCost and PostgreSQL<a class="headerlink" href="#opencost-and-postgresql" title="Permanent link">#</a></h2>
-<p>The operator does not measure resource consumption itself. <a href="https://opencost.io">OpenCost</a> does that, and the operator drives it from two directions: <code>FinOpsProvider</code> configures the OpenCost integration for the cluster's provider, and the active <code>PriceBook</code> is rendered into OpenCost's custom pricing document so OpenCost values usage with your rates rather than a public cloud price list. Subscription charges are then computed from the PriceBook rates directly rather than from OpenCost's own cost figures, which keeps billing arithmetic independent of how OpenCost happens to interpret the document.</p>
-<p>PostgreSQL is where anything durable lands. The collection CronJobs write OpenCost allocation rows there, controllers mirror every version of every Offering and Subscription into it, and the charge collector writes one row per subscription, per hour, per charge source. Rolling summaries for the current hour, day, and month are copied back onto <code>Subscription.status.costs</code> so the cheap answer is available from <code>kubectl</code> without querying the database.</p>
-<pre class="mermaid"><code>flowchart LR
-    FP[FinOpsProvider] --&gt;|configures| OC[OpenCost]
-    PB[PriceBook] --&gt;|custom pricing| OC
-    PB --&gt;|base rates| Off[Offering]
-    Off --&gt;|resolved pricing| Sub[Subscription]
-    OC --&gt;|allocation data| CJ[CostJob]
-    CJ --&gt;|writes charge rows| DB[(PostgreSQL)]
-    CJ --&gt;|writes cost summaries| Sub</code></pre>
-<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">#</a></h2>
-<p>Start with the <a href="getting-started/installation/overview.html">installation overview</a>, then work through the <a href="getting-started/quick-start.html">quick start</a> to get a price list, an offering, and a subscription in place.</p>
+<p>The three are computed independently over their own windows. The <code>hour</code> bucket does not roll up into <code>day</code>, and <code>day</code> does not roll up into <code>month</code>; each is the same calculation evaluated over a different span, which is why the <code>day</code> and <code>month</code> figures agree in the example. They only agree because the Subscription activated on the first day of the month, so both windows contain the same tick boundaries so far.</p>
+<p>Two details are easy to misread. The <code>month</code> window is a real calendar month, so it is 28 to 31 days long, and it is not the fixed 30 day 10 hour 30 minute month that <a href="../concepts/billing-model.html#prorating-the-opening-tick">proration</a> uses as its denominator under <code>MonthBoundary</code>. And because the anchor is the run's scheduled hour rather than wall clock, every run inside the same hour produces the same three windows.</p>
+<h2 id="step-3-separate-current-from-projected">Step 3: Separate current from projected<a class="headerlink" href="#step-3-separate-current-from-projected" title="Permanent link">#</a></h2>
+<p>Both figures come from the same fee arithmetic, evaluated over different spans:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What it holds</th>
+<th>What moves it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>current</code></td>
+<td>Spend settled inside the window, from <code>start</code> up to the run's scheduled hour</td>
+<td>A tick boundary crossed inside the window, and consumption measured for a Subscription that bills usage</td>
+</tr>
+<tr>
+<td><code>projected</code></td>
+<td>The subscription fee for the whole window, <code>start</code> to <code>endExclusive</code></td>
+<td>Nothing, while the window and the terms stay the same. A deactivation cuts it back to what will actually be charged</td>
+</tr>
+</tbody>
+</table>
+<p>Three consequences are worth having in mind before you quote either number.</p>
+<p><code>projected</code> is the fee and only the fee. No usage meter ever contributes to it, because there is no measurement of the future to project from. On a Subscription that bills consumption as well as a fee, <code>current</code> can therefore end up larger than <code>projected</code>, and that is not an error.</p>
+<p>A window that opens before <code>activatedAt</code> still counts only ticks after activation. The <code>day</code> projection above is 600.00 rather than a full day's 24 ticks, because the Subscription did not exist for the first nine hours of April 1.</p>
+<p>The <code>hour</code> bucket's fee accumulation is always zero. A tick is charged at the boundary that closes it, and the <code>hour</code> window begins at the run's own scheduled hour, so no boundary inside that window has been reached at the moment the numbers are written. On a Subscription that bills usage, the <code>hour</code> bucket's <code>current</code> is the consumption measured so far in the hour in progress, and nothing else.</p>
+<h2 id="step-4-convert-micro-currency">Step 4: Convert micro-currency<a class="headerlink" href="#step-4-convert-micro-currency" title="Permanent link">#</a></h2>
+<p>Every figure in <code>status.costs</code> is an integer in micro-currency, where 1,000,000 micros is 1.00 unit of the active PriceBook's currency. Divide by a million:</p>
+<table>
+<thead>
+<tr>
+<th>Value in <code>status.costs</code></th>
+<th>Divided by 1,000,000</th>
+<th>Reads as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>40000000</code></td>
+<td>40.0</td>
+<td>40.00</td>
+</tr>
+<tr>
+<td><code>160000000</code></td>
+<td>160.0</td>
+<td>160.00</td>
+</tr>
+<tr>
+<td><code>600000000</code></td>
+<td>600.0</td>
+<td>600.00</td>
+</tr>
+<tr>
+<td><code>28440000000</code></td>
+<td>28440.0</td>
+<td>28,440.00</td>
+</tr>
+</tbody>
+</table>
+<p>The buckets carry no currency of their own. The unit is the <code>spec.currency</code> of the PriceBook the charges were priced against, so a cluster reading <code>28440000000</code> reads 28,440.00 of whatever that book declares. <a href="define-pricing.html">Define pricing with a PriceBook</a> covers the field.</p>
+<h2 id="step-5-split-a-bucket-by-meter">Step 5: Split a bucket by meter<a class="headerlink" href="#step-5-split-a-bucket-by-meter" title="Permanent link">#</a></h2>
+<p><code>breakdown</code> divides a bucket's totals by meter. Exactly six meter names exist, and no others appear:</p>
+<table>
+<thead>
+<tr>
+<th>Meter</th>
+<th>Kind</th>
+<th>What it charges for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>subscription</code></td>
+<td>Recurring fee</td>
+<td>The Offering's <code>pricing.subscriptionFee</code>, one <code>priceMicros</code> per tick, computed from the clock alone</td>
+</tr>
+<tr>
+<td><code>cpuHour</code></td>
+<td>Usage</td>
+<td>CPU core-hours consumed</td>
+</tr>
+<tr>
+<td><code>gpuHour</code></td>
+<td>Usage</td>
+<td>GPU-hours consumed</td>
+</tr>
+<tr>
+<td><code>ramGbHour</code></td>
+<td>Usage</td>
+<td>RAM GiB-hours consumed</td>
+</tr>
+<tr>
+<td><code>pvGbHour</code></td>
+<td>Usage</td>
+<td>Persistent volume GiB-hours provisioned</td>
+</tr>
+<tr>
+<td><code>networkGb</code></td>
+<td>Usage</td>
+<td>Total data moved, transfer plus receive, per GiB</td>
+</tr>
+</tbody>
+</table>
+<p>The names ending <code>Gb</code> are billed on a binary basis of 1,073,741,824 bytes to a unit, matching how OpenCost converts bytes, so read them as GiB. In a PriceBook the rate that prices <code>networkGb</code> is spelled <code>networkGiB</code> under <code>spec.rates</code>; that spelling is a rate field and never a meter name.</p>
+<p>The <code>subscription</code> entry is present in every bucket whose fee is non-zero, and it is the only entry a fee-only Subscription ever has. Usage entries appear only where both halves are configured, the Subscription declaring <code>usageSources</code> and the Offering declaring <code>resourcePricing</code> for that meter, and then only for hours where allocation data actually exists for those sources and carries a rate. A meter with nothing measured produces no charge at all, so it is absent from <code>breakdown</code> rather than present and reading zero. <a href="price-resource-usage.html">Price resource usage</a> covers pairing the two halves, and <a href="collect-cost-data.html">collect cost data</a> covers the <code>ResourceCostCollection</code> job that produces the allocation rows in the first place.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Usage entries carry a <code>current</code> and no <code>projected</code>, because projection is fee-only. A <code>breakdown</code> entry showing a <code>current</code> and nothing else is a usage meter behaving normally.</p>
+</div>
+<h2 id="step-6-check-the-arithmetic">Step 6: Check the arithmetic<a class="headerlink" href="#step-6-check-the-arithmetic" title="Permanent link">#</a></h2>
+<p>The fee for a window is the number of tick boundaries inside it multiplied by the price, counting boundaries strictly after <code>activatedAt</code> and up to and including the window's end:</p>
+<div class="highlight"><pre><span></span><code>fee(start, end) = priceMicros × (ticks(end) − ticks(start))
+</code></pre></div>
+<p>With <code>tickAlignment: ActivatedAt</code>, <code>period: 1h</code> and an activation at <code>09:00:00Z</code>, the boundaries fall at <code>10:00</code>, <code>11:00</code>, <code>12:00</code> and so on. Every figure in step 1 follows from that.</p>
+<p><strong>The <code>hour</code> projection, 40.00.</strong> <code>ticks(14:00)</code> is 5, counting <code>10:00</code> through <code>14:00</code>. <code>ticks(13:00)</code> is 4. The window therefore contains one boundary: <code>40000000 × 1 = 40000000</code>.</p>
+<p><strong>The <code>day</code> projection, 600.00.</strong> <code>ticks(2026-04-02T00:00)</code> is 15, counting <code>10:00</code> through midnight. <code>ticks(2026-04-01T00:00)</code> is 0, because the window opens before activation and boundaries before <code>activatedAt</code> are never counted. That gives <code>40000000 × 15 = 600000000</code>, not the 24 ticks a full day would hold.</p>
+<p><strong>The <code>day</code> accumulation, 160.00.</strong> The same subtraction, evaluated to the run's scheduled hour instead of the window's end. <code>ticks(13:00)</code> is 4, so <code>40000000 × 4 = 160000000</code>. Four boundaries have been reached, at <code>10:00</code>, <code>11:00</code>, <code>12:00</code> and <code>13:00</code>.</p>
+<p><strong>The <code>month</code> projection, 28,440.00.</strong> <code>2026-04-01T09:00:00Z</code> to <code>2026-05-01T00:00:00Z</code> is 29 days and 15 hours, which is <code>29 × 24 + 15 = 711</code> hours and therefore 711 boundaries. That gives <code>40000000 × 711 = 28440000000</code>.</p>
+<p>A projection recomputed later in the same window returns the same number, because the calculation reads only <code>activatedAt</code>, the two window endpoints and the Offering's fee block. <a href="../concepts/billing-model.html#what-a-tick-is-worth">Billing model</a> has the formula in full, the proration that applies to a prorated opening tick under the boundary alignments, and the clamp that applies after a deactivation.</p>
+<h2 id="step-7-know-when-the-numbers-move">Step 7: Know when the numbers move<a class="headerlink" href="#step-7-know-when-the-numbers-move" title="Permanent link">#</a></h2>
+<p><code>status.costs</code> is rewritten once per run of the <code>SubscriptionChargeCollection</code> CostJob and at no other time. Nothing watches the object in between, so a Subscription read halfway through an hour reports what the last run computed.</p>
+<p>With <code>interval: 1h</code> that CostJob runs on <code>0 * * * *</code>, giving one rewrite at the top of each hour. A shorter interval does not give finer fee data: the run's anchor is truncated to the hour, so every run inside one hour rebuilds the same three windows and recomputes the same in-progress hour. Sub-hourly intervals refine usage figures and change nothing else. <a href="collect-cost-data.html#step-2-create-the-collection-costjob">Collect cost data</a> has the interval-to-schedule table, including which values silently fall through to a daily schedule.</p>
+<p>Each rewrite also records where the numbers came from, on the <code>CostsResolved</code> condition:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .status.conditions[?(@.type=="CostsResolved")]}{.reason}{"  "}{.message}{"\n"}{end}'</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>FromDB  Status.Costs resolved from DBCostSummary
+</code></pre></div>
+<p><code>FromDB</code> means <code>current</code> was summed out of the stored charge rows. <code>FromCalculator</code> means the database could not serve this Subscription on that run and the fee calculator produced the buckets instead, which makes the reading fee-only: no usage meter appears in <code>breakdown</code> on that path, however much consumption was measured. A reading you intend to bill from is worth checking this condition on first.</p>
+<h2 id="where-the-same-charges-are-stored">Where the same charges are stored<a class="headerlink" href="#where-the-same-charges-are-stored" title="Permanent link">#</a></h2>
+<p>Every run also persists what it computed to the <code>subscription_charges</code> table in PostgreSQL, one row per cluster, Subscription, hour window and charge source. Hours that have closed are written finalized, except where a usage-metered Subscription's allocation data has not settled yet, and the hour in progress is rewritten in place on every run with the finalized flag false so later runs can refine it. On the <code>FromDB</code> path a bucket's <code>current</code> is a sum over exactly those rows.</p>
+<p>That table is where a longer history lives. <code>status.costs</code> is a rolling summary of three windows around the current run and keeps nothing older, so a report that needs last month reads the table rather than the object. <a href="../concepts/architecture.html#how-charges-reach-subscriptionstatuscosts">How charges reach <code>Subscription.status.costs</code></a> describes both passes.</p>
+<h2 id="when-a-bucket-or-a-meter-is-missing">When a bucket or a meter is missing<a class="headerlink" href="#when-a-bucket-or-a-meter-is-missing" title="Permanent link">#</a></h2>
+<p>An empty <code>status.costs</code> has four causes worth checking in order:</p>
+<ol>
+<li>No <code>SubscriptionChargeCollection</code> CostJob is scheduled, or none has completed a run yet. Check with <code>kubectl get costjob -A</code>; a <code>SubscriptionChargeCollection</code> CostJob writes nothing to its own status, so read its Jobs and their pod logs.</li>
+<li>The Subscription never activated. A Subscription with no <code>status.activatedAt</code> is skipped outright by the run, whatever else is true of it.</li>
+<li>The Offering declares no subscription fee. Buckets are shaped around the fee, so an Offering with only <code>resourcePricing</code>, or with <code>pricing: {}</code>, produces no buckets at all even while its Subscription's usage charges are being computed and stored. Read those from <code>subscription_charges</code>.</li>
+<li>The Offering could not be read. Every run fetches each Subscription's Offering fresh, and a Subscription whose Offering has been deleted or renamed gets no buckets, because the terms the buckets are shaped from are unavailable.</li>
+</ol>
+<p>The <code>CostsResolved</code> condition is the marker for all four. It is written on the same status update as the buckets, so a Subscription with no costs and no <code>CostsResolved</code> condition was never summarised, and its absence is the signal to look at the run rather than at the numbers.</p>
+<p>A bucket that carries only <code>start</code> and <code>endExclusive</code> is not an error. It means every figure in it was zero and omitted, which is the normal state before the first tick boundary settles.</p>
+<p>A usage meter missing from <code>breakdown</code> while the fee is present points at the usage half rather than at the job. Either the Subscription declares no <code>usageSources</code>, or the Offering declares no <code>resourcePricing</code> entry for that meter, or no allocation rows matched those sources for the hour, or the rows that matched carry no rate for that meter because their PriceBook has none set. <a href="price-resource-usage.html#when-pricing-does-not-resolve">Price resource usage</a> works through the pricing side of that.</p>
+<h2 id="related-guides">Related guides<a class="headerlink" href="#related-guides" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="collect-cost-data.html">Collect cost data</a> for the CostJob that writes these buckets and the schedule it runs on.</li>
+<li><a href="price-resource-usage.html">Price resource usage</a> for adding usage meters to the breakdown.</li>
+<li><a href="../concepts/billing-model.html">Billing model</a> for tick counting, proration, and the deactivation clamp behind every figure here.</li>
+<li><a href="deactivate-a-subscription.html">Deactivate a subscription</a> for reading the closing figures before the object is removed.</li>
+<li><a href="../reference/api.html#costbucket"><code>CostBucket</code></a> and <a href="../reference/api.html#costmetric"><code>CostMetric</code></a> for the field-level reference.</li>
+</ul>
 
 
 
@@ -3824,27 +4206,27 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 <div class="flex-2">
                     <div class="logo-footer-container">
                         
-                        <img class="md-header__logo_light" src="assets/images/footer-logo-light.png#only-light" alt="logo">
+                        <img class="md-header__logo_light" src="../assets/images/footer-logo-light.png#only-light" alt="logo">
                         
                         
-                        <img src="assets/images/footer-logo-dark.png#only-dark" alt="logo">
+                        <img src="../assets/images/footer-logo-dark.png#only-dark" alt="logo">
                         
                     </div>
 
                     <div class="collaborations-img-container">
                         <div class="display-flex">
                             
-                            <img class="csa-logo-dark" src="assets/images/CSA_dark.png#only-dark" alt="CSA">
+                            <img class="csa-logo-dark" src="../assets/images/CSA_dark.png#only-dark" alt="CSA">
                             
                             
-                            <img class="csa-logo-light" src="assets/images/CSA_light.png#only-light" alt="CSA">
+                            <img class="csa-logo-light" src="../assets/images/CSA_light.png#only-light" alt="CSA">
                             
 
                             
-                            <img class="hc-logo-dark" src="assets/images/HC_dark.png#only-dark" alt="HC">
+                            <img class="hc-logo-dark" src="../assets/images/HC_dark.png#only-dark" alt="HC">
                             
                             
-                            <img class="hc-logo-light" src="assets/images/HC_light.png#only-light" alt="HC">
+                            <img class="hc-logo-light" src="../assets/images/HC_light.png#only-light" alt="HC">
                             
                         </div>
                     </div>
@@ -4236,10 +4618,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   

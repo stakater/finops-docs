@@ -5,29 +5,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.stakater.com/finops/renovate-main-stakater-.github-0.x/index.html">
+        <link rel="canonical" href="https://docs.stakater.com/finops/renovate-main-stakater-.github-0.x/getting-started/installation/openshift.html">
       
       
+        <link rel="prev" href="overview.html">
       
-        <link rel="next" href="overview/key-features.html">
+      
+        <link rel="next" href="kubernetes.html">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.svg">
+      <link rel="icon" href="../../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
-        <title>Introduction - FinOps Operator</title>
+        <title>On OpenShift - FinOps Operator</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -46,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="stylesheets/pills.css">
+      <link rel="stylesheet" href="../../stylesheets/pills.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -66,7 +68,7 @@
 
     
     
-  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -95,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#finops-operator" class="md-skip">
+        <a href="#on-openshift" class="md-skip">
           Skip to content
         </a>
       
@@ -340,7 +342,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <nav class="md-header__inner md-grid" aria-label="Header">
 
     <!-- Link to home -->
-    <a href="." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href="../.." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       <!-- 
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -361,10 +363,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
         <!-- Logo -->
         <div class="md-header__topic">
           
-          <img class="md-header__logo_light" src="assets/images/logo-light.png#only-light" alt="logo">
+          <img class="md-header__logo_light" src="../../assets/images/logo-light.png#only-light" alt="logo">
           
           
-          <img class="md-header__logo_dark" src="assets/images/logo-dark.png#only-dark" alt="logo">
+          <img class="md-header__logo_dark" src="../../assets/images/logo-dark.png#only-dark" alt="logo">
           
           
           <div class="header-site-name">
@@ -1988,7 +1990,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href="../.." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -2015,20 +2017,18 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -2049,7 +2049,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2064,37 +2064,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Introduction
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -2110,50 +2083,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#opencost-and-postgresql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OpenCost and PostgreSQL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2166,7 +2095,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="overview/key-features.html" class="md-nav__link">
+      <a href="../../overview/key-features.html" class="md-nav__link">
         
   
   
@@ -2194,7 +2123,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="overview/use-cases.html" class="md-nav__link">
+      <a href="../../overview/use-cases.html" class="md-nav__link">
         
   
   
@@ -2276,7 +2205,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/architecture.html" class="md-nav__link">
+      <a href="../../concepts/architecture.html" class="md-nav__link">
         
   
   
@@ -2304,7 +2233,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/terminology.html" class="md-nav__link">
+      <a href="../../concepts/terminology.html" class="md-nav__link">
         
   
   
@@ -2332,7 +2261,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/finops-provider.html" class="md-nav__link">
+      <a href="../../concepts/finops-provider.html" class="md-nav__link">
         
   
   
@@ -2360,7 +2289,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/pricebook.html" class="md-nav__link">
+      <a href="../../concepts/pricebook.html" class="md-nav__link">
         
   
   
@@ -2388,7 +2317,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/costjob.html" class="md-nav__link">
+      <a href="../../concepts/costjob.html" class="md-nav__link">
         
   
   
@@ -2416,7 +2345,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/offering.html" class="md-nav__link">
+      <a href="../../concepts/offering.html" class="md-nav__link">
         
   
   
@@ -2444,7 +2373,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/subscription.html" class="md-nav__link">
+      <a href="../../concepts/subscription.html" class="md-nav__link">
         
   
   
@@ -2472,7 +2401,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/billing-model.html" class="md-nav__link">
+      <a href="../../concepts/billing-model.html" class="md-nav__link">
         
   
   
@@ -2500,7 +2429,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="concepts/compatibility-and-hierarchy.html" class="md-nav__link">
+      <a href="../../concepts/compatibility-and-hierarchy.html" class="md-nav__link">
         
   
   
@@ -2532,18 +2461,20 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -2564,7 +2495,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2582,7 +2513,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/quick-start.html" class="md-nav__link">
+      <a href="../quick-start.html" class="md-nav__link">
         
   
   
@@ -2607,18 +2538,20 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked="">
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -2639,7 +2572,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2657,7 +2590,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/installation/overview.html" class="md-nav__link">
+      <a href="overview.html" class="md-nav__link">
         
   
   
@@ -2682,10 +2615,37 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="getting-started/installation/openshift.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    On OpenShift
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="openshift.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2701,6 +2661,116 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#what-the-project-ships-for-olm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the project ships for OLM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-catalog-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add the catalog source
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-operatorgroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create an OperatorGroup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscribe-to-the-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscribe to the operator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-the-installplan-and-the-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check the InstallPlan and the CSV
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-with-helm-on-openshift-instead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing with Helm on OpenShift instead
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2713,7 +2783,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/installation/kubernetes.html" class="md-nav__link">
+      <a href="kubernetes.html" class="md-nav__link">
         
   
   
@@ -2749,7 +2819,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="getting-started/uninstalling.html" class="md-nav__link">
+      <a href="../uninstalling.html" class="md-nav__link">
         
   
   
@@ -2831,7 +2901,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/define-pricing.html" class="md-nav__link">
+      <a href="../../guides/define-pricing.html" class="md-nav__link">
         
   
   
@@ -2859,7 +2929,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/switch-active-pricebook.html" class="md-nav__link">
+      <a href="../../guides/switch-active-pricebook.html" class="md-nav__link">
         
   
   
@@ -2887,7 +2957,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/collect-cost-data.html" class="md-nav__link">
+      <a href="../../guides/collect-cost-data.html" class="md-nav__link">
         
   
   
@@ -2915,7 +2985,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/define-offering.html" class="md-nav__link">
+      <a href="../../guides/define-offering.html" class="md-nav__link">
         
   
   
@@ -2943,7 +3013,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/price-resource-usage.html" class="md-nav__link">
+      <a href="../../guides/price-resource-usage.html" class="md-nav__link">
         
   
   
@@ -2971,7 +3041,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/subscribe-to-offering.html" class="md-nav__link">
+      <a href="../../guides/subscribe-to-offering.html" class="md-nav__link">
         
   
   
@@ -2999,7 +3069,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/compose-subscriptions.html" class="md-nav__link">
+      <a href="../../guides/compose-subscriptions.html" class="md-nav__link">
         
   
   
@@ -3027,7 +3097,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/read-subscription-costs.html" class="md-nav__link">
+      <a href="../../guides/read-subscription-costs.html" class="md-nav__link">
         
   
   
@@ -3055,7 +3125,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="guides/deactivate-a-subscription.html" class="md-nav__link">
+      <a href="../../guides/deactivate-a-subscription.html" class="md-nav__link">
         
   
   
@@ -3137,7 +3207,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/api.html" class="md-nav__link">
+      <a href="../../reference/api.html" class="md-nav__link">
         
   
   
@@ -3165,7 +3235,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/configuration.html" class="md-nav__link">
+      <a href="../../reference/configuration.html" class="md-nav__link">
         
   
   
@@ -3193,7 +3263,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/rbac.html" class="md-nav__link">
+      <a href="../../reference/rbac.html" class="md-nav__link">
         
   
   
@@ -3221,7 +3291,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/security-model.html" class="md-nav__link">
+      <a href="../../reference/security-model.html" class="md-nav__link">
         
   
   
@@ -3249,7 +3319,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/metrics.html" class="md-nav__link">
+      <a href="../../reference/metrics.html" class="md-nav__link">
         
   
   
@@ -3277,7 +3347,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/webhooks.html" class="md-nav__link">
+      <a href="../../reference/webhooks.html" class="md-nav__link">
         
   
   
@@ -3305,7 +3375,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="reference/status-conditions.html" class="md-nav__link">
+      <a href="../../reference/status-conditions.html" class="md-nav__link">
         
   
   
@@ -3340,7 +3410,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting.html" class="md-nav__link">
+      <a href="../../troubleshooting.html" class="md-nav__link">
         
   
   
@@ -3367,7 +3437,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="release-notes.html" class="md-nav__link">
+      <a href="../../release-notes.html" class="md-nav__link">
         
   
   
@@ -3394,7 +3464,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="eula.html" class="md-nav__link">
+      <a href="../../eula.html" class="md-nav__link">
         
   
   
@@ -3443,10 +3513,76 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#opencost-and-postgresql" class="md-nav__link">
+  <a href="#what-the-project-ships-for-olm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OpenCost and PostgreSQL
+        What the project ships for OLM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-catalog-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add the catalog source
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-operatorgroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create an OperatorGroup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscribe-to-the-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscribe to the operator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-the-installplan-and-the-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check the InstallPlan and the CSV
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-with-helm-on-openshift-instead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing with Helm on OpenShift instead
       
     </span>
   </a>
@@ -3484,53 +3620,181 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
 
-<h1 id="finops-operator">FinOps Operator<a class="headerlink" href="#finops-operator" title="Permanent link">#</a></h1>
-<p>The FinOps Operator performs cost accounting for Kubernetes workloads. It collects allocation data for what actually ran in the cluster, prices that usage against rates you declare, and bills the result to whoever subscribed to it. The whole model is expressed as Kubernetes resources, so a platform engineer, SRE, or FinOps practitioner who is comfortable with <code>kubectl</code> can publish an internal price list, attach it to a service, and read accrued charges back from a resource status without leaving the cluster.</p>
-<p>Five custom resources in the <code>finops.stakater.com/v1alpha1</code> API group carry that model.</p>
+<h1 id="on-openshift">On OpenShift<a class="headerlink" href="#on-openshift" title="Permanent link">#</a></h1>
+<p>The FinOps Operator ships an operator bundle and a catalog index, so on OpenShift you install it through the Operator Lifecycle Manager rather than with Helm. Those artifacts are published to the project's own registry, so the install starts by adding a <code>CatalogSource</code> that points at the catalog image. Once that catalog is reachable, the rest is the standard OLM sequence: an <code>OperatorGroup</code>, a <code>Subscription</code>, then an <code>InstallPlan</code> that OLM resolves into a <code>ClusterServiceVersion</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This procedure installs from the project's own catalog and does not depend on the operator appearing in the catalogs OpenShift ships with. Once you have added the catalog below, the package shows up on the console's <strong>OperatorHub</strong> page under that catalog's display name, and you can install it from there instead of applying the manifests by hand.</p>
+</div>
+<h2 id="what-the-project-ships-for-olm">What the project ships for OLM<a class="headerlink" href="#what-the-project-ships-for-olm" title="Permanent link">#</a></h2>
 <table>
 <thead>
 <tr>
-<th>Resource</th>
-<th>What it is</th>
+<th>Artifact</th>
+<th>Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="concepts/finops-provider.html"><code>FinOpsProvider</code></a></td>
-<td>A cluster-scoped singleton, always named <code>default</code>, that declares where the cluster runs, exactly one of AWS, GCP, Azure, or on-premises, and configures the OpenCost integration.</td>
+<td>Package name</td>
+<td><code>finops-operator</code></td>
 </tr>
 <tr>
-<td><a href="concepts/pricebook.html"><code>PriceBook</code></a></td>
-<td>A currency and a set of per-unit rates for CPU, GPU, RAM, persistent volumes, and network transfer, with separate spot rates for CPU and RAM. One PriceBook at a time is the active one, and its rates are what everything else prices against.</td>
+<td>Bundle format</td>
+<td><code>registry+v1</code>, manifests in <code>manifests/</code>, metadata in <code>metadata/</code></td>
 </tr>
 <tr>
-<td><a href="concepts/costjob.html"><code>CostJob</code></a></td>
-<td>A collection schedule. The operator turns each CostJob into a Kubernetes <code>CronJob</code> that either pulls allocation data out of OpenCost or computes subscription charges.</td>
+<td>Channel declared by the bundle</td>
+<td><code>alpha</code></td>
 </tr>
 <tr>
-<td><a href="concepts/offering.html"><code>Offering</code></a></td>
-<td>A cost-driving entity and the rules for pricing it: a recurring subscription fee, per-meter margins on measured usage, or both. Its spec is immutable once created.</td>
+<td><code>ClusterServiceVersion</code> name</td>
+<td><code>finops-operator.v&lt;version&gt;</code>, for example <code>finops-operator.v0.1.16</code></td>
 </tr>
 <tr>
-<td><a href="concepts/subscription.html"><code>Subscription</code></a></td>
-<td>A binding to an Offering that represents active consumption. While it is active it accrues charges, and it can hang off a parent Subscription to model add-ons.</td>
+<td>Supported install mode</td>
+<td><code>AllNamespaces</code> only</td>
+</tr>
+<tr>
+<td>Catalog image</td>
+<td><code>ghcr.io/stakater/finops-operator-catalog:v&lt;version&gt;</code></td>
+</tr>
+<tr>
+<td>Install namespace</td>
+<td><code>finops-operator-system</code></td>
 </tr>
 </tbody>
 </table>
-<p>An Offering is the catalogue entry and a Subscription is the thing being billed, so pricing is authored once and consumed many times.</p>
-<h2 id="opencost-and-postgresql">OpenCost and PostgreSQL<a class="headerlink" href="#opencost-and-postgresql" title="Permanent link">#</a></h2>
-<p>The operator does not measure resource consumption itself. <a href="https://opencost.io">OpenCost</a> does that, and the operator drives it from two directions: <code>FinOpsProvider</code> configures the OpenCost integration for the cluster's provider, and the active <code>PriceBook</code> is rendered into OpenCost's custom pricing document so OpenCost values usage with your rates rather than a public cloud price list. Subscription charges are then computed from the PriceBook rates directly rather than from OpenCost's own cost figures, which keeps billing arithmetic independent of how OpenCost happens to interpret the document.</p>
-<p>PostgreSQL is where anything durable lands. The collection CronJobs write OpenCost allocation rows there, controllers mirror every version of every Offering and Subscription into it, and the charge collector writes one row per subscription, per hour, per charge source. Rolling summaries for the current hour, day, and month are copied back onto <code>Subscription.status.costs</code> so the cheap answer is available from <code>kubectl</code> without querying the database.</p>
-<pre class="mermaid"><code>flowchart LR
-    FP[FinOpsProvider] --&gt;|configures| OC[OpenCost]
-    PB[PriceBook] --&gt;|custom pricing| OC
-    PB --&gt;|base rates| Off[Offering]
-    Off --&gt;|resolved pricing| Sub[Subscription]
-    OC --&gt;|allocation data| CJ[CostJob]
-    CJ --&gt;|writes charge rows| DB[(PostgreSQL)]
-    CJ --&gt;|writes cost summaries| Sub</code></pre>
+<p>The bundle carries the same five CRDs, RBAC, and controller Deployment the Helm chart does, plus a set of <code>alm-examples</code> the console uses to fill in sample resources. It declares the two validating webhooks as <code>webhookdefinitions</code> on the <code>ClusterServiceVersion</code> rather than shipping a <code>ValidatingWebhookConfiguration</code> and a cert-manager <code>Certificate</code>, both <code>ValidatingAdmissionWebhook</code> entries targeting container port 443 and target port 9443 on the <code>finops-operator-controller-manager</code> Deployment. Webhook serving certificates are therefore the responsibility of OLM on this path, and cert-manager is not a prerequisite.</p>
+<p>The <code>Subscription</code> manifest checked into the project uses channel <code>alpha</code>, matching the bundle's own annotation. The file-based catalog under the project's <code>catalog/</code> directory declares a single channel named <code>preview</code> and makes it the default, so the channel you need depends on which catalog image you point at. Read it off the cluster rather than assuming. The <code>PackageManifest</code> only exists once the <code>CatalogSource</code> below is added and reporting <code>READY</code>, so this is a check to come back to after that step:</p>
+<div class="highlight"><pre><span></span><code>oc<span class="w"> </span>get<span class="w"> </span>packagemanifest<span class="w"> </span>finops-operator<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.channels[*].name}{"\n"}'</span>
+</code></pre></div>
+<h2 id="before-you-start">Before you start<a class="headerlink" href="#before-you-start" title="Permanent link">#</a></h2>
+<ul>
+<li><code>cluster-admin</code> on the cluster, and <code>oc</code> configured against it.</li>
+<li>A pull secret for the catalog and bundle images. Neither image can be pulled anonymously, so OLM needs credentials in the namespace holding the <code>CatalogSource</code>.</li>
+<li>The dependency Secrets. The <code>ClusterServiceVersion</code> wires the controller's environment from three Secrets by hard-coded name, all with non-optional key references, so the pod cannot start until each exists in <code>finops-operator-system</code>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Secret</th>
+<th>Key</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>finops-operator-postgres-config</code></td>
+<td><code>POSTGRES_CONNECTION_STRING</code></td>
+<td>The PostgreSQL DSN</td>
+</tr>
+<tr>
+<td><code>finops-operator-opencost-config</code></td>
+<td><code>OPENCOST_CONNECTION_STRING</code></td>
+<td>The OpenCost API endpoint</td>
+</tr>
+<tr>
+<td><code>finops-operator-prometheus-config</code></td>
+<td><code>PROMETHEUS_URL</code></td>
+<td>Referenced but never read by the operator</td>
+</tr>
+</tbody>
+</table>
+<p>The OLM path offers no equivalent of chart values, so these names are not configurable. Create the namespace and the Secrets first:</p>
+<div class="highlight"><pre><span></span><code>oc<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>finops-operator-system
+
+oc<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>finops-operator-postgres-config<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from-literal<span class="o">=</span><span class="nv">POSTGRES_CONNECTION_STRING</span><span class="o">=</span><span class="s1">'postgres://finops:PASSWORD@postgres.example.svc:5432/finops?sslmode=require'</span>
+
+oc<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>finops-operator-opencost-config<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from-literal<span class="o">=</span><span class="nv">OPENCOST_CONNECTION_STRING</span><span class="o">=</span><span class="s1">'http://opencost.opencost.svc:9003'</span>
+
+oc<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>finops-operator-prometheus-config<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from-literal<span class="o">=</span><span class="nv">PROMETHEUS_URL</span><span class="o">=</span><span class="s1">'http://prometheus-server.monitoring.svc'</span>
+</code></pre></div>
+<p>See <a href="overview.html">installation overview</a> for what each dependency is for and why the Prometheus Secret has to exist despite being unused.</p>
+<h2 id="add-the-catalog-source">Add the catalog source<a class="headerlink" href="#add-the-catalog-source" title="Permanent link">#</a></h2>
+<p>Put the <code>CatalogSource</code> where your <code>Subscription</code> will point at it. On OpenShift that is conventionally <code>openshift-marketplace</code>; the manifest in the project targets <code>olm</code>, because it was written for a local kind cluster. Whichever you choose, the <code>Subscription</code>'s <code>sourceNamespace</code> has to match.</p>
+<div class="highlight"><pre><span></span><code>oc<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>docker-registry<span class="w"> </span>finops-operator-pull<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--docker-server<span class="o">=</span>ghcr.io<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--docker-username<span class="o">=</span><span class="s1">'&lt;username&gt;'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--docker-password<span class="o">=</span><span class="s1">'&lt;token&gt;'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="w"> </span>openshift-marketplace
+
+oc<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<span class="s">apiVersion: operators.coreos.com/v1alpha1</span>
+<span class="s">kind: CatalogSource</span>
+<span class="s">metadata:</span>
+<span class="s">  name: finops-operator-catalog</span>
+<span class="s">  namespace: openshift-marketplace</span>
+<span class="s">spec:</span>
+<span class="s">  sourceType: grpc</span>
+<span class="s">  image: ghcr.io/stakater/finops-operator-catalog:v0.1.16</span>
+<span class="s">  displayName: FinOps Operator Catalog</span>
+<span class="s">  publisher: stakater</span>
+<span class="s">  secrets:</span>
+<span class="s">    - finops-operator-pull</span>
+<span class="s">EOF</span>
+</code></pre></div>
+<p>A healthy catalog reports <code>READY</code> and runs a pod serving its gRPC endpoint:</p>
+<div class="highlight"><pre><span></span><code>oc<span class="w"> </span>get<span class="w"> </span>catalogsource<span class="w"> </span>finops-operator-catalog<span class="w"> </span>-n<span class="w"> </span>openshift-marketplace<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.connectionState.lastObservedState}{"\n"}'</span>
+oc<span class="w"> </span>get<span class="w"> </span>packagemanifest<span class="w"> </span>finops-operator
+</code></pre></div>
+<p>If the catalog pod stays in <code>ImagePullBackOff</code>, the pull secret is missing or lacks access to the image. Nothing downstream resolves until the <code>PackageManifest</code> appears.</p>
+<h2 id="create-an-operatorgroup">Create an OperatorGroup<a class="headerlink" href="#create-an-operatorgroup" title="Permanent link">#</a></h2>
+<p>The <code>ClusterServiceVersion</code> supports only the <code>AllNamespaces</code> install mode, so the <code>OperatorGroup</code> must watch all namespaces. An empty <code>targetNamespaces</code> list is how that is expressed.</p>
+<div class="highlight"><pre><span></span><code>oc<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<span class="s">apiVersion: operators.coreos.com/v1</span>
+<span class="s">kind: OperatorGroup</span>
+<span class="s">metadata:</span>
+<span class="s">  name: finops-operator-operatorgroup</span>
+<span class="s">  namespace: finops-operator-system</span>
+<span class="s">spec:</span>
+<span class="s">  targetNamespaces: []</span>
+<span class="s">EOF</span>
+</code></pre></div>
+<p>An <code>OperatorGroup</code> scoped to a single namespace leaves the <code>Subscription</code> unresolvable, because no install mode the bundle supports matches it.</p>
+<h2 id="subscribe-to-the-operator">Subscribe to the operator<a class="headerlink" href="#subscribe-to-the-operator" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>oc<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<span class="s">apiVersion: operators.coreos.com/v1alpha1</span>
+<span class="s">kind: Subscription</span>
+<span class="s">metadata:</span>
+<span class="s">  name: finops-operator-subscription</span>
+<span class="s">  namespace: finops-operator-system</span>
+<span class="s">spec:</span>
+<span class="s">  channel: alpha</span>
+<span class="s">  name: finops-operator</span>
+<span class="s">  source: finops-operator-catalog</span>
+<span class="s">  sourceNamespace: openshift-marketplace</span>
+<span class="s">  installPlanApproval: Automatic</span>
+<span class="s">EOF</span>
+</code></pre></div>
+<p><code>installPlanApproval: Automatic</code> is what the project's own manifest uses and lets OLM apply new versions from the channel as they arrive. Use <code>Manual</code> where you want to review each upgrade, and add <code>startingCSV: finops-operator.v&lt;version&gt;</code> to pin the version the first <code>InstallPlan</code> resolves to.</p>
+<h2 id="check-the-installplan-and-the-csv">Check the InstallPlan and the CSV<a class="headerlink" href="#check-the-installplan-and-the-csv" title="Permanent link">#</a></h2>
+<p>OLM creates an <code>InstallPlan</code> in the operator namespace and then a <code>ClusterServiceVersion</code>. Both carry the state you need:</p>
+<div class="highlight"><pre><span></span><code>oc<span class="w"> </span>get<span class="w"> </span>installplan<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+oc<span class="w"> </span>get<span class="w"> </span>csv<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+</code></pre></div>
+<p>An <code>InstallPlan</code> in <code>Complete</code> and a <code>ClusterServiceVersion</code> phase of <code>Succeeded</code> mean OLM applied the bundle. With <code>installPlanApproval: Manual</code>, the plan sits at <code>RequiresApproval</code> until you patch <code>spec.approved</code> to <code>true</code>.</p>
+<p>A <code>Succeeded</code> phase says the manifests were applied, not that the controller is serving. Check the workload it created:</p>
+<div class="highlight"><pre><span></span><code>oc<span class="w"> </span>get<span class="w"> </span>deployment<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+oc<span class="w"> </span>logs<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>deployment/finops-operator-controller-manager
+</code></pre></div>
+<p>The bundle creates two Deployments: <code>finops-operator-controller-manager</code>, and <code>finops-operator-finops-gateway-gateway</code>, which runs the FinOps Gateway image and connects to the same PostgreSQL database and listens on port 8080. A controller pod stuck in <code>CreateContainerConfigError</code> almost always means one of the three Secrets, or one of their keys, is missing. Reconciliation only begins once the manager reports it is running; the resources it then acts on are the ones you create.</p>
+<p>The bundle installs no <code>PriceBook</code> and no <code>CostJob</code>, so nothing is priced or collected until you author them. The <a href="../quick-start.html">quick start</a> walks through that, and <a href="../../concepts/pricebook.html">PriceBook</a> and <a href="../../concepts/costjob.html">CostJob</a> explain the resources.</p>
+<h2 id="installing-with-helm-on-openshift-instead">Installing with Helm on OpenShift instead<a class="headerlink" href="#installing-with-helm-on-openshift-instead" title="Permanent link">#</a></h2>
+<p>Nothing forces the OLM path on OpenShift. The Helm chart runs there too, and it is the only way to reach the configuration surface, which includes the Secret names, the OpenCost Deployment to restart, the optional starter <code>PriceBook</code> and <code>CostJob</code>, and Multi Tenant Operator mode. On OpenShift, set <code>openshift.enabled=true</code> and <code>certManager.enabled=false</code> so the platform issues the webhook serving certificate instead of cert-manager. See <a href="kubernetes.html">on Kubernetes</a>.</p>
 <h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">#</a></h2>
-<p>Start with the <a href="getting-started/installation/overview.html">installation overview</a>, then work through the <a href="getting-started/quick-start.html">quick start</a> to get a price list, an offering, and a subscription in place.</p>
+<ul>
+<li><a href="../quick-start.html">Quick start</a> to get from a running operator to a Subscription accruing charges.</li>
+<li><a href="../../concepts/architecture.html">Architecture</a> for what the installed Deployment and the generated CronJobs do.</li>
+<li><a href="../uninstalling.html#the-olm-path">Uninstalling</a> to remove the operator and its OLM objects.</li>
+</ul>
 
 
 
@@ -3824,27 +4088,27 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 <div class="flex-2">
                     <div class="logo-footer-container">
                         
-                        <img class="md-header__logo_light" src="assets/images/footer-logo-light.png#only-light" alt="logo">
+                        <img class="md-header__logo_light" src="../../assets/images/footer-logo-light.png#only-light" alt="logo">
                         
                         
-                        <img src="assets/images/footer-logo-dark.png#only-dark" alt="logo">
+                        <img src="../../assets/images/footer-logo-dark.png#only-dark" alt="logo">
                         
                     </div>
 
                     <div class="collaborations-img-container">
                         <div class="display-flex">
                             
-                            <img class="csa-logo-dark" src="assets/images/CSA_dark.png#only-dark" alt="CSA">
+                            <img class="csa-logo-dark" src="../../assets/images/CSA_dark.png#only-dark" alt="CSA">
                             
                             
-                            <img class="csa-logo-light" src="assets/images/CSA_light.png#only-light" alt="CSA">
+                            <img class="csa-logo-light" src="../../assets/images/CSA_light.png#only-light" alt="CSA">
                             
 
                             
-                            <img class="hc-logo-dark" src="assets/images/HC_dark.png#only-dark" alt="HC">
+                            <img class="hc-logo-dark" src="../../assets/images/HC_dark.png#only-dark" alt="HC">
                             
                             
-                            <img class="hc-logo-light" src="assets/images/HC_light.png#only-light" alt="HC">
+                            <img class="hc-logo-light" src="../../assets/images/HC_light.png#only-light" alt="HC">
                             
                         </div>
                     </div>
@@ -4236,10 +4500,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   
