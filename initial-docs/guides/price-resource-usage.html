@@ -5,13 +5,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/guides/subscribe-to-offering.html">
+        <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/guides/price-resource-usage.html">
       
       
-        <link rel="prev" href="price-resource-usage.html">
+        <link rel="prev" href="define-offering.html">
       
       
-        <link rel="next" href="compose-subscriptions.html">
+        <link rel="next" href="subscribe-to-offering.html">
       
       
         
@@ -22,7 +22,7 @@
     
     
       
-        <title>Subscribe to an offering - FinOps Operator</title>
+        <title>Price resource usage - FinOps Operator</title>
       
     
     
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#subscribe-to-an-offering" class="md-skip">
+        <a href="#price-resource-usage" class="md-skip">
           Skip to content
         </a>
       
@@ -2871,34 +2871,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="price-resource-usage.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Price resource usage
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2918,7 +2890,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <span class="md-ellipsis">
     
   
-    Subscribe to an offering
+    Price resource usage
   
 
     
@@ -2929,14 +2901,14 @@ This documentation is for a pull request deployment and is unreleased, it is onl
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="subscribe-to-offering.html" class="md-nav__link md-nav__link--active">
+      <a href="price-resource-usage.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Subscribe to an offering
+    Price resource usage
   
 
     
@@ -2975,10 +2947,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-reference-the-offering" class="md-nav__link">
+  <a href="#step-1-pick-the-meters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Reference the Offering
+        Step 1: Pick the meters
       
     </span>
   </a>
@@ -2986,10 +2958,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-know-what-has-to-be-true-before-it-activates" class="md-nav__link">
+  <a href="#step-2-set-the-margin-per-meter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Know what has to be true before it activates
+        Step 2: Set the margin per meter
       
     </span>
   </a>
@@ -2997,10 +2969,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-apply-the-subscription" class="md-nav__link">
+  <a href="#step-3-apply-the-offering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Apply the Subscription
+        Step 3: Apply the Offering
       
     </span>
   </a>
@@ -3008,10 +2980,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-verify-activation" class="md-nav__link">
+  <a href="#step-4-declare-usage-sources-on-the-subscription" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Verify activation
+        Step 4: Declare usage sources on the Subscription
       
     </span>
   </a>
@@ -3019,10 +2991,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-tell-a-waiting-subscription-from-a-finished-one" class="md-nav__link">
+  <a href="#step-5-read-the-effective-unit-prices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Tell a waiting Subscription from a finished one
+        Step 5: Read the effective unit prices
       
     </span>
   </a>
@@ -3030,10 +3002,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-confirm-charges-are-accruing" class="md-nav__link">
+  <a href="#when-pricing-does-not-resolve" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: Confirm charges are accruing
+        When pricing does not resolve
       
     </span>
   </a>
@@ -3055,6 +3027,34 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="subscribe-to-offering.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subscribe to an offering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -3522,10 +3522,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-reference-the-offering" class="md-nav__link">
+  <a href="#step-1-pick-the-meters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Reference the Offering
+        Step 1: Pick the meters
       
     </span>
   </a>
@@ -3533,10 +3533,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-know-what-has-to-be-true-before-it-activates" class="md-nav__link">
+  <a href="#step-2-set-the-margin-per-meter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Know what has to be true before it activates
+        Step 2: Set the margin per meter
       
     </span>
   </a>
@@ -3544,10 +3544,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-apply-the-subscription" class="md-nav__link">
+  <a href="#step-3-apply-the-offering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Apply the Subscription
+        Step 3: Apply the Offering
       
     </span>
   </a>
@@ -3555,10 +3555,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-verify-activation" class="md-nav__link">
+  <a href="#step-4-declare-usage-sources-on-the-subscription" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Verify activation
+        Step 4: Declare usage sources on the Subscription
       
     </span>
   </a>
@@ -3566,10 +3566,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-tell-a-waiting-subscription-from-a-finished-one" class="md-nav__link">
+  <a href="#step-5-read-the-effective-unit-prices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Tell a waiting Subscription from a finished one
+        Step 5: Read the effective unit prices
       
     </span>
   </a>
@@ -3577,10 +3577,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-confirm-charges-are-accruing" class="md-nav__link">
+  <a href="#when-pricing-does-not-resolve" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: Confirm charges are accruing
+        When pricing does not resolve
       
     </span>
   </a>
@@ -3618,107 +3618,215 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
 
-<h1 id="subscribe-to-an-offering">Subscribe to an offering<a class="headerlink" href="#subscribe-to-an-offering" title="Permanent link">#</a></h1>
-<p>A <code>Subscription</code> binds a subscriber to an <a href="define-offering.html">Offering</a> and starts the billing clock. This guide creates the simplest useful one, a Subscription with nothing but an <code>offeringRef</code>, then confirms it activated and reads the state it left behind. It is for a platform engineer, or the automation that provisions a tenant, with edit rights in the namespace the Subscription will live in.</p>
+<h1 id="price-resource-usage">Price resource usage<a class="headerlink" href="#price-resource-usage" title="Permanent link">#</a></h1>
+<p><code>pricing.resourcePricing</code> is how an Offering bills what a workload actually consumed. It carries no rates of its own: each entry names a meter, and the per-unit price comes from the active PriceBook with the entry's margin applied on top. This guide picks the meters, sets the margin that turns a cost rate into a sell rate, and reads the effective prices back off the Offering's status. It is for whoever sets the markup, working alongside whoever owns the PriceBook.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
 <ul>
-<li>The FinOps Operator is <a href="../getting-started/installation/kubernetes.html">installed</a> and its controller pod is running.</li>
-<li>An <code>Offering</code> whose <code>READY</code> column reads <code>True</code>. <a href="define-offering.html">Define an offering</a> authors one.</li>
-<li>A <a href="collect-cost-data.html"><code>SubscriptionChargeCollection</code> CostJob</a> scheduled, if the fee is to accrue into charge rows rather than only be declared. A cluster without one also never finishes deleting a Subscription.</li>
-<li><code>kubectl</code> edit permission in the namespace you are creating the Subscription in, which is <code>finops-operator-system</code> throughout this guide.</li>
+<li>A PriceBook that is both active and <code>valuationMode: currency</code>, carrying a rate for every meter you intend to price. <a href="define-pricing.html">Define pricing with a PriceBook</a> authors one.</li>
+<li>A <a href="collect-cost-data.html"><code>ResourceCostCollection</code> CostJob</a> collecting allocations, and a <code>SubscriptionChargeCollection</code> one turning them into charges.</li>
+<li><code>kubectl</code> edit permission in the namespace the Offering lives in, which is <code>finops-operator-system</code> throughout this guide.</li>
+<li>The markup you intend to apply, as either a fixed addition or a multiplier.</li>
 </ul>
-<p>For a Subscription that hangs off another one, or whose activation depends on a sibling or a workload, read <a href="compose-subscriptions.html">compose subscriptions</a> after this page.</p>
-<h2 id="step-1-reference-the-offering">Step 1: Reference the Offering<a class="headerlink" href="#step-1-reference-the-offering" title="Permanent link">#</a></h2>
-<p><code>spec.offeringRef</code> is the only required field on the spec, and it takes two values, both required:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
-<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
-</code></pre></div>
-<p><code>namespace</code> carries <code>+required</code> and a minimum length of one character, and it is never filled in from the Subscription's own namespace. Omitting it is rejected by the API server, not defaulted, even when the Offering sits in the same namespace as the Subscription. That is deliberate: a reference means the same object wherever the manifest is applied, so the same file cannot silently bind to a different Offering in a different namespace.</p>
-<p>The whole reference is immutable, held by a CEL rule on <code>spec</code> that rejects any change with <code>offeringRef is immutable; create a new Subscription instead</code>. Check the manifest against the API server before you commit to it:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>subscription.yaml<span class="w"> </span>--dry-run<span class="o">=</span>server
-</code></pre></div>
-<p>Moving a subscriber onto different terms later means creating a second Subscription against a second Offering, which is the sequence in <a href="../concepts/offering.html#replacing-an-offering">replacing an Offering</a>.</p>
-<h2 id="step-2-know-what-has-to-be-true-before-it-activates">Step 2: Know what has to be true before it activates<a class="headerlink" href="#step-2-know-what-has-to-be-true-before-it-activates" title="Permanent link">#</a></h2>
-<p>Activation is not one condition but four, checked in a fixed order on every reconcile: the Offering, then the parent, then compatibility coverage, then the target. All four must pass. They are continuous checks rather than admission checks, so a Subscription that fails one is still admitted, held at <code>Ready=False</code>, and activates on its own once the condition clears. <a href="../concepts/subscription.html#the-four-activation-gates">The four activation gates</a> sets out what each one tests and which of them can also end an already-active Subscription.</p>
-<p>What a guide needs from that is the reason vocabulary, because the failing gate names itself on the <code>Ready</code> condition. The Offering gate reports <code>OfferingNotFound</code> or <code>OfferingNotReady</code>. Where a <code>spec.parent</code> is set, the parent gate reports <code>ParentSubscriptionNotFound</code>, <code>ParentSubscriptionDeactivated</code>, or <code>ParentSubscriptionNotReady</code>. Where the bound Offering declares <code>requiredOfferings</code>, the compatibility gate reports <code>CompatibilityRequirementNotMet</code>. Where a <code>lifecycle.targetRef</code> is set, the target gate reports <code>TargetNotFound</code>, or <code>TargetIsSelfReference</code> if the Subscription named itself. A read that fails for some other reason surfaces as <code>ValidationError</code> at whichever gate hit it.</p>
-<p>The Subscription in step 3 sets neither a <code>parent</code> nor a <code>targetRef</code> and binds an Offering that requires nothing, so gates two to four pass trivially and only the first two reasons are reachable. Opting into any of the other three makes it a live dependency for the rest of the Subscription's life, which is what <a href="compose-subscriptions.html">compose subscriptions</a> covers, one procedure per gate.</p>
-<h2 id="step-3-apply-the-subscription">Step 3: Apply the Subscription<a class="headerlink" href="#step-3-apply-the-subscription" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># subscription-acme-platform-base.yaml</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subscription</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acme-platform-base</span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
-<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>subscription-acme-platform-base.yaml
-</code></pre></div>
-<p>To bill measured consumption as well as the fee, add <code>usageSources</code> here; <a href="price-resource-usage.html">price resource usage</a> covers pairing them with the Offering's <code>resourcePricing</code>. Unlike <code>offeringRef</code>, <code>usageSources</code> stays editable afterwards.</p>
-<h2 id="step-4-verify-activation">Step 4: Verify activation<a class="headerlink" href="#step-4-verify-activation" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscriptions<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>NAME                 READY
-acme-platform-base   True
-</code></pre></div>
-<p><code>READY</code> is the <code>status.ready</code> print column. <code>True</code> means every gate passed and the billing epoch has opened. The two status fields worth reading next are the timestamp the epoch opened at and the conditions that recorded it:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.activatedAt}{"\n"}'</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
-</code></pre></div>
-<p>On a Subscription that just activated, <code>describe</code> shows a <code>Ready</code> condition and an <code>Active</code> condition, both <code>True</code> and both carrying reason <code>ActivationSucceeded</code>. <code>status.activatedAt</code> is written once and never moved, and everything downstream keys off it: charges are computed from it, <code>minPeriods</code> is counted from it, and a Subscription that never activated is skipped outright by the collection job.</p>
-<p>If <code>READY</code> reads <code>False</code>, <code>describe</code> names the gate that is holding it, using the reason vocabulary in step 2. <a href="../reference/status-conditions.html">Status conditions</a> lists the full set.</p>
-<h2 id="step-5-tell-a-waiting-subscription-from-a-finished-one">Step 5: Tell a waiting Subscription from a finished one<a class="headerlink" href="#step-5-tell-a-waiting-subscription-from-a-finished-one" title="Permanent link">#</a></h2>
-<p><code>READY False</code> is not one state. It covers a Subscription that has not activated yet, one that has ended for good, and one that is active and billing while a gate is transiently failing. The <code>Ready</code> condition alone does not separate them, because deactivation writes <code>Ready=False</code> with reason <code>ValidationSucceeded</code>, which describes nothing about the cause. Read the <code>Active</code> condition and <code>status.deactivatedAt</code> instead:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.ready}{"  "}{.status.deactivatedAt}{"\n"}{range .status.conditions[*]}{.type}{"\t"}{.status}{"\t"}{.reason}{"\n"}{end}'</span>
-</code></pre></div>
+<h2 id="step-1-pick-the-meters">Step 1: Pick the meters<a class="headerlink" href="#step-1-pick-the-meters" title="Permanent link">#</a></h2>
+<p>Six names are admitted, and five of them bill something. Each reads its own signal out of the allocation rows the collector wrote and integrates it over the part of the hour the Subscription was active:</p>
 <table>
 <thead>
 <tr>
-<th>What you see</th>
-<th>What it means</th>
+<th>Meter</th>
+<th>Priced per</th>
+<th>Quantity billed</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>READY True</code></td>
-<td>Active. <code>Active=True</code> with reason <code>ActivationSucceeded</code>, or <code>Orphaned</code> if it outlived its parent.</td>
+<td><code>cpuHour</code></td>
+<td>Core-hour</td>
+<td>Average cores used across the row, integrated over the billable span</td>
 </tr>
 <tr>
-<td><code>READY False</code> and no <code>Active</code> condition at all</td>
-<td>It has never activated. The <code>Ready</code> condition's reason names the failing gate.</td>
+<td><code>gpuHour</code></td>
+<td>GPU-hour</td>
+<td>Average number of GPUs actively used, integrated the same way</td>
 </tr>
 <tr>
-<td><code>READY False</code> with <code>Active=True</code></td>
-<td>It is still active and still accruing charges; a gate is failing without ending it, such as an Offering that has gone not ready. <code>status.deactivatedAt</code> is absent.</td>
+<td><code>ramGbHour</code></td>
+<td>GiB-hour</td>
+<td>Average memory in use, converted from bytes at 2^30 per GiB</td>
 </tr>
 <tr>
-<td><code>READY False</code> with <code>Active=False</code></td>
-<td>It has ended, and terminally. The <code>Active</code> condition's reason carries the real cause: <code>ParentDeactivated</code>, <code>CompatibilityRequirementNotMet</code>, <code>TargetNotFound</code>, or <code>MarkedForDeletion</code>. <code>status.deactivatedAt</code> is set.</td>
+<td><code>pvGbHour</code></td>
+<td>GiB-hour</td>
+<td>Persistent volume capacity attached, from the byte-hours integral rather than a capacity snapshot</td>
+</tr>
+<tr>
+<td><code>networkGb</code></td>
+<td>GiB</td>
+<td>Data transferred plus data received, summed across both directions</td>
 </tr>
 </tbody>
 </table>
-<p>The absent-<code>Active</code>-condition row is the reliable discriminator for a Subscription that never got going, because the not-ready path writes only the <code>Ready</code> condition and never touches <code>Active</code>. <code>status.deactivatedAt</code> is the reliable one for a Subscription that ended: it is written once, never cleared, and a Subscription carrying it is not re-validated on any later reconcile, so it will not come back if the Offering recovers. <a href="../concepts/subscription.html#what-status-tells-you">What status tells you</a> sets out the rest of the fields.</p>
-<h2 id="step-6-confirm-charges-are-accruing">Step 6: Confirm charges are accruing<a class="headerlink" href="#step-6-confirm-charges-are-accruing" title="Permanent link">#</a></h2>
-<p><code>status.costs</code> is written by the <code>SubscriptionChargeCollection</code> CostJob on its own schedule, not by the reconciler, so it appears on the first run after activation rather than at activation:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.costs[*].granularity}{"\n"}'</span>
+<p><code>networkGb</code> is the one with no time dimension, which is why its name has no <code>Hour</code> in it. The rate is per GiB moved, so a Subscription that shifts a fixed amount of data pays the same whether it took a minute or a day. The activation and deactivation instants still trim its first and last hour, because the collector clamps every row to the Subscription's active interval, but there is no per-hour multiplier.</p>
+<p><code>cpuHour</code> and <code>gpuHour</code> are billed on utilization rather than on what a pod requested, so a workload that reserves eight GPUs and drives two is charged for two. <code>gpuHour</code> reads zero where GPU profiling is not measuring anything, which makes an unmonitored GPU node look free.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The schema also accepts <code>subscription</code> as a meter name, but no usage calculator is registered for it. An entry named <code>subscription</code> resolves to a unit price and then never produces a charge; the recurring fee belongs in <code>subscriptionFee</code>, which <a href="define-offering.html">define an offering</a> covers.</p>
+</div>
+<h2 id="step-2-set-the-margin-per-meter">Step 2: Set the margin per meter<a class="headerlink" href="#step-2-set-the-margin-per-meter" title="Permanent link">#</a></h2>
+<p><code>margins</code> on an entry adjusts the PriceBook rate for that one meter. It has two fields and they are two different modes:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Unit</th>
+<th>Effect on the rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>absoluteMicros</code></td>
+<td>Micro-currency, 1,000,000 to 1.00 of the PriceBook's currency</td>
+<td>Adds a fixed amount per unit</td>
+</tr>
+<tr>
+<td><code>factorMilli</code></td>
+<td>Milli-units, <code>1000</code> being 1.000x</td>
+<td>Multiplies, so <code>1150</code> is a 15 percent markup and <code>980</code> a 2 percent discount</td>
+</tr>
+</tbody>
+</table>
+<p>Three CEL rules on <code>margins</code> police the pair, all evaluated at admission:</p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Message on rejection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Only one mode per meter</td>
+<td><code>absoluteMicros and factorMilli are mutually exclusive — set only one</code></td>
+</tr>
+<tr>
+<td>No negative addition</td>
+<td><code>absoluteMicros must be &gt;= 0</code></td>
+</tr>
+<tr>
+<td>No negative factor</td>
+<td><code>factorMilli must be &gt;= 0</code></td>
+</tr>
+</tbody>
+</table>
+<p>The non-negativity is not arbitrary. A usage meter never credits, so a per-unit price driven below zero has no meaning and is clamped to zero if it ever arrives. That makes <code>factorMilli</code> the only way to express a discount: <code>980</code> charges 98 percent of the PriceBook rate, and there is no negative <code>absoluteMicros</code> that would do the same job.</p>
+<p>Against the <code>0.031</code> per core-hour and <code>1.80</code> per GPU-hour of the PriceBook in <a href="define-pricing.html">define pricing</a>, the four cases work out as:</p>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>PriceBook rate in micros</th>
+<th>Effective unit price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cpuHour</code> with no <code>margins</code></td>
+<td><code>31000</code></td>
+<td><code>31000</code></td>
+</tr>
+<tr>
+<td><code>cpuHour</code> with <code>absoluteMicros: 200</code></td>
+<td><code>31000</code></td>
+<td><code>31200</code></td>
+</tr>
+<tr>
+<td><code>cpuHour</code> with <code>factorMilli: 1150</code></td>
+<td><code>31000</code></td>
+<td><code>35650</code></td>
+</tr>
+<tr>
+<td><code>gpuHour</code> with <code>factorMilli: 1200</code></td>
+<td><code>1800000</code></td>
+<td><code>2160000</code></td>
+</tr>
+</tbody>
+</table>
+<p>Omitting <code>margins</code> altogether is valid and resolves the PriceBook rate unchanged, which is the shape to use when the Offering is meant to pass cost through at cost.</p>
+<p>Two details matter when you reconcile a charge against these numbers. The margin is applied to each allocation row's own rate before that rate is multiplied by the row's units, not to the summed charge afterwards. And the meter's rate is taken from the PriceBook recorded against the allocation row, so a row that carries no rate for a meter is dropped from that meter's charge rather than being billed at the margin alone.</p>
+<h2 id="step-3-apply-the-offering">Step 3: Apply the Offering<a class="headerlink" href="#step-3-apply-the-offering" title="Permanent link">#</a></h2>
+<p>Both pricing blocks are optional, so an Offering can price usage with no recurring fee at all:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># offering-gpu-workload.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Offering</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpu-workload</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pricing</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">resourcePricing</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpuHour</span>
+<span class="w">        </span><span class="nt">margins</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">factorMilli</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1200</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpuHour</span>
+<span class="w">        </span><span class="nt">margins</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">absoluteMicros</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>hour day month
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>offering-gpu-workload.yaml
 </code></pre></div>
-<p>Three rolling buckets, in micro-currency, where 1,000,000 micros is 1.00 of the active PriceBook's currency. An empty result after a collection run has fired means the Subscription had not activated when the run started, or that no <code>SubscriptionChargeCollection</code> CostJob is scheduled at all. <a href="read-subscription-costs.html">Read subscription costs</a> interprets the values and the per-meter breakdown.</p>
+<p>List each meter once. The spec's list is a plain array, so nothing at admission stops two entries naming the same meter, while the resolved list the operator writes back to <code>status</code> is keyed on <code>name</code>. As with any Offering the spec is immutable after this apply, which means a margin change is a new Offering under a new name.</p>
+<h2 id="step-4-declare-usage-sources-on-the-subscription">Step 4: Declare usage sources on the Subscription<a class="headerlink" href="#step-4-declare-usage-sources-on-the-subscription" title="Permanent link">#</a></h2>
+<p>Declaring meters is only half of what it takes to bill them. The collector builds usage calculators only for a Subscription that has activated and declares at least one <code>spec.usageSources</code> entry, so a Subscription with none is charged its Offering's subscription fee and nothing else, however much <code>resourcePricing</code> the Offering carries. Nothing reports this as an error, which makes it an easy gap to miss.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># subscription-acme-gpu.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subscription</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acme-gpu</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpu-workload</span>
+<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<span class="w">  </span><span class="nt">usageSources</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acme-training</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>subscription-acme-gpu.yaml
+</code></pre></div>
+<p><code>offeringRef.namespace</code> is required and is never filled in from the Subscription's own namespace, so it has to be written out even when the two match. <a href="../concepts/subscription.html#declaring-usage-sources">Declaring usage sources</a> covers how the entries select allocation rows, and <a href="subscribe-to-offering.html">subscribe to an offering</a> covers the rest of the Subscription.</p>
+<h2 id="step-5-read-the-effective-unit-prices">Step 5: Read the effective unit prices<a class="headerlink" href="#step-5-read-the-effective-unit-prices" title="Permanent link">#</a></h2>
+<p><code>status.resolvedPricing.meters</code> is where the arithmetic from step 2 surfaces, one entry per meter the Offering declares:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>offering<span class="w"> </span>gpu-workload<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ready</span><span class="p">:</span><span class="w"> </span><span class="s">"True"</span>
+<span class="w">  </span><span class="nt">resolvedPricing</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">resolvedAt</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-08-12T09:15:04Z"</span>
+<span class="w">    </span><span class="nt">meters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpuHour</span>
+<span class="w">        </span><span class="nt">unitPriceMicros</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2160000</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpuHour</span>
+<span class="w">        </span><span class="nt">unitPriceMicros</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">31200</span>
+</code></pre></div>
+<p><code>unitPriceMicros</code> is the price a subscriber pays for one unit of that meter: the active PriceBook's rate with the entry's margin already applied. Divide by 1,000,000 to read it in currency, so <code>2160000</code> is 2.16 per GPU-hour. Checking these two numbers against what you intended is the quickest way to catch a <code>factorMilli</code> that was meant to be a percentage, or micros entered as currency.</p>
+<p>The list is resolved once and then left alone, because the spec cannot change. Editing the PriceBook afterwards does not move an already-resolved <code>unitPriceMicros</code>, while a usage charge takes its rate from the PriceBook recorded with the allocation row, so the two can disagree after a rate change. <a href="../concepts/pricebook.html#changing-rates-later">Changing rates later</a> covers the consequences and <a href="switch-active-pricebook.html">switch the active PriceBook</a> the procedure.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>includedUsage</code>, an allowance of free usage per subscriber, is not available. The field is commented out in the API types, so it cannot be set on a meter, and the matching <code>status.resolvedPricing.meters[].includedUsage</code> is never populated. Model an allowance somewhere other than the Offering until it lands.</p>
+</div>
+<h2 id="when-pricing-does-not-resolve">When pricing does not resolve<a class="headerlink" href="#when-pricing-does-not-resolve" title="Permanent link">#</a></h2>
+<p>An Offering that declares <code>resourcePricing</code> needs an active PriceBook whose <code>valuationMode</code> is <code>currency</code>. Without one it stays not ready, with <code>PricingResolved=False</code> and reason <code>NoActivePricebook</code>:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>offering<span class="w"> </span>gpu-workload<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Type              Status  Reason              Message
+Ready             False   NoActivePricebook   offering finops-operator-system/gpu-workload: no active pricebook to resolve metered pricing
+PricingResolved   False   NoActivePricebook   offering finops-operator-system/gpu-workload: no active pricebook to resolve metered pricing
+</code></pre></div>
+<p>The operator refuses rather than publishing something. With no rates to read, every meter's base would be zero, and a resolved price would then be the margin on its own: an Offering with <code>absoluteMicros: 200</code> would publish 200 micros per core-hour, which is the internal markup masquerading as the sell price. Staying not ready keeps that out of <code>status.resolvedPricing</code>, and out of the hands of any Subscription reading it. Reconciliation keeps retrying, so activating a PriceBook is enough to clear the condition with no edit to the Offering.</p>
+<p>Reason <code>PricebookParseFailed</code> means a book was found but one of the rates the Offering needs could not be read; its message names the meter and the offending value. Fix the rate on the PriceBook. An Offering with no <code>resourcePricing</code> at all needs no PriceBook and resolves either way.</p>
 <h2 id="related-guides">Related guides<a class="headerlink" href="#related-guides" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="compose-subscriptions.html">Compose subscriptions</a> for parents, required Offerings, orphaning, and target references.</li>
-<li><a href="define-offering.html">Define an offering</a> for the terms this Subscription accrues against.</li>
-<li><a href="deactivate-a-subscription.html">Deactivate a subscription</a> for ending one and what holds its finalizer.</li>
-<li><a href="../concepts/subscription.html">Subscription</a> for the gates, the status fields, and why deactivation is terminal.</li>
+<li><a href="define-offering.html">Define an offering</a> for the recurring fee, immutability, and the versioning pattern.</li>
+<li><a href="define-pricing.html">Define pricing with a PriceBook</a> for the rates these margins are applied to.</li>
+<li><a href="collect-cost-data.html">Collect cost data</a> for the allocation collection that produces the usage in the first place.</li>
+<li><a href="read-subscription-costs.html">Read subscription costs</a> for the charges these prices produce.</li>
 </ul>
 
 

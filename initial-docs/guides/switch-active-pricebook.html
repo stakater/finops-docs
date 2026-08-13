@@ -5,13 +5,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/guides/subscribe-to-offering.html">
+        <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/guides/switch-active-pricebook.html">
       
       
-        <link rel="prev" href="price-resource-usage.html">
+        <link rel="prev" href="define-pricing.html">
       
       
-        <link rel="next" href="compose-subscriptions.html">
+        <link rel="next" href="collect-cost-data.html">
       
       
         
@@ -22,7 +22,7 @@
     
     
       
-        <title>Subscribe to an offering - FinOps Operator</title>
+        <title>Switch the active PriceBook - FinOps Operator</title>
       
     
     
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#subscribe-to-an-offering" class="md-skip">
+        <a href="#switch-the-active-pricebook" class="md-skip">
           Skip to content
         </a>
       
@@ -2787,10 +2787,37 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="switch-active-pricebook.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch the active PriceBook
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="switch-active-pricebook.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2806,6 +2833,105 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-find-out-which-book-is-active-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Find out which book is active now
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-move-the-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Move the annotation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-verify-the-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Verify the switch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-more-than-one-book-carries-the-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If more than one book carries the annotation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rate-changes-are-not-retroactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate changes are not retroactive
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related guides
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2899,37 +3025,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="subscribe-to-offering.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="subscribe-to-offering.html" class="md-nav__link">
         
   
   
@@ -2945,116 +3044,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-reference-the-offering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Reference the Offering
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-know-what-has-to-be-true-before-it-activates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Know what has to be true before it activates
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-apply-the-subscription" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Apply the Subscription
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-verify-activation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Verify activation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-tell-a-waiting-subscription-from-a-finished-one" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 5: Tell a waiting Subscription from a finished one
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-confirm-charges-are-accruing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Confirm charges are accruing
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-guides" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Related guides
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3522,10 +3511,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-reference-the-offering" class="md-nav__link">
+  <a href="#step-1-find-out-which-book-is-active-now" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Reference the Offering
+        Step 1: Find out which book is active now
       
     </span>
   </a>
@@ -3533,10 +3522,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-know-what-has-to-be-true-before-it-activates" class="md-nav__link">
+  <a href="#step-2-move-the-annotation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Know what has to be true before it activates
+        Step 2: Move the annotation
       
     </span>
   </a>
@@ -3544,10 +3533,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-apply-the-subscription" class="md-nav__link">
+  <a href="#step-3-verify-the-switch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Apply the Subscription
+        Step 3: Verify the switch
       
     </span>
   </a>
@@ -3555,10 +3544,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-verify-activation" class="md-nav__link">
+  <a href="#if-more-than-one-book-carries-the-annotation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Verify activation
+        If more than one book carries the annotation
       
     </span>
   </a>
@@ -3566,21 +3555,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-tell-a-waiting-subscription-from-a-finished-one" class="md-nav__link">
+  <a href="#rate-changes-are-not-retroactive" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Tell a waiting Subscription from a finished one
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-confirm-charges-are-accruing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Confirm charges are accruing
+        Rate changes are not retroactive
       
     </span>
   </a>
@@ -3618,107 +3596,54 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
 
-<h1 id="subscribe-to-an-offering">Subscribe to an offering<a class="headerlink" href="#subscribe-to-an-offering" title="Permanent link">#</a></h1>
-<p>A <code>Subscription</code> binds a subscriber to an <a href="define-offering.html">Offering</a> and starts the billing clock. This guide creates the simplest useful one, a Subscription with nothing but an <code>offeringRef</code>, then confirms it activated and reads the state it left behind. It is for a platform engineer, or the automation that provisions a tenant, with edit rights in the namespace the Subscription will live in.</p>
+<h1 id="switch-the-active-pricebook">Switch the active PriceBook<a class="headerlink" href="#switch-the-active-pricebook" title="Permanent link">#</a></h1>
+<p>Exactly one PriceBook drives pricing at a time, and which one it is comes down to a single annotation you control. Keeping a second book around is how a new rate card gets reviewed as an ordinary manifest before it takes effect, and how you get back to the old rates if the new ones turn out wrong. This guide moves the active marker from one book to another.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
 <ul>
-<li>The FinOps Operator is <a href="../getting-started/installation/kubernetes.html">installed</a> and its controller pod is running.</li>
-<li>An <code>Offering</code> whose <code>READY</code> column reads <code>True</code>. <a href="define-offering.html">Define an offering</a> authors one.</li>
-<li>A <a href="collect-cost-data.html"><code>SubscriptionChargeCollection</code> CostJob</a> scheduled, if the fee is to accrue into charge rows rather than only be declared. A cluster without one also never finishes deleting a Subscription.</li>
-<li><code>kubectl</code> edit permission in the namespace you are creating the Subscription in, which is <code>finops-operator-system</code> throughout this guide.</li>
+<li>Two PriceBooks exist, and the one you are switching to already has the rates you want. <a href="define-pricing.html">Define pricing with a PriceBook</a> covers authoring it.</li>
+<li><code>kubectl</code> edit permission on both objects. Selection runs cluster-wide, but the objects are namespace-scoped, so pass <code>-n</code> on every command below.</li>
 </ul>
-<p>For a Subscription that hangs off another one, or whose activation depends on a sibling or a workload, read <a href="compose-subscriptions.html">compose subscriptions</a> after this page.</p>
-<h2 id="step-1-reference-the-offering">Step 1: Reference the Offering<a class="headerlink" href="#step-1-reference-the-offering" title="Permanent link">#</a></h2>
-<p><code>spec.offeringRef</code> is the only required field on the spec, and it takes two values, both required:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
-<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<h2 id="step-1-find-out-which-book-is-active-now">Step 1: Find out which book is active now<a class="headerlink" href="#step-1-find-out-which-book-is-active-now" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pricebooks<span class="w"> </span>--all-namespaces
 </code></pre></div>
-<p><code>namespace</code> carries <code>+required</code> and a minimum length of one character, and it is never filled in from the Subscription's own namespace. Omitting it is rejected by the API server, not defaulted, even when the Offering sits in the same namespace as the Subscription. That is deliberate: a reference means the same object wherever the manifest is applied, so the same file cannot silently bind to a different Offering in a different namespace.</p>
-<p>The whole reference is immutable, held by a CEL rule on <code>spec</code> that rejects any change with <code>offeringRef is immutable; create a new Subscription instead</code>. Check the manifest against the API server before you commit to it:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>subscription.yaml<span class="w"> </span>--dry-run<span class="o">=</span>server
+<p>The book with <code>ACTIVE</code> set to <code>true</code> is the incumbent. Note its name and namespace; you need both in step 2.</p>
+<h2 id="step-2-move-the-annotation">Step 2: Move the annotation<a class="headerlink" href="#step-2-move-the-annotation" title="Permanent link">#</a></h2>
+<p>Set the marker on the target first. That one change is enough to switch: an annotated book wins outright, and the incumbent is demoted in the same reconcile. Taking the marker off the old book afterwards is cleanup, but it is not optional: leaving both annotated makes the next switch ambiguous, as the section below explains.</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>annotate<span class="w"> </span>pricebook<span class="w"> </span>onprem-2026h2<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>finops.stakater.com/active<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--overwrite
+
+kubectl<span class="w"> </span>annotate<span class="w"> </span>pricebook<span class="w"> </span>onprem-standard<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>finops.stakater.com/active-
 </code></pre></div>
-<p>Moving a subscriber onto different terms later means creating a second Subscription against a second Offering, which is the sequence in <a href="../concepts/offering.html#replacing-an-offering">replacing an Offering</a>.</p>
-<h2 id="step-2-know-what-has-to-be-true-before-it-activates">Step 2: Know what has to be true before it activates<a class="headerlink" href="#step-2-know-what-has-to-be-true-before-it-activates" title="Permanent link">#</a></h2>
-<p>Activation is not one condition but four, checked in a fixed order on every reconcile: the Offering, then the parent, then compatibility coverage, then the target. All four must pass. They are continuous checks rather than admission checks, so a Subscription that fails one is still admitted, held at <code>Ready=False</code>, and activates on its own once the condition clears. <a href="../concepts/subscription.html#the-four-activation-gates">The four activation gates</a> sets out what each one tests and which of them can also end an already-active Subscription.</p>
-<p>What a guide needs from that is the reason vocabulary, because the failing gate names itself on the <code>Ready</code> condition. The Offering gate reports <code>OfferingNotFound</code> or <code>OfferingNotReady</code>. Where a <code>spec.parent</code> is set, the parent gate reports <code>ParentSubscriptionNotFound</code>, <code>ParentSubscriptionDeactivated</code>, or <code>ParentSubscriptionNotReady</code>. Where the bound Offering declares <code>requiredOfferings</code>, the compatibility gate reports <code>CompatibilityRequirementNotMet</code>. Where a <code>lifecycle.targetRef</code> is set, the target gate reports <code>TargetNotFound</code>, or <code>TargetIsSelfReference</code> if the Subscription named itself. A read that fails for some other reason surfaces as <code>ValidationError</code> at whichever gate hit it.</p>
-<p>The Subscription in step 3 sets neither a <code>parent</code> nor a <code>targetRef</code> and binds an Offering that requires nothing, so gates two to four pass trivially and only the first two reasons are reachable. Opting into any of the other three makes it a live dependency for the rest of the Subscription's life, which is what <a href="compose-subscriptions.html">compose subscriptions</a> covers, one procedure per gate.</p>
-<h2 id="step-3-apply-the-subscription">Step 3: Apply the Subscription<a class="headerlink" href="#step-3-apply-the-subscription" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># subscription-acme-platform-base.yaml</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subscription</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acme-platform-base</span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
-<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<p>The trailing <code>-</code> on the second command is how <code>kubectl</code> removes an annotation; <code>--overwrite</code> on the first matters only if the target already carries the annotation with some other value.</p>
+<p>Each command triggers a reconcile, and on each one the operator lists every PriceBook in the cluster and picks a winner. It patches the winner <code>status.active: true</code> with an <code>Active</code> condition whose reason is <code>Activated</code>, and patches every other book <code>status.active: false</code> with reason <code>Demoted</code>. A demoted book also has its <code>status.activePricing</code> cleared, because it no longer describes what OpenCost is using.</p>
+<p>Only the winner then touches OpenCost. It renders its rates into the <code>finops-operator-custom-pricing-configs</code> ConfigMap, and if the rendered document differs from what was already there, the operator patches the OpenCost Deployment's pod template to force a rolling restart, since OpenCost reads its pricing document only at startup. The document records the book it came from in its <code>description</code> field, so a switch to a differently named book changes the content and restarts OpenCost even when the two books carry identical rates.</p>
+<h2 id="step-3-verify-the-switch">Step 3: Verify the switch<a class="headerlink" href="#step-3-verify-the-switch" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pricebooks<span class="w"> </span>--all-namespaces
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>subscription-acme-platform-base.yaml
+<div class="highlight"><pre><span></span><code>NAMESPACE                 NAME             ACTIVE   READY
+finops-operator-system    onprem-2026h2    true     True
+finops-operator-system    onprem-standard  false    True
 </code></pre></div>
-<p>To bill measured consumption as well as the fee, add <code>usageSources</code> here; <a href="price-resource-usage.html">price resource usage</a> covers pairing them with the Offering's <code>resourcePricing</code>. Unlike <code>offeringRef</code>, <code>usageSources</code> stays editable afterwards.</p>
-<h2 id="step-4-verify-activation">Step 4: Verify activation<a class="headerlink" href="#step-4-verify-activation" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscriptions<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>NAME                 READY
-acme-platform-base   True
-</code></pre></div>
-<p><code>READY</code> is the <code>status.ready</code> print column. <code>True</code> means every gate passed and the billing epoch has opened. The two status fields worth reading next are the timestamp the epoch opened at and the conditions that recorded it:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.activatedAt}{"\n"}'</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
-</code></pre></div>
-<p>On a Subscription that just activated, <code>describe</code> shows a <code>Ready</code> condition and an <code>Active</code> condition, both <code>True</code> and both carrying reason <code>ActivationSucceeded</code>. <code>status.activatedAt</code> is written once and never moved, and everything downstream keys off it: charges are computed from it, <code>minPeriods</code> is counted from it, and a Subscription that never activated is skipped outright by the collection job.</p>
-<p>If <code>READY</code> reads <code>False</code>, <code>describe</code> names the gate that is holding it, using the reason vocabulary in step 2. <a href="../reference/status-conditions.html">Status conditions</a> lists the full set.</p>
-<h2 id="step-5-tell-a-waiting-subscription-from-a-finished-one">Step 5: Tell a waiting Subscription from a finished one<a class="headerlink" href="#step-5-tell-a-waiting-subscription-from-a-finished-one" title="Permanent link">#</a></h2>
-<p><code>READY False</code> is not one state. It covers a Subscription that has not activated yet, one that has ended for good, and one that is active and billing while a gate is transiently failing. The <code>Ready</code> condition alone does not separate them, because deactivation writes <code>Ready=False</code> with reason <code>ValidationSucceeded</code>, which describes nothing about the cause. Read the <code>Active</code> condition and <code>status.deactivatedAt</code> instead:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.ready}{"  "}{.status.deactivatedAt}{"\n"}{range .status.conditions[*]}{.type}{"\t"}{.status}{"\t"}{.reason}{"\n"}{end}'</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th>What you see</th>
-<th>What it means</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>READY True</code></td>
-<td>Active. <code>Active=True</code> with reason <code>ActivationSucceeded</code>, or <code>Orphaned</code> if it outlived its parent.</td>
-</tr>
-<tr>
-<td><code>READY False</code> and no <code>Active</code> condition at all</td>
-<td>It has never activated. The <code>Ready</code> condition's reason names the failing gate.</td>
-</tr>
-<tr>
-<td><code>READY False</code> with <code>Active=True</code></td>
-<td>It is still active and still accruing charges; a gate is failing without ending it, such as an Offering that has gone not ready. <code>status.deactivatedAt</code> is absent.</td>
-</tr>
-<tr>
-<td><code>READY False</code> with <code>Active=False</code></td>
-<td>It has ended, and terminally. The <code>Active</code> condition's reason carries the real cause: <code>ParentDeactivated</code>, <code>CompatibilityRequirementNotMet</code>, <code>TargetNotFound</code>, or <code>MarkedForDeletion</code>. <code>status.deactivatedAt</code> is set.</td>
-</tr>
-</tbody>
-</table>
-<p>The absent-<code>Active</code>-condition row is the reliable discriminator for a Subscription that never got going, because the not-ready path writes only the <code>Ready</code> condition and never touches <code>Active</code>. <code>status.deactivatedAt</code> is the reliable one for a Subscription that ended: it is written once, never cleared, and a Subscription carrying it is not re-validated on any later reconcile, so it will not come back if the Offering recovers. <a href="../concepts/subscription.html#what-status-tells-you">What status tells you</a> sets out the rest of the fields.</p>
-<h2 id="step-6-confirm-charges-are-accruing">Step 6: Confirm charges are accruing<a class="headerlink" href="#step-6-confirm-charges-are-accruing" title="Permanent link">#</a></h2>
-<p><code>status.costs</code> is written by the <code>SubscriptionChargeCollection</code> CostJob on its own schedule, not by the reconciler, so it appears on the first run after activation rather than at activation:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.costs[*].granularity}{"\n"}'</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>hour day month
-</code></pre></div>
-<p>Three rolling buckets, in micro-currency, where 1,000,000 micros is 1.00 of the active PriceBook's currency. An empty result after a collection run has fired means the Subscription had not activated when the run started, or that no <code>SubscriptionChargeCollection</code> CostJob is scheduled at all. <a href="read-subscription-costs.html">Read subscription costs</a> interprets the values and the per-meter breakdown.</p>
+<p><code>ACTIVE</code> should have moved and <code>READY</code> on the new book should be <code>True</code>. Selection deliberately ignores readiness, so <code>ACTIVE true</code> with <code>READY False</code> means the switch took but the new rates did not parse: the book stays active, its <code>Ready</code> condition carries reason <code>PricebookParseFailed</code> naming the offending field, and the operator leaves the previous pricing document in place rather than pushing rates it could not read. Nothing is lost either way, so fix the rate on the new book or move the annotation back.</p>
+<p>To confirm what OpenCost is now costing with, read <code>status.activePricing</code> on the new book. It is populated only on the active, ready book and mirrors the document the operator applied.</p>
+<h2 id="if-more-than-one-book-carries-the-annotation">If more than one book carries the annotation<a class="headerlink" href="#if-more-than-one-book-carries-the-annotation" title="Permanent link">#</a></h2>
+<p>Nothing stops you annotating two books, and the outcome is not "the one I annotated last". Annotations carry no timestamp, so among several annotated books the operator falls back to the newest <code>creationTimestamp</code>, tie-broken on namespace then name ascending. The rest are demoted as though they had never been annotated. Removing the marker from the outgoing book is what keeps the choice unambiguous, which is why step 2 has two commands rather than one.</p>
+<h2 id="rate-changes-are-not-retroactive">Rate changes are not retroactive<a class="headerlink" href="#rate-changes-are-not-retroactive" title="Permanent link">#</a></h2>
+<p>Switching books changes what gets priced from now on. It does not reprice what is already billed, and the difference shows up in three places:</p>
+<ul>
+<li>Every charge row records the unit price it was written with, and the collector resumes from each Subscription's last finalized hour, so billed hours keep the prices they were billed at. Hours not yet finalized are recomputed from the new rates.</li>
+<li>An Offering resolves <code>status.resolvedPricing</code> once and keeps it, because its spec is immutable. An Offering created before the switch goes on publishing the old unit prices, while a usage charge takes its rate from the <code>pricebooks</code> table row the collector stamped onto the allocation, so the two can disagree until you create a replacement Offering.</li>
+<li>Where a namespace that runs a <code>ResourceCostCollection</code> CostJob holds more than one PriceBook, usage can be priced from a book that is not the active one at all. <a href="../concepts/pricebook.html">PriceBook</a> explains that path; keeping a single book in any collecting namespace avoids it, which is a reason to hold the outgoing book somewhere else.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Helm chart's optional default PriceBook, named <code>&lt;release&gt;-default-pricing</code>, does not mark itself active in a way the operator sees. Its template writes <code>finops.stakater.com/active: "true"</code> under <code>metadata.labels</code>, and the operator reads only the annotation of that name, so the marker has no effect on selection. A chart-provisioned book becomes active only by winning the bootstrap election, which is what happens when it is the only book on a fresh cluster, and it loses the slot to any book you annotate. If you want it chosen explicitly, annotate it yourself with the command in step 2.</p>
+</div>
 <h2 id="related-guides">Related guides<a class="headerlink" href="#related-guides" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="compose-subscriptions.html">Compose subscriptions</a> for parents, required Offerings, orphaning, and target references.</li>
-<li><a href="define-offering.html">Define an offering</a> for the terms this Subscription accrues against.</li>
-<li><a href="deactivate-a-subscription.html">Deactivate a subscription</a> for ending one and what holds its finalizer.</li>
-<li><a href="../concepts/subscription.html">Subscription</a> for the gates, the status fields, and why deactivation is terminal.</li>
+<li><a href="define-pricing.html">Define pricing with a PriceBook</a> to author the book you are switching to.</li>
+<li><a href="../concepts/pricebook.html">PriceBook</a> for all three selection tiers and the status fields the operator writes.</li>
 </ul>
 
 

@@ -8,7 +8,7 @@
         <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/guides/collect-cost-data.html">
       
       
-        <link rel="prev" href="define-pricing.html">
+        <link rel="prev" href="switch-active-pricebook.html">
       
       
         <link rel="next" href="define-offering.html">
@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -49,6 +49,8 @@
     
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/pills.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -340,7 +342,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <nav class="md-header__inner md-grid" aria-label="Header">
 
     <!-- Link to home -->
-    <a href="../index.html" title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       <!-- 
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -1988,7 +1990,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -2017,33 +2019,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
   
-    <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
     
@@ -2053,17 +2028,17 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Getting Started
+    Overview
   
 
     
@@ -2074,12 +2049,12 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Getting Started
+    Overview
   
 
           </label>
@@ -2092,14 +2067,14 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Getting started
+    Introduction
   
 
     
@@ -2120,14 +2095,14 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/prerequisites.html" class="md-nav__link">
+      <a href="../overview/key-features.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Prerequisites
+    Key features
   
 
     
@@ -2148,42 +2123,14 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/installation.html" class="md-nav__link">
+      <a href="../overview/use-cases.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Installation
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../getting-started/quickstart.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Quickstart
+    Use cases
   
 
     
@@ -2219,10 +2166,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -2240,8 +2187,8 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2258,14 +2205,42 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../concepts/index.html" class="md-nav__link">
+      <a href="../concepts/architecture.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Concepts
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/terminology.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminology
   
 
     
@@ -2447,6 +2422,283 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/compatibility-and-hierarchy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compatibility and hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/quick-start.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Installation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation/overview.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation/openshift.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    On OpenShift
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation/kubernetes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    On Kubernetes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/uninstalling.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uninstalling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2517,7 +2769,35 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <span class="md-ellipsis">
     
   
-    Define pricing
+    Define pricing with a PriceBook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="switch-active-pricebook.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch the active PriceBook
   
 
     
@@ -2600,71 +2880,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Steps
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-create-a-finopsprovider" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Create a FinOpsProvider
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-verify-the-finopsprovider" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Verify the FinOpsProvider
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-create-a-costjob-for-resource-cost-collection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Create a CostJob for resource cost collection
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-understand-the-timeout-fields" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Understand the timeout fields
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verify-it-worked" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify it worked
+        Prerequisites
       
     </span>
   </a>
@@ -2672,10 +2891,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#step-1-declare-the-finopsprovider" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Troubleshooting
+        Step 1: Declare the FinOpsProvider
       
     </span>
   </a>
@@ -2683,10 +2902,43 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#related" class="md-nav__link">
+  <a href="#step-2-create-the-collection-costjob" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Related
+        Step 2: Create the collection CostJob
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-raise-a-timeout-if-a-run-outgrows-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Raise a timeout if a run outgrows it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-verify-that-a-run-happened" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Verify that a run happened
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related guides
       
     </span>
   </a>
@@ -2737,6 +2989,34 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
+      <a href="price-resource-usage.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Price resource usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="subscribe-to-offering.html" class="md-nav__link">
         
   
@@ -2745,6 +3025,34 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="compose-subscriptions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compose subscriptions
   
 
     
@@ -2793,42 +3101,14 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="deactivation-and-cleanup.html" class="md-nav__link">
+      <a href="deactivate-a-subscription.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deactivation and cleanup
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="uninstall.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Uninstall
+    Deactivate a subscription
   
 
     
@@ -2902,62 +3182,15 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1">
-        
-          
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CRDs
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    CRDs
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../reference/crds/finopsprovider.html" class="md-nav__link">
+      <a href="../reference/api.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    FinOpsProvider
+    Api
   
 
     
@@ -2966,126 +3199,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/crds/pricebook.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PriceBook
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/crds/costjob.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CostJob
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/crds/offering.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/crds/subscription.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Subscription
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -3105,7 +3218,119 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <span class="md-ellipsis">
     
   
-    Configuration
+    Configuration reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/rbac.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RBAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/security-model.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/metrics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/webhooks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhooks
   
 
     
@@ -3134,34 +3359,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Status conditions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/glossary.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Glossary
   
 
     
@@ -3209,6 +3406,60 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eula.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EULA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3238,71 +3489,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Steps
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-create-a-finopsprovider" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Create a FinOpsProvider
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-verify-the-finopsprovider" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Verify the FinOpsProvider
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-create-a-costjob-for-resource-cost-collection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Create a CostJob for resource cost collection
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-understand-the-timeout-fields" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Understand the timeout fields
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verify-it-worked" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify it worked
+        Prerequisites
       
     </span>
   </a>
@@ -3310,10 +3500,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#step-1-declare-the-finopsprovider" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Troubleshooting
+        Step 1: Declare the FinOpsProvider
       
     </span>
   </a>
@@ -3321,10 +3511,43 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#related" class="md-nav__link">
+  <a href="#step-2-create-the-collection-costjob" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Related
+        Step 2: Create the collection CostJob
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-raise-a-timeout-if-a-run-outgrows-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Raise a timeout if a run outgrows it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-verify-that-a-run-happened" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Verify that a run happened
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related guides
       
     </span>
   </a>
@@ -3352,19 +3575,19 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 
 <h1 id="collect-cost-data">Collect cost data<a class="headerlink" href="#collect-cost-data" title="Permanent link">#</a></h1>
-<p>This guide shows you how to configure a <code>FinOpsProvider</code> to tell the operator about your cloud environment, and how to create a <code>CostJob</code> of type <code>ResourceCostCollection</code> to schedule regular pulls of allocation data from OpenCost. After completing this guide, the operator will periodically fetch workload cost data and store it for Subscription charge computation.</p>
-<p><strong>Prerequisites:</strong></p>
+<p>Allocation data is what turns measured consumption into money. This guide declares the <code>FinOpsProvider</code> that records where the cluster runs, then creates the <code>ResourceCostCollection</code> CostJob whose generated CronJob pulls hourly allocation rows from OpenCost into PostgreSQL, and checks that a run actually happened. It is for whoever installed the operator and has cluster-scoped create permission plus edit rights in the operator's namespace.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
 <ul>
-<li>A running FinOps Operator installation. See <a href="../getting-started/installation.html">Installation</a>.</li>
-<li>OpenCost deployed and reachable in the cluster (<code>OPENCOST_CONNECTION_STRING</code> configured on the manager).</li>
-<li><code>kubectl</code> access to the operator namespace (typically <code>finops-operator-system</code>).</li>
-<li>A <code>PriceBook</code> in place if you want custom pricing applied to allocation data. See <a href="define-pricing.html">Define pricing</a>.</li>
+<li>The FinOps Operator is <a href="../getting-started/installation/kubernetes.html">installed</a> and its controller pod is running.</li>
+<li>OpenCost is reachable, and <code>OPENCOST_CONNECTION_STRING</code> is set on the controller. The value is passed through to each collection pod.</li>
+<li>PostgreSQL is reachable with the connection string the controller was installed with.</li>
+<li>A PriceBook exists in the namespace the CostJob will live in. <a href="define-pricing.html">Define pricing with a PriceBook</a> covers writing one.</li>
 </ul>
-<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">#</a></h2>
-<h3 id="1-create-a-finopsprovider">1. Create a FinOpsProvider<a class="headerlink" href="#1-create-a-finopsprovider" title="Permanent link">#</a></h3>
-<p>The <code>FinOpsProvider</code> is a cluster-scoped singleton. It must be named exactly <code>default</code>. Exactly one of the four provider options (<code>awsoptions</code>, <code>gcpoptions</code>, <code>azureoptions</code>, <code>onpremoptions</code>) must be set; any other combination is rejected at admission.</p>
-<p><strong>On-premises</strong> clusters do not use a cloud billing integration secret. Set only <code>pricingModelSource</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<h2 id="step-1-declare-the-finopsprovider">Step 1: Declare the FinOpsProvider<a class="headerlink" href="#step-1-declare-the-finopsprovider" title="Permanent link">#</a></h2>
+<p><code>FinOpsProvider</code> is cluster-scoped and there is exactly one of it. Three CEL validation rules on the type, not a webhook, are what enforce that: the object has to be named <code>default</code>, and it has to carry exactly one of the four provider option blocks. The API server checks them on every create and update, so they hold whether or not the controller is running and <code>kubectl apply --dry-run=server</code> reports a bad object before you apply it. <a href="../concepts/finops-provider.html#rules-the-api-server-enforces">Rules the API server enforces</a> quotes each rejection message.</p>
+<p>On owned hardware there is no cloud bill to reconcile against, so <code>onpremoptions</code> carries only <code>pricingModelSource</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># finopsprovider.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FinOpsProvider</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
@@ -3372,8 +3595,9 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <span class="w">  </span><span class="nt">onpremoptions</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">pricingModelSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pricebook</span>
 </code></pre></div>
-<p><strong>AWS</strong> clusters can additionally reference a Secret that holds cloud billing credentials:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<p>On AWS, name the Secret that holds your cloud billing credentials. The operator moves the value into OpenCost's own cloud integration setting and never reads the credentials behind it:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># finopsprovider.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FinOpsProvider</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
@@ -3382,68 +3606,20 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <span class="w">    </span><span class="nt">cloudIntegrationSecret</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aws-cloud-integration</span>
 <span class="w">    </span><span class="nt">pricingModelSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pricebook</span>
 </code></pre></div>
-<p><strong>GCP</strong> and <strong>Azure</strong> follow the same pattern as AWS, using <code>gcpoptions</code> or <code>azureoptions</code> respectively, each accepting the same <code>cloudIntegrationSecret</code> and <code>pricingModelSource</code> fields.</p>
-<p>Setting <code>pricingModelSource: Pricebook</code> tells the operator to enable OpenCost's custom-pricing path so that your <code>PriceBook</code>-derived ConfigMap is used for cost calculations.</p>
-<p>Apply the appropriate provider:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>finops-provider.yaml
+<p>GCP and Azure take the same two fields under <code>gcpoptions</code> and <code>azureoptions</code>. On all three cloud blocks the secret has to be non-empty to have any effect: each cloud branch in the reconciler requires the block to be present <em>and</em> the secret set, so an <code>awsoptions</code> block with no secret matches nothing and the reconcile logs <code>No valid provider option configured</code> and returns. If you run on a cloud but price everything from a PriceBook, either set the secret or declare <code>onpremoptions</code> instead.</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>finopsprovider.yaml
+kubectl<span class="w"> </span>get<span class="w"> </span>finopsprovider<span class="w"> </span>default
 </code></pre></div>
-<h3 id="2-verify-the-finopsprovider">2. Verify the FinOpsProvider<a class="headerlink" href="#2-verify-the-finopsprovider" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>finopsprovider<span class="w"> </span>default<span class="w"> </span>-o<span class="w"> </span>yaml
-</code></pre></div>
-<p>Look for:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">conditions</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ready</span>
-<span class="w">      </span><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="s">"True"</span>
-<span class="w">  </span><span class="nt">lastSyncTime</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-20T10:00:00Z"</span>
-</code></pre></div>
-<h3 id="3-create-a-costjob-for-resource-cost-collection">3. Create a CostJob for resource cost collection<a class="headerlink" href="#3-create-a-costjob-for-resource-cost-collection" title="Permanent link">#</a></h3>
-<p>A <code>CostJob</code> of type <code>ResourceCostCollection</code> instructs the operator to create a Kubernetes <code>CronJob</code> in the operator's namespace. That <code>CronJob</code> runs on the configured schedule and pulls allocation data from OpenCost.</p>
-<p>The <code>interval</code> field controls how often the job runs. The following values are recognized and produce exact cron expressions:</p>
-<table>
-<thead>
-<tr>
-<th><code>interval</code></th>
-<th>Generated schedule</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>1m</code></td>
-<td><code>* * * * *</code></td>
-<td>Every minute</td>
-</tr>
-<tr>
-<td><code>5m</code></td>
-<td><code>*/5 * * * *</code></td>
-<td>Every 5 minutes</td>
-</tr>
-<tr>
-<td><code>1h</code></td>
-<td><code>0 * * * *</code></td>
-<td>Top of every hour</td>
-</tr>
-<tr>
-<td><code>6h</code></td>
-<td><code>0 */6 * * *</code></td>
-<td>Every 6 hours</td>
-</tr>
-<tr>
-<td><code>12h</code></td>
-<td><code>0 */12 * * *</code></td>
-<td>Every 12 hours</td>
-</tr>
-<tr>
-<td><code>24h</code></td>
-<td><code>0 0 * * *</code></td>
-<td>Daily at 00:00 UTC</td>
-</tr>
-</tbody>
-</table>
-<p>Any value not in this list falls back to the daily schedule <code>0 0 * * *</code>. Use one of the recognized values.</p>
-<p>A <code>1h</code> interval is a good default for most environments:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Outside Multi Tenant Operator bundled mode, applying this object changes nothing about OpenCost. The pricing ConfigMap and the OpenCost restart are written by the PriceBook reconciler, and the provider path deliberately skips them so one change does not restart OpenCost twice. This reconciler also writes no status at all, so <code>lastSyncTime</code> and the conditions stay empty even on success; the controller log is where an applied provider shows up. Collection itself does not read the object, so the steps below work regardless. <a href="../concepts/finops-provider.html">FinOpsProvider</a> covers what changes in MTO-bundled mode.</p>
+</div>
+<h2 id="step-2-create-the-collection-costjob">Step 2: Create the collection CostJob<a class="headerlink" href="#step-2-create-the-collection-costjob" title="Permanent link">#</a></h2>
+<p>A <code>CostJob</code> declares a schedule rather than a job. The reconciler turns it into a Kubernetes CronJob it owns, and the collection work happens in the short-lived pods that CronJob fires.</p>
+<p><code>spec.interval</code> is a duration, but it is not translated arithmetically. Only <code>1h</code>, <code>6h</code>, <code>12h</code>, <code>24h</code>, <code>1m</code>, and <code>5m</code> map to distinct schedules, and the match is on the parsed duration, so <code>60m</code> behaves exactly like <code>1h</code>. Anything else, <code>2h</code> and <code>30m</code> included, is accepted at admission and then silently falls through to the daily <code>0 0 * * *</code>, with nothing on the CostJob to say the value was ignored, which is why step 4 reads the schedule back off the generated CronJob. Of those six, <code>1m</code> and <code>5m</code> are for debugging rather than finer data: a run's unit of work is a whole hour, so a sub-hourly interval just recomputes the current hour repeatedly. <a href="../concepts/costjob.html#from-interval-to-schedule">From interval to schedule</a> gives the cron expression each value produces.</p>
+<p>An hourly job matches the granularity the data has:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># costjob-resource.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CostJob</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource-cost-collection</span>
@@ -3452,94 +3628,39 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceCostCollection</span>
 <span class="w">  </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
 </code></pre></div>
-<p>Apply it:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>resource-cost-collection.yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>costjob-resource.yaml
 </code></pre></div>
-<h3 id="4-understand-the-timeout-fields">4. Understand the timeout fields<a class="headerlink" href="#4-understand-the-timeout-fields" title="Permanent link">#</a></h3>
-<p>Each <code>CostJob</code> exposes timeout fields that control how long individual phases of the job are allowed to run. You can set these to tune the job for your environment; the defaults are listed below.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Default</th>
-<th>What it controls</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>databaseInitTimeout</code></td>
-<td><code>2m</code></td>
-<td>Time allowed for the job to connect to and initialize the PostgreSQL database.</td>
-</tr>
-<tr>
-<td><code>kubernetesOperationTimeout</code></td>
-<td><code>1m</code></td>
-<td>Time allowed for Kubernetes API calls made during the job run.</td>
-</tr>
-<tr>
-<td><code>openCostFetchTimeout</code></td>
-<td><code>2m</code></td>
-<td>Time allowed to fetch allocation data from OpenCost.</td>
-</tr>
-<tr>
-<td><code>databaseInsertTimeout</code></td>
-<td><code>3m</code></td>
-<td>Time allowed to write fetched data into the database.</td>
-</tr>
-<tr>
-<td><code>databaseViewsRefreshTimeout</code></td>
-<td><code>5m</code></td>
-<td>Time allowed to refresh materialized views after insert.</td>
-</tr>
-<tr>
-<td><code>statusUpdateTimeout</code></td>
-<td><code>1m</code></td>
-<td>Time allowed to write the execution result back to the <code>CostJob</code> status.</td>
-</tr>
-<tr>
-<td><code>httpClientTimeout</code></td>
-<td><code>90s</code></td>
-<td><code>HTTP</code> client timeout for outbound requests (OpenCost, cloud APIs).</td>
-</tr>
-</tbody>
-</table>
-<p>For most clusters the defaults are sufficient. Increase <code>openCostFetchTimeout</code> or <code>databaseInsertTimeout</code> if you see frequent <code>Error</code> or <code>Failed</code> statuses on the <code>CostJob</code> in large clusters.</p>
-<p>A fully annotated example with custom timeouts:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CostJob</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource-cost-collection</span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
-<span class="nt">spec</span><span class="p">:</span>
+<p>The namespace matters more than it looks. Each run resolves its rates by listing PriceBooks in its own CostJob's namespace, copies that book's rates into the <code>pricebooks</code> table, and stamps the row's id onto every allocation it writes. A namespace with no PriceBook makes the run stamp an id of <code>0</code>, which matches no rate row, so those allocations carry no rate and are dropped when charges are computed; a PriceBook with no <code>rates</code> block at all fails the run outright. Keep one PriceBook, with rates, in the namespace that collects.</p>
+<h2 id="step-3-raise-a-timeout-if-a-run-outgrows-it">Step 3: Raise a timeout if a run outgrows it<a class="headerlink" href="#step-3-raise-a-timeout-if-a-run-outgrows-it" title="Permanent link">#</a></h2>
+<p>Six optional duration fields bound the phases of a run, and each has a default set on the type, so an omitted field is not unbounded. On a large cluster the two worth raising first are <code>openCostFetchTimeout</code>, which bounds each hour's fetch-and-stream, and <code>databaseInsertTimeout</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceCostCollection</span>
 <span class="w">  </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
 <span class="w">  </span><span class="nt">openCostFetchTimeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5m</span>
 <span class="w">  </span><span class="nt">databaseInsertTimeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10m</span>
-<span class="w">  </span><span class="nt">databaseViewsRefreshTimeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10m</span>
 </code></pre></div>
-<h2 id="verify-it-worked">Verify it worked<a class="headerlink" href="#verify-it-worked" title="Permanent link">#</a></h2>
-<p>Check the <code>CostJob</code> status:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>costjob<span class="w"> </span>resource-cost-collection<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
+<p>Only the <code>ResourceCostCollection</code> run reads these, so setting them on a <code>SubscriptionChargeCollection</code> CostJob has no effect. <a href="../concepts/costjob.html#timeouts">CostJob</a> lists all six with their defaults and what each one bounds, along with a seventh field that is retained for compatibility and does nothing.</p>
+<h2 id="step-4-verify-that-a-run-happened">Step 4: Verify that a run happened<a class="headerlink" href="#step-4-verify-that-a-run-happened" title="Permanent link">#</a></h2>
+<p>The generated CronJob is named after the CostJob, with <code>-cronjob</code> appended, and lives in the CostJob's namespace:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>cronjob<span class="w"> </span>resource-cost-collection-cronjob<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.spec.schedule}{"\n"}'</span>
 </code></pre></div>
-<p>After the first scheduled run, the status should show:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">lastExecutionStatus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Success</span>
-<span class="w">  </span><span class="nt">lastSuccessfulExecutionTime</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-20T11:00:00Z"</span>
-<span class="w">  </span><span class="nt">lastExecutionTime</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-20T11:00:00Z"</span>
+<p>That prints <code>0 * * * *</code> for the manifest above. If it prints <code>0 0 * * *</code> when you asked for something else, the interval was not one of the six recognised values and fell through to the daily default.</p>
+<p>The CronJob is owned by the CostJob, so deleting the CostJob takes it with it, and each reconcile overwrites the CronJob's <code>spec</code> and labels; edit the CostJob rather than the CronJob. Alongside it the operator creates a Secret named <code>resource-cost-collection-costjob-secret</code>, also owned by the CostJob, which is how the PostgreSQL connection string reaches the pod.</p>
+<p>Nothing is on the CostJob's status until the first run finishes, which for an hourly schedule means the top of the next hour. Once it has:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>costjob<span class="w"> </span>resource-cost-collection<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.lastExecutionStatus}{"  "}{.status.lastSuccessfulExecutionTime}{"\n"}'</span>
 </code></pre></div>
-<p>Confirm the operator created a <code>CronJob</code> in the operator's namespace:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>cronjobs<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+<div class="highlight"><pre><span></span><code>Success  2026-04-20T11:00:00Z
 </code></pre></div>
-<p>You should see an entry named after or associated with <code>resource-cost-collection</code>. The operator manages this <code>CronJob</code> — do not delete or edit it manually.</p>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h2>
-<p>If <code>lastExecutionStatus</code> stays <code>Pending</code> or shows <code>Failed</code>, see <a href="../troubleshooting.html">Troubleshooting</a> and <a href="../reference/status-conditions.html">Status conditions reference</a>. Common causes include an unreachable OpenCost URL, incorrect PostgreSQL credentials, or an unrecognized <code>interval</code> value.</p>
-<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">#</a></h2>
+<p><code>status.lastExecutionStatus</code> tracks the most recent run whatever it said, and <code>status.lastSuccessfulExecutionTime</code> only moves on a success, so comparing the second value against <code>status.lastExecutionTime</code> is the quickest way to spot a job that is running on schedule and failing every time. <code>kubectl get costjob</code> prints the interval and the last status as columns for a faster look, and <code>status.executionHistory</code> keeps the last ten records, newest first, with the error text on each failure. <code>Success</code> and <code>Failed</code> are the only values written; <code>Error</code> and <code>Pending</code> are in the schema and nothing sets them.</p>
+<p>Only a <code>ResourceCostCollection</code> run writes any of this. A <code>SubscriptionChargeCollection</code> CostJob leaves its status empty, so watch its Jobs and pod logs instead.</p>
+<h2 id="related-guides">Related guides<a class="headerlink" href="#related-guides" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="define-pricing.html">Define pricing</a> — create the <code>PriceBook</code> that OpenCost uses for custom rates.</li>
-<li><a href="define-offering.html">Define an offering</a> — create a pricing contract backed by the rates collected here.</li>
-<li><a href="read-subscription-costs.html">Read subscription costs</a> — understand how the <code>SubscriptionChargeCollection</code> job turns raw allocation data into per-Subscription costs.</li>
-<li><a href="../reference/crds/costjob.html">CostJob CRD reference</a></li>
-<li><a href="../reference/crds/finopsprovider.html">FinOpsProvider CRD reference</a></li>
+<li><a href="define-pricing.html">Define pricing with a PriceBook</a> for the rates a collection run stamps onto its allocation rows.</li>
+<li><a href="price-resource-usage.html">Price resource usage</a> to charge a Subscription for the consumption collected here.</li>
+<li><a href="../concepts/costjob.html">CostJob</a> for the second job type, the generated CronJob's pod, and the full timeout list.</li>
+<li><a href="../troubleshooting.html">Troubleshooting</a> when a run reports <code>Failed</code>.</li>
 </ul>
 
 
@@ -4249,7 +4370,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   

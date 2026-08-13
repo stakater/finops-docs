@@ -5,13 +5,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/guides/subscribe-to-offering.html">
+        <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/concepts/terminology.html">
       
       
-        <link rel="prev" href="price-resource-usage.html">
+        <link rel="prev" href="architecture.html">
       
       
-        <link rel="next" href="compose-subscriptions.html">
+        <link rel="next" href="finops-provider.html">
       
       
         
@@ -22,7 +22,7 @@
     
     
       
-        <title>Subscribe to an offering - FinOps Operator</title>
+        <title>Terminology - FinOps Operator</title>
       
     
     
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#subscribe-to-an-offering" class="md-skip">
+        <a href="#terminology" class="md-skip">
           Skip to content
         </a>
       
@@ -2155,18 +2155,20 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -2187,7 +2189,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2205,7 +2207,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../concepts/architecture.html" class="md-nav__link">
+      <a href="architecture.html" class="md-nav__link">
         
   
   
@@ -2230,10 +2232,37 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../concepts/terminology.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminology
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="terminology.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2249,6 +2278,243 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        activation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#active-pricebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        active PriceBook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        allocation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charge-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        charge window
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compatibility-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        compatibility root
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deactivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deactivation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deactivation-snap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deactivation snap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        family
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-tick-proration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        first-tick proration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#margin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        margin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        meter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#micro-currency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        micro-currency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minperiods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        minPeriods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        proration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resourcecostcollection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ResourceCostCollection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptionchargecollection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubscriptionChargeCollection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tick
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tick-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tick alignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2261,7 +2527,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../concepts/finops-provider.html" class="md-nav__link">
+      <a href="finops-provider.html" class="md-nav__link">
         
   
   
@@ -2289,7 +2555,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../concepts/pricebook.html" class="md-nav__link">
+      <a href="pricebook.html" class="md-nav__link">
         
   
   
@@ -2317,7 +2583,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../concepts/costjob.html" class="md-nav__link">
+      <a href="costjob.html" class="md-nav__link">
         
   
   
@@ -2345,7 +2611,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../concepts/offering.html" class="md-nav__link">
+      <a href="offering.html" class="md-nav__link">
         
   
   
@@ -2373,7 +2639,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../concepts/subscription.html" class="md-nav__link">
+      <a href="subscription.html" class="md-nav__link">
         
   
   
@@ -2401,7 +2667,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../concepts/billing-model.html" class="md-nav__link">
+      <a href="billing-model.html" class="md-nav__link">
         
   
   
@@ -2429,7 +2695,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../concepts/compatibility-and-hierarchy.html" class="md-nav__link">
+      <a href="compatibility-and-hierarchy.html" class="md-nav__link">
         
   
   
@@ -2710,20 +2976,18 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2744,7 +3008,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2762,7 +3026,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="define-pricing.html" class="md-nav__link">
+      <a href="../guides/define-pricing.html" class="md-nav__link">
         
   
   
@@ -2790,7 +3054,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="switch-active-pricebook.html" class="md-nav__link">
+      <a href="../guides/switch-active-pricebook.html" class="md-nav__link">
         
   
   
@@ -2818,7 +3082,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="collect-cost-data.html" class="md-nav__link">
+      <a href="../guides/collect-cost-data.html" class="md-nav__link">
         
   
   
@@ -2846,7 +3110,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="define-offering.html" class="md-nav__link">
+      <a href="../guides/define-offering.html" class="md-nav__link">
         
   
   
@@ -2874,7 +3138,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="price-resource-usage.html" class="md-nav__link">
+      <a href="../guides/price-resource-usage.html" class="md-nav__link">
         
   
   
@@ -2899,37 +3163,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="subscribe-to-offering.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../guides/subscribe-to-offering.html" class="md-nav__link">
         
   
   
@@ -2945,116 +3182,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-reference-the-offering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Reference the Offering
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-know-what-has-to-be-true-before-it-activates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Know what has to be true before it activates
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-apply-the-subscription" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Apply the Subscription
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-verify-activation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Verify activation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-tell-a-waiting-subscription-from-a-finished-one" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 5: Tell a waiting Subscription from a finished one
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-confirm-charges-are-accruing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Confirm charges are accruing
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-guides" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Related guides
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3067,7 +3194,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="compose-subscriptions.html" class="md-nav__link">
+      <a href="../guides/compose-subscriptions.html" class="md-nav__link">
         
   
   
@@ -3095,7 +3222,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="read-subscription-costs.html" class="md-nav__link">
+      <a href="../guides/read-subscription-costs.html" class="md-nav__link">
         
   
   
@@ -3123,7 +3250,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="deactivate-a-subscription.html" class="md-nav__link">
+      <a href="../guides/deactivate-a-subscription.html" class="md-nav__link">
         
   
   
@@ -3511,90 +3638,217 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#terms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Terms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        activation
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-reference-the-offering" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#active-pricebook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Reference the Offering
+        active PriceBook
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-know-what-has-to-be-true-before-it-activates" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#allocation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Know what has to be true before it activates
+        allocation
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-apply-the-subscription" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#charge-window" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Apply the Subscription
+        charge window
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-verify-activation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#compatibility-root" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Verify activation
+        compatibility root
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-tell-a-waiting-subscription-from-a-finished-one" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#deactivation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Tell a waiting Subscription from a finished one
+        deactivation
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-confirm-charges-are-accruing" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#deactivation-snap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: Confirm charges are accruing
+        deactivation snap
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#related-guides" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#family" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Related guides
+        family
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-tick-proration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        first-tick proration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#margin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        margin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        meter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#micro-currency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        micro-currency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minperiods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        minPeriods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        proration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resourcecostcollection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ResourceCostCollection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptionchargecollection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubscriptionChargeCollection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tick
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tick-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tick alignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3618,108 +3872,59 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
 
-<h1 id="subscribe-to-an-offering">Subscribe to an offering<a class="headerlink" href="#subscribe-to-an-offering" title="Permanent link">#</a></h1>
-<p>A <code>Subscription</code> binds a subscriber to an <a href="define-offering.html">Offering</a> and starts the billing clock. This guide creates the simplest useful one, a Subscription with nothing but an <code>offeringRef</code>, then confirms it activated and reads the state it left behind. It is for a platform engineer, or the automation that provisions a tenant, with edit rights in the namespace the Subscription will live in.</p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
-<ul>
-<li>The FinOps Operator is <a href="../getting-started/installation/kubernetes.html">installed</a> and its controller pod is running.</li>
-<li>An <code>Offering</code> whose <code>READY</code> column reads <code>True</code>. <a href="define-offering.html">Define an offering</a> authors one.</li>
-<li>A <a href="collect-cost-data.html"><code>SubscriptionChargeCollection</code> CostJob</a> scheduled, if the fee is to accrue into charge rows rather than only be declared. A cluster without one also never finishes deleting a Subscription.</li>
-<li><code>kubectl</code> edit permission in the namespace you are creating the Subscription in, which is <code>finops-operator-system</code> throughout this guide.</li>
-</ul>
-<p>For a Subscription that hangs off another one, or whose activation depends on a sibling or a workload, read <a href="compose-subscriptions.html">compose subscriptions</a> after this page.</p>
-<h2 id="step-1-reference-the-offering">Step 1: Reference the Offering<a class="headerlink" href="#step-1-reference-the-offering" title="Permanent link">#</a></h2>
-<p><code>spec.offeringRef</code> is the only required field on the spec, and it takes two values, both required:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
-<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
-</code></pre></div>
-<p><code>namespace</code> carries <code>+required</code> and a minimum length of one character, and it is never filled in from the Subscription's own namespace. Omitting it is rejected by the API server, not defaulted, even when the Offering sits in the same namespace as the Subscription. That is deliberate: a reference means the same object wherever the manifest is applied, so the same file cannot silently bind to a different Offering in a different namespace.</p>
-<p>The whole reference is immutable, held by a CEL rule on <code>spec</code> that rejects any change with <code>offeringRef is immutable; create a new Subscription instead</code>. Check the manifest against the API server before you commit to it:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>subscription.yaml<span class="w"> </span>--dry-run<span class="o">=</span>server
-</code></pre></div>
-<p>Moving a subscriber onto different terms later means creating a second Subscription against a second Offering, which is the sequence in <a href="../concepts/offering.html#replacing-an-offering">replacing an Offering</a>.</p>
-<h2 id="step-2-know-what-has-to-be-true-before-it-activates">Step 2: Know what has to be true before it activates<a class="headerlink" href="#step-2-know-what-has-to-be-true-before-it-activates" title="Permanent link">#</a></h2>
-<p>Activation is not one condition but four, checked in a fixed order on every reconcile: the Offering, then the parent, then compatibility coverage, then the target. All four must pass. They are continuous checks rather than admission checks, so a Subscription that fails one is still admitted, held at <code>Ready=False</code>, and activates on its own once the condition clears. <a href="../concepts/subscription.html#the-four-activation-gates">The four activation gates</a> sets out what each one tests and which of them can also end an already-active Subscription.</p>
-<p>What a guide needs from that is the reason vocabulary, because the failing gate names itself on the <code>Ready</code> condition. The Offering gate reports <code>OfferingNotFound</code> or <code>OfferingNotReady</code>. Where a <code>spec.parent</code> is set, the parent gate reports <code>ParentSubscriptionNotFound</code>, <code>ParentSubscriptionDeactivated</code>, or <code>ParentSubscriptionNotReady</code>. Where the bound Offering declares <code>requiredOfferings</code>, the compatibility gate reports <code>CompatibilityRequirementNotMet</code>. Where a <code>lifecycle.targetRef</code> is set, the target gate reports <code>TargetNotFound</code>, or <code>TargetIsSelfReference</code> if the Subscription named itself. A read that fails for some other reason surfaces as <code>ValidationError</code> at whichever gate hit it.</p>
-<p>The Subscription in step 3 sets neither a <code>parent</code> nor a <code>targetRef</code> and binds an Offering that requires nothing, so gates two to four pass trivially and only the first two reasons are reachable. Opting into any of the other three makes it a live dependency for the rest of the Subscription's life, which is what <a href="compose-subscriptions.html">compose subscriptions</a> covers, one procedure per gate.</p>
-<h2 id="step-3-apply-the-subscription">Step 3: Apply the Subscription<a class="headerlink" href="#step-3-apply-the-subscription" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># subscription-acme-platform-base.yaml</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subscription</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acme-platform-base</span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
-<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>subscription-acme-platform-base.yaml
-</code></pre></div>
-<p>To bill measured consumption as well as the fee, add <code>usageSources</code> here; <a href="price-resource-usage.html">price resource usage</a> covers pairing them with the Offering's <code>resourcePricing</code>. Unlike <code>offeringRef</code>, <code>usageSources</code> stays editable afterwards.</p>
-<h2 id="step-4-verify-activation">Step 4: Verify activation<a class="headerlink" href="#step-4-verify-activation" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscriptions<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>NAME                 READY
-acme-platform-base   True
-</code></pre></div>
-<p><code>READY</code> is the <code>status.ready</code> print column. <code>True</code> means every gate passed and the billing epoch has opened. The two status fields worth reading next are the timestamp the epoch opened at and the conditions that recorded it:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.activatedAt}{"\n"}'</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
-</code></pre></div>
-<p>On a Subscription that just activated, <code>describe</code> shows a <code>Ready</code> condition and an <code>Active</code> condition, both <code>True</code> and both carrying reason <code>ActivationSucceeded</code>. <code>status.activatedAt</code> is written once and never moved, and everything downstream keys off it: charges are computed from it, <code>minPeriods</code> is counted from it, and a Subscription that never activated is skipped outright by the collection job.</p>
-<p>If <code>READY</code> reads <code>False</code>, <code>describe</code> names the gate that is holding it, using the reason vocabulary in step 2. <a href="../reference/status-conditions.html">Status conditions</a> lists the full set.</p>
-<h2 id="step-5-tell-a-waiting-subscription-from-a-finished-one">Step 5: Tell a waiting Subscription from a finished one<a class="headerlink" href="#step-5-tell-a-waiting-subscription-from-a-finished-one" title="Permanent link">#</a></h2>
-<p><code>READY False</code> is not one state. It covers a Subscription that has not activated yet, one that has ended for good, and one that is active and billing while a gate is transiently failing. The <code>Ready</code> condition alone does not separate them, because deactivation writes <code>Ready=False</code> with reason <code>ValidationSucceeded</code>, which describes nothing about the cause. Read the <code>Active</code> condition and <code>status.deactivatedAt</code> instead:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.ready}{"  "}{.status.deactivatedAt}{"\n"}{range .status.conditions[*]}{.type}{"\t"}{.status}{"\t"}{.reason}{"\n"}{end}'</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th>What you see</th>
-<th>What it means</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>READY True</code></td>
-<td>Active. <code>Active=True</code> with reason <code>ActivationSucceeded</code>, or <code>Orphaned</code> if it outlived its parent.</td>
-</tr>
-<tr>
-<td><code>READY False</code> and no <code>Active</code> condition at all</td>
-<td>It has never activated. The <code>Ready</code> condition's reason names the failing gate.</td>
-</tr>
-<tr>
-<td><code>READY False</code> with <code>Active=True</code></td>
-<td>It is still active and still accruing charges; a gate is failing without ending it, such as an Offering that has gone not ready. <code>status.deactivatedAt</code> is absent.</td>
-</tr>
-<tr>
-<td><code>READY False</code> with <code>Active=False</code></td>
-<td>It has ended, and terminally. The <code>Active</code> condition's reason carries the real cause: <code>ParentDeactivated</code>, <code>CompatibilityRequirementNotMet</code>, <code>TargetNotFound</code>, or <code>MarkedForDeletion</code>. <code>status.deactivatedAt</code> is set.</td>
-</tr>
-</tbody>
-</table>
-<p>The absent-<code>Active</code>-condition row is the reliable discriminator for a Subscription that never got going, because the not-ready path writes only the <code>Ready</code> condition and never touches <code>Active</code>. <code>status.deactivatedAt</code> is the reliable one for a Subscription that ended: it is written once, never cleared, and a Subscription carrying it is not re-validated on any later reconcile, so it will not come back if the Offering recovers. <a href="../concepts/subscription.html#what-status-tells-you">What status tells you</a> sets out the rest of the fields.</p>
-<h2 id="step-6-confirm-charges-are-accruing">Step 6: Confirm charges are accruing<a class="headerlink" href="#step-6-confirm-charges-are-accruing" title="Permanent link">#</a></h2>
-<p><code>status.costs</code> is written by the <code>SubscriptionChargeCollection</code> CostJob on its own schedule, not by the reconciler, so it appears on the first run after activation rather than at activation:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.costs[*].granularity}{"\n"}'</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>hour day month
-</code></pre></div>
-<p>Three rolling buckets, in micro-currency, where 1,000,000 micros is 1.00 of the active PriceBook's currency. An empty result after a collection run has fired means the Subscription had not activated when the run started, or that no <code>SubscriptionChargeCollection</code> CostJob is scheduled at all. <a href="read-subscription-costs.html">Read subscription costs</a> interprets the values and the per-meter breakdown.</p>
-<h2 id="related-guides">Related guides<a class="headerlink" href="#related-guides" title="Permanent link">#</a></h2>
-<ul>
-<li><a href="compose-subscriptions.html">Compose subscriptions</a> for parents, required Offerings, orphaning, and target references.</li>
-<li><a href="define-offering.html">Define an offering</a> for the terms this Subscription accrues against.</li>
-<li><a href="deactivate-a-subscription.html">Deactivate a subscription</a> for ending one and what holds its finalizer.</li>
-<li><a href="../concepts/subscription.html">Subscription</a> for the gates, the status fields, and why deactivation is terminal.</li>
-</ul>
+<h1 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">#</a></h1>
+<p>The vocabulary used across these docs, with the field, resource, or table each term maps to.</p>
+<h2 id="terms">Terms<a class="headerlink" href="#terms" title="Permanent link">#</a></h2>
+<h3 id="activation">activation<a class="headerlink" href="#activation" title="Permanent link">#</a></h3>
+<p>A Subscription activates once every gate its spec implies has passed: the referenced Offering is ready, a named parent is active, any offerings its Offering requires are covered elsewhere in its family, and a named <code>lifecycle.targetRef</code> resolves to an object that exists. The reconciler stamps <code>status.activatedAt</code> at that moment, and every charge is computed relative to it.</p>
+<p>See: <a href="subscription.html">Subscription</a>.</p>
+<h3 id="active-pricebook">active PriceBook<a class="headerlink" href="#active-pricebook" title="Permanent link">#</a></h3>
+<p>The one PriceBook whose rates OpenCost and the charge collector price against. You choose it by annotating it <code>finops.stakater.com/active: "true"</code>; the operator reconciles that choice into <code>status.active</code> and demotes whichever book held the slot before, and only elects a book on its own when none is annotated. Selection is cluster-wide, so exactly one book is active at a time.</p>
+<p>See: <a href="../guides/switch-active-pricebook.html">switch the active PriceBook</a>.</p>
+<h3 id="allocation">allocation<a class="headerlink" href="#allocation" title="Permanent link">#</a></h3>
+<p>One hour of measured resource consumption for one workload, as reported by OpenCost's allocation API and stored in the operator's <code>provider_allocations</code> table. An allocation row is measurement only: charges are priced later from PriceBook rates rather than from OpenCost's own cost figures.</p>
+<h3 id="charge-window">charge window<a class="headerlink" href="#charge-window" title="Permanent link">#</a></h3>
+<p>The one-hour span a charge row covers. Charges are written one row per subscription, per window, per charge source, and a window is marked finalized once it will not be recomputed; the hour still in progress is marked not finalized and rewritten on every collection tick.</p>
+<h3 id="compatibility-root">compatibility root<a class="headerlink" href="#compatibility-root" title="Permanent link">#</a></h3>
+<p>The <code>metadata.uid</code> of a Subscription's root ancestor, resolved once and stamped onto <code>status.compatibilityRoot</code>. It identifies the family whose members can satisfy the Subscription's compatibility requirements.</p>
+<p>See: <a href="compatibility-and-hierarchy.html">compatibility and hierarchy</a>.</p>
+<h3 id="deactivation">deactivation<a class="headerlink" href="#deactivation" title="Permanent link">#</a></h3>
+<p>The end of a Subscription's billable life, recorded as <code>status.deactivatedAt</code>. It happens when the Subscription is deleted, when its parent deactivates and the lifecycle policy is <code>Deactivate</code>, when compatibility coverage it relied on disappears, or when its lifecycle target is gone. Deactivation is terminal, so a deactivated Subscription never reactivates.</p>
+<p>See: <a href="../guides/deactivate-a-subscription.html">deactivate a subscription</a>.</p>
+<h3 id="deactivation-snap">deactivation snap<a class="headerlink" href="#deactivation-snap" title="Permanent link">#</a></h3>
+<p>The rule that a deactivating Subscription is billed to a tick boundary rather than to the instant it stopped. When the fee is calculated, <code>deactivatedAt</code> is snapped forward to the next tick boundary, so the final tick is always charged in full and there is never a partial final tick.</p>
+<p>See: <a href="billing-model.html">billing model</a>.</p>
+<h3 id="family">family<a class="headerlink" href="#family" title="Permanent link">#</a></h3>
+<p>The connected tree of Subscriptions that share one compatibility root. Coverage for a compatibility requirement is looked for across the whole family except the Subscription itself and everything below it, so ancestors, siblings, uncles, and cousins can provide it while the Subscription's own children and their descendants cannot.</p>
+<h3 id="first-tick-proration">first-tick proration<a class="headerlink" href="#first-tick-proration" title="Permanent link">#</a></h3>
+<p>The reduction applied to the opening tick under <code>HourBoundary</code>, <code>DayBoundary</code>, or <code>MonthBoundary</code> alignment, where activation lands mid-period and the first tick is therefore short. <code>ActivatedAt</code> alignment never prorates, because its first tick is a full period by construction.</p>
+<p>See: <a href="billing-model.html">billing model</a>.</p>
+<h3 id="margin">margin<a class="headerlink" href="#margin" title="Permanent link">#</a></h3>
+<p>The adjustment an Offering applies to a meter's PriceBook rate to arrive at the price consumers see. <code>absoluteMicros</code> adds a fixed amount in micro-currency; <code>factorMilli</code> multiplies in milli-units, where 1000 is 1.000x and 980 is a two percent discount. The two are mutually exclusive and neither may be negative, so a discount is expressed as a factor below 1000.</p>
+<p>See: <a href="../reference/api.html#margins"><code>Margins</code></a>.</p>
+<h3 id="meter">meter<a class="headerlink" href="#meter" title="Permanent link">#</a></h3>
+<p>A named unit of consumption an Offering can price. The names are exactly <code>subscription</code>, <code>cpuHour</code>, <code>gpuHour</code>, <code>ramGbHour</code>, <code>pvGbHour</code>, and <code>networkGb</code>: <code>subscription</code> carries the recurring fee, and the other five are priced from allocation data. Meters appear in <code>Offering.status.resolvedPricing.meters</code> and in the <code>breakdown</code> of each entry in <code>Subscription.status.costs</code>.</p>
+<p>See: <a href="../reference/api.html#metername"><code>MeterName</code></a>.</p>
+<h3 id="micro-currency">micro-currency<a class="headerlink" href="#micro-currency" title="Permanent link">#</a></h3>
+<p>The integer convention every monetary value in the API and the database follows: one millionth of the PriceBook's currency, so 1,000,000 micros is 1.00 unit and <code>priceMicros: 40000000</code> is 40.00. Integers rather than floats keep billing arithmetic exact and reproducible.</p>
+<h3 id="minperiods"><code>minPeriods</code><a class="headerlink" href="#minperiods" title="Permanent link">#</a></h3>
+<p>An optional field on an Offering's <code>subscriptionFee</code> giving the number of full ticks that must elapse after activation before the operator releases a deleted Subscription. It is a cleanup guard rather than a charge: billing continues unchanged during the wait, no shortfall is added for the periods that never ran, and the finalizer comes off once the tick count is reached and charges are finalized through the Subscription's last billable hour.</p>
+<p>See: <a href="../reference/api.html#subscriptionfee"><code>SubscriptionFee</code></a>.</p>
+<h3 id="proration">proration<a class="headerlink" href="#proration" title="Permanent link">#</a></h3>
+<p>Charging a fraction of <code>priceMicros</code> for a tick that a Subscription only partly covered, computed as the elapsed seconds over the seconds in a full period. It applies to the first tick under the three boundary alignments and to nothing else; the final tick is never prorated, because deactivation snaps forward to a boundary.</p>
+<p>See: <a href="billing-model.html">billing model</a>.</p>
+<h3 id="resourcecostcollection">ResourceCostCollection<a class="headerlink" href="#resourcecostcollection" title="Permanent link">#</a></h3>
+<p>The default <code>CostJob</code> type. Its CronJob runs the operator in <code>cronjob</code> mode, fetching allocation data from OpenCost and streaming it into the <code>provider_allocations</code> table.</p>
+<p>See: <a href="costjob.html"><code>CostJob</code></a>.</p>
+<h3 id="subscriptionchargecollection">SubscriptionChargeCollection<a class="headerlink" href="#subscriptionchargecollection" title="Permanent link">#</a></h3>
+<p>The <code>CostJob</code> type that bills. Its CronJob runs the operator in <code>collectionjob</code> mode, computing hourly charges for every activated Subscription, writing them to the <code>subscription_charges</code> table, refreshing each Subscription's <code>status.costs</code>, and releasing the finalizer of Subscriptions whose charges have settled.</p>
+<p>See: <a href="costjob.html"><code>CostJob</code></a>.</p>
+<h3 id="tick">tick<a class="headerlink" href="#tick" title="Permanent link">#</a></h3>
+<p>One complete billing period of an Offering's subscription fee. Each tick adds <code>priceMicros</code> to the total, and the fee for any window is <code>priceMicros</code> multiplied by the number of tick boundaries that window crosses, which is what makes recomputing a window produce the same number every time.</p>
+<p>See: <a href="billing-model.html">billing model</a>.</p>
+<h3 id="tick-alignment">tick alignment<a class="headerlink" href="#tick-alignment" title="Permanent link">#</a></h3>
+<p>Where tick boundaries fall. <code>ActivatedAt</code> puts them at <code>status.activatedAt</code> plus multiples of <code>period</code>; <code>HourBoundary</code>, <code>DayBoundary</code>, and <code>MonthBoundary</code> put them on wall-clock hour, day, and month boundaries. The choice also fixes the format of <code>period</code>, a Go duration for <code>ActivatedAt</code> and a plain integer count for the three boundary modes, and whether the first tick is prorated.</p>
+<p>See: <a href="../reference/api.html#tickalignment"><code>TickAlignment</code></a>.</p>
 
 
 

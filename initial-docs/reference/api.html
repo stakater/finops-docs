@@ -5,13 +5,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/guides/subscribe-to-offering.html">
+        <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/reference/api.html">
       
       
-        <link rel="prev" href="price-resource-usage.html">
+        <link rel="prev" href="../guides/deactivate-a-subscription.html">
       
       
-        <link rel="next" href="compose-subscriptions.html">
+        <link rel="next" href="configuration.html">
       
       
         
@@ -22,7 +22,7 @@
     
     
       
-        <title>Subscribe to an offering - FinOps Operator</title>
+        <title>Api - FinOps Operator</title>
       
     
     
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#subscribe-to-an-offering" class="md-skip">
+        <a href="#api-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -2710,20 +2710,18 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2744,7 +2742,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2762,7 +2760,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="define-pricing.html" class="md-nav__link">
+      <a href="../guides/define-pricing.html" class="md-nav__link">
         
   
   
@@ -2790,7 +2788,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="switch-active-pricebook.html" class="md-nav__link">
+      <a href="../guides/switch-active-pricebook.html" class="md-nav__link">
         
   
   
@@ -2818,7 +2816,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="collect-cost-data.html" class="md-nav__link">
+      <a href="../guides/collect-cost-data.html" class="md-nav__link">
         
   
   
@@ -2846,7 +2844,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="define-offering.html" class="md-nav__link">
+      <a href="../guides/define-offering.html" class="md-nav__link">
         
   
   
@@ -2874,7 +2872,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="price-resource-usage.html" class="md-nav__link">
+      <a href="../guides/price-resource-usage.html" class="md-nav__link">
         
   
   
@@ -2899,37 +2897,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="subscribe-to-offering.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../guides/subscribe-to-offering.html" class="md-nav__link">
         
   
   
@@ -2945,116 +2916,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-reference-the-offering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Reference the Offering
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-know-what-has-to-be-true-before-it-activates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Know what has to be true before it activates
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-apply-the-subscription" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Apply the Subscription
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-verify-activation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Verify activation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-tell-a-waiting-subscription-from-a-finished-one" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 5: Tell a waiting Subscription from a finished one
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-confirm-charges-are-accruing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Confirm charges are accruing
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-guides" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Related guides
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3067,7 +2928,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="compose-subscriptions.html" class="md-nav__link">
+      <a href="../guides/compose-subscriptions.html" class="md-nav__link">
         
   
   
@@ -3095,7 +2956,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="read-subscription-costs.html" class="md-nav__link">
+      <a href="../guides/read-subscription-costs.html" class="md-nav__link">
         
   
   
@@ -3123,7 +2984,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="deactivate-a-subscription.html" class="md-nav__link">
+      <a href="../guides/deactivate-a-subscription.html" class="md-nav__link">
         
   
   
@@ -3155,18 +3016,20 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -3187,7 +3050,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3202,10 +3065,37 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../reference/api.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="api.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3221,6 +3111,524 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finopsstakatercomv1alpha1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        finops.stakater.com/v1alpha1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="finops.stakater.com/v1alpha1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resource Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resource Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#awsoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AWSOptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azureoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AzureOptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compatibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costbucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CostBucket
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costjob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CostJob
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costjobspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CostJobSpec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costjobstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CostJobStatus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costjobtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CostJobType
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costmetric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CostMetric
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executionrecord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExecutionRecord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finopsprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FinOpsProvider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finopsproviderspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FinOpsProviderSpec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finopsproviderstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FinOpsProviderStatus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gcpoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCPOptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#margins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Margins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metername" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MeterName
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectreference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ObjectReference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offeringspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OfferingSpec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offeringstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OfferingStatus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onpremoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OnPremOptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parentdeactivateaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ParentDeactivateAction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PriceBook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricebookspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PriceBookSpec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricebookstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PriceBookStatus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricerates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PriceRates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pricing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolvedincludedusage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ResolvedIncludedUsage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolvedmeter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ResolvedMeter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolvedpricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ResolvedPricing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscription
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptionfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubscriptionFee
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptionlifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubscriptionLifecycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptionparent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubscriptionParent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptionspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubscriptionSpec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptionstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubscriptionStatus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#targetreference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TargetReference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tickalignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TickAlignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usagesource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UsageSource
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3233,7 +3641,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../reference/configuration.html" class="md-nav__link">
+      <a href="configuration.html" class="md-nav__link">
         
   
   
@@ -3261,7 +3669,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../reference/rbac.html" class="md-nav__link">
+      <a href="rbac.html" class="md-nav__link">
         
   
   
@@ -3289,7 +3697,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../reference/security-model.html" class="md-nav__link">
+      <a href="security-model.html" class="md-nav__link">
         
   
   
@@ -3317,7 +3725,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../reference/metrics.html" class="md-nav__link">
+      <a href="metrics.html" class="md-nav__link">
         
   
   
@@ -3345,7 +3753,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../reference/webhooks.html" class="md-nav__link">
+      <a href="webhooks.html" class="md-nav__link">
         
   
   
@@ -3373,7 +3781,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../reference/status-conditions.html" class="md-nav__link">
+      <a href="status-conditions.html" class="md-nav__link">
         
   
   
@@ -3511,10 +3919,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#packages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Packages
       
     </span>
   </a>
@@ -3522,79 +3930,487 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-reference-the-offering" class="md-nav__link">
+  <a href="#finopsstakatercomv1alpha1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Reference the Offering
+        finops.stakater.com/v1alpha1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="finops.stakater.com/v1alpha1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resource Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resource Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#awsoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AWSOptions
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-know-what-has-to-be-true-before-it-activates" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#azureoptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Know what has to be true before it activates
+        AzureOptions
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-apply-the-subscription" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#compatibility" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Apply the Subscription
+        Compatibility
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-verify-activation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#costbucket" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Verify activation
+        CostBucket
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-tell-a-waiting-subscription-from-a-finished-one" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#costjob" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Tell a waiting Subscription from a finished one
+        CostJob
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-confirm-charges-are-accruing" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#costjobspec" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: Confirm charges are accruing
+        CostJobSpec
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#related-guides" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#costjobstatus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Related guides
+        CostJobStatus
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costjobtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CostJobType
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costmetric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CostMetric
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executionrecord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExecutionRecord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finopsprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FinOpsProvider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finopsproviderspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FinOpsProviderSpec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finopsproviderstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FinOpsProviderStatus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gcpoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCPOptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#margins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Margins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metername" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MeterName
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectreference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ObjectReference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offeringspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OfferingSpec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offeringstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OfferingStatus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onpremoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OnPremOptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parentdeactivateaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ParentDeactivateAction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PriceBook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricebookspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PriceBookSpec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricebookstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PriceBookStatus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricerates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PriceRates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pricing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolvedincludedusage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ResolvedIncludedUsage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolvedmeter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ResolvedMeter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolvedpricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ResolvedPricing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscription
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptionfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubscriptionFee
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptionlifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubscriptionLifecycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptionparent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubscriptionParent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptionspec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubscriptionSpec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptionstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SubscriptionStatus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#targetreference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TargetReference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tickalignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TickAlignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usagesource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UsageSource
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3618,108 +4434,1550 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
 
-<h1 id="subscribe-to-an-offering">Subscribe to an offering<a class="headerlink" href="#subscribe-to-an-offering" title="Permanent link">#</a></h1>
-<p>A <code>Subscription</code> binds a subscriber to an <a href="define-offering.html">Offering</a> and starts the billing clock. This guide creates the simplest useful one, a Subscription with nothing but an <code>offeringRef</code>, then confirms it activated and reads the state it left behind. It is for a platform engineer, or the automation that provisions a tenant, with edit rights in the namespace the Subscription will live in.</p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
+<!-- markdownlint-disable --><h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">#</a></h1>
+<h2 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">#</a></h2>
 <ul>
-<li>The FinOps Operator is <a href="../getting-started/installation/kubernetes.html">installed</a> and its controller pod is running.</li>
-<li>An <code>Offering</code> whose <code>READY</code> column reads <code>True</code>. <a href="define-offering.html">Define an offering</a> authors one.</li>
-<li>A <a href="collect-cost-data.html"><code>SubscriptionChargeCollection</code> CostJob</a> scheduled, if the fee is to accrue into charge rows rather than only be declared. A cluster without one also never finishes deleting a Subscription.</li>
-<li><code>kubectl</code> edit permission in the namespace you are creating the Subscription in, which is <code>finops-operator-system</code> throughout this guide.</li>
+<li><a href="#finopsstakatercomv1alpha1">finops.stakater.com/v1alpha1</a></li>
 </ul>
-<p>For a Subscription that hangs off another one, or whose activation depends on a sibling or a workload, read <a href="compose-subscriptions.html">compose subscriptions</a> after this page.</p>
-<h2 id="step-1-reference-the-offering">Step 1: Reference the Offering<a class="headerlink" href="#step-1-reference-the-offering" title="Permanent link">#</a></h2>
-<p><code>spec.offeringRef</code> is the only required field on the spec, and it takes two values, both required:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
-<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
-</code></pre></div>
-<p><code>namespace</code> carries <code>+required</code> and a minimum length of one character, and it is never filled in from the Subscription's own namespace. Omitting it is rejected by the API server, not defaulted, even when the Offering sits in the same namespace as the Subscription. That is deliberate: a reference means the same object wherever the manifest is applied, so the same file cannot silently bind to a different Offering in a different namespace.</p>
-<p>The whole reference is immutable, held by a CEL rule on <code>spec</code> that rejects any change with <code>offeringRef is immutable; create a new Subscription instead</code>. Check the manifest against the API server before you commit to it:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>subscription.yaml<span class="w"> </span>--dry-run<span class="o">=</span>server
-</code></pre></div>
-<p>Moving a subscriber onto different terms later means creating a second Subscription against a second Offering, which is the sequence in <a href="../concepts/offering.html#replacing-an-offering">replacing an Offering</a>.</p>
-<h2 id="step-2-know-what-has-to-be-true-before-it-activates">Step 2: Know what has to be true before it activates<a class="headerlink" href="#step-2-know-what-has-to-be-true-before-it-activates" title="Permanent link">#</a></h2>
-<p>Activation is not one condition but four, checked in a fixed order on every reconcile: the Offering, then the parent, then compatibility coverage, then the target. All four must pass. They are continuous checks rather than admission checks, so a Subscription that fails one is still admitted, held at <code>Ready=False</code>, and activates on its own once the condition clears. <a href="../concepts/subscription.html#the-four-activation-gates">The four activation gates</a> sets out what each one tests and which of them can also end an already-active Subscription.</p>
-<p>What a guide needs from that is the reason vocabulary, because the failing gate names itself on the <code>Ready</code> condition. The Offering gate reports <code>OfferingNotFound</code> or <code>OfferingNotReady</code>. Where a <code>spec.parent</code> is set, the parent gate reports <code>ParentSubscriptionNotFound</code>, <code>ParentSubscriptionDeactivated</code>, or <code>ParentSubscriptionNotReady</code>. Where the bound Offering declares <code>requiredOfferings</code>, the compatibility gate reports <code>CompatibilityRequirementNotMet</code>. Where a <code>lifecycle.targetRef</code> is set, the target gate reports <code>TargetNotFound</code>, or <code>TargetIsSelfReference</code> if the Subscription named itself. A read that fails for some other reason surfaces as <code>ValidationError</code> at whichever gate hit it.</p>
-<p>The Subscription in step 3 sets neither a <code>parent</code> nor a <code>targetRef</code> and binds an Offering that requires nothing, so gates two to four pass trivially and only the first two reasons are reachable. Opting into any of the other three makes it a live dependency for the rest of the Subscription's life, which is what <a href="compose-subscriptions.html">compose subscriptions</a> covers, one procedure per gate.</p>
-<h2 id="step-3-apply-the-subscription">Step 3: Apply the Subscription<a class="headerlink" href="#step-3-apply-the-subscription" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># subscription-acme-platform-base.yaml</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subscription</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acme-platform-base</span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
-<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>subscription-acme-platform-base.yaml
-</code></pre></div>
-<p>To bill measured consumption as well as the fee, add <code>usageSources</code> here; <a href="price-resource-usage.html">price resource usage</a> covers pairing them with the Offering's <code>resourcePricing</code>. Unlike <code>offeringRef</code>, <code>usageSources</code> stays editable afterwards.</p>
-<h2 id="step-4-verify-activation">Step 4: Verify activation<a class="headerlink" href="#step-4-verify-activation" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscriptions<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>NAME                 READY
-acme-platform-base   True
-</code></pre></div>
-<p><code>READY</code> is the <code>status.ready</code> print column. <code>True</code> means every gate passed and the billing epoch has opened. The two status fields worth reading next are the timestamp the epoch opened at and the conditions that recorded it:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.activatedAt}{"\n"}'</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
-</code></pre></div>
-<p>On a Subscription that just activated, <code>describe</code> shows a <code>Ready</code> condition and an <code>Active</code> condition, both <code>True</code> and both carrying reason <code>ActivationSucceeded</code>. <code>status.activatedAt</code> is written once and never moved, and everything downstream keys off it: charges are computed from it, <code>minPeriods</code> is counted from it, and a Subscription that never activated is skipped outright by the collection job.</p>
-<p>If <code>READY</code> reads <code>False</code>, <code>describe</code> names the gate that is holding it, using the reason vocabulary in step 2. <a href="../reference/status-conditions.html">Status conditions</a> lists the full set.</p>
-<h2 id="step-5-tell-a-waiting-subscription-from-a-finished-one">Step 5: Tell a waiting Subscription from a finished one<a class="headerlink" href="#step-5-tell-a-waiting-subscription-from-a-finished-one" title="Permanent link">#</a></h2>
-<p><code>READY False</code> is not one state. It covers a Subscription that has not activated yet, one that has ended for good, and one that is active and billing while a gate is transiently failing. The <code>Ready</code> condition alone does not separate them, because deactivation writes <code>Ready=False</code> with reason <code>ValidationSucceeded</code>, which describes nothing about the cause. Read the <code>Active</code> condition and <code>status.deactivatedAt</code> instead:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.ready}{"  "}{.status.deactivatedAt}{"\n"}{range .status.conditions[*]}{.type}{"\t"}{.status}{"\t"}{.reason}{"\n"}{end}'</span>
-</code></pre></div>
+<h2 id="finopsstakatercomv1alpha1">finops.stakater.com/v1alpha1<a class="headerlink" href="#finopsstakatercomv1alpha1" title="Permanent link">#</a></h2>
+<p>Package v1alpha1 contains API Schema definitions for the finops v1alpha1 API group.</p>
+<h3 id="resource-types">Resource Types<a class="headerlink" href="#resource-types" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="#costjob">CostJob</a></li>
+<li><a href="#finopsprovider">FinOpsProvider</a></li>
+<li><a href="#offering">Offering</a></li>
+<li><a href="#pricebook">PriceBook</a></li>
+<li><a href="#subscription">Subscription</a></li>
+</ul>
+<h4 id="awsoptions">AWSOptions<a class="headerlink" href="#awsoptions" title="Permanent link">#</a></h4>
+<p>AWSOptions defines AWS-specific options.</p>
+<p><em>Appears in:</em>
+- <a href="#finopsproviderspec">FinOpsProviderSpec</a></p>
 <table>
 <thead>
 <tr>
-<th>What you see</th>
-<th>What it means</th>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>READY True</code></td>
-<td>Active. <code>Active=True</code> with reason <code>ActivationSucceeded</code>, or <code>Orphaned</code> if it outlived its parent.</td>
+<td><code>cloudIntegrationSecret</code> <em>string</em></td>
+<td>CloudIntegrationSecret is the Azure Subscription ID.</td>
+<td></td>
+<td>Optional: {} <br></td>
 </tr>
 <tr>
-<td><code>READY False</code> and no <code>Active</code> condition at all</td>
-<td>It has never activated. The <code>Ready</code> condition's reason names the failing gate.</td>
-</tr>
-<tr>
-<td><code>READY False</code> with <code>Active=True</code></td>
-<td>It is still active and still accruing charges; a gate is failing without ending it, such as an Offering that has gone not ready. <code>status.deactivatedAt</code> is absent.</td>
-</tr>
-<tr>
-<td><code>READY False</code> with <code>Active=False</code></td>
-<td>It has ended, and terminally. The <code>Active</code> condition's reason carries the real cause: <code>ParentDeactivated</code>, <code>CompatibilityRequirementNotMet</code>, <code>TargetNotFound</code>, or <code>MarkedForDeletion</code>. <code>status.deactivatedAt</code> is set.</td>
+<td><code>pricingModelSource</code> <em>string</em></td>
+<td>PricingModelSource indicates how the pricing model is provided to OpenCost.<br>e.g., "Pricebook" if derived from PriceBook CRs.</td>
+<td></td>
+<td>Optional: {} <br></td>
 </tr>
 </tbody>
 </table>
-<p>The absent-<code>Active</code>-condition row is the reliable discriminator for a Subscription that never got going, because the not-ready path writes only the <code>Ready</code> condition and never touches <code>Active</code>. <code>status.deactivatedAt</code> is the reliable one for a Subscription that ended: it is written once, never cleared, and a Subscription carrying it is not re-validated on any later reconcile, so it will not come back if the Offering recovers. <a href="../concepts/subscription.html#what-status-tells-you">What status tells you</a> sets out the rest of the fields.</p>
-<h2 id="step-6-confirm-charges-are-accruing">Step 6: Confirm charges are accruing<a class="headerlink" href="#step-6-confirm-charges-are-accruing" title="Permanent link">#</a></h2>
-<p><code>status.costs</code> is written by the <code>SubscriptionChargeCollection</code> CostJob on its own schedule, not by the reconciler, so it appears on the first run after activation rather than at activation:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.costs[*].granularity}{"\n"}'</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>hour day month
-</code></pre></div>
-<p>Three rolling buckets, in micro-currency, where 1,000,000 micros is 1.00 of the active PriceBook's currency. An empty result after a collection run has fired means the Subscription had not activated when the run started, or that no <code>SubscriptionChargeCollection</code> CostJob is scheduled at all. <a href="read-subscription-costs.html">Read subscription costs</a> interprets the values and the per-meter breakdown.</p>
-<h2 id="related-guides">Related guides<a class="headerlink" href="#related-guides" title="Permanent link">#</a></h2>
-<ul>
-<li><a href="compose-subscriptions.html">Compose subscriptions</a> for parents, required Offerings, orphaning, and target references.</li>
-<li><a href="define-offering.html">Define an offering</a> for the terms this Subscription accrues against.</li>
-<li><a href="deactivate-a-subscription.html">Deactivate a subscription</a> for ending one and what holds its finalizer.</li>
-<li><a href="../concepts/subscription.html">Subscription</a> for the gates, the status fields, and why deactivation is terminal.</li>
-</ul>
+<h4 id="azureoptions">AzureOptions<a class="headerlink" href="#azureoptions" title="Permanent link">#</a></h4>
+<p>AzureOptions defines Azure-specific options.</p>
+<p><em>Appears in:</em>
+- <a href="#finopsproviderspec">FinOpsProviderSpec</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cloudIntegrationSecret</code> <em>string</em></td>
+<td>CloudIntegrationSecret is the Azure Subscription ID.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>pricingModelSource</code> <em>string</em></td>
+<td>PricingModelSource indicates how the pricing model is provided to OpenCost.<br>e.g., "Pricebook" if derived from PriceBook CRs.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="compatibility">Compatibility<a class="headerlink" href="#compatibility" title="Permanent link">#</a></h4>
+<p>Compatibility defines compatibility requirements for subscriptions bound to this offering</p>
+<p><em>Appears in:</em>
+- <a href="#offeringspec">OfferingSpec</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>requiredOfferings</code> <em><a href="#objectreference">ObjectReference</a> array</em></td>
+<td>RequiredOfferings lists offerings that must be covered by an active subscription in<br>the same family (the connected tree sharing a root ancestor) for a subscription to<br>this offering to activate. Coverage spans the whole family EXCEPT the subscription's<br>own subtree: ancestors, siblings, uncles, and cousins all count; the subscription's<br>own children and descendants do not. A root subscription's subtree is the entire<br>family, so a requirement-bearing root can never be covered.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="costbucket">CostBucket<a class="headerlink" href="#costbucket" title="Permanent link">#</a></h4>
+<p><em>Appears in:</em>
+- <a href="#subscriptionstatus">SubscriptionStatus</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>granularity</code> <em>string</em></td>
+<td>Granularity is the time granularity of this bucket (e.g., hour, day, month).</td>
+<td></td>
+<td>Enum: [hour day month] <br></td>
+</tr>
+<tr>
+<td><code>start</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#time-v1-meta">Time</a></em></td>
+<td>Start is the start time of the bucket (inclusive).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>endExclusive</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#time-v1-meta">Time</a></em></td>
+<td>EndExclusive is the end time of the bucket (exclusive).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>current</code> <em>integer</em></td>
+<td>Current is the current accumulated spend for the period in micro-currency units.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>projected</code> <em>integer</em></td>
+<td>Projected is the projected spend for the full period cycle in micro-currency units.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>breakdown</code> <em><a href="#costmetric">CostMetric</a> array</em></td>
+<td>Breakdown contains the cost breakdown by component.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="costjob">CostJob<a class="headerlink" href="#costjob" title="Permanent link">#</a></h4>
+<p>CostJob is the Schema for the costjobs API.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apiVersion</code> <em>string</em></td>
+<td><code>finops.stakater.com/v1alpha1</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>kind</code> <em>string</em></td>
+<td><code>CostJob</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>metadata</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#objectmeta-v1-meta">ObjectMeta</a></em></td>
+<td>Refer to Kubernetes API documentation for fields of <code>metadata</code>.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>spec</code> <em><a href="#costjobspec">CostJobSpec</a></em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>status</code> <em><a href="#costjobstatus">CostJobStatus</a></em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="costjobspec">CostJobSpec<a class="headerlink" href="#costjobspec" title="Permanent link">#</a></h4>
+<p>CostJobSpec defines the desired state of CostJob.</p>
+<p><em>Appears in:</em>
+- <a href="#costjob">CostJob</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code> <em><a href="#costjobtype">CostJobType</a></em></td>
+<td>Type of the cost collection job, e.g., "ResourceCostCollection"</td>
+<td>ResourceCostCollection</td>
+<td>Enum: [ResourceCostCollection SubscriptionChargeCollection] <br>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>databaseInitTimeout</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#duration-v1-meta">Duration</a></em></td>
+<td>DatabaseInitTimeout is the timeout for database initialization</td>
+<td>2m</td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>kubernetesOperationTimeout</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#duration-v1-meta">Duration</a></em></td>
+<td>KubernetesOperationTimeout is the timeout for Kubernetes API operations</td>
+<td>1m</td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>openCostFetchTimeout</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#duration-v1-meta">Duration</a></em></td>
+<td>OpenCostFetchTimeout is the timeout for fetching data from OpenCost</td>
+<td>2m</td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>databaseInsertTimeout</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#duration-v1-meta">Duration</a></em></td>
+<td>DatabaseInsertTimeout is the timeout for database insert operations</td>
+<td>3m</td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>databaseViewsRefreshTimeout</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#duration-v1-meta">Duration</a></em></td>
+<td>DatabaseViewsRefreshTimeout is retained for API compatibility and has no<br>effect. The cost ingestion job no longer refreshes any database view: the<br>mv_provider_allocations_summary materialized view it used to rebuild on<br>every run had no readers and was dropped in migration 14.<br>Deprecated: no-op. Setting this value changes nothing.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>statusUpdateTimeout</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#duration-v1-meta">Duration</a></em></td>
+<td>StatusUpdateTimeout is the timeout for status update operations</td>
+<td>1m</td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>httpClientTimeout</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#duration-v1-meta">Duration</a></em></td>
+<td>HTTPClientTimeout is the timeout for HTTP client requests</td>
+<td>90s</td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>interval</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#duration-v1-meta">Duration</a></em></td>
+<td></td>
+<td>24h</td>
+<td></td>
+</tr>
+<tr>
+<td><code>resources</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#resourcerequirements-v1-core">ResourceRequirements</a></em></td>
+<td>Resources overrides compute resources for the generated CronJob's loader container.<br>Setting this replaces the whole block, so a partial value does not inherit the<br>template defaults for the keys it omits. Unset means the operator defaults apply.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="costjobstatus">CostJobStatus<a class="headerlink" href="#costjobstatus" title="Permanent link">#</a></h4>
+<p>CostJobStatus defines the observed state of CostJob</p>
+<p><em>Appears in:</em>
+- <a href="#costjob">CostJob</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lastExecutionTime</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#time-v1-meta">Time</a></em></td>
+<td>Last execution time</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>lastSuccessfulExecutionTime</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#time-v1-meta">Time</a></em></td>
+<td>Last successful execution time</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>lastExecutionStatus</code> <em>string</em></td>
+<td>Status of the last execution</td>
+<td></td>
+<td>Enum: [Success Failed Error Pending] <br></td>
+</tr>
+<tr>
+<td><code>executionHistory</code> <em><a href="#executionrecord">ExecutionRecord</a> array</em></td>
+<td>History of the last 10 executions</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="costjobtype">CostJobType<a class="headerlink" href="#costjobtype" title="Permanent link">#</a></h4>
+<p><em>Underlying type:</em> <em>string</em></p>
+<p><em>Validation:</em>
+- Enum: [ResourceCostCollection SubscriptionChargeCollection]</p>
+<p><em>Appears in:</em>
+- <a href="#costjobspec">CostJobSpec</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ResourceCostCollection</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>SubscriptionChargeCollection</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="costmetric">CostMetric<a class="headerlink" href="#costmetric" title="Permanent link">#</a></h4>
+<p><em>Appears in:</em>
+- <a href="#costbucket">CostBucket</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code> <em><a href="#metername">MeterName</a></em></td>
+<td>Name is the name of the cost metric (e.g., "cpuHour", "pvGbHour").</td>
+<td></td>
+<td>Enum: [subscription cpuHour gpuHour ramGbHour pvGbHour networkGb] <br>Required: {} <br></td>
+</tr>
+<tr>
+<td><code>current</code> <em>integer</em></td>
+<td>Current is the current accumulated value in micro-currency units.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>projected</code> <em>integer</em></td>
+<td>Projected is the projected value in micro-currency units.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="executionrecord">ExecutionRecord<a class="headerlink" href="#executionrecord" title="Permanent link">#</a></h4>
+<p>ExecutionRecord represents a single execution attempt</p>
+<p><em>Appears in:</em>
+- <a href="#costjobstatus">CostJobStatus</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>executionTime</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#time-v1-meta">Time</a></em></td>
+<td>The time when this execution started</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>status</code> <em>string</em></td>
+<td>Status of the execution (Success, Failed, Error)</td>
+<td></td>
+<td>Enum: [Success Failed Error] <br></td>
+</tr>
+<tr>
+<td><code>duration</code> <em>string</em></td>
+<td>Duration of the execution</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>error</code> <em>string</em></td>
+<td>Error message if the execution failed</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="finopsprovider">FinOpsProvider<a class="headerlink" href="#finopsprovider" title="Permanent link">#</a></h4>
+<p>FinOpsProvider is the Schema for the finopsproviders API.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apiVersion</code> <em>string</em></td>
+<td><code>finops.stakater.com/v1alpha1</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>kind</code> <em>string</em></td>
+<td><code>FinOpsProvider</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>metadata</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#objectmeta-v1-meta">ObjectMeta</a></em></td>
+<td>Refer to Kubernetes API documentation for fields of <code>metadata</code>.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>spec</code> <em><a href="#finopsproviderspec">FinOpsProviderSpec</a></em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>status</code> <em><a href="#finopsproviderstatus">FinOpsProviderStatus</a></em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="finopsproviderspec">FinOpsProviderSpec<a class="headerlink" href="#finopsproviderspec" title="Permanent link">#</a></h4>
+<p>ProviderOptions holds provider-specific configuration options.
+Exactly one of AWS, GCP, Azure, or OnPrem must be set.
+These validations operate on the Go field names (AWS, GCP, Azure, OnPrem).
+Se https://opencost.io/docs/configuration/ for possible options
+todo: +kubebuilder:validation:XValidation:rule="has(self.Aws) || has(self.Gcp) || has(self.Azure) || has(self.OnPrem)", message="At least one provider option (awsoptions, gcpoptions, azureoptions, onpremoptions) must be set"
+todo: +kubebuilder:validation:XValidation:rule="(has(self.Aws) ? 1 : 0) + (has(self.Gcp) ? 1 : 0) + (has(self.Azure) ? 1 : 0) + (has(self.OnPrem) ? 1 : 0) == 1", message="Exactly one provider option (awsoptions, gcpoptions, azureoptions, onpremoptions) must be set"</p>
+<p><em>Appears in:</em>
+- <a href="#finopsprovider">FinOpsProvider</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>awsoptions</code> <em><a href="#awsoptions">AWSOptions</a></em></td>
+<td>AWS specific options.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>gcpoptions</code> <em><a href="#gcpoptions">GCPOptions</a></em></td>
+<td>GCP specific options.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>azureoptions</code> <em><a href="#azureoptions">AzureOptions</a></em></td>
+<td>Azure specific options.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>onpremoptions</code> <em><a href="#onpremoptions">OnPremOptions</a></em></td>
+<td>OnPrem specific options.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="finopsproviderstatus">FinOpsProviderStatus<a class="headerlink" href="#finopsproviderstatus" title="Permanent link">#</a></h4>
+<p>FinOpsProviderStatus defines the observed state of FinOpsProvider.</p>
+<p><em>Appears in:</em>
+- <a href="#finopsprovider">FinOpsProvider</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>observedGeneration</code> <em>integer</em></td>
+<td>ObservedGeneration reflects the generation of the most recently observed spec.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>conditions</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#condition-v1-meta">Condition</a> array</em></td>
+<td>Conditions represent the latest available observations of the FinOpsProvider's state.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>lastSyncTime</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#time-v1-meta">Time</a></em></td>
+<td>LastSyncTime is the timestamp of the last successful sync of OpenCost configuration.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="gcpoptions">GCPOptions<a class="headerlink" href="#gcpoptions" title="Permanent link">#</a></h4>
+<p>GCPOptions defines GCP-specific options.</p>
+<p><em>Appears in:</em>
+- <a href="#finopsproviderspec">FinOpsProviderSpec</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cloudIntegrationSecret</code> <em>string</em></td>
+<td>CloudIntegrationSecret is the Azure Subscription ID.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>pricingModelSource</code> <em>string</em></td>
+<td>PricingModelSource indicates how the pricing model is provided to OpenCost.<br>e.g., "Pricebook" if derived from PriceBook CRs.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="lifecycle">Lifecycle<a class="headerlink" href="#lifecycle" title="Permanent link">#</a></h4>
+<p>Lifecycle defines lifecycle behavior for subscriptions</p>
+<p><em>Appears in:</em>
+- <a href="#offeringspec">OfferingSpec</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onParentDeactivate</code> <em><a href="#parentdeactivateaction">ParentDeactivateAction</a></em></td>
+<td>OnParentDeactivate toggles whether subscriptions to this offering should be deactivated when their parent subscription is deactivated<br>- Deactivate: this subscription also deactivates.<br>- Orphan: this subscription stays active independently, while retaining the parent reference for traceability.</td>
+<td>Deactivate</td>
+<td>Enum: [Deactivate Orphan] <br></td>
+</tr>
+<tr>
+<td><code>allowOverride</code> <em>boolean</em></td>
+<td>AllowOverride allows the subscription to override the lifecycle settings</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="margins">Margins<a class="headerlink" href="#margins" title="Permanent link">#</a></h4>
+<p>Margins defines pricing adjustments. AbsoluteMicros and FactorMilli are
+mutually exclusive — pick one mode per meter. Both must be non-negative: a
+negative margin would drive the per-unit price (and thus the usage charge)
+below zero, which usage meters don't support. Express a discount with a
+factorMilli below 1000 (e.g. 980 = 0.98x), not a negative absoluteMicros.</p>
+<p><em>Appears in:</em>
+- <a href="#meter">Meter</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>absoluteMicros</code> <em>integer</em></td>
+<td>AbsoluteMicros is an additive margin in micro-currency units (10^-6 of the currency)<br>1,000,000 micros = 1.00 currency unit<br>Example: 0.02 cents = 0.0002 currency units = 200 micros</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>factorMilli</code> <em>integer</em></td>
+<td>FactorMilli is a multiplicative factor in milli-units<br>1000 = 1.000x, 1020 = 1.020x (adds 2%), 980 = 0.980x (discount 2%)</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="meter">Meter<a class="headerlink" href="#meter" title="Permanent link">#</a></h4>
+<p>Meter defines pricing adjustments for a specific meter</p>
+<p><em>Appears in:</em>
+- <a href="#pricing">Pricing</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code> <em><a href="#metername">MeterName</a></em></td>
+<td>Name is the name of the meter along with unit (e.g., "cpuHour", "ramGbHour").</td>
+<td></td>
+<td>Enum: [subscription cpuHour gpuHour ramGbHour pvGbHour networkGb] <br>Required: {} <br></td>
+</tr>
+<tr>
+<td><code>margins</code> <em><a href="#margins">Margins</a></em></td>
+<td>Margins adjusts the price derived from raw usage for this meter.<br>You can specify either:<br>- absoluteMicros: an additive margin in micro-currency units (10^-6 of the currency), or<br>- factorMilli: a multiplicative factor in milli-units (1000 = 1.000x, 1020 = 1.020x).</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="metername">MeterName<a class="headerlink" href="#metername" title="Permanent link">#</a></h4>
+<p><em>Underlying type:</em> <em>string</em></p>
+<p>MeterName defines the name of a usage meter for pricing adjustments</p>
+<p><em>Validation:</em>
+- Enum: [subscription cpuHour gpuHour ramGbHour pvGbHour networkGb]</p>
+<p><em>Appears in:</em>
+- <a href="#costmetric">CostMetric</a>
+- <a href="#meter">Meter</a>
+- <a href="#resolvedmeter">ResolvedMeter</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>subscription</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cpuHour</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>gpuHour</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ramGbHour</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>pvGbHour</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>networkGb</code></td>
+<td>MeterNetworkGB bills total data transferred (transfer + receive) per GiB.<br>No time dimension — the rate is per-GB, not per-GB-hour — hence no "Hour".<br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="objectreference">ObjectReference<a class="headerlink" href="#objectreference" title="Permanent link">#</a></h4>
+<p><em>Appears in:</em>
+- <a href="#compatibility">Compatibility</a>
+- <a href="#subscriptionparent">SubscriptionParent</a>
+- <a href="#subscriptionspec">SubscriptionSpec</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code> <em>string</em></td>
+<td></td>
+<td></td>
+<td>Required: {} <br></td>
+</tr>
+<tr>
+<td><code>namespace</code> <em>string</em></td>
+<td>Namespace of the referenced object. Must be set explicitly — references are<br>never resolved against the referrer's namespace, so the same reference always<br>means the same object no matter where it is authored. MinLength guards against<br>an empty string, which +required alone would accept.</td>
+<td></td>
+<td>MinLength: 1 <br>Required: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="offering">Offering<a class="headerlink" href="#offering" title="Permanent link">#</a></h4>
+<p>Offering describes a cost driving entity
+It owns the rules for how the base cost for that entity is collected and calculated</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apiVersion</code> <em>string</em></td>
+<td><code>finops.stakater.com/v1alpha1</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>kind</code> <em>string</em></td>
+<td><code>Offering</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>metadata</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#objectmeta-v1-meta">ObjectMeta</a></em></td>
+<td>Refer to Kubernetes API documentation for fields of <code>metadata</code>.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>spec</code> <em><a href="#offeringspec">OfferingSpec</a></em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>status</code> <em><a href="#offeringstatus">OfferingStatus</a></em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="offeringspec">OfferingSpec<a class="headerlink" href="#offeringspec" title="Permanent link">#</a></h4>
+<p>OfferingSpec defines the desired state of Offering.</p>
+<p><em>Appears in:</em>
+- <a href="#offering">Offering</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pricing</code> <em><a href="#pricing">Pricing</a></em></td>
+<td>Pricing specifies how the price for this offering is calculated</td>
+<td></td>
+<td>Required: {} <br></td>
+</tr>
+<tr>
+<td><code>compatibility</code> <em><a href="#compatibility">Compatibility</a></em></td>
+<td>Compatibility can be used for ensuring that any subscription created for this offering<br>has the required offerings in its parents or siblings</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>lifecycle</code> <em><a href="#lifecycle">Lifecycle</a></em></td>
+<td>Lifecycle defines how subscriptions to this offering behave during certain lifecycle events</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="offeringstatus">OfferingStatus<a class="headerlink" href="#offeringstatus" title="Permanent link">#</a></h4>
+<p>OfferingStatus defines the observed state of Offering.</p>
+<p><em>Appears in:</em>
+- <a href="#offering">Offering</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>resolvedPricing</code> <em><a href="#resolvedpricing">ResolvedPricing</a></em></td>
+<td>ResolvedPricing contains the effective pricing derived from the offering spec</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>conditions</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#condition-v1-meta">Condition</a> array</em></td>
+<td>Conditions represent the latest available observations of the Offering's state</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>ready</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#conditionstatus-v1-meta">ConditionStatus</a></em></td>
+<td>Ready indicates whether the offering is ready to be subscribed to (i.e., all required offerings are present and no circular dependencies detected)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="onpremoptions">OnPremOptions<a class="headerlink" href="#onpremoptions" title="Permanent link">#</a></h4>
+<p>OnPremOptions defines On-Premise specific options.</p>
+<p><em>Appears in:</em>
+- <a href="#finopsproviderspec">FinOpsProviderSpec</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pricingModelSource</code> <em>string</em></td>
+<td>PricingModelSource indicates how the pricing model is provided to OpenCost.<br>e.g., "Pricebook" if derived from PriceBook CRs.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="parentdeactivateaction">ParentDeactivateAction<a class="headerlink" href="#parentdeactivateaction" title="Permanent link">#</a></h4>
+<p><em>Underlying type:</em> <em>string</em></p>
+<p>ParentDeactivateAction defines the behavior when a parent subscription is deactivated.</p>
+<p><em>Validation:</em>
+- Enum: [Deactivate Orphan]</p>
+<p><em>Appears in:</em>
+- <a href="#lifecycle">Lifecycle</a>
+- <a href="#subscriptionlifecycle">SubscriptionLifecycle</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Deactivate</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Orphan</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pricebook">PriceBook<a class="headerlink" href="#pricebook" title="Permanent link">#</a></h4>
+<p>PriceBook is the Schema for the pricebooks API</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apiVersion</code> <em>string</em></td>
+<td><code>finops.stakater.com/v1alpha1</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>kind</code> <em>string</em></td>
+<td><code>PriceBook</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>metadata</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#objectmeta-v1-meta">ObjectMeta</a></em></td>
+<td>Refer to Kubernetes API documentation for fields of <code>metadata</code>.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>spec</code> <em><a href="#pricebookspec">PriceBookSpec</a></em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>status</code> <em><a href="#pricebookstatus">PriceBookStatus</a></em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pricebookspec">PriceBookSpec<a class="headerlink" href="#pricebookspec" title="Permanent link">#</a></h4>
+<p>PriceBookSpec defines the desired state of PriceBook</p>
+<p><em>Appears in:</em>
+- <a href="#pricebook">PriceBook</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>currency</code> <em>string</em></td>
+<td>The base currency for financial reporting and calculations (e.g., EUR, USD).</td>
+<td></td>
+<td>Pattern: <code>^[A-Z]\{3\}$</code> <br>Required: {} <br></td>
+</tr>
+<tr>
+<td><code>valuationMode</code> <em>string</em></td>
+<td>The mode of valuation - either 'currency' for direct monetary rates or 'percent' for weighted scoring.</td>
+<td></td>
+<td>Enum: [currency percent] <br>Required: {} <br></td>
+</tr>
+<tr>
+<td><code>rates</code> <em><a href="#pricerates">PriceRates</a></em></td>
+<td>Rates used for valuation in 'currency' mode. Defines cost per unit of resource. Required if valuationMode is 'currency'.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pricebookstatus">PriceBookStatus<a class="headerlink" href="#pricebookstatus" title="Permanent link">#</a></h4>
+<p>PriceBookStatus defines the observed state of PriceBook</p>
+<p><em>Appears in:</em>
+- <a href="#pricebook">PriceBook</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>active</code> <em>boolean</em></td>
+<td>Active indicates whether this PriceBook instance is currently designated as the active one<br>used for pricing calculations. This field is managed by the operator.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>ready</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#conditionstatus-v1-meta">ConditionStatus</a></em></td>
+<td>Ready indicates whether this PriceBook's rates are valid and it is usable<br>for pricing resolution. Managed by the operator.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>observedGeneration</code> <em>integer</em></td>
+<td>ObservedGeneration reflects the generation of the most recently observed spec.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>conditions</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#condition-v1-meta">Condition</a> array</em></td>
+<td>Conditions represent the latest available observations of the PriceBook's state.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>activePricing</code> <em>object (keys:string, values:string)</em></td>
+<td>ActivePricing mirrors the OpenCost custom-pricing document (default.json)<br>this PriceBook has applied to OpenCost. Populated only on the active, ready<br>PriceBook (the one driving OpenCost); nil on every other PriceBook.<br>Managed by the operator.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pricerates">PriceRates<a class="headerlink" href="#pricerates" title="Permanent link">#</a></h4>
+<p>PriceRates defines the cost rates for different resources. Each rate is a
+non-negative decimal string (e.g. "0.031"); empty means "unset". The pattern
+<code>^([0-9]+(\.[0-9]+)?)?$</code> rejects malformed values at admission while allowing
+empty.</p>
+<p><em>Appears in:</em>
+- <a href="#pricebookspec">PriceBookSpec</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cpuHour</code> <em>string</em></td>
+<td>Cost per vCPU-hour (e.g., 0.031).</td>
+<td></td>
+<td>Pattern: <code>^([0-9]+(\.[0-9]+)?)?$</code> <br>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>spotCPUHour</code> <em>string</em></td>
+<td>Cost per vCPU-hour (e.g., 0.031).</td>
+<td></td>
+<td>Pattern: <code>^([0-9]+(\.[0-9]+)?)?$</code> <br>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>ramGbHour</code> <em>string</em></td>
+<td>Cost per GB-hour of RAM (e.g., 0.004).</td>
+<td></td>
+<td>Pattern: <code>^([0-9]+(\.[0-9]+)?)?$</code> <br>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>spotRAMGbHour</code> <em>string</em></td>
+<td>Cost per GB-hour of spotRAM (e.g., 0.004).</td>
+<td></td>
+<td>Pattern: <code>^([0-9]+(\.[0-9]+)?)?$</code> <br>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>pvGbHour</code> <em>string</em></td>
+<td>Cost per GB-hour of Persistent Volume (e.g., 0.00012).</td>
+<td></td>
+<td>Pattern: <code>^([0-9]+(\.[0-9]+)?)?$</code> <br>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>gpuHour</code> <em>string</em></td>
+<td>Cost per GPU-hour (e.g., 1.8).</td>
+<td></td>
+<td>Pattern: <code>^([0-9]+(\.[0-9]+)?)?$</code> <br>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>networkGiB</code> <em>string</em></td>
+<td>Cost per GiB of network data transferred (e.g., 0.09).</td>
+<td></td>
+<td>Pattern: <code>^([0-9]+(\.[0-9]+)?)?$</code> <br>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pricing">Pricing<a class="headerlink" href="#pricing" title="Permanent link">#</a></h4>
+<p>Pricing defines pricing rules for the offering</p>
+<p><em>Appears in:</em>
+- <a href="#offeringspec">OfferingSpec</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>resourcePricing</code> <em><a href="#meter">Meter</a> array</em></td>
+<td>ResourcePricing defines per-meter pricing adjustments applied to raw usage.<br>Each meter can optionally define:<br>- includedUsage: an amount of usage included for free per subscription (same unit as the meter)<br>- margins: either an absolute add-on (in micro-currency) or a multiplicative factor (in milli-units)</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>subscriptionFee</code> <em><a href="#subscriptionfee">SubscriptionFee</a></em></td>
+<td>SubscriptionFee defines the recurring fee charged for the subscription being active,<br>independent of resource usage</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="resolvedincludedusage">ResolvedIncludedUsage<a class="headerlink" href="#resolvedincludedusage" title="Permanent link">#</a></h4>
+<p>ResolvedIncludedUsage contains the resolved included usage with its unit of measurement</p>
+<p><em>Appears in:</em>
+- <a href="#resolvedmeter">ResolvedMeter</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>value</code> <em>integer</em></td>
+<td>Value is the amount of free usage included per subscription</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>unit</code> <em>string</em></td>
+<td>Unit is the unit of measurement (e.g., "GbHour", "CoreHour")</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="resolvedmeter">ResolvedMeter<a class="headerlink" href="#resolvedmeter" title="Permanent link">#</a></h4>
+<p>ResolvedMeter contains the effective per-unit price for a specific meter</p>
+<p><em>Appears in:</em>
+- <a href="#resolvedpricing">ResolvedPricing</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code> <em><a href="#metername">MeterName</a></em></td>
+<td>Name is the meter name (e.g., "cpuHour", "ramGbHour")</td>
+<td></td>
+<td>Enum: [subscription cpuHour gpuHour ramGbHour pvGbHour networkGb] <br>Required: {} <br></td>
+</tr>
+<tr>
+<td><code>unitPriceMicros</code> <em>integer</em></td>
+<td>UnitPriceMicros is the effective per-unit price in micro-currency units (10^-6)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>includedUsage</code> <em><a href="#resolvedincludedusage">ResolvedIncludedUsage</a></em></td>
+<td>IncludedUsage is the free usage included per subscription for this meter</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="resolvedpricing">ResolvedPricing<a class="headerlink" href="#resolvedpricing" title="Permanent link">#</a></h4>
+<p>ResolvedPricing contains the effective pricing that consumers see.
+It is derived from the offering spec and stamped on status during reconciliation.</p>
+<p><em>Appears in:</em>
+- <a href="#offeringstatus">OfferingStatus</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>resolvedAt</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#time-v1-meta">Time</a></em></td>
+<td>ResolvedAt is the timestamp when pricing was last resolved</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>meters</code> <em><a href="#resolvedmeter">ResolvedMeter</a> array</em></td>
+<td>Meters contains per-meter resolved unit prices after margins are applied.<br>Empty when no resource pricing is configured.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>subscriptionFee</code> <em><a href="#subscriptionfee">SubscriptionFee</a></em></td>
+<td>SubscriptionFee contains the resolved subscription fee, if configured</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="subscription">Subscription<a class="headerlink" href="#subscription" title="Permanent link">#</a></h4>
+<p>Subscription is the Schema for the subscriptions API.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apiVersion</code> <em>string</em></td>
+<td><code>finops.stakater.com/v1alpha1</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>kind</code> <em>string</em></td>
+<td><code>Subscription</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>metadata</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#objectmeta-v1-meta">ObjectMeta</a></em></td>
+<td>Refer to Kubernetes API documentation for fields of <code>metadata</code>.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>spec</code> <em><a href="#subscriptionspec">SubscriptionSpec</a></em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>status</code> <em><a href="#subscriptionstatus">SubscriptionStatus</a></em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="subscriptionfee">SubscriptionFee<a class="headerlink" href="#subscriptionfee" title="Permanent link">#</a></h4>
+<p>SubscriptionFee defines the recurring fee charged for the subscription being active,
+independent of resource usage.</p>
+<p>Billing model:
+- The fee accrues over time in discrete "ticks" of length <code>period</code>.
+- Each tick contributes <code>priceMicros</code> to the total.
+- Ticks are aligned according to <code>tickAlignment</code>.</p>
+<p>Tick alignment:
+  - ActivatedAt: ticks start at status.activatedAt (tick boundaries are: activatedAt + N*period).
+    Best for per-subscription billing cycles (common for add-ons).
+  - HourBoundary / DayBoundary / MonthBoundary: ticks align to wall-clock boundaries.
+    Best for synchronized billing windows across subscriptions (common for reporting).</p>
+<p>Charging rule (deterministic per time window):
+For a time bucket [start, endExclusive), the subscription fee charged in that bucket is:</p>
+<pre><code>ticks(t) = number of full tick boundaries strictly before time t
+feeInBucket = priceMicros * (ticks(endExclusive) - ticks(start))
+</code></pre>
+<p>This ensures exports are idempotent: the same [start, endExclusive) always yields the same fee.</p>
+<p>Minimum commitment (minPeriods):
+  - minPeriods defines the minimum number of periods to bill once the subscription becomes active.
+  - If the subscription deactivates before minPeriods have elapsed, the remaining periods are billed
+    as an adjustment at deactivation time, so the total billed periods is at least minPeriods.</p>
+<p>All monetary values are expressed in micro-currency units (10^-6 of the currency).</p>
+<p><em>Appears in:</em>
+- <a href="#pricing">Pricing</a>
+- <a href="#resolvedpricing">ResolvedPricing</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>period</code> <em>string</em></td>
+<td>Period is the tick interval. Its interpretation depends on tickAlignment:<br>  - ActivatedAt: a Go duration string (e.g., "1h", "30m", "24h").<br>  - HourBoundary: an integer number of hours (e.g., "1", "2").<br>  - DayBoundary: an integer number of days (e.g., "1", "7").<br>  - MonthBoundary: an integer number of months (e.g., "1", "3", "12").</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>tickAlignment</code> <em><a href="#tickalignment">TickAlignment</a></em></td>
+<td>TickAlignment defines where tick boundaries occur.<br>ActivatedAt: ticks start at status.activatedAt (tick boundaries are: activatedAt + N*period).<br>Best for per-subscription billing cycles (common for add-ons).<br>HourBoundary / DayBoundary / MonthBoundary: ticks align to wall-clock boundaries.<br>Best for synchronized billing windows across subscriptions (common for reporting).<br>For boundary-aligned modes, the first tick after activation covers a partial period<br>and is prorated: charge = priceMicros * actualDuration / periodDuration.<br>For MonthBoundary, the period duration denominator is a fixed 365.25/12 days (30.4375 days).</td>
+<td></td>
+<td>Enum: [ActivatedAt HourBoundary DayBoundary MonthBoundary] <br></td>
+</tr>
+<tr>
+<td><code>minPeriods</code> <em>integer</em></td>
+<td>MinPeriods is the minimum number of full tick periods before deletion is allowed.<br>The collection job keeps the subscription finalizer until at least minPeriods ticks<br>have elapsed since activation. The subscription continues accruing charges normally<br>until the finalizer is removed.</td>
+<td></td>
+<td>Minimum: 1 <br>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>priceMicros</code> <em>integer</em></td>
+<td>PriceMicros is the price per tick, in micro-currency units</td>
+<td></td>
+<td>Minimum: 1 <br>Required: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="subscriptionlifecycle">SubscriptionLifecycle<a class="headerlink" href="#subscriptionlifecycle" title="Permanent link">#</a></h4>
+<p><em>Appears in:</em>
+- <a href="#subscriptionspec">SubscriptionSpec</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onParentDeactivate</code> <em><a href="#parentdeactivateaction">ParentDeactivateAction</a></em></td>
+<td>OnParentDeactivate controls what happens when the parent subscription deactivates:<br>- Deactivate: this subscription also deactivates.<br>- Orphan: this subscription stays active independently, while retaining the parent reference for traceability.<br>Orphan only detaches the parent lifecycle link; compatibility requirements are still enforced.<br>An orphan whose required offering was covered only by the now-deactivated parent (and by no<br>active sibling) is still deactivated, because keeping it active would violate the requirement.</td>
+<td>Deactivate</td>
+<td>Enum: [Deactivate Orphan] <br></td>
+</tr>
+<tr>
+<td><code>targetRef</code> <em><a href="#targetreference">TargetReference</a></em></td>
+<td>TargetRef ties the lifecycle of the subscription to a target resource.<br>The subscription will not activate until the target status is Ready.<br>When the target is deleted, the subscription will be deactivated.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="subscriptionparent">SubscriptionParent<a class="headerlink" href="#subscriptionparent" title="Permanent link">#</a></h4>
+<p><em>Appears in:</em>
+- <a href="#subscriptionspec">SubscriptionSpec</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>subscriptionRef</code> <em><a href="#objectreference">ObjectReference</a></em></td>
+<td>SubscriptionRef is a reference to the parent subscription.</td>
+<td></td>
+<td>Required: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="subscriptionspec">SubscriptionSpec<a class="headerlink" href="#subscriptionspec" title="Permanent link">#</a></h4>
+<p>SubscriptionSpec defines the desired state of Subscription.
+A Subscription creates a binding to an Offering, starting the clock and instantiating the offering.
+Effectively it starts consuming the cost-driving entity from a billing perspective.</p>
+<p>offeringRef and parent are immutable: both determine what the subscription is
+billed for and which subscriptions provide its compatibility coverage, and a
+subscription's activation is a billing epoch that cannot be re-pointed.</p>
+<p><em>Appears in:</em>
+- <a href="#subscription">Subscription</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>offeringRef</code> <em><a href="#objectreference">ObjectReference</a></em></td>
+<td>OfferingRef is the reference to the Offering which is being subscribed to.</td>
+<td></td>
+<td>Required: {} <br></td>
+</tr>
+<tr>
+<td><code>parent</code> <em><a href="#subscriptionparent">SubscriptionParent</a></em></td>
+<td>Parent is an optional reference to a parent subscription for traceability.<br>For example, a storage subscription attached to a VM would reference the VM subscription.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>usageSources</code> <em><a href="#usagesource">UsageSource</a> array</em></td>
+<td>UsageSources defines from where the data for the resource usage of this subscription comes.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>lifecycle</code> <em><a href="#subscriptionlifecycle">SubscriptionLifecycle</a></em></td>
+<td>Lifecycle allows overriding lifecycle behavior if the Offering permits it.<br>If both parent and targetRef are set:<br>- activation requires BOTH (parent active AND target Ready)<br>- deactivation happens if EITHER stops applying, except parent deactivation is ignored when onParentDeactivate=Orphan<br>Note: onParentDeactivate=Orphan only governs the parent lifecycle link. It does not<br>exempt the subscription from its offering's compatibility requirements: if the deactivating<br>parent was the only active provider of a required offering, the subscription is still<br>deactivated for the coverage gap.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="subscriptionstatus">SubscriptionStatus<a class="headerlink" href="#subscriptionstatus" title="Permanent link">#</a></h4>
+<p>SubscriptionStatus defines the observed state of Subscription.
+Non-active subscriptions are ignored by scrape jobs.
+A subscription becomes active when:
+- parent.SubscriptionRef is set and the parent is active, and/or
+- targetRef is set and the target is Ready.
+Unset references are ignored. If neither reference is set, the subscription activates after spec validation.</p>
+<p><em>Appears in:</em>
+- <a href="#subscription">Subscription</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ready</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#conditionstatus-v1-meta">ConditionStatus</a></em></td>
+<td>Ready indicates whether the subscription is active and ready.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>activatedAt</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#time-v1-meta">Time</a></em></td>
+<td>ActivatedAt is the time when the subscription became active.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>deactivatedAt</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#time-v1-meta">Time</a></em></td>
+<td>DeactivatedAt is the time when the subscription was deactivated.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>compatibilityRoot</code> <em>string</em></td>
+<td>CompatibilityRoot is the metadata.uid of this subscription's root ancestor,<br>resolved once by the controller. It identifies the connected family used<br>for compatibility coverage.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>costs</code> <em><a href="#costbucket">CostBucket</a> array</em></td>
+<td>Costs contains rolling cost summaries for the current hour, day, and month.<br>When populated, contains exactly 3 entries — one per granularity.    // +optional</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>conditions</code> <em><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#condition-v1-meta">Condition</a> array</em></td>
+<td>Conditions represent the latest available observations of the Subscription's state.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="targetreference">TargetReference<a class="headerlink" href="#targetreference" title="Permanent link">#</a></h4>
+<p><em>Appears in:</em>
+- <a href="#subscriptionlifecycle">SubscriptionLifecycle</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apiVersion</code> <em>string</em></td>
+<td>APIVersion is the API version of the target resource.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>kind</code> <em>string</em></td>
+<td>Kind is the kind of the target resource.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>namespace</code> <em>string</em></td>
+<td>Namespace is the namespace of the target resource.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>name</code> <em>string</em></td>
+<td>Name is the name of the target resource.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tickalignment">TickAlignment<a class="headerlink" href="#tickalignment" title="Permanent link">#</a></h4>
+<p><em>Underlying type:</em> <em>string</em></p>
+<p>TickAlignment defines where tick boundaries occur for subscription fee billing.</p>
+<p><em>Validation:</em>
+- Enum: [ActivatedAt HourBoundary DayBoundary MonthBoundary]</p>
+<p><em>Appears in:</em>
+- <a href="#subscriptionfee">SubscriptionFee</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ActivatedAt</code></td>
+<td>ActivatedAt: ticks start at status.activatedAt (tick boundaries are: activatedAt + N*period).<br>Best for per-subscription billing cycles (common for add-ons).<br></td>
+</tr>
+<tr>
+<td><code>HourBoundary</code></td>
+<td>HourBoundary ticks align to wall-clock hour boundaries (e.g., 1:00, 2:00, etc.).<br></td>
+</tr>
+<tr>
+<td><code>DayBoundary</code></td>
+<td>DayBoundary ticks align to wall-clock day boundaries (e.g., 1 calender day).<br></td>
+</tr>
+<tr>
+<td><code>MonthBoundary</code></td>
+<td>MonthBoundary ticks align to wall-clock month boundaries (e.g., 1st of each month).<br></td>
+</tr>
+</tbody>
+</table>
+<h4 id="usagesource">UsageSource<a class="headerlink" href="#usagesource" title="Permanent link">#</a></h4>
+<p><em>Appears in:</em>
+- <a href="#subscriptionspec">SubscriptionSpec</a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Default</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>resourceType</code> <em>string</em></td>
+<td>ResourceType is the type of resource to track (e.g., Deployment, StatefulSet, Pod).</td>
+<td></td>
+<td>Enum: [Deployment StatefulSet Pod DaemonSet Job CronJob ReplicaSet] <br></td>
+</tr>
+<tr>
+<td><code>name</code> <em>string</em></td>
+<td>Name is the name of the specific resource instance.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+<tr>
+<td><code>namespace</code> <em>string</em></td>
+<td>Namespace is the namespace of the resource.</td>
+<td></td>
+<td>Optional: {} <br></td>
+</tr>
+</tbody>
+</table>
 
 
 

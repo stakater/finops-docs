@@ -5,13 +5,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/guides/subscribe-to-offering.html">
+        <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/getting-started/quick-start.html">
       
       
-        <link rel="prev" href="price-resource-usage.html">
+        <link rel="prev" href="../concepts/compatibility-and-hierarchy.html">
       
       
-        <link rel="next" href="compose-subscriptions.html">
+        <link rel="next" href="installation/overview.html">
       
       
         
@@ -22,7 +22,7 @@
     
     
       
-        <title>Subscribe to an offering - FinOps Operator</title>
+        <title>Quick start - FinOps Operator</title>
       
     
     
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#subscribe-to-an-offering" class="md-skip">
+        <a href="#quick-start" class="md-skip">
           Skip to content
         </a>
       
@@ -2461,18 +2461,20 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -2493,7 +2495,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2508,10 +2510,37 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../getting-started/quick-start.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="quick-start.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2527,6 +2556,138 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-install-the-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Install the operator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-a-pricebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Create a PriceBook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-create-a-finopsprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Create a FinOpsProvider
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-collect-resource-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Collect resource costs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-create-an-offering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Create an Offering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-create-a-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Create a Subscription
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-collect-subscription-charges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Collect subscription charges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-read-the-charges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Read the charges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2586,7 +2747,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/installation/overview.html" class="md-nav__link">
+      <a href="installation/overview.html" class="md-nav__link">
         
   
   
@@ -2614,7 +2775,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/installation/openshift.html" class="md-nav__link">
+      <a href="installation/openshift.html" class="md-nav__link">
         
   
   
@@ -2642,7 +2803,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/installation/kubernetes.html" class="md-nav__link">
+      <a href="installation/kubernetes.html" class="md-nav__link">
         
   
   
@@ -2678,7 +2839,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/uninstalling.html" class="md-nav__link">
+      <a href="uninstalling.html" class="md-nav__link">
         
   
   
@@ -2710,20 +2871,18 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2744,7 +2903,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2762,7 +2921,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="define-pricing.html" class="md-nav__link">
+      <a href="../guides/define-pricing.html" class="md-nav__link">
         
   
   
@@ -2790,7 +2949,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="switch-active-pricebook.html" class="md-nav__link">
+      <a href="../guides/switch-active-pricebook.html" class="md-nav__link">
         
   
   
@@ -2818,7 +2977,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="collect-cost-data.html" class="md-nav__link">
+      <a href="../guides/collect-cost-data.html" class="md-nav__link">
         
   
   
@@ -2846,7 +3005,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="define-offering.html" class="md-nav__link">
+      <a href="../guides/define-offering.html" class="md-nav__link">
         
   
   
@@ -2874,7 +3033,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="price-resource-usage.html" class="md-nav__link">
+      <a href="../guides/price-resource-usage.html" class="md-nav__link">
         
   
   
@@ -2899,37 +3058,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Subscribe to an offering
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="subscribe-to-offering.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../guides/subscribe-to-offering.html" class="md-nav__link">
         
   
   
@@ -2945,116 +3077,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-reference-the-offering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Reference the Offering
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-know-what-has-to-be-true-before-it-activates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Know what has to be true before it activates
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-apply-the-subscription" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Apply the Subscription
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-verify-activation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Verify activation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-tell-a-waiting-subscription-from-a-finished-one" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 5: Tell a waiting Subscription from a finished one
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-confirm-charges-are-accruing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Confirm charges are accruing
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-guides" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Related guides
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3067,7 +3089,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="compose-subscriptions.html" class="md-nav__link">
+      <a href="../guides/compose-subscriptions.html" class="md-nav__link">
         
   
   
@@ -3095,7 +3117,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="read-subscription-costs.html" class="md-nav__link">
+      <a href="../guides/read-subscription-costs.html" class="md-nav__link">
         
   
   
@@ -3123,7 +3145,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="deactivate-a-subscription.html" class="md-nav__link">
+      <a href="../guides/deactivate-a-subscription.html" class="md-nav__link">
         
   
   
@@ -3522,10 +3544,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-reference-the-offering" class="md-nav__link">
+  <a href="#1-install-the-operator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Reference the Offering
+        1. Install the operator
       
     </span>
   </a>
@@ -3533,10 +3555,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-know-what-has-to-be-true-before-it-activates" class="md-nav__link">
+  <a href="#2-create-a-pricebook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Know what has to be true before it activates
+        2. Create a PriceBook
       
     </span>
   </a>
@@ -3544,10 +3566,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-apply-the-subscription" class="md-nav__link">
+  <a href="#3-create-a-finopsprovider" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Apply the Subscription
+        3. Create a FinOpsProvider
       
     </span>
   </a>
@@ -3555,10 +3577,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-verify-activation" class="md-nav__link">
+  <a href="#4-collect-resource-costs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Verify activation
+        4. Collect resource costs
       
     </span>
   </a>
@@ -3566,10 +3588,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-tell-a-waiting-subscription-from-a-finished-one" class="md-nav__link">
+  <a href="#5-create-an-offering" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Tell a waiting Subscription from a finished one
+        5. Create an Offering
       
     </span>
   </a>
@@ -3577,10 +3599,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-confirm-charges-are-accruing" class="md-nav__link">
+  <a href="#6-create-a-subscription" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: Confirm charges are accruing
+        6. Create a Subscription
       
     </span>
   </a>
@@ -3588,10 +3610,32 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-guides" class="md-nav__link">
+  <a href="#7-collect-subscription-charges" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Related guides
+        7. Collect subscription charges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-read-the-charges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Read the charges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
       
     </span>
   </a>
@@ -3618,107 +3662,180 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
 
-<h1 id="subscribe-to-an-offering">Subscribe to an offering<a class="headerlink" href="#subscribe-to-an-offering" title="Permanent link">#</a></h1>
-<p>A <code>Subscription</code> binds a subscriber to an <a href="define-offering.html">Offering</a> and starts the billing clock. This guide creates the simplest useful one, a Subscription with nothing but an <code>offeringRef</code>, then confirms it activated and reads the state it left behind. It is for a platform engineer, or the automation that provisions a tenant, with edit rights in the namespace the Subscription will live in.</p>
+<h1 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">#</a></h1>
+<p>This walk-through goes from a fresh cluster to a Subscription whose <code>status.costs</code> carries charges. Every resource below is created in <code>finops-operator-system</code>, the namespace the rest of the documentation assumes.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
 <ul>
-<li>The FinOps Operator is <a href="../getting-started/installation/kubernetes.html">installed</a> and its controller pod is running.</li>
-<li>An <code>Offering</code> whose <code>READY</code> column reads <code>True</code>. <a href="define-offering.html">Define an offering</a> authors one.</li>
-<li>A <a href="collect-cost-data.html"><code>SubscriptionChargeCollection</code> CostJob</a> scheduled, if the fee is to accrue into charge rows rather than only be declared. A cluster without one also never finishes deleting a Subscription.</li>
-<li><code>kubectl</code> edit permission in the namespace you are creating the Subscription in, which is <code>finops-operator-system</code> throughout this guide.</li>
+<li>A cluster with <code>cluster-admin</code>, plus <code>kubectl</code> and the Helm CLI.</li>
+<li>cert-manager, because the chart issues the webhook serving certificate through it.</li>
+<li>A reachable PostgreSQL database and a reachable OpenCost instance. <a href="installation/overview.html">Installation overview</a> explains what each one is used for, and how the chart can bring both up for you.</li>
 </ul>
-<p>For a Subscription that hangs off another one, or whose activation depends on a sibling or a workload, read <a href="compose-subscriptions.html">compose subscriptions</a> after this page.</p>
-<h2 id="step-1-reference-the-offering">Step 1: Reference the Offering<a class="headerlink" href="#step-1-reference-the-offering" title="Permanent link">#</a></h2>
-<p><code>spec.offeringRef</code> is the only required field on the spec, and it takes two values, both required:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
-<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<h2 id="1-install-the-operator">1. Install the operator<a class="headerlink" href="#1-install-the-operator" title="Permanent link">#</a></h2>
+<p>Create the namespace and the two Secrets the controller mounts by name, then install the chart. Neither <code>secretKeyRef</code> is optional, so the controller pod does not start until both Secrets exist.</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>finops-operator-system
+
+kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>finops-operator-postgres-config<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from-literal<span class="o">=</span><span class="nv">POSTGRES_CONNECTION_STRING</span><span class="o">=</span><span class="s1">'postgres://finops:PASSWORD@postgres.example.svc:5432/finops?sslmode=require'</span>
+
+kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>finops-operator-opencost-config<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from-literal<span class="o">=</span><span class="nv">OPENCOST_CONNECTION_STRING</span><span class="o">=</span><span class="s1">'http://opencost.opencost.svc:9003'</span>
+
+helm<span class="w"> </span>install<span class="w"> </span>finops-operator<span class="w"> </span>oci://ghcr.io/stakater/public/charts/finops-operator<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--namespace<span class="w"> </span>finops-operator-system
 </code></pre></div>
-<p><code>namespace</code> carries <code>+required</code> and a minimum length of one character, and it is never filled in from the Subscription's own namespace. Omitting it is rejected by the API server, not defaulted, even when the Offering sits in the same namespace as the Subscription. That is deliberate: a reference means the same object wherever the manifest is applied, so the same file cannot silently bind to a different Offering in a different namespace.</p>
-<p>The whole reference is immutable, held by a CEL rule on <code>spec</code> that rejects any change with <code>offeringRef is immutable; create a new Subscription instead</code>. Check the manifest against the API server before you commit to it:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>subscription.yaml<span class="w"> </span>--dry-run<span class="o">=</span>server
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>deployment<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
-<p>Moving a subscriber onto different terms later means creating a second Subscription against a second Offering, which is the sequence in <a href="../concepts/offering.html#replacing-an-offering">replacing an Offering</a>.</p>
-<h2 id="step-2-know-what-has-to-be-true-before-it-activates">Step 2: Know what has to be true before it activates<a class="headerlink" href="#step-2-know-what-has-to-be-true-before-it-activates" title="Permanent link">#</a></h2>
-<p>Activation is not one condition but four, checked in a fixed order on every reconcile: the Offering, then the parent, then compatibility coverage, then the target. All four must pass. They are continuous checks rather than admission checks, so a Subscription that fails one is still admitted, held at <code>Ready=False</code>, and activates on its own once the condition clears. <a href="../concepts/subscription.html#the-four-activation-gates">The four activation gates</a> sets out what each one tests and which of them can also end an already-active Subscription.</p>
-<p>What a guide needs from that is the reason vocabulary, because the failing gate names itself on the <code>Ready</code> condition. The Offering gate reports <code>OfferingNotFound</code> or <code>OfferingNotReady</code>. Where a <code>spec.parent</code> is set, the parent gate reports <code>ParentSubscriptionNotFound</code>, <code>ParentSubscriptionDeactivated</code>, or <code>ParentSubscriptionNotReady</code>. Where the bound Offering declares <code>requiredOfferings</code>, the compatibility gate reports <code>CompatibilityRequirementNotMet</code>. Where a <code>lifecycle.targetRef</code> is set, the target gate reports <code>TargetNotFound</code>, or <code>TargetIsSelfReference</code> if the Subscription named itself. A read that fails for some other reason surfaces as <code>ValidationError</code> at whichever gate hit it.</p>
-<p>The Subscription in step 3 sets neither a <code>parent</code> nor a <code>targetRef</code> and binds an Offering that requires nothing, so gates two to four pass trivially and only the first two reasons are reachable. Opting into any of the other three makes it a live dependency for the rest of the Subscription's life, which is what <a href="compose-subscriptions.html">compose subscriptions</a> covers, one procedure per gate.</p>
-<h2 id="step-3-apply-the-subscription">Step 3: Apply the Subscription<a class="headerlink" href="#step-3-apply-the-subscription" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># subscription-acme-platform-base.yaml</span>
+<p><code>finops-operator-controller-manager</code> and <code>finops-operator-finops-gateway-gateway</code> both report their replicas available once the install has settled. A default install creates no <code>PriceBook</code>, <code>CostJob</code>, or <code>FinOpsProvider</code>, so nothing is priced or collected until you author them below. <a href="installation/kubernetes.html">On Kubernetes</a> covers the chart values, the OpenShift variant, and what to read when a pod will not start.</p>
+<h2 id="2-create-a-pricebook">2. Create a PriceBook<a class="headerlink" href="#2-create-a-pricebook" title="Permanent link">#</a></h2>
+<p>A <code>PriceBook</code> holds per-unit rates. The operator renders the active book into OpenCost's custom pricing document, and a metered Offering resolves its prices from it. The <code>finops.stakater.com/active</code> annotation is how you choose which book is active.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># pricebook.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PriceBook</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">onprem-pricing</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">finops.stakater.com/active</span><span class="p">:</span><span class="w"> </span><span class="s">"true"</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">currency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">USD</span>
+<span class="w">  </span><span class="nt">valuationMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">currency</span>
+<span class="w">  </span><span class="nt">rates</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">cpuHour</span><span class="p">:</span><span class="w"> </span><span class="s">"0.031"</span>
+<span class="w">    </span><span class="nt">ramGbHour</span><span class="p">:</span><span class="w"> </span><span class="s">"0.004"</span>
+<span class="w">    </span><span class="nt">pvGbHour</span><span class="p">:</span><span class="w"> </span><span class="s">"0.00012"</span>
+<span class="w">    </span><span class="nt">gpuHour</span><span class="p">:</span><span class="w"> </span><span class="s">"1.80"</span>
+<span class="w">    </span><span class="nt">networkGiB</span><span class="p">:</span><span class="w"> </span><span class="s">"0.09"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>pricebook.yaml
+kubectl<span class="w"> </span>get<span class="w"> </span>pricebook<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+</code></pre></div>
+<p>The <code>ACTIVE</code> column reads <code>true</code> on the book the operator selected, and <code>READY</code> reads <code>True</code> once its rates parsed. <a href="../guides/define-pricing.html">Define pricing</a> walks through the rates, and <a href="../concepts/pricebook.html">PriceBook</a> explains all three selection tiers and why a namespace that collects allocations should hold only one book.</p>
+<h2 id="3-create-a-finopsprovider">3. Create a FinOpsProvider<a class="headerlink" href="#3-create-a-finopsprovider" title="Permanent link">#</a></h2>
+<p><code>FinOpsProvider</code> records where the cluster runs. It is cluster-scoped and there is exactly one of it: CEL rules on the CRD require the name <code>default</code> and exactly one option block.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># finopsprovider.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FinOpsProvider</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">onpremoptions</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">pricingModelSource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pricebook</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>finopsprovider.yaml
+kubectl<span class="w"> </span>get<span class="w"> </span>finopsprovider<span class="w"> </span>default
+</code></pre></div>
+<p>This reconciler writes no status, so the object existing is all <code>kubectl get</code> reports; the controller log is where an applied provider shows up. Outside Multi Tenant Operator mode the provider also changes nothing about pricing on its own, since the pricing document is written by the PriceBook reconciler. <a href="../concepts/finops-provider.html">FinOpsProvider</a> covers the four option blocks and what each one switches on.</p>
+<h2 id="4-collect-resource-costs">4. Collect resource costs<a class="headerlink" href="#4-collect-resource-costs" title="Permanent link">#</a></h2>
+<p>A <code>CostJob</code> of type <code>ResourceCostCollection</code> pulls hourly allocation rows from OpenCost and stores them, priced from a PriceBook in its own namespace.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># costjob-resource.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CostJob</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource-cost-collection</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceCostCollection</span>
+<span class="w">  </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>costjob-resource.yaml
+kubectl<span class="w"> </span>get<span class="w"> </span>cronjob<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+</code></pre></div>
+<p>The operator generates a CronJob named <code>resource-cost-collection-cronjob</code> in the CostJob's namespace, and <code>interval: 1h</code> becomes the schedule <code>0 * * * *</code>. <a href="../guides/collect-cost-data.html">Collect cost data</a> covers what a run reads and writes, and <a href="../concepts/costjob.html">CostJob</a> lists the intervals that map to a schedule of their own.</p>
+<h2 id="5-create-an-offering">5. Create an Offering<a class="headerlink" href="#5-create-an-offering" title="Permanent link">#</a></h2>
+<p>An <code>Offering</code> is the priced thing. Its spec is immutable once created, enforced by a CEL rule, so pricing changes mean a new Offering rather than an edit.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># offering.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Offering</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pricing</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">subscriptionFee</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+<span class="w">      </span><span class="nt">tickAlignment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ActivatedAt</span>
+<span class="w">      </span><span class="nt">priceMicros</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>offering.yaml
+kubectl<span class="w"> </span>get<span class="w"> </span>offering<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+</code></pre></div>
+<p><code>priceMicros</code> is micro-currency in the PriceBook's currency, where 1,000,000 is 1.00, so this Offering charges 40.00 per tick and <code>period</code> with <code>tickAlignment: ActivatedAt</code> puts a tick boundary one hour after each Subscription activates. It prices no metered resources, so its <code>READY</code> column reaches <code>True</code> without needing a rate from the PriceBook. <a href="../guides/define-offering.html">Define an offering</a> covers tick alignment, <code>minPeriods</code>, and compatibility requirements.</p>
+<h2 id="6-create-a-subscription">6. Create a Subscription<a class="headerlink" href="#6-create-a-subscription" title="Permanent link">#</a></h2>
+<p>A <code>Subscription</code> binds a subscriber to the Offering and starts the clock.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># subscription.yaml</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subscription</span>
 <span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acme-platform-base</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-platform-sub</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">offeringRef</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">platform-base</span>
 <span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>subscription-acme-platform-base.yaml
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>subscription.yaml
+kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
-<p>To bill measured consumption as well as the fee, add <code>usageSources</code> here; <a href="price-resource-usage.html">price resource usage</a> covers pairing them with the Offering's <code>resourcePricing</code>. Unlike <code>offeringRef</code>, <code>usageSources</code> stays editable afterwards.</p>
-<h2 id="step-4-verify-activation">Step 4: Verify activation<a class="headerlink" href="#step-4-verify-activation" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscriptions<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+<p><code>offeringRef.namespace</code> is required and is never filled in from the Subscription's own namespace, so set it on every reference. The <code>READY</code> column reaches <code>True</code> once all four activation gates pass, which for a Subscription with no parent, no target, and an Offering that requires nothing means as soon as that Offering is ready. Activation stamps <code>status.activatedAt</code>, and every charge is computed from it. <a href="../concepts/subscription.html">Subscription</a> describes the gates; <a href="../guides/subscribe-to-offering.html">subscribe to an offering</a> covers parents, usage sources, and targets.</p>
+<h2 id="7-collect-subscription-charges">7. Collect subscription charges<a class="headerlink" href="#7-collect-subscription-charges" title="Permanent link">#</a></h2>
+<p>A second <code>CostJob</code>, of type <code>SubscriptionChargeCollection</code>, computes each Subscription's charges, writes <code>status.costs</code>, and releases the finalizer of a Subscription that has been deleted. Nothing else does those three things, so a cluster without this CostJob accrues no readable charges and never finishes deleting a Subscription.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># costjob-charges.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops.stakater.com/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CostJob</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subscription-charge-collection</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">finops-operator-system</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SubscriptionChargeCollection</span>
+<span class="w">  </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>NAME                 READY
-acme-platform-base   True
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>costjob-charges.yaml
+kubectl<span class="w"> </span>get<span class="w"> </span>cronjob<span class="w"> </span>subscription-charge-collection-cronjob<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
 </code></pre></div>
-<p><code>READY</code> is the <code>status.ready</code> print column. <code>True</code> means every gate passed and the billing epoch has opened. The two status fields worth reading next are the timestamp the epoch opened at and the conditions that recorded it:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.activatedAt}{"\n"}'</span>
+<p>This CronJob also runs on <code>0 * * * *</code>, so <code>status.costs</code> is written on its first run at the top of the hour.</p>
+<h2 id="8-read-the-charges">8. Read the charges<a class="headerlink" href="#8-read-the-charges" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>my-platform-sub<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+<p>The figures below are illustrative, for a Subscription activated four hours earlier. Run the command straight after the previous step and you will see no <code>costs</code> at all until the charge collector's first run, and near-zero <code>current</code> values for a while after that.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">status</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ready</span><span class="p">:</span><span class="w"> </span><span class="s">"True"</span>
+<span class="w">  </span><span class="nt">activatedAt</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T09:00:00Z"</span>
+<span class="w">  </span><span class="nt">costs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hour</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T13:00:00Z"</span>
+<span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T14:00:00Z"</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span>
+<span class="w">      </span><span class="nt">breakdown</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subscription</span>
+<span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40000000</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">day</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T00:00:00Z"</span>
+<span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-02T00:00:00Z"</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">160000000</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600000000</span>
+<span class="w">      </span><span class="nt">breakdown</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subscription</span>
+<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">160000000</span>
+<span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600000000</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">granularity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">month</span>
+<span class="w">      </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-04-01T00:00:00Z"</span>
+<span class="w">      </span><span class="nt">endExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">"2026-05-01T00:00:00Z"</span>
+<span class="w">      </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">160000000</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28440000000</span>
+<span class="w">      </span><span class="nt">breakdown</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subscription</span>
+<span class="w">          </span><span class="nt">current</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">160000000</span>
+<span class="w">          </span><span class="nt">projected</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">28440000000</span>
 </code></pre></div>
-<p>On a Subscription that just activated, <code>describe</code> shows a <code>Ready</code> condition and an <code>Active</code> condition, both <code>True</code> and both carrying reason <code>ActivationSucceeded</code>. <code>status.activatedAt</code> is written once and never moved, and everything downstream keys off it: charges are computed from it, <code>minPeriods</code> is counted from it, and a Subscription that never activated is skipped outright by the collection job.</p>
-<p>If <code>READY</code> reads <code>False</code>, <code>describe</code> names the gate that is holding it, using the reason vocabulary in step 2. <a href="../reference/status-conditions.html">Status conditions</a> lists the full set.</p>
-<h2 id="step-5-tell-a-waiting-subscription-from-a-finished-one">Step 5: Tell a waiting Subscription from a finished one<a class="headerlink" href="#step-5-tell-a-waiting-subscription-from-a-finished-one" title="Permanent link">#</a></h2>
-<p><code>READY False</code> is not one state. It covers a Subscription that has not activated yet, one that has ended for good, and one that is active and billing while a gate is transiently failing. The <code>Ready</code> condition alone does not separate them, because deactivation writes <code>Ready=False</code> with reason <code>ValidationSucceeded</code>, which describes nothing about the cause. Read the <code>Active</code> condition and <code>status.deactivatedAt</code> instead:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.ready}{"  "}{.status.deactivatedAt}{"\n"}{range .status.conditions[*]}{.type}{"\t"}{.status}{"\t"}{.reason}{"\n"}{end}'</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th>What you see</th>
-<th>What it means</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>READY True</code></td>
-<td>Active. <code>Active=True</code> with reason <code>ActivationSucceeded</code>, or <code>Orphaned</code> if it outlived its parent.</td>
-</tr>
-<tr>
-<td><code>READY False</code> and no <code>Active</code> condition at all</td>
-<td>It has never activated. The <code>Ready</code> condition's reason names the failing gate.</td>
-</tr>
-<tr>
-<td><code>READY False</code> with <code>Active=True</code></td>
-<td>It is still active and still accruing charges; a gate is failing without ending it, such as an Offering that has gone not ready. <code>status.deactivatedAt</code> is absent.</td>
-</tr>
-<tr>
-<td><code>READY False</code> with <code>Active=False</code></td>
-<td>It has ended, and terminally. The <code>Active</code> condition's reason carries the real cause: <code>ParentDeactivated</code>, <code>CompatibilityRequirementNotMet</code>, <code>TargetNotFound</code>, or <code>MarkedForDeletion</code>. <code>status.deactivatedAt</code> is set.</td>
-</tr>
-</tbody>
-</table>
-<p>The absent-<code>Active</code>-condition row is the reliable discriminator for a Subscription that never got going, because the not-ready path writes only the <code>Ready</code> condition and never touches <code>Active</code>. <code>status.deactivatedAt</code> is the reliable one for a Subscription that ended: it is written once, never cleared, and a Subscription carrying it is not re-validated on any later reconcile, so it will not come back if the Offering recovers. <a href="../concepts/subscription.html#what-status-tells-you">What status tells you</a> sets out the rest of the fields.</p>
-<h2 id="step-6-confirm-charges-are-accruing">Step 6: Confirm charges are accruing<a class="headerlink" href="#step-6-confirm-charges-are-accruing" title="Permanent link">#</a></h2>
-<p><code>status.costs</code> is written by the <code>SubscriptionChargeCollection</code> CostJob on its own schedule, not by the reconciler, so it appears on the first run after activation rather than at activation:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.costs[*].granularity}{"\n"}'</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>hour day month
-</code></pre></div>
-<p>Three rolling buckets, in micro-currency, where 1,000,000 micros is 1.00 of the active PriceBook's currency. An empty result after a collection run has fired means the Subscription had not activated when the run started, or that no <code>SubscriptionChargeCollection</code> CostJob is scheduled at all. <a href="read-subscription-costs.html">Read subscription costs</a> interprets the values and the per-meter breakdown.</p>
-<h2 id="related-guides">Related guides<a class="headerlink" href="#related-guides" title="Permanent link">#</a></h2>
+<p>There are always exactly three buckets, one per granularity, each covering the window from <code>start</code> to <code>endExclusive</code>. <code>current</code> is what has settled inside that window and <code>projected</code> is the figure for the whole of it, both in micro-currency, and <code>breakdown</code> splits them by meter, where <code>subscription</code> is the Offering's recurring fee. Zero values are omitted from the object, so a bucket with nothing settled yet shows only its window and its projection. <a href="../guides/read-subscription-costs.html">Read subscription costs</a> works through how each figure is arrived at.</p>
+<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="compose-subscriptions.html">Compose subscriptions</a> for parents, required Offerings, orphaning, and target references.</li>
-<li><a href="define-offering.html">Define an offering</a> for the terms this Subscription accrues against.</li>
-<li><a href="deactivate-a-subscription.html">Deactivate a subscription</a> for ending one and what holds its finalizer.</li>
-<li><a href="../concepts/subscription.html">Subscription</a> for the gates, the status fields, and why deactivation is terminal.</li>
+<li><a href="../guides/read-subscription-costs.html">Read subscription costs</a> to interpret the buckets above.</li>
+<li><a href="../guides/price-resource-usage.html">Price resource usage</a> to charge for measured consumption as well as a fee.</li>
+<li><a href="../concepts/architecture.html">Architecture</a> for what the controller and the generated CronJobs each do.</li>
+<li><a href="uninstalling.html">Uninstalling</a> for the order to tear this down in.</li>
 </ul>
 
 

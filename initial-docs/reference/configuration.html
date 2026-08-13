@@ -8,25 +8,25 @@
         <link rel="canonical" href="https://docs.stakater.com/finops/initial-docs/reference/configuration.html">
       
       
-        <link rel="prev" href="crds/subscription.html">
+        <link rel="prev" href="api.html">
       
       
-        <link rel="next" href="status-conditions.html">
+        <link rel="next" href="rbac.html">
       
       
         
       
       
       <link rel="icon" href="../assets/images/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
-        <title>Configuration - FinOps Operator</title>
+        <title>Configuration reference - FinOps Operator</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -49,6 +49,8 @@
     
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/pills.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -340,7 +342,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <nav class="md-header__inner md-grid" aria-label="Header">
 
     <!-- Link to home -->
-    <a href="../index.html" title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       <!-- 
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -1988,7 +1990,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href=".." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -2017,33 +2019,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
   
-    <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
     
@@ -2053,17 +2028,17 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Getting Started
+    Overview
   
 
     
@@ -2074,12 +2049,12 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Getting Started
+    Overview
   
 
           </label>
@@ -2092,14 +2067,14 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Getting started
+    Introduction
   
 
     
@@ -2120,14 +2095,14 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/prerequisites.html" class="md-nav__link">
+      <a href="../overview/key-features.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Prerequisites
+    Key features
   
 
     
@@ -2148,42 +2123,14 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/installation.html" class="md-nav__link">
+      <a href="../overview/use-cases.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Installation
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../getting-started/quickstart.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Quickstart
+    Use cases
   
 
     
@@ -2219,10 +2166,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -2240,8 +2187,8 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2258,14 +2205,42 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../concepts/index.html" class="md-nav__link">
+      <a href="../concepts/architecture.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Concepts
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/terminology.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminology
   
 
     
@@ -2447,6 +2422,283 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/compatibility-and-hierarchy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compatibility and hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/quick-start.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Installation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation/overview.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation/openshift.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    On OpenShift
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation/kubernetes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    On Kubernetes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/uninstalling.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uninstalling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2515,7 +2767,35 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <span class="md-ellipsis">
     
   
-    Define pricing
+    Define pricing with a PriceBook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/switch-active-pricebook.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch the active PriceBook
   
 
     
@@ -2592,6 +2872,34 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
+      <a href="../guides/price-resource-usage.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Price resource usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../guides/subscribe-to-offering.html" class="md-nav__link">
         
   
@@ -2600,6 +2908,34 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
   
     Subscribe to an offering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/compose-subscriptions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compose subscriptions
   
 
     
@@ -2648,42 +2984,14 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="../guides/deactivation-and-cleanup.html" class="md-nav__link">
+      <a href="../guides/deactivate-a-subscription.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deactivation and cleanup
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../guides/uninstall.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Uninstall
+    Deactivate a subscription
   
 
     
@@ -2759,62 +3067,15 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1">
-        
-          
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CRDs
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    CRDs
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="crds/finopsprovider.html" class="md-nav__link">
+      <a href="api.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    FinOpsProvider
+    Api
   
 
     
@@ -2823,126 +3084,6 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="crds/pricebook.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PriceBook
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="crds/costjob.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CostJob
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="crds/offering.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Offering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="crds/subscription.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Subscription
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -2971,7 +3112,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <span class="md-ellipsis">
     
   
-    Configuration
+    Configuration reference
   
 
     
@@ -2989,7 +3130,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <span class="md-ellipsis">
     
   
-    Configuration
+    Configuration reference
   
 
     
@@ -3017,33 +3158,22 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#helm-values" class="md-nav__link">
+  <a href="#helm-chart-values" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Helm values
+        Helm chart values
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manager-environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Manager environment variables
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Manager environment variables">
+    <nav class="md-nav" aria-label="Helm chart values">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-controller-mode" class="md-nav__link">
+  <a href="#controller-manager" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Required (controller mode)
+        Controller manager
       
     </span>
   </a>
@@ -3051,10 +3181,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
         
           <li class="md-nav__item">
-  <a href="#optional" class="md-nav__link">
+  <a href="#certificates-and-platform" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Optional
+        Certificates and platform
       
     </span>
   </a>
@@ -3062,10 +3192,43 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
         
           <li class="md-nav__item">
-  <a href="#scheduled-job-environment-variables" class="md-nav__link">
+  <a href="#dependency-secret-names" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scheduled-job environment variables
+        Dependency Secret names
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starter-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starter resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finops-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FinOps Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundled-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bundled dependencies
       
     </span>
   </a>
@@ -3078,10 +3241,116 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#manager-command-line-flags" class="md-nav__link">
+  <a href="#environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Manager command-line flags
+        Environment variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-controller-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The controller manager
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The controller manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prometheus_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PROMETHEUS_URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-allocation-cronjob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The allocation CronJob
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The allocation CronJob">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#databaseviewsrefreshtimeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        databaseViewsRefreshTimeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hours_lookback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HOURS_LOOKBACK
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-collection-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The collection job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manager-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manager flags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
       
     </span>
   </a>
@@ -3104,14 +3373,14 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="status-conditions.html" class="md-nav__link">
+      <a href="rbac.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Status conditions
+    RBAC
   
 
     
@@ -3132,14 +3401,98 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="glossary.html" class="md-nav__link">
+      <a href="security-model.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Glossary
+    Security model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="metrics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="webhooks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="status-conditions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status conditions
   
 
     
@@ -3187,6 +3540,60 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eula.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EULA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3216,33 +3623,22 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#helm-values" class="md-nav__link">
+  <a href="#helm-chart-values" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Helm values
+        Helm chart values
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manager-environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Manager environment variables
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Manager environment variables">
+    <nav class="md-nav" aria-label="Helm chart values">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-controller-mode" class="md-nav__link">
+  <a href="#controller-manager" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Required (controller mode)
+        Controller manager
       
     </span>
   </a>
@@ -3250,10 +3646,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
         
           <li class="md-nav__item">
-  <a href="#optional" class="md-nav__link">
+  <a href="#certificates-and-platform" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Optional
+        Certificates and platform
       
     </span>
   </a>
@@ -3261,10 +3657,43 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
         
           <li class="md-nav__item">
-  <a href="#scheduled-job-environment-variables" class="md-nav__link">
+  <a href="#dependency-secret-names" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scheduled-job environment variables
+        Dependency Secret names
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starter-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starter resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finops-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FinOps Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundled-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bundled dependencies
       
     </span>
   </a>
@@ -3277,10 +3706,116 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </li>
       
         <li class="md-nav__item">
-  <a href="#manager-command-line-flags" class="md-nav__link">
+  <a href="#environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Manager command-line flags
+        Environment variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-controller-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The controller manager
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The controller manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prometheus_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PROMETHEUS_URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-allocation-cronjob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The allocation CronJob
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The allocation CronJob">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#databaseviewsrefreshtimeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        databaseViewsRefreshTimeout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hours_lookback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HOURS_LOOKBACK
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-collection-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The collection job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manager-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manager flags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
       
     </span>
   </a>
@@ -3308,9 +3843,11 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 
 <h1 id="configuration-reference">Configuration reference<a class="headerlink" href="#configuration-reference" title="Permanent link">#</a></h1>
-<p>This page documents the external configuration surface of the FinOps Operator: the Helm chart values, environment variables on the manager and its scheduled jobs, and command-line flags. Together, these options let you integrate the operator with your cluster's infrastructure and control its runtime behavior.</p>
-<h2 id="helm-values">Helm values<a class="headerlink" href="#helm-values" title="Permanent link">#</a></h2>
-<p>The following table lists top-level Helm chart keys. Use dot notation to override values during chart installation.</p>
+<p>The FinOps Operator ships one binary that runs in three modes, and each mode reads its own configuration. A platform engineer configures the long-lived controller manager through Helm values, which the chart turns into container arguments and environment variables. The two short-lived job modes are configured by the operator itself, from the <code>CostJob</code> you author plus the pod template the operator embeds, so their environment is something you read rather than something you set. <a href="../concepts/architecture.html#the-three-binary-modes">The three binary modes</a> explains the split.</p>
+<p>This page is the exhaustive surface: every key in the chart's <code>values.yaml</code>, every environment variable the code reads, and every flag the binary registers. <a href="../getting-started/installation/kubernetes.html">On Kubernetes</a> covers the practical subset you are likely to change.</p>
+<h2 id="helm-chart-values">Helm chart values<a class="headerlink" href="#helm-chart-values" title="Permanent link">#</a></h2>
+<p>The chart is generated from the operator's Kubernetes manifests and then post-processed, so <code>values.yaml</code> is the authoritative list of keys rather than a hand-written interface. Read the shipped defaults for the version you are installing with <code>helm show values oci://ghcr.io/stakater/public/charts/finops-operator</code>.</p>
+<h3 id="controller-manager">Controller manager<a class="headerlink" href="#controller-manager" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3321,261 +3858,608 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </thead>
 <tbody>
 <tr>
+<td><code>controllerManager.replicas</code></td>
+<td><code>1</code></td>
+<td>Replicas of the manager Deployment. Leader election is on by default, so extra replicas stand by rather than share work.</td>
+</tr>
+<tr>
 <td><code>controllerManager.manager.args</code></td>
-<td>(flags for metrics, leader-elect, health probe, webhook cert)</td>
-<td>Command-line arguments passed to the manager.</td>
+<td><code>--metrics-bind-address=:8443</code>, <code>--leader-elect</code>, <code>--health-probe-bind-address=:8081</code>, <code>--webhook-cert-path=/tmp/k8s-webhook-server/serving-certs</code></td>
+<td>The manager's command line, replaced wholesale when you set it. See <a href="#manager-flags">manager flags</a>.</td>
+</tr>
+<tr>
+<td><code>controllerManager.manager.image.repository</code></td>
+<td><code>ghcr.io/stakater/finops-operator</code></td>
+<td>Manager image. The same coordinate is passed to generated CronJob pods through <code>OPERATOR_IMAGE</code>.</td>
+</tr>
+<tr>
+<td><code>controllerManager.manager.image.tag</code></td>
+<td><code>v0.1.16</code></td>
+<td>Image tag. It falls back to the chart's <code>appVersion</code> when empty, and the shipped value moves with each chart release.</td>
 </tr>
 <tr>
 <td><code>controllerManager.manager.env.opencostDeploymentName</code></td>
 <td><code>finops-operator-opencost</code></td>
-<td>Name of the Deployment that the operator restarts when pricing changes.</td>
+<td>Becomes <code>OPENCOST_DEPLOYMENT_NAME</code>. The Deployment the PriceBook reconciler restarts after a pricing change.</td>
 </tr>
 <tr>
 <td><code>controllerManager.manager.env.opencostDeploymentNamespace</code></td>
 <td><code>finops-operator-system</code></td>
-<td>Namespace containing the OpenCost Deployment and pricing ConfigMap.</td>
+<td>Becomes <code>OPENCOST_DEPLOYMENT_NAMESPACE</code>. Where that Deployment and the pricing ConfigMap live.</td>
 </tr>
 <tr>
-<td><code>controllerManager.manager.image.repository</code></td>
-<td>—</td>
-<td>Container image repository.</td>
+<td><code>controllerManager.manager.env.mtoEnabled</code></td>
+<td><code>"false"</code></td>
+<td>Becomes <code>MTO_ENABLED</code>. Only the exact string <code>"true"</code> switches the operator to the Multi Tenant Operator path.</td>
 </tr>
 <tr>
-<td><code>controllerManager.manager.image.tag</code></td>
-<td>—</td>
-<td>Container image tag.</td>
-</tr>
-<tr>
-<td><code>controllerManager.replicas</code></td>
-<td>—</td>
-<td>Number of manager Deployment replicas.</td>
-</tr>
-<tr>
-<td><code>controllerManager.podSecurityContext</code></td>
-<td>—</td>
-<td>Pod-level security context.</td>
+<td><code>controllerManager.manager.extraEnv</code></td>
+<td><code>[]</code></td>
+<td>Raw <code>env</code> entries appended to the manager container. The only way to set a variable the chart has no named key for, such as <code>ENABLE_WEBHOOKS</code> or <code>CLUSTER_ID</code>.</td>
 </tr>
 <tr>
 <td><code>controllerManager.manager.containerSecurityContext</code></td>
-<td>—</td>
-<td>Container-level security context.</td>
+<td><code>allowPrivilegeEscalation: false</code>, <code>capabilities.drop: [ALL]</code></td>
+<td>Container security context.</td>
+</tr>
+<tr>
+<td><code>controllerManager.podSecurityContext</code></td>
+<td><code>runAsNonRoot: true</code>, <code>seccompProfile.type: RuntimeDefault</code></td>
+<td>Pod security context.</td>
+</tr>
+<tr>
+<td><code>controllerManager.serviceAccount.annotations</code></td>
+<td><code>{}</code></td>
+<td>Annotations on the <code>finops-operator-controller-manager</code> ServiceAccount.</td>
 </tr>
 <tr>
 <td><code>imagePullSecrets</code></td>
-<td>—</td>
-<td>Names of Secrets for pulling images from private registries.</td>
+<td><code>[]</code></td>
+<td>Pull secrets set on both Deployments, and serialized into the manager's <code>IMAGE_PULL_SECRETS</code> variable so generated CronJob pods inherit them.</td>
 </tr>
 <tr>
 <td><code>kubernetesClusterDomain</code></td>
 <td><code>cluster.local</code></td>
-<td>Kubernetes cluster domain for internal DNS names.</td>
+<td>Used to build the certificate DNS names. Also passed to both containers as <code>KUBERNETES_CLUSTER_DOMAIN</code>.</td>
 </tr>
+</tbody>
+</table>
+<p>The chart sets no resource requests or limits on the manager container. Add them through your own values if the namespace enforces a quota.</p>
+<h3 id="certificates-and-platform">Certificates and platform<a class="headerlink" href="#certificates-and-platform" title="Permanent link">#</a></h3>
+<table>
+<thead>
 <tr>
-<td><code>metricsService.*</code></td>
-<td>(<code>HTTPS</code> on <code>:8443</code>)</td>
-<td>Service configuration for the metrics endpoint.</td>
+<th>Key</th>
+<th>Default</th>
+<th>Purpose</th>
 </tr>
-<tr>
-<td><code>webhookService.*</code></td>
-<td>(<code>HTTPS</code> on <code>:443</code>)</td>
-<td>Service configuration for the webhook endpoint.</td>
-</tr>
+</thead>
+<tbody>
 <tr>
 <td><code>certManager.enabled</code></td>
 <td><code>true</code></td>
-<td>Whether to use cert-manager for webhook certificates. Set to <code>false</code> only if you manage certificates manually.</td>
+<td>Creates the self-signed <code>Issuer</code>, the webhook serving <code>Certificate</code>, and the metrics <code>Certificate</code>, and adds the cert-manager CA injection annotation to the <code>ValidatingWebhookConfiguration</code>.</td>
 </tr>
 <tr>
 <td><code>openshift.enabled</code></td>
 <td><code>false</code></td>
-<td>Enable OpenShift-specific configuration.</td>
+<td>Annotates the webhook Service for OpenShift's service serving certificates and switches CA injection to <code>service.beta.openshift.io/inject-cabundle</code>. Use instead of cert-manager, not alongside it.</td>
 </tr>
 <tr>
-<td><code>secrets.prometheus</code></td>
-<td>—</td>
-<td>Name of the Secret containing Prometheus credentials.</td>
+<td><code>webhookService.type</code></td>
+<td><code>ClusterIP</code></td>
+<td>Service type for the webhook endpoint.</td>
 </tr>
+<tr>
+<td><code>webhookService.ports</code></td>
+<td>port <code>443</code>, <code>targetPort</code> <code>9443</code>, <code>TCP</code></td>
+<td>The webhook Service's ports. The manager serves admission on 9443.</td>
+</tr>
+<tr>
+<td><code>metricsService.type</code></td>
+<td><code>ClusterIP</code></td>
+<td>Service type for the metrics endpoint.</td>
+</tr>
+<tr>
+<td><code>metricsService.ports</code></td>
+<td>port <code>8443</code>, <code>targetPort</code> <code>8443</code>, <code>TCP</code>, named <code>https</code></td>
+<td>The metrics Service's ports.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dependency-secret-names">Dependency Secret names<a class="headerlink" href="#dependency-secret-names" title="Permanent link">#</a></h3>
+<p>The manager's <code>secretKeyRef</code> entries are not optional, so a missing Secret or a missing key leaves the pod unable to start.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code>secrets.postgres</code></td>
-<td>—</td>
-<td>Name of the Secret containing PostgreSQL credentials.</td>
+<td><code>finops-operator-postgres-config</code></td>
+<td>Secret holding key <code>POSTGRES_CONNECTION_STRING</code>. Wired into the manager as that variable and into the gateway as <code>PG_CONNECTION_STRING</code>.</td>
 </tr>
 <tr>
 <td><code>secrets.opencost</code></td>
-<td>—</td>
-<td>Name of the Secret containing OpenCost credentials.</td>
+<td><code>finops-operator-opencost-config</code></td>
+<td>Secret holding key <code>OPENCOST_CONNECTION_STRING</code>. Mandatory: the manager refuses to start without a value.</td>
 </tr>
+<tr>
+<td><code>secrets.prometheus</code></td>
+<td><code>finops-operator-prometheus-config</code></td>
+<td>Referenced by no chart template, so it changes nothing on the Helm path.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>secrets.prometheus</code> is inert under Helm but not under Operator Lifecycle Manager. The bundle's ClusterServiceVersion wires a <code>PROMETHEUS_URL</code> variable from that Secret with a non-optional <code>secretKeyRef</code>, so an OLM install needs the Secret to exist and to carry a <code>PROMETHEUS_URL</code> key even though nothing in the operator reads the value. See <a href="#prometheus_url">PROMETHEUS_URL</a>.</p>
+</div>
+<h3 id="starter-resources">Starter resources<a class="headerlink" href="#starter-resources" title="Permanent link">#</a></h3>
+<p>The chart can create one <code>CostJob</code> of each type and one <code>PriceBook</code>. All three are off by default, so a default install reconciles nothing until you author those resources yourself.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td><code>costJob.enabled</code></td>
 <td><code>false</code></td>
-<td>Create a default <code>ResourceCostCollection</code> CostJob on install.</td>
+<td>Creates <code>&lt;release&gt;-daily-scraping-job</code>, a <code>ResourceCostCollection</code> CostJob, in the release namespace.</td>
 </tr>
 <tr>
 <td><code>costJob.interval</code></td>
-<td>—</td>
-<td>Schedule interval for the default CostJob.</td>
-</tr>
-<tr>
-<td><code>costJob.&lt;timeout&gt;</code> (7 keys)</td>
-<td>—</td>
-<td>Optional timeout overrides matching the seven <code>CostJob</code> spec timeout fields. See <a href="crds/costjob.html">CostJob</a> for the field list and defaults.</td>
+<td><code>1m</code></td>
+<td>Its <code>spec.interval</code>.</td>
 </tr>
 <tr>
 <td><code>chargeCollectionJob.enabled</code></td>
 <td><code>false</code></td>
-<td>Create a default <code>SubscriptionChargeCollection</code> CostJob on install.</td>
+<td>Creates <code>&lt;release&gt;-charge-collection-job</code>, a <code>SubscriptionChargeCollection</code> CostJob, in the release namespace.</td>
 </tr>
 <tr>
 <td><code>chargeCollectionJob.interval</code></td>
-<td>—</td>
-<td>Schedule interval for the default charge collection job.</td>
-</tr>
-<tr>
-<td><code>chargeCollectionJob.&lt;timeout&gt;</code> (7 keys)</td>
-<td>—</td>
-<td>Optional timeout overrides matching the seven <code>CostJob</code> spec timeout fields. See <a href="crds/costjob.html">CostJob</a> for the field list and defaults.</td>
+<td><code>1m</code></td>
+<td>Its <code>spec.interval</code>.</td>
 </tr>
 <tr>
 <td><code>priceBook.enabled</code></td>
 <td><code>false</code></td>
-<td>Create a default <code>PriceBook</code> on install.</td>
+<td>Creates <code>&lt;release&gt;-default-pricing</code> in the release namespace.</td>
 </tr>
 <tr>
 <td><code>priceBook.currency</code></td>
-<td>—</td>
-<td>ISO 4217 currency code (e.g. <code>USD</code>).</td>
+<td><code>USD</code></td>
+<td>Its <code>spec.currency</code>.</td>
 </tr>
 <tr>
 <td><code>priceBook.valuationMode</code></td>
-<td>—</td>
-<td>Pricing valuation mode.</td>
+<td><code>currency</code></td>
+<td>Its <code>spec.valuationMode</code>. Only <code>currency</code> prices an Offering.</td>
 </tr>
 <tr>
-<td><code>priceBook.rates.*</code></td>
-<td>—</td>
-<td>Rate definitions for pricing.</td>
+<td><code>priceBook.rates.cpuHour</code></td>
+<td><code>""</code></td>
+<td>Rate per CPU-hour. Empty rates are omitted from the object rather than written as zero.</td>
 </tr>
 <tr>
-<td><code>finopsGatewayGateway</code></td>
-<td>—</td>
-<td>FinOps Gateway Deployment configuration.</td>
+<td><code>priceBook.rates.spotCPUHour</code></td>
+<td><code>""</code></td>
+<td>Rate per spot CPU-hour.</td>
 </tr>
 <tr>
-<td><code>finopsGatewayService</code></td>
-<td>—</td>
-<td>FinOps Gateway Service configuration.</td>
+<td><code>priceBook.rates.ramGbHour</code></td>
+<td><code>""</code></td>
+<td>Rate per GB-hour of memory.</td>
 </tr>
 <tr>
-<td><code>finopsGatewayIngress</code></td>
-<td>—</td>
-<td>FinOps Gateway Ingress configuration.</td>
+<td><code>priceBook.rates.spotRAMGbHour</code></td>
+<td><code>""</code></td>
+<td>Rate per spot GB-hour of memory.</td>
+</tr>
+<tr>
+<td><code>priceBook.rates.pvGbHour</code></td>
+<td><code>""</code></td>
+<td>Rate per GB-hour of persistent volume.</td>
+</tr>
+<tr>
+<td><code>priceBook.rates.gpuHour</code></td>
+<td><code>""</code></td>
+<td>Rate per GPU-hour.</td>
+</tr>
+<tr>
+<td><code>priceBook.rates.networkGiB</code></td>
+<td><code>""</code></td>
+<td>Rate per GiB of network transfer.</td>
 </tr>
 </tbody>
 </table>
-<p>The three <code>finopsGateway*</code> values enable an optional FinOps Gateway deployment — a separate component for UI/API access. These values ship the Gateway's Gateway API route, Service, and Ingress; configuring the Gateway itself is out of scope for this page.</p>
-<h2 id="manager-environment-variables">Manager environment variables<a class="headerlink" href="#manager-environment-variables" title="Permanent link">#</a></h2>
-<p>The manager binary reads environment variables on startup. Some are required; others are optional with sensible defaults. Scheduled jobs use a distinct set of timeout variables that can be overridden per-job.</p>
-<h3 id="required-controller-mode">Required (controller mode)<a class="headerlink" href="#required-controller-mode" title="Permanent link">#</a></h3>
-<p>These variables must be set for the manager to operate in controller mode.</p>
+<p>Both CostJob templates also expose seven timeout keys, each empty by default and each omitted from the generated object when empty: <code>databaseInitTimeout</code>, <code>k8sOperationTimeout</code>, <code>openCostFetchTimeout</code>, <code>databaseInsertTimeout</code>, <code>databaseViewsRefreshTimeout</code>, <code>statusUpdateTimeout</code>, and <code>httpClientTimeout</code>, under both <code>costJob</code> and <code>chargeCollectionJob</code>. Five of the seven take effect. <a href="../concepts/costjob.html#timeouts">Timeouts</a> gives what each one bounds.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Two of those keys change nothing, and neither one tells you so. <code>k8sOperationTimeout</code> renders a field of that name onto the <code>CostJob</code>, but the CRD calls the field <code>kubernetesOperationTimeout</code>, so the API server prunes the unknown field; set <code>kubernetesOperationTimeout</code> on the <code>CostJob</code> object directly instead. <code>databaseViewsRefreshTimeout</code> does reach the object, and then bounds nothing: the materialized view it used to refresh has been dropped and the collection run no longer refreshes any view. See <a href="#databaseviewsrefreshtimeout">databaseViewsRefreshTimeout</a>.</p>
+</div>
+<p>Two more things are worth knowing before you turn the starter resources on. An interval of <code>1m</code> maps to the cron expression <code>* * * * *</code>, so an unchanged default runs collection every minute; <a href="../concepts/costjob.html#from-interval-to-schedule">from interval to schedule</a> lists the intervals the operator recognises. And the chart writes the active marker on its <code>PriceBook</code> as a label while the operator reads an annotation, so the chart's marker does not pin the book; <a href="../concepts/pricebook.html#choosing-the-active-pricebook">choosing the active PriceBook</a> covers what happens instead.</p>
+<h3 id="finops-gateway">FinOps Gateway<a class="headerlink" href="#finops-gateway" title="Permanent link">#</a></h3>
+<p>The chart deploys a second workload, the FinOps Gateway, which reads the same PostgreSQL Secret key and listens on port 8080.</p>
 <table>
 <thead>
 <tr>
-<th>Variable</th>
+<th>Key</th>
+<th>Default</th>
 <th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>PROMETHEUS_URL</code></td>
-<td>Prometheus endpoint used for supplementary metrics.</td>
+<td><code>finopsGatewayGateway.replicas</code></td>
+<td><code>1</code></td>
+<td>Replicas of the gateway Deployment.</td>
 </tr>
 <tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.image.repository</code></td>
+<td><code>ghcr.io/stakater/finops-gateway</code></td>
+<td>Gateway image.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.image.tag</code></td>
+<td><code>v0.1.0</code></td>
+<td>Gateway image tag, falling back to the chart's <code>appVersion</code> when empty.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.env.port</code></td>
+<td><code>"8080"</code></td>
+<td>Becomes <code>PORT</code>.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.env.enableAuth</code></td>
+<td><code>"false"</code></td>
+<td>Becomes <code>ENABLE_AUTH</code>.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.env.mtoGatewayUrl</code></td>
+<td><code>""</code></td>
+<td>Becomes <code>MTO_GATEWAY_URL</code>.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.env.allowedOrigins</code></td>
+<td><code>""</code></td>
+<td>Becomes <code>ALLOWED_ORIGINS</code>.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.extraEnv</code></td>
+<td><code>[]</code></td>
+<td>Raw <code>env</code> entries appended to the gateway container.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayGateway.finopsGatewayContainer.containerSecurityContext</code></td>
+<td><code>{}</code></td>
+<td>Container security context for the gateway.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayService.type</code></td>
+<td><code>ClusterIP</code></td>
+<td>Gateway Service type.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayService.ports</code></td>
+<td>port <code>8080</code>, <code>targetPort</code> <code>8080</code>, named <code>http</code></td>
+<td>Gateway Service ports.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayIngress.enabled</code></td>
+<td><code>false</code></td>
+<td>Creates an Ingress for the gateway Service.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayIngress.className</code></td>
+<td><code>""</code></td>
+<td>Sets <code>spec.ingressClassName</code> when non-empty.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayIngress.annotations</code></td>
+<td><code>{}</code></td>
+<td>Annotations on the Ingress.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayIngress.tls</code></td>
+<td><code>[]</code></td>
+<td>Copied into the Ingress <code>spec.tls</code>.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayIngress.rules</code></td>
+<td><code>[]</code></td>
+<td>Copied into the Ingress <code>spec.rules</code>. An Ingress with no rules routes nothing, so set this whenever you enable the Ingress.</td>
+</tr>
+<tr>
+<td><code>finopsGatewayIngress.hosts</code></td>
+<td><code>[]</code></td>
+<td>Declared in <code>values.yaml</code> and read by no template. Put hostnames in <code>rules</code> instead.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bundled-dependencies">Bundled dependencies<a class="headerlink" href="#bundled-dependencies" title="Permanent link">#</a></h3>
+<p>Setting <code>mdoDependencies.enabled</code> pulls in the <code>mto-dependencies-operator</code> dependency chart and creates PostgreSQL, OpenCost, Prometheus, and the three dependency Secrets, so the operator has something to talk to on a fresh cluster.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mdoDependencies.enabled</code></td>
+<td><code>false</code></td>
+<td>Enables the dependency chart and the objects that go with it.</td>
+</tr>
+<tr>
+<td><code>mdoDependencies.postgres.database</code></td>
+<td><code>finopsdb</code></td>
+<td>Database created, and the database named in the generated connection string.</td>
+</tr>
+<tr>
+<td><code>mdoDependencies.postgres.username</code></td>
+<td><code>finopsuser</code></td>
+<td>Application user, also used in the generated connection string.</td>
+</tr>
+<tr>
+<td><code>mdoDependencies.postgres.password</code></td>
+<td><code>superfinopspassword1234</code></td>
+<td>That user's password.</td>
+</tr>
+<tr>
+<td><code>mdoDependencies.postgres.postgresPassword</code></td>
+<td><code>supersecurepassword1234</code></td>
+<td>The <code>postgres</code> superuser password.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The two password defaults are placeholders that ship with the chart, and the generated connection string uses <code>sslmode=disable</code>. Treat <code>mdoDependencies</code> as a way to get a cluster running, not as a production database.</p>
+</div>
+<h2 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">#</a></h2>
+<p>Every variable below is one the code actually reads, at the call site named in the description. Which process reads it matters, because the three modes share a binary but not a configuration surface.</p>
+<h3 id="the-controller-manager">The controller manager<a class="headerlink" href="#the-controller-manager" title="Permanent link">#</a></h3>
+<p>The manager validates four variables at startup and exits if any is empty, so these are hard requirements rather than defaults.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Required</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
 <td><code>POSTGRES_CONNECTION_STRING</code></td>
-<td>PostgreSQL DSN for storing cost and charge data.</td>
+<td>Yes</td>
+<td>none</td>
+<td>PostgreSQL DSN. Also used to apply migrations at startup unless <code>--skipDBConnection</code> is set.</td>
 </tr>
 <tr>
 <td><code>OPENCOST_CONNECTION_STRING</code></td>
-<td>OpenCost service URL (e.g., <code>http://finops-operator-opencost.finops-operator-system.svc.cluster.local:9003</code>).</td>
+<td>Yes</td>
+<td>none</td>
+<td>Base URL of the OpenCost service, for example <code>http://finops-operator-opencost.finops-operator-system.svc.cluster.local:9003</code>. Passed on to generated CronJob pods.</td>
 </tr>
 <tr>
 <td><code>OPENCOST_DEPLOYMENT_NAME</code></td>
-<td>Deployment name that the operator restarts when pricing changes.</td>
+<td>Yes</td>
+<td>none</td>
+<td>Deployment restarted after the pricing ConfigMap changes.</td>
 </tr>
 <tr>
 <td><code>OPENCOST_DEPLOYMENT_NAMESPACE</code></td>
-<td>Namespace containing the OpenCost Deployment and pricing ConfigMap.</td>
+<td>Yes</td>
+<td>none</td>
+<td>Namespace of that Deployment and of the pricing ConfigMap.</td>
+</tr>
+<tr>
+<td><code>MTO_ENABLED</code></td>
+<td>No</td>
+<td>unset, treated as false</td>
+<td>Only the exact string <code>"true"</code> enables the Multi Tenant Operator path. Any other value, including <code>"True"</code>, leaves it off.</td>
+</tr>
+<tr>
+<td><code>CLUSTER_ID</code></td>
+<td>No</td>
+<td><code>default</code></td>
+<td>Identifier stamped on the rows the operator mirrors into PostgreSQL. The chart has no key for it, so set it through <code>extraEnv</code> if one database serves several clusters.</td>
+</tr>
+<tr>
+<td><code>ENABLE_WEBHOOKS</code></td>
+<td>No</td>
+<td>unset, webhooks on</td>
+<td>Both validating webhooks are registered unless this is exactly <code>"false"</code>. Anything else, including an empty value, registers them.</td>
+</tr>
+<tr>
+<td><code>IMAGE_PULL_SECRETS</code></td>
+<td>No</td>
+<td>unset</td>
+<td>A JSON array of local object references, applied to the pod template of every CronJob the operator generates. Malformed JSON fails the CostJob reconcile.</td>
+</tr>
+<tr>
+<td><code>OPERATOR_IMAGE</code></td>
+<td>No</td>
+<td>unset</td>
+<td>The image written into generated CronJob pods, and passed through to them as a variable of the same name. An empty value produces a CronJob with an empty image.</td>
+</tr>
+<tr>
+<td><code>FINOPS_MIGRATION_DIR</code></td>
+<td>No</td>
+<td><code>/migrations</code></td>
+<td>Directory the migration files are read from. Useful when running the binary outside its image.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="optional">Optional<a class="headerlink" href="#optional" title="Permanent link">#</a></h3>
-<p>These variables have sensible defaults and are only needed in special configurations.</p>
+<p><code>KUBERNETES_CLUSTER_DOMAIN</code> is set on both containers by the chart and read by no code in the operator.</p>
+<h4 id="prometheus_url">PROMETHEUS_URL<a class="headerlink" href="#prometheus_url" title="Permanent link">#</a></h4>
+<p><code>PROMETHEUS_URL</code> is not required in controller mode. It appears nowhere in the operator's Go source, and the startup validation covers only the four variables above, so the manager starts and runs without it. Prometheus is a dependency of OpenCost rather than of the operator: OpenCost queries it, and the operator queries OpenCost.</p>
+<p>The name survives in one place. The bundle's ClusterServiceVersion still declares a <code>PROMETHEUS_URL</code> variable sourced from the Prometheus Secret with a non-optional <code>secretKeyRef</code>, so on the OLM path the Secret and the key must exist for the pod to start even though the value is never used. On the Helm path no template references it at all.</p>
+<h3 id="the-allocation-cronjob">The allocation CronJob<a class="headerlink" href="#the-allocation-cronjob" title="Permanent link">#</a></h3>
+<p>Pods of a <code>ResourceCostCollection</code> run start in <code>--mode=cronjob</code>. Four variables are required and the run aborts without them; the rest are read with a fallback. The reconciler overlays what it computes onto the operator's pod template by name, so a variable the template sets and the reconciler does not name reaches the pod with the template's value, and the compiled-in fallback applies only when neither supplies it.</p>
 <table>
 <thead>
 <tr>
 <th>Variable</th>
-<th>Default</th>
-<th>Purpose</th>
+<th>Set by</th>
+<th>Effective value in the generated pod</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>ENABLE_WEBHOOKS</code></td>
-<td><code>true</code></td>
-<td>Set to <code>"false"</code> to disable webhook registration (local development only).</td>
+<td><code>COSTJOB_NAME</code></td>
+<td>Reconciler</td>
+<td>The CostJob's name. Required.</td>
+</tr>
+<tr>
+<td><code>COSTJOB_NAMESPACE</code></td>
+<td>Reconciler</td>
+<td>The CostJob's namespace. Required.</td>
+</tr>
+<tr>
+<td><code>POSTGRES_CONNECTION_STRING</code></td>
+<td>Reconciler</td>
+<td>A <code>secretKeyRef</code> into <code>&lt;costjob-name&gt;-costjob-secret</code>. Required.</td>
+</tr>
+<tr>
+<td><code>OPENCOST_CONNECTION_STRING</code></td>
+<td>Reconciler</td>
+<td>The manager's own OpenCost URL, with any trailing slash trimmed. Required.</td>
+</tr>
+<tr>
+<td><code>OPERATOR_IMAGE</code></td>
+<td>Reconciler</td>
+<td>The manager's <code>OPERATOR_IMAGE</code>. Carried but not read in this mode.</td>
+</tr>
+<tr>
+<td><code>CLUSTER_ID</code></td>
+<td>Template</td>
+<td><code>default</code>. The compiled-in fallback is also <code>default</code>.</td>
+</tr>
+<tr>
+<td><code>HOURS_LOOKBACK</code></td>
+<td>Template</td>
+<td><code>5</code>. See <a href="#hours_lookback">HOURS_LOOKBACK</a>.</td>
+</tr>
+<tr>
+<td><code>OPENCOST_AGGREGATE</code></td>
+<td>Template</td>
+<td><code>namespace,pod,container</code>, matching the compiled-in fallback. The dimensions each allocation row is grouped by.</td>
+</tr>
+<tr>
+<td><code>OPENCOST_STEP</code></td>
+<td>Template</td>
+<td><code>1h</code>, matching the compiled-in fallback. The step of each OpenCost query.</td>
+</tr>
+<tr>
+<td><code>OPENCOST_RESOLUTION</code></td>
+<td>Template</td>
+<td><code>1m</code>, matching the compiled-in fallback. The resolution of each OpenCost query.</td>
+</tr>
+<tr>
+<td><code>SCHEDULED_TIMESTAMP</code></td>
+<td>Template</td>
+<td>A <code>fieldRef</code> to the <code>batch.kubernetes.io/cronjob-scheduled-timestamp</code> annotation. Parsed as RFC 3339 and truncated to the hour to pin the window a retry works on. An empty value, or one that does not parse, falls back to the current hour, which is why a hand-run pod processes now rather than a past window.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="scheduled-job-environment-variables">Scheduled-job environment variables<a class="headerlink" href="#scheduled-job-environment-variables" title="Permanent link">#</a></h3>
-<p>The operator's scheduled <code>CostJob</code> pods consume these environment variables. Each can be overridden on individual <code>CostJob</code> specifications via corresponding fields in the CR. If not overridden, the values below are used as defaults.</p>
+<p>Six timeout variables are written onto the pod, each only when the matching <code>CostJob</code> field is set, and each falling back to the default on the type otherwise.</p>
 <table>
 <thead>
 <tr>
 <th>Variable</th>
+<th><code>CostJob</code> field</th>
 <th>Default</th>
-<th>CostJob field</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>DATABASE_INIT_TIMEOUT</code></td>
-<td><code>2m</code></td>
 <td><code>databaseInitTimeout</code></td>
+<td><code>2m</code></td>
 </tr>
 <tr>
 <td><code>K8S_OPERATION_TIMEOUT</code></td>
-<td><code>1m</code></td>
 <td><code>kubernetesOperationTimeout</code></td>
+<td><code>1m</code></td>
 </tr>
 <tr>
 <td><code>OPENCOST_FETCH_TIMEOUT</code></td>
-<td><code>2m</code></td>
 <td><code>openCostFetchTimeout</code></td>
+<td><code>2m</code></td>
 </tr>
 <tr>
 <td><code>DATABASE_INSERT_TIMEOUT</code></td>
-<td><code>3m</code></td>
 <td><code>databaseInsertTimeout</code></td>
-</tr>
-<tr>
-<td><code>DATABASE_VIEWS_REFRESH_TIMEOUT</code></td>
-<td><code>5m</code></td>
-<td><code>databaseViewsRefreshTimeout</code></td>
+<td><code>3m</code></td>
 </tr>
 <tr>
 <td><code>STATUS_UPDATE_TIMEOUT</code></td>
-<td><code>1m</code></td>
 <td><code>statusUpdateTimeout</code></td>
+<td><code>1m</code></td>
 </tr>
 <tr>
 <td><code>HTTP_CLIENT_TIMEOUT</code></td>
-<td><code>90s</code></td>
 <td><code>httpClientTimeout</code></td>
+<td><code>90s</code></td>
 </tr>
 </tbody>
 </table>
-<p>Each timeout field corresponds to an optional override on the <code>CostJob</code> resource. See <a href="crds/costjob.html">CostJob</a> for more details.</p>
-<h2 id="manager-command-line-flags">Manager command-line flags<a class="headerlink" href="#manager-command-line-flags" title="Permanent link">#</a></h2>
-<p>The manager binary accepts command-line flags to configure its runtime behavior. Most are set automatically by the Helm chart; you only need to override them in special cases.</p>
+<p>A duration that does not parse is logged and the default is kept, so a typo degrades to the default rather than failing the run.</p>
+<h4 id="databaseviewsrefreshtimeout">databaseViewsRefreshTimeout<a class="headerlink" href="#databaseviewsrefreshtimeout" title="Permanent link">#</a></h4>
+<p>The <code>CostJob</code> type carries a seventh timeout field, <code>databaseViewsRefreshTimeout</code>, which is retained for API compatibility and does nothing. There is no <code>DATABASE_VIEWS_REFRESH_TIMEOUT</code> variable on the pod: the reconciler no longer writes one, the job configuration no longer holds the value, and no code reads it.</p>
+<p>The reason is that the work it bounded is gone. Collection runs used to rebuild the <code>mv_provider_allocations_summary</code> materialized view on every tick, which meant a full re-scan and re-aggregate of <code>provider_allocations</code> growing with retained history. Nothing read that view any more, so it was dropped in the operator's fourteenth migration and the refresh step was removed with it.</p>
+<p>The field is still settable, on the object and through the chart's <code>costJob.databaseViewsRefreshTimeout</code> and <code>chargeCollectionJob.databaseViewsRefreshTimeout</code> keys, and it carries no default. Setting it is accepted, is not pruned, and changes nothing. Treat it as vestigial, and expect to find it on <code>CostJob</code> objects created before it was deprecated.</p>
+<p><code>OPENCOST_HOSTNAME</code> and <code>OPENCOST_PORT</code> are also on the pod, carried over from the template, and read by no code. The OpenCost address comes from <code>OPENCOST_CONNECTION_STRING</code> alone.</p>
+<h4 id="hours_lookback">HOURS_LOOKBACK<a class="headerlink" href="#hours_lookback" title="Permanent link">#</a></h4>
+<p><code>HOURS_LOOKBACK</code> decides how many hours before the scheduled hour a run revisits, so that hours which were empty or failed earlier get another chance before they are finalized. It has two layers. The operator's pod template sets it to <code>5</code>, and the Go fallback is <code>2</code>. Because the reconciler merges its overrides onto the template by name and does not name this variable, the template's value survives and the effective default in a generated CronJob is <strong>5</strong>. The fallback of <code>2</code> applies only if the variable is absent from the pod altogether, which is what happens when you run the binary in that mode yourself.</p>
+<h3 id="the-collection-job">The collection job<a class="headerlink" href="#the-collection-job" title="Permanent link">#</a></h3>
+<p>Pods of a <code>SubscriptionChargeCollection</code> run start in <code>--mode=collectionjob</code> and read a much smaller set. The reconciler builds their environment with the same code, so a collection-job pod also carries <code>COSTJOB_NAME</code>, <code>COSTJOB_NAMESPACE</code>, <code>OPENCOST_CONNECTION_STRING</code>, and whichever timeout variables the <code>CostJob</code> set, and reads none of them.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Required</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POSTGRES_CONNECTION_STRING</code></td>
+<td>Yes</td>
+<td>none</td>
+<td>The charges and allocations are read and written through this connection.</td>
+</tr>
+<tr>
+<td><code>CLUSTER_ID</code></td>
+<td>No</td>
+<td><code>default</code></td>
+<td>Scopes the charge rows and the summary queries. Note the generated pod inherits <code>default</code> from the template, not the manager's value.</td>
+</tr>
+<tr>
+<td><code>SCHEDULED_TIMESTAMP</code></td>
+<td>No</td>
+<td>current hour</td>
+<td>Pinned once at construction and truncated to the hour, so every retry of a Job targets the same window.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="manager-flags">Manager flags<a class="headerlink" href="#manager-flags" title="Permanent link">#</a></h2>
+<p>The binary registers the same flags in every mode, but only the controller uses most of them. The chart passes four of them through <code>controllerManager.manager.args</code>.</p>
 <table>
 <thead>
 <tr>
@@ -3588,66 +4472,73 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <tr>
 <td><code>--mode</code></td>
 <td><code>controller</code></td>
-<td>Operating mode. End users set <code>controller</code> in the Deployment; the other values are set automatically by the scheduled jobs the operator creates.</td>
-</tr>
-<tr>
-<td><code>--metrics-bind-address</code></td>
-<td><code>0</code> (disabled)</td>
-<td>Address the metrics endpoint binds to.</td>
-</tr>
-<tr>
-<td><code>--metrics-secure</code></td>
-<td><code>true</code></td>
-<td>Serve metrics over <code>HTTPS</code>.</td>
-</tr>
-<tr>
-<td><code>--health-probe-bind-address</code></td>
-<td><code>:8081</code></td>
-<td>Liveness and readiness probe endpoint.</td>
-</tr>
-<tr>
-<td><code>--leader-elect</code></td>
-<td><code>false</code></td>
-<td>Enable leader election for high-availability deployments.</td>
-</tr>
-<tr>
-<td><code>--webhook-cert-path</code></td>
-<td>(empty)</td>
-<td>Directory containing the webhook serving certificate.</td>
-</tr>
-<tr>
-<td><code>--webhook-cert-name</code></td>
-<td><code>tls.crt</code></td>
-<td>Filename of the webhook certificate within the cert path.</td>
-</tr>
-<tr>
-<td><code>--webhook-cert-key</code></td>
-<td><code>tls.key</code></td>
-<td>Filename of the webhook certificate key within the cert path.</td>
-</tr>
-<tr>
-<td><code>--metrics-cert-path</code></td>
-<td>(empty)</td>
-<td>Directory containing the metrics serving certificate.</td>
-</tr>
-<tr>
-<td><code>--metrics-cert-name</code></td>
-<td><code>tls.crt</code></td>
-<td>Filename of the metrics certificate within the cert path.</td>
-</tr>
-<tr>
-<td><code>--metrics-cert-key</code></td>
-<td><code>tls.key</code></td>
-<td>Filename of the metrics certificate key within the cert path.</td>
+<td>One of <code>controller</code>, <code>cronjob</code>, or <code>collectionjob</code>. An unrecognised value exits with an error. The operator sets the job modes on the CronJobs it generates.</td>
 </tr>
 <tr>
 <td><code>--skipDBConnection</code></td>
 <td><code>false</code></td>
-<td>Skip database initialisation on startup. Local debugging only.</td>
+<td>Skip database initialization and migrations. For local debugging.</td>
+</tr>
+<tr>
+<td><code>--metrics-bind-address</code></td>
+<td><code>0</code></td>
+<td>Address the metrics endpoint binds to. <code>0</code> disables it; the chart passes <code>:8443</code>.</td>
+</tr>
+<tr>
+<td><code>--metrics-secure</code></td>
+<td><code>true</code></td>
+<td>Serve metrics over TLS, with authentication and authorization filters in front.</td>
+</tr>
+<tr>
+<td><code>--health-probe-bind-address</code></td>
+<td><code>:8081</code></td>
+<td>Address the liveness and readiness endpoints bind to.</td>
+</tr>
+<tr>
+<td><code>--leader-elect</code></td>
+<td><code>false</code></td>
+<td>Enable leader election. The chart passes it, so a chart install has it on.</td>
+</tr>
+<tr>
+<td><code>--webhook-cert-path</code></td>
+<td><code>""</code></td>
+<td>Directory holding the webhook serving certificate. Empty means no certificate watcher is started; the chart passes <code>/tmp/k8s-webhook-server/serving-certs</code>.</td>
+</tr>
+<tr>
+<td><code>--webhook-cert-name</code></td>
+<td><code>tls.crt</code></td>
+<td>Certificate filename inside that directory.</td>
+</tr>
+<tr>
+<td><code>--webhook-cert-key</code></td>
+<td><code>tls.key</code></td>
+<td>Private key filename inside that directory.</td>
+</tr>
+<tr>
+<td><code>--metrics-cert-path</code></td>
+<td><code>""</code></td>
+<td>Directory holding the metrics serving certificate. Empty means the metrics server uses its own generated certificate.</td>
+</tr>
+<tr>
+<td><code>--metrics-cert-name</code></td>
+<td><code>tls.crt</code></td>
+<td>Certificate filename inside that directory.</td>
+</tr>
+<tr>
+<td><code>--metrics-cert-key</code></td>
+<td><code>tls.key</code></td>
+<td>Private key filename inside that directory.</td>
 </tr>
 </tbody>
 </table>
-<p>For cloud integration options, see <a href="crds/finopsprovider.html">FinOpsProvider</a>. For pricing configuration, see <a href="crds/pricebook.html">PriceBook</a>.</p>
+<p>The controller-runtime logging flags are registered as well: <code>--zap-devel</code>, <code>--zap-encoder</code>, <code>--zap-log-level</code>, <code>--zap-stacktrace-level</code>, and <code>--zap-time-encoding</code>. The operator builds its logger with development mode off, so <code>--zap-devel</code> defaults to <code>false</code> and logs are JSON at info level unless you change it.</p>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../getting-started/installation/kubernetes.html">On Kubernetes</a> for the values a real install sets, and why the two dependency Secrets are not optional.</li>
+<li><a href="../concepts/costjob.html">CostJob</a> for what the generated CronJob looks like and what each timeout bounds.</li>
+<li><a href="api.html#costjobspec"><code>CostJobSpec</code></a> and <a href="api.html#pricebookspec"><code>PriceBookSpec</code></a> for the field-level schema behind the starter resources.</li>
+<li><a href="status-conditions.html">Status conditions</a> for reading back what the configuration produced.</li>
+</ul>
 
 
 
@@ -4356,7 +5247,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   
