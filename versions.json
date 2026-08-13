@@ -53,12 +53,5 @@
     "version": "renovate-main-actions-checkout-6.x",
     "title": "renovate-main-actions-checkout-6.x",
     "aliases": []
-  },
-  {
-    "version": "initial-docs",
-    "title": "initial-docs",
-    "aliases": [
-      "latest"
-    ]
   }
 ]
