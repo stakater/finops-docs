@@ -13,7 +13,7 @@ jobs:
   build_container:
     uses: stakater/.github/.github/workflows/push_container_only.yaml@v0.0.131
     with:
-      DOCKER_BUILD_CONTEXTS: content=https://github.com/stakater/dco-docs.git#gh-pages
+      DOCKER_BUILD_CONTEXTS: content=https://github.com/stakater/finops-docs.git#gh-pages
       DOCKER_FILE_PATH: Dockerfile
     secrets:
       CONTAINER_REGISTRY_URL: ghcr.io/stakater

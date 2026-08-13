@@ -1,0 +1,20 @@
+# Config for generating content/reference/api.md from the finops-operator Go
+# types with https://github.com/elastic/crd-ref-docs (template-operator-docs
+# model). One-off manual regeneration:
+#
+#   go install github.com/elastic/crd-ref-docs@latest
+#   crd-ref-docs --source-path=../finops-operator/api/v1alpha1 \
+#     --config=crd-ref-docs.yaml --renderer=markdown \
+#     --output-mode=single --output-path=content/reference/api.md
+#   # Then prepend the '<!-- markdownlint-disable -->' header.
+#
+# finops.stakater.com/v1alpha1 is the only group-version, so
+# ignoreGroupVersions is empty.
+processor:
+  ignoreTypes:
+    - "List$"
+  ignoreFields:
+    - "TypeMeta$"
+
+render:
+  kubernetesVersion: "1.30"

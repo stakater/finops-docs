@@ -1,10 +1,38 @@
 site_name: FinOps Operator
 docs_dir: content
-site_url: https://docs.stakater.com/dco/
-repo_url: https://github.com/stakater/dco-docs
+site_url: https://docs.stakater.com/finops/
+repo_url: https://github.com/stakater/finops-docs
 edit_uri: blob/main/content/
 theme:
   favicon: assets/images/favicon.svg
+plugins:
+  - search
+  - tags
+  # Redirects for pages relocated during the docs restructure, so existing
+  # links to docs.stakater.com/finops keep working. Requires mkdocs-redirects,
+  # which arrived in the shared theme at v0.0.61.
+  - redirects:
+      redirect_maps:
+        getting-started/index.md: getting-started/quick-start.md
+        getting-started/prerequisites.md: getting-started/installation/overview.md
+        getting-started/installation.md: getting-started/installation/kubernetes.md
+        getting-started/quickstart.md: getting-started/quick-start.md
+        concepts/index.md: concepts/architecture.md
+        guides/uninstall.md: getting-started/uninstalling.md
+        guides/deactivation-and-cleanup.md: guides/deactivate-a-subscription.md
+        reference/glossary.md: concepts/terminology.md
+        reference/crds/finopsprovider.md: reference/api.md
+        reference/crds/pricebook.md: reference/api.md
+        reference/crds/costjob.md: reference/api.md
+        reference/crds/offering.md: reference/api.md
+        reference/crds/subscription.md: reference/api.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - stylesheets/pills.css
 
 strict: true
 validation:
@@ -17,4 +45,45 @@ extra:
     default: latest
 
 nav:
-  - index.md
+  - Overview:
+      - Introduction: index.md
+      - overview/key-features.md
+      - overview/use-cases.md
+  - Concepts:
+      - concepts/architecture.md
+      - concepts/terminology.md
+      - concepts/finops-provider.md
+      - concepts/pricebook.md
+      - concepts/costjob.md
+      - concepts/offering.md
+      - concepts/subscription.md
+      - concepts/billing-model.md
+      - concepts/compatibility-and-hierarchy.md
+  - Getting Started:
+      - getting-started/quick-start.md
+      - Installation:
+          - getting-started/installation/overview.md
+          - getting-started/installation/openshift.md
+          - getting-started/installation/kubernetes.md
+      - getting-started/uninstalling.md
+  - Guides:
+      - guides/define-pricing.md
+      - guides/switch-active-pricebook.md
+      - guides/collect-cost-data.md
+      - guides/define-offering.md
+      - guides/price-resource-usage.md
+      - guides/subscribe-to-offering.md
+      - guides/compose-subscriptions.md
+      - guides/read-subscription-costs.md
+      - guides/deactivate-a-subscription.md
+  - Reference:
+      - reference/api.md
+      - reference/configuration.md
+      - reference/rbac.md
+      - reference/security-model.md
+      - reference/metrics.md
+      - reference/webhooks.md
+      - reference/status-conditions.md
+  - Troubleshooting: troubleshooting.md
+  - Release Notes: release-notes.md
+  - EULA: eula.md
