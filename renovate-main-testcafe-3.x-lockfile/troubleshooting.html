@@ -1,32 +1,35 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
       
+        <link rel="canonical" href="https://docs.stakater.com/finops/renovate-main-testcafe-3.x-lockfile/troubleshooting.html">
       
+      
+        <link rel="prev" href="reference/status-conditions.html">
+      
+      
+        <link rel="next" href="release-notes.html">
       
       
         
       
       
-      <link rel="icon" href="/finops/renovate-main-testcafe-3.x-lockfile/assets/images/favicon.svg">
+      <link rel="icon" href="assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.7.7">
     
     
       
-        <title>FinOps Operator</title>
+        <title>Troubleshooting - FinOps Operator</title>
       
     
     
-      <link rel="stylesheet" href="/finops/renovate-main-testcafe-3.x-lockfile/assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="/finops/renovate-main-testcafe-3.x-lockfile/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -39,17 +42,17 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Grotesk:300,300i,400,400i,700,700i%7CMonospace:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Grotesk:300,300i,400,400i,700,700i%7CMonospace:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Space Grotesk";--md-code-font:"Monospace"}</style>
       
     
     
-      <link rel="stylesheet" href="/finops/renovate-main-testcafe-3.x-lockfile/stylesheets/extra.css">
+      <link rel="stylesheet" href="stylesheets/extra.css">
     
-      <link rel="stylesheet" href="/finops/renovate-main-testcafe-3.x-lockfile/stylesheets/pills.css">
+      <link rel="stylesheet" href="stylesheets/pills.css">
     
-    <script>__md_scope=new URL("/finops/renovate-main-testcafe-3.x-lockfile",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -65,7 +68,17 @@
 
     
     
-  </head>
+  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -82,6 +95,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -101,7 +119,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
     </div>
     
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
         
       </div>
     
@@ -324,8 +342,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   <nav class="md-header__inner md-grid" aria-label="Header">
 
     <!-- Link to home -->
-    <a href="/finops/renovate-main-testcafe-3.x-lockfile/." title="FinOps Operator"
-      class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href="." title="FinOps Operator" class="md-header__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       <!-- 
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -336,7 +353,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     <label class="md-header__button md-icon" for="__drawer">
       
       <div class="md-header__drawer-hamburger-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
       </div>
     </label>
 
@@ -346,10 +363,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
         <!-- Logo -->
         <div class="md-header__topic">
           
-          <img class="md-header__logo_light" src="/finops/renovate-main-testcafe-3.x-lockfile/assets/images/logo-light.png#only-light" alt="logo" />
+          <img class="md-header__logo_light" src="assets/images/logo-light.png#only-light" alt="logo">
           
           
-          <img class="md-header__logo_dark" src="/finops/renovate-main-testcafe-3.x-lockfile/assets/images/logo-dark.png#only-dark" alt="logo" />
+          <img class="md-header__logo_dark" src="assets/images/logo-dark.png#only-dark" alt="logo">
           
           
           <div class="header-site-name">
@@ -703,12 +720,12 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 &nbsp;
                 <span class="dropdown-arrow">
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"/>
+<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"></path>
 </svg>
                 </span>
                 <span class="dropdown-arrow-sm">
                     <svg width="8" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"/>
+<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"></path>
 </svg>
                 </span>
             </a>
@@ -718,8 +735,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                     <div class="dropdown-content-column">
                         <h3 class="dropdown-content-column-title">Products</h3>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/saap-kubernetes-openshift"
-                                class="dropdown-item-link-text hover-underline">Stakater
+                            <a href="https://www.stakater.com/saap-kubernetes-openshift" class="dropdown-item-link-text hover-underline">Stakater
                                 App
                                 Agility
                                 Platform (SAAP)</a>
@@ -730,8 +746,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                                 Operator</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://docs.stakater.com/tronador"
-                                class="dropdown-item-link-text hover-underline">Tronador
+                            <a href="https://docs.stakater.com/tronador" class="dropdown-item-link-text hover-underline">Tronador
                             </a>
                         </div>
                     </div>
@@ -739,28 +754,23 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                     <div class="dropdown-content-column">
                         <h3 class="dropdown-content-column-title">Services</h3>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-consultancy"
-                                class="dropdown-item-link-text hover-underline">Kubernetes
+                            <a href="https://www.stakater.com/kubernetes-consultancy" class="dropdown-item-link-text hover-underline">Kubernetes
                                 Consultancy</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-platform-assessment"
-                                class="dropdown-item-link-text hover-underline">Platform
+                            <a href="https://www.stakater.com/kubernetes-platform-assessment" class="dropdown-item-link-text hover-underline">Platform
                                 Assessment</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/openshift-as-a-service"
-                                class="dropdown-item-link-text hover-underline">OpenShift
+                            <a href="https://www.stakater.com/openshift-as-a-service" class="dropdown-item-link-text hover-underline">OpenShift
                                 Consultancy</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/secure-your-kubernetes-infrastructure"
-                                class="dropdown-item-link-text hover-underline">Secret
+                            <a href="https://www.stakater.com/secure-your-kubernetes-infrastructure" class="dropdown-item-link-text hover-underline">Secret
                                 Management Service</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-consultancy"
-                                class="dropdown-item-link-text hover-underline">Platform
+                            <a href="https://www.stakater.com/kubernetes-consultancy" class="dropdown-item-link-text hover-underline">Platform
                                 Engineering</a>
                         </div>
                     </div>
@@ -769,16 +779,13 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                         <h3 class="dropdown-content-column-title">Open Source</h3>
 
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/Reloader"
-                                class="dropdown-item-link-text hover-underline">Reloader</a>
+                            <a href="https://github.com/stakater/Reloader" class="dropdown-item-link-text hover-underline">Reloader</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/IngressMonitorController"
-                                class="dropdown-item-link-text hover-underline">IMC</a>
+                            <a href="https://github.com/stakater/IngressMonitorController" class="dropdown-item-link-text hover-underline">IMC</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/forecastle"
-                                class="dropdown-item-link-text hover-underline">Forecastle</a>
+                            <a href="https://github.com/stakater/forecastle" class="dropdown-item-link-text hover-underline">Forecastle</a>
                         </div>
                     </div>
                     <!-- Column 4 -->
@@ -787,8 +794,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                             <a href="https://github.com/stakater/" class="dropdown-content-dev-links-anchor">GitHub</a>
                         </div>
                         <div class="dropdown-content-dev-links-anchor-container">
-                            <a href="https://docs.stakater.com/"
-                                class="dropdown-content-dev-links-anchor">Documentation</a>
+                            <a href="https://docs.stakater.com/" class="dropdown-content-dev-links-anchor">Documentation</a>
                         </div>
                         <div class="dropdown-content-dev-links-anchor-container">
                             <a href="https://employee.stakater.com/" class="dropdown-content-dev-links-anchor">Employee
@@ -1088,42 +1094,30 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
   
-  <input class="md-option" data-md-color-media="(prefers-color-scheme)"
-    data-md-color-scheme="default" data-md-color-primary="indigo"
-    data-md-color-accent="indigo"  aria-label="Switch to system preference"
-     type="radio" name="__palette" id="__palette_0" />
+  <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_0">
   
-  <label class="md-header__button md-icon" title="Switch to system preference"
-    for="__palette_1" hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+  <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_1" hidden="">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
   </label>
   
   
   
   
   
-  <input class="md-option" data-md-color-media="(prefers-color-scheme: light)"
-    data-md-color-scheme="default" data-md-color-primary="custom"
-    data-md-color-accent="custom"  aria-label="Switch to light mode"
-     type="radio" name="__palette" id="__palette_1" />
+  <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
   
-  <label class="md-header__button md-icon" title="Switch to light mode"
-    for="__palette_2" hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+  <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden="">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
   </label>
   
   
   
   
   
-  <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)"
-    data-md-color-scheme="slate" data-md-color-primary="custom"
-    data-md-color-accent="custom"  aria-label="Switch to dark mode"
-     type="radio" name="__palette" id="__palette_2" />
+  <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_2">
   
-  <label class="md-header__button md-icon" title="Switch to dark mode"
-    for="__palette_0" hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54s-2.94 8.27-7 9.54c.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2"/></svg>
+  <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden="">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54s-2.94 8.27-7 9.54c.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2"></path></svg>
   </label>
   
   
@@ -1163,31 +1157,31 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
     <label class="md-header__button md-icon" for="__search">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
     </label>
     <!-- Search interface -->
     <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -1542,12 +1536,12 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 &nbsp;
                 <span class="dropdown-arrow">
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"/>
+<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"></path>
 </svg>
                 </span>
                 <span class="dropdown-arrow-sm">
                     <svg width="8" height="6" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"/>
+<path class="down-arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.79566 7.04528C6.58472 7.25596 6.29878 7.37429 6.00066 7.37429C5.70253 7.37429 5.4166 7.25596 5.20566 7.04528L0.962158 2.80328C0.751211 2.59224 0.632742 2.30604 0.632813 2.00764C0.632883 1.70925 0.751487 1.4231 0.962533 1.21216C1.17358 1.00121 1.45978 0.882742 1.75817 0.882813C2.05657 0.882883 2.34271 1.00149 2.55366 1.21253L6.00066 4.65953L9.44766 1.21253C9.65974 1.0075 9.94386 0.893973 10.2388 0.896397C10.5338 0.89882 10.816 1.017 11.0247 1.22549C11.2334 1.43397 11.3518 1.71608 11.3545 2.01106C11.3573 2.30603 11.244 2.59026 11.0392 2.80253L6.79641 7.04603L6.79566 7.04528Z"></path>
 </svg>
                 </span>
             </a>
@@ -1557,8 +1551,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                     <div class="dropdown-content-column">
                         <h3 class="dropdown-content-column-title">Products</h3>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/saap-kubernetes-openshift"
-                                class="dropdown-item-link-text hover-underline">Stakater
+                            <a href="https://www.stakater.com/saap-kubernetes-openshift" class="dropdown-item-link-text hover-underline">Stakater
                                 App
                                 Agility
                                 Platform (SAAP)</a>
@@ -1569,8 +1562,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                                 Operator</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://docs.stakater.com/tronador"
-                                class="dropdown-item-link-text hover-underline">Tronador
+                            <a href="https://docs.stakater.com/tronador" class="dropdown-item-link-text hover-underline">Tronador
                             </a>
                         </div>
                     </div>
@@ -1578,28 +1570,23 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                     <div class="dropdown-content-column">
                         <h3 class="dropdown-content-column-title">Services</h3>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-consultancy"
-                                class="dropdown-item-link-text hover-underline">Kubernetes
+                            <a href="https://www.stakater.com/kubernetes-consultancy" class="dropdown-item-link-text hover-underline">Kubernetes
                                 Consultancy</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-platform-assessment"
-                                class="dropdown-item-link-text hover-underline">Platform
+                            <a href="https://www.stakater.com/kubernetes-platform-assessment" class="dropdown-item-link-text hover-underline">Platform
                                 Assessment</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/openshift-as-a-service"
-                                class="dropdown-item-link-text hover-underline">OpenShift
+                            <a href="https://www.stakater.com/openshift-as-a-service" class="dropdown-item-link-text hover-underline">OpenShift
                                 Consultancy</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/secure-your-kubernetes-infrastructure"
-                                class="dropdown-item-link-text hover-underline">Secret
+                            <a href="https://www.stakater.com/secure-your-kubernetes-infrastructure" class="dropdown-item-link-text hover-underline">Secret
                                 Management Service</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://www.stakater.com/kubernetes-consultancy"
-                                class="dropdown-item-link-text hover-underline">Platform
+                            <a href="https://www.stakater.com/kubernetes-consultancy" class="dropdown-item-link-text hover-underline">Platform
                                 Engineering</a>
                         </div>
                     </div>
@@ -1608,16 +1595,13 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                         <h3 class="dropdown-content-column-title">Open Source</h3>
 
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/Reloader"
-                                class="dropdown-item-link-text hover-underline">Reloader</a>
+                            <a href="https://github.com/stakater/Reloader" class="dropdown-item-link-text hover-underline">Reloader</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/IngressMonitorController"
-                                class="dropdown-item-link-text hover-underline">IMC</a>
+                            <a href="https://github.com/stakater/IngressMonitorController" class="dropdown-item-link-text hover-underline">IMC</a>
                         </div>
                         <div class="dropdown-content-anchor-container">
-                            <a href="https://github.com/stakater/forecastle"
-                                class="dropdown-item-link-text hover-underline">Forecastle</a>
+                            <a href="https://github.com/stakater/forecastle" class="dropdown-item-link-text hover-underline">Forecastle</a>
                         </div>
                     </div>
                     <!-- Column 4 -->
@@ -1626,8 +1610,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                             <a href="https://github.com/stakater/" class="dropdown-content-dev-links-anchor">GitHub</a>
                         </div>
                         <div class="dropdown-content-dev-links-anchor-container">
-                            <a href="https://docs.stakater.com/"
-                                class="dropdown-content-dev-links-anchor">Documentation</a>
+                            <a href="https://docs.stakater.com/" class="dropdown-content-dev-links-anchor">Documentation</a>
                         </div>
                         <div class="dropdown-content-dev-links-anchor-container">
                             <a href="https://employee.stakater.com/" class="dropdown-content-dev-links-anchor">Employee
@@ -1998,7 +1981,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2007,10 +1990,10 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/finops/renovate-main-testcafe-3.x-lockfile/." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
+    <a href="." title="FinOps Operator" class="md-nav__button md-logo" aria-label="FinOps Operator" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     FinOps Operator
@@ -2020,7 +2003,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       <a href="https://github.com/stakater/finops-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -2028,7 +2011,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </a>
     </div>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -2045,7 +2028,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -2075,7 +2058,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2084,7 +2067,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         
   
   
@@ -2112,7 +2095,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/overview/key-features.html" class="md-nav__link">
+      <a href="overview/key-features.html" class="md-nav__link">
         
   
   
@@ -2140,7 +2123,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/overview/use-cases.html" class="md-nav__link">
+      <a href="overview/use-cases.html" class="md-nav__link">
         
   
   
@@ -2183,7 +2166,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -2213,7 +2196,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2222,7 +2205,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/concepts/architecture.html" class="md-nav__link">
+      <a href="concepts/architecture.html" class="md-nav__link">
         
   
   
@@ -2250,7 +2233,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/concepts/terminology.html" class="md-nav__link">
+      <a href="concepts/terminology.html" class="md-nav__link">
         
   
   
@@ -2278,7 +2261,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/concepts/finops-provider.html" class="md-nav__link">
+      <a href="concepts/finops-provider.html" class="md-nav__link">
         
   
   
@@ -2306,7 +2289,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/concepts/pricebook.html" class="md-nav__link">
+      <a href="concepts/pricebook.html" class="md-nav__link">
         
   
   
@@ -2334,7 +2317,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/concepts/costjob.html" class="md-nav__link">
+      <a href="concepts/costjob.html" class="md-nav__link">
         
   
   
@@ -2362,7 +2345,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/concepts/offering.html" class="md-nav__link">
+      <a href="concepts/offering.html" class="md-nav__link">
         
   
   
@@ -2390,7 +2373,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/concepts/subscription.html" class="md-nav__link">
+      <a href="concepts/subscription.html" class="md-nav__link">
         
   
   
@@ -2418,7 +2401,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/concepts/billing-model.html" class="md-nav__link">
+      <a href="concepts/billing-model.html" class="md-nav__link">
         
   
   
@@ -2446,7 +2429,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/concepts/compatibility-and-hierarchy.html" class="md-nav__link">
+      <a href="concepts/compatibility-and-hierarchy.html" class="md-nav__link">
         
   
   
@@ -2489,7 +2472,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -2519,7 +2502,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2528,7 +2511,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/getting-started/quick-start.html" class="md-nav__link">
+      <a href="getting-started/quick-start.html" class="md-nav__link">
         
   
   
@@ -2564,7 +2547,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -2594,7 +2577,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2603,7 +2586,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/getting-started/installation/overview.html" class="md-nav__link">
+      <a href="getting-started/installation/overview.html" class="md-nav__link">
         
   
   
@@ -2631,7 +2614,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/getting-started/installation/openshift.html" class="md-nav__link">
+      <a href="getting-started/installation/openshift.html" class="md-nav__link">
         
   
   
@@ -2659,7 +2642,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/getting-started/installation/kubernetes.html" class="md-nav__link">
+      <a href="getting-started/installation/kubernetes.html" class="md-nav__link">
         
   
   
@@ -2695,7 +2678,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/getting-started/uninstalling.html" class="md-nav__link">
+      <a href="getting-started/uninstalling.html" class="md-nav__link">
         
   
   
@@ -2738,7 +2721,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2768,7 +2751,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -2777,7 +2760,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/guides/define-pricing.html" class="md-nav__link">
+      <a href="guides/define-pricing.html" class="md-nav__link">
         
   
   
@@ -2805,7 +2788,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/guides/switch-active-pricebook.html" class="md-nav__link">
+      <a href="guides/switch-active-pricebook.html" class="md-nav__link">
         
   
   
@@ -2833,7 +2816,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/guides/collect-cost-data.html" class="md-nav__link">
+      <a href="guides/collect-cost-data.html" class="md-nav__link">
         
   
   
@@ -2861,7 +2844,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/guides/define-offering.html" class="md-nav__link">
+      <a href="guides/define-offering.html" class="md-nav__link">
         
   
   
@@ -2889,7 +2872,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/guides/price-resource-usage.html" class="md-nav__link">
+      <a href="guides/price-resource-usage.html" class="md-nav__link">
         
   
   
@@ -2917,7 +2900,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/guides/subscribe-to-offering.html" class="md-nav__link">
+      <a href="guides/subscribe-to-offering.html" class="md-nav__link">
         
   
   
@@ -2945,7 +2928,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/guides/compose-subscriptions.html" class="md-nav__link">
+      <a href="guides/compose-subscriptions.html" class="md-nav__link">
         
   
   
@@ -2973,7 +2956,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/guides/read-subscription-costs.html" class="md-nav__link">
+      <a href="guides/read-subscription-costs.html" class="md-nav__link">
         
   
   
@@ -3001,7 +2984,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/guides/deactivate-a-subscription.html" class="md-nav__link">
+      <a href="guides/deactivate-a-subscription.html" class="md-nav__link">
         
   
   
@@ -3044,7 +3027,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -3074,7 +3057,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -3083,7 +3066,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/reference/api.html" class="md-nav__link">
+      <a href="reference/api.html" class="md-nav__link">
         
   
   
@@ -3111,7 +3094,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/reference/configuration.html" class="md-nav__link">
+      <a href="reference/configuration.html" class="md-nav__link">
         
   
   
@@ -3139,7 +3122,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/reference/rbac.html" class="md-nav__link">
+      <a href="reference/rbac.html" class="md-nav__link">
         
   
   
@@ -3167,7 +3150,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/reference/security-model.html" class="md-nav__link">
+      <a href="reference/security-model.html" class="md-nav__link">
         
   
   
@@ -3195,7 +3178,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/reference/metrics.html" class="md-nav__link">
+      <a href="reference/metrics.html" class="md-nav__link">
         
   
   
@@ -3223,7 +3206,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/reference/webhooks.html" class="md-nav__link">
+      <a href="reference/webhooks.html" class="md-nav__link">
         
   
   
@@ -3251,7 +3234,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/reference/status-conditions.html" class="md-nav__link">
+      <a href="reference/status-conditions.html" class="md-nav__link">
         
   
   
@@ -3283,10 +3266,37 @@ This documentation is for a pull request deployment and is unreleased, it is onl
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/troubleshooting.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="troubleshooting.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3302,6 +3312,311 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#subscriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscriptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subscriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-subscription-never-becomes-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Subscription never becomes ready
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-subscription-is-waiting-on-its-parent-or-its-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Subscription is waiting on its parent or its target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-subscription-reads-readyfalse-with-reason-validationsucceeded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Subscription reads Ready=False with reason ValidationSucceeded
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-subscription-deactivated-itself-with-compatibilityrequirementnotmet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Subscription deactivated itself with CompatibilityRequirementNotMet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-subscriptions-statuscosts-stays-empty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Subscription's status.costs stays empty
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-subscription-will-not-finish-deleting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Subscription will not finish deleting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offerings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offerings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Offerings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-offering-is-not-ready-and-publishes-no-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An Offering is not ready and publishes no pricing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-offering-is-stuck-at-pricingresolvedfalse-with-noactivepricebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An Offering is stuck at PricingResolved=False with NoActivePricebook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-offering-will-not-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An Offering will not delete
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-edit-to-an-offering-is-rejected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An edit to an Offering is rejected
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PriceBooks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PriceBooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-pricebook-is-not-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A PriceBook is not ready
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-charts-default-pricebook-never-becomes-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The chart's default PriceBook never becomes active
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opencost-shows-stale-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenCost shows stale prices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-is-priced-from-a-book-that-is-not-the-active-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage is priced from a book that is not the active one
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#costjobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CostJobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CostJobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statuslastexecutiontime-never-advances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        status.lastExecutionTime never advances
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-costjob-timeout-appears-to-be-ignored" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A CostJob timeout appears to be ignored
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finopsprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FinOpsProvider
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FinOpsProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-finopsprovider-is-rejected-at-admission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A FinOpsProvider is rejected at admission
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3313,7 +3628,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/release-notes.html" class="md-nav__link">
+      <a href="release-notes.html" class="md-nav__link">
         
   
   
@@ -3340,7 +3655,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
     <li class="md-nav__item">
-      <a href="/finops/renovate-main-testcafe-3.x-lockfile/eula.html" class="md-nav__link">
+      <a href="eula.html" class="md-nav__link">
         
   
   
@@ -3368,7 +3683,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3379,6 +3694,299 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#subscriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscriptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subscriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-subscription-never-becomes-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Subscription never becomes ready
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-subscription-is-waiting-on-its-parent-or-its-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Subscription is waiting on its parent or its target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-subscription-reads-readyfalse-with-reason-validationsucceeded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Subscription reads Ready=False with reason ValidationSucceeded
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-subscription-deactivated-itself-with-compatibilityrequirementnotmet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Subscription deactivated itself with CompatibilityRequirementNotMet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-subscriptions-statuscosts-stays-empty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Subscription's status.costs stays empty
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-subscription-will-not-finish-deleting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Subscription will not finish deleting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offerings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offerings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Offerings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-offering-is-not-ready-and-publishes-no-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An Offering is not ready and publishes no pricing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-offering-is-stuck-at-pricingresolvedfalse-with-noactivepricebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An Offering is stuck at PricingResolved=False with NoActivePricebook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-offering-will-not-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An Offering will not delete
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-edit-to-an-offering-is-rejected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An edit to an Offering is rejected
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PriceBooks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PriceBooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-pricebook-is-not-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A PriceBook is not ready
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-charts-default-pricebook-never-becomes-active" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The chart's default PriceBook never becomes active
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opencost-shows-stale-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenCost shows stale prices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-is-priced-from-a-book-that-is-not-the-active-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage is priced from a book that is not the active one
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#costjobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CostJobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CostJobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statuslastexecutiontime-never-advances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        status.lastExecutionTime never advances
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-costjob-timeout-appears-to-be-ignored" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A CostJob timeout appears to be ignored
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finopsprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FinOpsProvider
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FinOpsProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-finopsprovider-is-rejected-at-admission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A FinOpsProvider is rejected at admission
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3391,9 +3999,297 @@ This documentation is for a pull request deployment and is unreleased, it is onl
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>4xx - Page does not exist or has restricted access or rights</h1>
-  <p>This page does not exist or may have been deprecated or moved. Please use the search to find anything in the documentation.</p>
+                  
 
+
+  
+  
+
+
+<h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h1>
+<p>Almost everything the operator decides is recorded on a condition, so reading the conditions is the first move for every symptom on this page:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .status.conditions[*]}{.type}{"  "}{.status}{"  "}{.reason}{"  "}{.message}{"\n"}{end}'</span>
+</code></pre></div>
+<p>This page runs the other way round from <a href="reference/status-conditions.html">Status conditions</a>, which is the exhaustive table of every type, status, and reason. Here the entry point is what you observed. Each symptom names the reason string you will actually see, says why the operator wrote it, and gives the remedy.</p>
+<h2 id="subscriptions">Subscriptions<a class="headerlink" href="#subscriptions" title="Permanent link">#</a></h2>
+<h3 id="a-subscription-never-becomes-ready">A Subscription never becomes ready<a class="headerlink" href="#a-subscription-never-becomes-ready" title="Permanent link">#</a></h3>
+<p>Activation is four checks in a fixed order, the Offering, then the parent, then compatibility coverage, then the <code>lifecycle.targetRef</code>, and they run on every reconcile rather than at admission. A Subscription that fails one is still admitted, held at <code>Ready=False</code>, and activates by itself once the cause clears. Only the first failing gate is reported, so fix that one and read the condition again.</p>
+<p>The Offering gate is the common one:</p>
+<table>
+<thead>
+<tr>
+<th>Reason</th>
+<th>Cause</th>
+<th>Remedy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OfferingNotFound</code></td>
+<td><code>spec.offeringRef</code> resolves to nothing.</td>
+<td>Create the Offering, or replace the Subscription. <code>namespace</code> is required on the reference and is never filled in from the Subscription's own namespace, so a reference that reads correctly in a single-namespace manifest can still point nowhere. <code>spec.offeringRef</code> is immutable, so it cannot be corrected in place.</td>
+</tr>
+<tr>
+<td><code>OfferingNotReady</code></td>
+<td>The Offering exists and its own <code>Ready</code> condition is <code>False</code>.</td>
+<td>Fix that Offering, starting from <a href="#an-offering-is-not-ready-and-publishes-no-pricing">an Offering that is not ready</a>. This Subscription activates on its own afterwards.</td>
+</tr>
+</tbody>
+</table>
+<p>A gate failing does not stop the billing on a Subscription that had already activated. <code>status.activatedAt</code> stands, and the charge collection job selects on that timestamp rather than on readiness, so charges keep accruing while <code>Ready</code> reads <code>False</code>. <a href="reference/status-conditions.html#ready">Subscription Ready reasons</a> has the full list, and <a href="concepts/subscription.html#the-four-activation-gates">the four activation gates</a> sets out what each gate tests.</p>
+<h3 id="a-subscription-is-waiting-on-its-parent-or-its-target">A Subscription is waiting on its parent or its target<a class="headerlink" href="#a-subscription-is-waiting-on-its-parent-or-its-target" title="Permanent link">#</a></h3>
+<p>Where <code>spec.parent</code> is set, the parent gate holds the Subscription until the parent exists, has not deactivated, and is ready itself:</p>
+<table>
+<thead>
+<tr>
+<th>Reason</th>
+<th>Meaning</th>
+<th>Remedy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ParentSubscriptionNotFound</code></td>
+<td><code>spec.parent.subscriptionRef</code> does not resolve.</td>
+<td>Create the parent at exactly that name and namespace. <code>spec.parent</code> is immutable including whether it is present at all, so a wrong parent means a new Subscription rather than an edit.</td>
+</tr>
+<tr>
+<td><code>ParentSubscriptionNotReady</code></td>
+<td>The parent exists but has not activated.</td>
+<td>Transient. Clear the parent's own gate and this one clears with it.</td>
+</tr>
+<tr>
+<td><code>ParentSubscriptionDeactivated</code></td>
+<td>The parent has ended.</td>
+<td>On a Subscription that never activated this never clears, because deactivation is one-way. Rebuild the family instead of waiting.</td>
+</tr>
+</tbody>
+</table>
+<p>Where <code>spec.lifecycle.targetRef</code> is set, the target gate holds the Subscription until that object exists and reports <code>TargetNotFound</code> while it does not. The check is a plain get on the name, namespace, kind, and API version you gave it, so a typo in any of the four reads as a missing target. It tests existence only: a target that exists and is itself broken does not hold the Subscription back.</p>
+<p><code>TargetIsSelfReference</code> means the <code>targetRef</code> names this Subscription, matching on all four fields. That is refused at admission on create, so it only appears when a later edit introduces it.</p>
+<h3 id="a-subscription-reads-readyfalse-with-reason-validationsucceeded">A Subscription reads <code>Ready=False</code> with reason <code>ValidationSucceeded</code><a class="headerlink" href="#a-subscription-reads-readyfalse-with-reason-validationsucceeded" title="Permanent link">#</a></h3>
+<p>This looks like success and is not. Every deactivation writes <code>Ready=False</code> with reason <code>ValidationSucceeded</code>, which says nothing about the cause, and puts the real cause on the <code>Active</code> condition. Read both, plus <code>status.deactivatedAt</code>:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>acme-platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.ready}{"  "}{.status.deactivatedAt}{"\n"}{range .status.conditions[*]}{.type}{"\t"}{.status}{"\t"}{.reason}{"\n"}{end}'</span>
+</code></pre></div>
+<p>A Subscription with no <code>Active</code> condition at all has never activated, and its <code>Ready</code> reason names the failing gate. <code>Active=True</code> beside <code>READY False</code> means it is still active and still accruing while a gate fails transiently. <code>Active=False</code> means it has ended, terminally, and the <code>Active</code> reason carries the cause. <a href="guides/subscribe-to-offering.html#step-5-tell-a-waiting-subscription-from-a-finished-one">Tell a waiting Subscription from a finished one</a> has the discriminator table for all four states.</p>
+<h3 id="a-subscription-deactivated-itself-with-compatibilityrequirementnotmet">A Subscription deactivated itself with <code>CompatibilityRequirementNotMet</code><a class="headerlink" href="#a-subscription-deactivated-itself-with-compatibilityrequirementnotmet" title="Permanent link">#</a></h3>
+<p><code>Active=False</code> with that reason, and a message of the form <code>required offering &lt;namespace&gt;/&lt;name&gt; not covered by an active subscription in the family</code>.</p>
+<p>The bound Offering lists <code>compatibility.requiredOfferings</code>, and coverage for one of those entries went away, usually because the sibling Subscription supplying it was deleted or deactivated. Coverage is re-evaluated on every reconcile rather than once at activation, and only an active Subscription satisfies it: one in the same family, meaning sharing the same root ancestor recorded in <code>status.compatibilityRoot</code>, and excluding the Subscription itself and its own descendants, because coverage never flows up from a Subscription's own dependents.</p>
+<p>Find what is missing, then find who could cover it:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>offering<span class="w"> </span>platform-base<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .spec.compatibility.requiredOfferings[*]}{.namespace}{"/"}{.name}{"\n"}{end}'</span>
+
+kubectl<span class="w"> </span>get<span class="w"> </span>subscription<span class="w"> </span>-A<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span>custom-columns<span class="o">=</span><span class="s1">'NS:.metadata.namespace,NAME:.metadata.name,OFFERING:.spec.offeringRef.name,READY:.status.ready,ROOT:.status.compatibilityRoot'</span>
+</code></pre></div>
+<p>The deactivation is terminal. Restoring the sibling does not revive this Subscription, because one carrying <code>status.deactivatedAt</code> is never re-validated. Recovery means a new Subscription created after the covering Subscription is active again.</p>
+<p>The same reason on the <code>Ready</code> condition with no <code>Active</code> condition present means nothing ended: the Subscription has not activated because coverage was never there. Subscribe a relative to the missing Offering and it activates on the next reconcile.</p>
+<h3 id="a-subscriptions-statuscosts-stays-empty">A Subscription's <code>status.costs</code> stays empty<a class="headerlink" href="#a-subscriptions-statuscosts-stays-empty" title="Permanent link">#</a></h3>
+<p>Four causes, worth checking in this order:</p>
+<ol>
+<li>No <code>SubscriptionChargeCollection</code> CostJob is scheduled, or none has completed a run. Nothing else writes <code>status.costs</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>costjob<span class="w"> </span>-A
+</code></pre></div>
+<p>That job type writes nothing to its own status, so read its Jobs and their pod logs rather than the CostJob.</p>
+<ol>
+<li>The Subscription never activated. One with no <code>status.activatedAt</code> is skipped outright by the run, whatever else is true of it.</li>
+<li>The bound Offering declares no subscription fee. The buckets are shaped around the fee, so an Offering carrying only <code>resourcePricing</code> produces no buckets at all, even while that Subscription's usage charges are computed and written to the <code>subscription_charges</code> table. Read those from the table.</li>
+<li>The Offering could not be read. Every run fetches each Subscription's Offering fresh, so an Offering that has been deleted or renamed leaves its Subscriptions with no buckets.</li>
+</ol>
+<p>A Subscription with no <code>CostsResolved</code> condition was never summarised at all, which points at the run rather than at the numbers. <a href="guides/read-subscription-costs.html#when-a-bucket-or-a-meter-is-missing">When a bucket or a meter is missing</a> covers a bucket that is present but thinner than expected.</p>
+<h3 id="a-subscription-will-not-finish-deleting">A Subscription will not finish deleting<a class="headerlink" href="#a-subscription-will-not-finish-deleting" title="Permanent link">#</a></h3>
+<p><code>Deleting=False</code> with reason <code>WaitingForCollectionJob</code> is the only thing that condition ever says, and on its own it means the wind-down is proceeding normally. It becomes a symptom when it does not end.</p>
+<p>Only a <code>SubscriptionChargeCollection</code> run takes the finalizer off, and only when four things hold on the same run: the Subscription is deactivated, <code>minPeriods</code> has elapsed since <code>status.activatedAt</code>, charges are finalized through its last billable hour, and nothing was recorded against it during that run. The run's log says which one held it:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span><span class="nb">jobs</span><span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>--sort-by<span class="o">=</span>.metadata.creationTimestamp
+kubectl<span class="w"> </span>logs<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>job/&lt;job-name&gt;
+</code></pre></div>
+<p><code>MinPeriods not yet satisfied, keeping finalizer</code> and <code>Charges not finalized through deactivation hour, keeping finalizer</code> both mean the wait is working as designed.</p>
+<p><code>minPeriods</code> is a cleanup guard and nothing more. Billing carries on tick by tick while it waits, and no shortfall is charged for the ticks between the deletion and the count being reached, so a Subscription deleted early is simply never charged for the ticks that did not run and waiting costs nothing but time. The value cannot be lowered, because an Offering's spec is immutable. Creating a new Offering with a lower <code>minPeriods</code> changes the guard only for Subscriptions created against that new Offering later; it does nothing for this one, and there is no shortfall charge for it to avoid.</p>
+<p>The one cause that never clears by waiting is a missing Offering. Every run re-reads each deleting Subscription's Offering to price the remaining hours and to count the ticks, and a failed read is recorded as an error against that Subscription, which holds the finalizer on that run and on every run after it. The Offering's own delete guard does not prevent this, because it counts only dependents whose <code>status.ready</code> is <code>True</code> and a deactivated Subscription is not ready. <a href="getting-started/uninstalling.html#when-a-subscription-will-not-finish-deleting">When a Subscription will not finish deleting</a> has the recovery, which is to recreate the Offering at the same name and namespace, and the last-resort finalizer patch and what it forfeits. <a href="guides/deactivate-a-subscription.html#when-the-finalizer-will-not-release">When the finalizer will not release</a> lists the remaining causes.</p>
+<h2 id="offerings">Offerings<a class="headerlink" href="#offerings" title="Permanent link">#</a></h2>
+<h3 id="an-offering-is-not-ready-and-publishes-no-pricing">An Offering is not ready and publishes no pricing<a class="headerlink" href="#an-offering-is-not-ready-and-publishes-no-pricing" title="Permanent link">#</a></h3>
+<p><code>Ready</code> and <code>PricingResolved</code> are written in the same pass and always agree, so an Offering that is not ready has published no <code>status.resolvedPricing</code> and no Subscription against it can activate.</p>
+<table>
+<thead>
+<tr>
+<th>Reason</th>
+<th>Cause</th>
+<th>Remedy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RequiredOfferingNotFound</code></td>
+<td>A <code>compatibility.requiredOfferings</code> entry does not resolve.</td>
+<td>Create the missing Offering or replace this one, remembering that <code>namespace</code> is required on the entry. Apply order does not matter: interdependent Offerings may be applied in any order and each becomes ready once its requirements exist.</td>
+</tr>
+<tr>
+<td><code>RequiredOfferingNotReady</code></td>
+<td>A required Offering exists and is not itself ready.</td>
+<td>Fix that one. This recovers on its own afterwards.</td>
+</tr>
+<tr>
+<td><code>CircularDependencyDetected</code></td>
+<td>The requirement graph loops, or the Offering requires itself. The message carries the path it walked.</td>
+<td>Break the loop, which means replacing one of the Offerings in it, since a spec cannot be edited.</td>
+</tr>
+<tr>
+<td><code>NoActivePricebook</code></td>
+<td>The Offering declares <code>resourcePricing</code> and no active currency PriceBook exists.</td>
+<td>See <a href="#an-offering-is-stuck-at-pricingresolvedfalse-with-noactivepricebook">the next symptom</a>.</td>
+</tr>
+<tr>
+<td><code>PricebookParseFailed</code></td>
+<td>The active PriceBook holds a rate this Offering's meters cannot resolve against.</td>
+<td>Fix the rate on the PriceBook; see <a href="#a-pricebook-is-not-ready">a PriceBook that is not ready</a>.</td>
+</tr>
+<tr>
+<td><code>ValidationError</code></td>
+<td>A lookup failed some other way, typically an API error while reading a required Offering.</td>
+<td>Read the message. Transient, and retried on a lengthening delay.</td>
+</tr>
+</tbody>
+</table>
+<p>None of these is terminal, and each is re-evaluated on the next reconcile. Pricing is resolved once and then kept, though, so an Offering that has already published <code>status.resolvedPricing</code> does not re-resolve when the PriceBook changes.</p>
+<h3 id="an-offering-is-stuck-at-pricingresolvedfalse-with-noactivepricebook">An Offering is stuck at <code>PricingResolved=False</code> with <code>NoActivePricebook</code><a class="headerlink" href="#an-offering-is-stuck-at-pricingresolvedfalse-with-noactivepricebook" title="Permanent link">#</a></h3>
+<p>The message reads <code>offering &lt;namespace&gt;/&lt;name&gt;: no active pricebook to resolve metered pricing</code>.</p>
+<p>The Offering declares <code>pricing.resourcePricing</code>, so its meters need unit rates, and no PriceBook in the cluster is both marked active and set to <code>valuationMode: currency</code>. The operator refuses to publish in that state deliberately: every meter rate would resolve to zero and <code>status.resolvedPricing</code> would then expose the Offering's margins as the price.</p>
+<p>Look at what the cluster actually has:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pricebooks<span class="w"> </span>--all-namespaces<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span>custom-columns<span class="o">=</span><span class="s1">'NS:.metadata.namespace,NAME:.metadata.name,MODE:.spec.valuationMode,ACTIVE:.status.active,READY:.status.ready'</span>
+</code></pre></div>
+<p>If nothing shows <code>ACTIVE true</code>, mark the book you want:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>annotate<span class="w"> </span>pricebook<span class="w"> </span>onprem-standard<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>finops.stakater.com/active<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--overwrite
+</code></pre></div>
+<p>If a book is active but its <code>MODE</code> is <code>percent</code>, it carries no currency rates and cannot resolve them whatever its readiness says, so a currency book has to exist as well. Either way the Offering resolves on the next reconcile, which is retried on a lengthening delay without any edit to the Offering.</p>
+<p>An Offering with only a <code>subscriptionFee</code> and no <code>resourcePricing</code> never hits this. It needs no PriceBook and resolves regardless.</p>
+<h3 id="an-offering-will-not-delete">An Offering will not delete<a class="headerlink" href="#an-offering-will-not-delete" title="Permanent link">#</a></h3>
+<p>Deletion is refused at admission, so the <code>kubectl delete</code> fails outright rather than leaving the object terminating. The error names the dependents: <code>still referenced by subscriptions</code> followed by the Subscriptions whose <code>offeringRef</code> points here, or <code>still required by dependent resources</code> followed by the Offerings that list this one under <code>compatibility.requiredOfferings</code>. The reconciler records the same finding as <code>Deleting=False</code> with reason <code>DependentSubscriptionsExist</code> or <code>DependentOfferingsExist</code>.</p>
+<p>Delete or migrate the dependents it named, then retry.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Both checks count only dependents whose <code>status.ready</code> is <code>True</code>, so a Subscription that never activated or has already deactivated does not block the delete, even though every collection run still reads this Offering to price that Subscription's remaining hours. Deleting the Offering out from under one of those strands its finalizer permanently. Confirm no dependent Subscriptions are left at all, rather than only that the delete was accepted.</p>
+</div>
+<h3 id="an-edit-to-an-offering-is-rejected">An edit to an Offering is rejected<a class="headerlink" href="#an-edit-to-an-offering-is-rejected" title="Permanent link">#</a></h3>
+<p>An Offering's <code>spec</code> is immutable in full, with the rejection message <code>offering spec is immutable</code>. That rule lives on the CRD and is evaluated by the API server, not by the Offering webhook, whose update path inspects nothing at all. Because it is a CRD rule it applies on every install, whether or not the webhooks are registered and whether or not the manager pod is running.</p>
+<p>There is no way to change an Offering's terms. Different pricing, a different <code>minPeriods</code>, or a different requirement list means a second Offering, with new Subscriptions created against it; existing Subscriptions keep the terms they were created against. <a href="concepts/offering.html#replacing-an-offering">Replacing an Offering</a> has the sequence.</p>
+<h2 id="pricebooks">PriceBooks<a class="headerlink" href="#pricebooks" title="Permanent link">#</a></h2>
+<h3 id="a-pricebook-is-not-ready">A PriceBook is not ready<a class="headerlink" href="#a-pricebook-is-not-ready" title="Permanent link">#</a></h3>
+<p><code>Ready=False</code> with reason <code>PricebookParseFailed</code>, and a message of the form <code>rate "&lt;field&gt;" ("&lt;value&gt;"): ...</code> naming the first field that failed and the value it held.</p>
+<p>Readiness parses every rate on <code>spec.rates</code> in turn, <code>cpuHour</code>, <code>spotCPUHour</code>, <code>ramGbHour</code>, <code>spotRAMGbHour</code>, <code>pvGbHour</code>, <code>gpuHour</code>, and <code>networkGiB</code>, and stops at the first one it cannot read as a currency value. Fix that field. Malformed shapes are already refused at admission by a pattern on each rate, so what reaches this check is usually a value too large to express in micro-units. A book whose <code>valuationMode</code> is <code>percent</code> carries no rates to parse and is ready trivially.</p>
+<p>Readiness and selection are independent, so a book can hold <code>Active=True</code> and <code>Ready=False</code> at the same time. That is on purpose: OpenCost keeps the pricing document it already had rather than silently switching to rates the operator could not read, and a typo produces a visible failure instead of different prices.</p>
+<h3 id="the-charts-default-pricebook-never-becomes-active">The chart's default PriceBook never becomes active<a class="headerlink" href="#the-charts-default-pricebook-never-becomes-active" title="Permanent link">#</a></h3>
+<p>The chart's optional <code>&lt;release&gt;-default-pricing</code> book writes <code>finops.stakater.com/active: "true"</code> under <code>metadata.labels</code>, and the operator reads only the annotation of that name. The chart's marker therefore has no effect on selection at all.</p>
+<p>A chart-provisioned book still becomes active on a fresh cluster by winning the bootstrap election, which runs only when no book carries the annotation, and it loses the slot to any book you do annotate. To pin it explicitly, set the annotation yourself:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>annotate<span class="w"> </span>pricebook<span class="w"> </span>finops-operator-default-pricing<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>finops.stakater.com/active<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--overwrite
+</code></pre></div>
+<p><a href="guides/switch-active-pricebook.html">Switch the active PriceBook</a> covers moving the marker between books, and why leaving two of them annotated makes the next switch ambiguous.</p>
+<h3 id="opencost-shows-stale-prices">OpenCost shows stale prices<a class="headerlink" href="#opencost-shows-stale-prices" title="Permanent link">#</a></h3>
+<p>Only the active book touches OpenCost. It renders its rates into the <code>finops-operator-custom-pricing-configs</code> ConfigMap, and when the rendered document differs from what was already there the operator patches the OpenCost Deployment's pod template with a <code>finops.stakater.com/restartedAt</code> annotation to force a rolling restart, because OpenCost reads its pricing document only at startup.</p>
+<p>Check the steps in order:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>configmap<span class="w"> </span>finops-operator-custom-pricing-configs<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
+kubectl<span class="w"> </span>rollout<span class="w"> </span>status<span class="w"> </span>deployment/finops-operator-opencost<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+</code></pre></div>
+<p>The Deployment and the namespace are whatever <code>OPENCOST_DEPLOYMENT_NAME</code> and <code>OPENCOST_DEPLOYMENT_NAMESPACE</code> say on the manager, which the chart fills from <code>controllerManager.manager.env</code>. A mismatch between those two values and where OpenCost actually runs is the usual cause, because the ConfigMap is then written where OpenCost is not reading and the restart patches a Deployment that does not exist. Confirm too that the active book is the one you meant and that its <code>status.activePricing</code> is populated, which happens only on a book that is both active and ready.</p>
+<h3 id="usage-is-priced-from-a-book-that-is-not-the-active-one">Usage is priced from a book that is not the active one<a class="headerlink" href="#usage-is-priced-from-a-book-that-is-not-the-active-one" title="Permanent link">#</a></h3>
+<p>A <code>ResourceCostCollection</code> run stamps a PriceBook and its currency onto the allocation rows it writes, and it picks that book by listing the PriceBooks in its own namespace and taking the first, without consulting <code>status.active</code>. Where a namespace that runs a collection CostJob holds more than one PriceBook, the rates on its allocation rows can therefore come from a book that is not active.</p>
+<p>Keep a single PriceBook in any namespace that runs a <code>ResourceCostCollection</code> CostJob, and hold retired or draft books in another namespace. The OpenCost pricing document is unaffected, because that path does select on the active book.</p>
+<h2 id="costjobs">CostJobs<a class="headerlink" href="#costjobs" title="Permanent link">#</a></h2>
+<h3 id="statuslastexecutiontime-never-advances"><code>status.lastExecutionTime</code> never advances<a class="headerlink" href="#statuslastexecutiontime-never-advances" title="Permanent link">#</a></h3>
+<p>Each CostJob generates a Kubernetes CronJob named <code>&lt;costjob-name&gt;-cronjob</code> in the CostJob's own namespace, owned by it. The status fields are written by the run itself, so a status that never moves means no run is completing.</p>
+<ol>
+<li>Confirm the CronJob exists, is not suspended, and carries the schedule you expected:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>cronjob<span class="w"> </span>-n<span class="w"> </span>finops-operator-system
+</code></pre></div>
+<p><code>spec.interval</code> is matched against a fixed set of values rather than converted arithmetically, and an unrecognised value is accepted and falls through to the daily <code>0 0 * * *</code> with nothing on the CostJob to say the value was ignored. <a href="concepts/costjob.html#from-interval-to-schedule">From interval to schedule</a> lists the values that work.</p>
+<ol>
+<li>Read the most recent Job it created and that pod's log.</li>
+<li>Confirm the dependency values reach the pod. The run needs <code>POSTGRES_CONNECTION_STRING</code>, which arrives through a <code>secretKeyRef</code> into <code>&lt;costjob-name&gt;-costjob-secret</code> in the same namespace, and the OpenCost URL the manager passes down from its own <code>OPENCOST_CONNECTION_STRING</code>.</li>
+<li>Read the manager's log for reconcile errors. A malformed <code>IMAGE_PULL_SECRETS</code> fails the CostJob reconcile outright, and an empty <code>OPERATOR_IMAGE</code> produces a CronJob whose pods have no image to run.</li>
+</ol>
+<p>Only a <code>ResourceCostCollection</code> CostJob writes these fields. A <code>SubscriptionChargeCollection</code> CostJob's status stays empty by design, so watch its Jobs and their pod logs, and the <code>CostsResolved</code> condition on the Subscriptions it prices, instead. <a href="reference/status-conditions.html#costjob">CostJob</a> covers what is and is not written.</p>
+<h3 id="a-costjob-timeout-appears-to-be-ignored">A CostJob timeout appears to be ignored<a class="headerlink" href="#a-costjob-timeout-appears-to-be-ignored" title="Permanent link">#</a></h3>
+<p>Two of the timeout keys change nothing, and neither one tells you so:</p>
+<table>
+<thead>
+<tr>
+<th>What you set</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>costJob.k8sOperationTimeout</code> or <code>chargeCollectionJob.k8sOperationTimeout</code> in Helm values</td>
+<td>The chart renders a field called <code>k8sOperationTimeout</code> onto the CostJob. The CRD calls that field <code>kubernetesOperationTimeout</code>, so the API server prunes the unknown field and the object comes back without it. Set <code>kubernetesOperationTimeout</code> on the CostJob directly instead.</td>
+</tr>
+<tr>
+<td><code>databaseViewsRefreshTimeout</code>, on the object or through either chart key</td>
+<td>The field is accepted, is not pruned, and bounds nothing. The materialized view it used to refresh had no readers and was dropped, and a collection run no longer refreshes any view.</td>
+</tr>
+</tbody>
+</table>
+<p>Read the object back to see what actually landed:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>costjob<span class="w"> </span>allocation-collection<span class="w"> </span>-n<span class="w"> </span>finops-operator-system<span class="w"> </span>-o<span class="w"> </span>yaml
+</code></pre></div>
+<p>A third case looks the same from outside: a duration that is present and does not parse is logged and the type's default is kept, so a typo degrades to the default rather than failing the run. <a href="reference/configuration.html#databaseviewsrefreshtimeout">databaseViewsRefreshTimeout</a> and the table above it give what each of the six live timeouts bounds.</p>
+<h2 id="finopsprovider">FinOpsProvider<a class="headerlink" href="#finopsprovider" title="Permanent link">#</a></h2>
+<h3 id="a-finopsprovider-is-rejected-at-admission">A FinOpsProvider is rejected at admission<a class="headerlink" href="#a-finopsprovider-is-rejected-at-admission" title="Permanent link">#</a></h3>
+<p>FinOpsProvider's rules are validation rules on the CRD, evaluated by the API server. No webhook is involved, so they apply on every install whether or not the webhooks are registered and whether or not the manager pod is running.</p>
+<table>
+<thead>
+<tr>
+<th>Rejection message</th>
+<th>Cause</th>
+<th>Remedy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FinOpsProvider must be named 'default' (singleton).</code></td>
+<td>The kind is cluster-scoped and a singleton.</td>
+<td>Name the object <code>default</code>.</td>
+</tr>
+<tr>
+<td><code>At least one provider option (awsoptions, gcpoptions, azureoptions, onpremoptions) must be set</code></td>
+<td>The spec sets none of the four option blocks.</td>
+<td>Set the one that matches the environment.</td>
+</tr>
+<tr>
+<td><code>Exactly one provider option (awsoptions, gcpoptions, azureoptions, onpremoptions) must be set</code></td>
+<td>The spec sets more than one.</td>
+<td>Remove all but one.</td>
+</tr>
+</tbody>
+</table>
+<p>An admitted FinOpsProvider carries no conditions and its reconciler writes no status, so there is nothing to read back on the object to confirm it worked. Check the OpenCost side instead: the pricing ConfigMap in the operator's namespace, or the OpenCost custom resource on the Multi Tenant Operator path.</p>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="reference/status-conditions.html">Status conditions</a> for the exhaustive table behind every reason named here.</li>
+<li><a href="reference/webhooks.html">Webhooks</a> for which rejections come from admission and which from the CRDs.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
               </article>
             </div>
           
@@ -3401,9 +4297,9 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -3663,7 +4559,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </style>
 
 <footer class="md-footer">
-    <div class="md-footer__inner mlr-auto" aria-label="Footer" >
+    <div class="md-footer__inner mlr-auto" aria-label="Footer">
         <!-- Footer content container-->
         <div class="footer-content-container">
             <!-- Flex-container with columns -->
@@ -3672,33 +4568,27 @@ This documentation is for a pull request deployment and is unreleased, it is onl
                 <div class="flex-2">
                     <div class="logo-footer-container">
                         
-                        <img class="md-header__logo_light" src="/finops/renovate-main-testcafe-3.x-lockfile/assets/images/footer-logo-light.png#only-light"
-                            alt="logo" />
+                        <img class="md-header__logo_light" src="assets/images/footer-logo-light.png#only-light" alt="logo">
                         
                         
-                        <img src="/finops/renovate-main-testcafe-3.x-lockfile/assets/images/footer-logo-dark.png#only-dark" alt="logo" />
+                        <img src="assets/images/footer-logo-dark.png#only-dark" alt="logo">
                         
                     </div>
 
                     <div class="collaborations-img-container">
                         <div class="display-flex">
                             
-                            <img class="csa-logo-dark"
-                                src="/finops/renovate-main-testcafe-3.x-lockfile/assets/images/CSA_dark.png#only-dark" alt="CSA" />
+                            <img class="csa-logo-dark" src="assets/images/CSA_dark.png#only-dark" alt="CSA">
                             
                             
-                            <img class="csa-logo-light"
-                                src="/finops/renovate-main-testcafe-3.x-lockfile/assets/images/CSA_light.png#only-light"
-                                alt="CSA" />
+                            <img class="csa-logo-light" src="assets/images/CSA_light.png#only-light" alt="CSA">
                             
 
                             
-                            <img class="hc-logo-dark" src="/finops/renovate-main-testcafe-3.x-lockfile/assets/images/HC_dark.png#only-dark"
-                                alt="HC" />
+                            <img class="hc-logo-dark" src="assets/images/HC_dark.png#only-dark" alt="HC">
                             
                             
-                            <img class="hc-logo-light"
-                                src="/finops/renovate-main-testcafe-3.x-lockfile/assets/images/HC_light.png#only-light" alt="HC" />
+                            <img class="hc-logo-light" src="assets/images/HC_light.png#only-light" alt="HC">
                             
                         </div>
                     </div>
@@ -3896,8 +4786,8 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
-<path class="cls-2" d="M24.91,11.22A9.84,9.84,0,0,0,21.3,7.61a9.68,9.68,0,0,0-5-1.33,9.68,9.68,0,0,0-5,1.33A9.9,9.9,0,0,0,6.4,16.19,9.61,9.61,0,0,0,8.3,22a9.73,9.73,0,0,0,4.88,3.58.6.6,0,0,0,.52-.09.51.51,0,0,0,.17-.39s0-.26,0-.7,0-.82,0-1.15l-.29.06a3.78,3.78,0,0,1-.72,0,4.73,4.73,0,0,1-.9-.09,1.86,1.86,0,0,1-.86-.39,1.58,1.58,0,0,1-.57-.79l-.13-.3a3,3,0,0,0-.41-.66,1.55,1.55,0,0,0-.56-.49l-.09-.06a1.25,1.25,0,0,1-.17-.16A.58.58,0,0,1,9,20.26q0-.09.06-.15a1.07,1.07,0,0,1,.38-.05l.26,0a1.75,1.75,0,0,1,.63.3,2.05,2.05,0,0,1,.63.68,2.26,2.26,0,0,0,.72.8,1.48,1.48,0,0,0,.84.28,4,4,0,0,0,.74-.06,2.64,2.64,0,0,0,.58-.2,2.14,2.14,0,0,1,.63-1.33,9,9,0,0,1-1.32-.23,5.09,5.09,0,0,1-1.21-.5,3.42,3.42,0,0,1-1-.87,4,4,0,0,1-.68-1.35A6.36,6.36,0,0,1,10,15.68,3.77,3.77,0,0,1,11,13a3.57,3.57,0,0,1,.09-2.64,1.87,1.87,0,0,1,1.12.18,6.56,6.56,0,0,1,1.07.5c.23.13.41.25.55.34a9.48,9.48,0,0,1,5,0l.49-.31a7.36,7.36,0,0,1,1.19-.56,1.72,1.72,0,0,1,1.05-.15,3.48,3.48,0,0,1,.1,2.64,3.77,3.77,0,0,1,1,2.66,6.36,6.36,0,0,1-.27,1.94A3.84,3.84,0,0,1,21.7,19a3.73,3.73,0,0,1-1.05.86,5.09,5.09,0,0,1-1.21.5,9,9,0,0,1-1.32.23,2.34,2.34,0,0,1,.67,1.84v2.72a.51.51,0,0,0,.16.39.58.58,0,0,0,.51.09,9.91,9.91,0,0,0,6.78-9.42A9.67,9.67,0,0,0,24.91,11.22Z"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
+<path class="cls-2" d="M24.91,11.22A9.84,9.84,0,0,0,21.3,7.61a9.68,9.68,0,0,0-5-1.33,9.68,9.68,0,0,0-5,1.33A9.9,9.9,0,0,0,6.4,16.19,9.61,9.61,0,0,0,8.3,22a9.73,9.73,0,0,0,4.88,3.58.6.6,0,0,0,.52-.09.51.51,0,0,0,.17-.39s0-.26,0-.7,0-.82,0-1.15l-.29.06a3.78,3.78,0,0,1-.72,0,4.73,4.73,0,0,1-.9-.09,1.86,1.86,0,0,1-.86-.39,1.58,1.58,0,0,1-.57-.79l-.13-.3a3,3,0,0,0-.41-.66,1.55,1.55,0,0,0-.56-.49l-.09-.06a1.25,1.25,0,0,1-.17-.16A.58.58,0,0,1,9,20.26q0-.09.06-.15a1.07,1.07,0,0,1,.38-.05l.26,0a1.75,1.75,0,0,1,.63.3,2.05,2.05,0,0,1,.63.68,2.26,2.26,0,0,0,.72.8,1.48,1.48,0,0,0,.84.28,4,4,0,0,0,.74-.06,2.64,2.64,0,0,0,.58-.2,2.14,2.14,0,0,1,.63-1.33,9,9,0,0,1-1.32-.23,5.09,5.09,0,0,1-1.21-.5,3.42,3.42,0,0,1-1-.87,4,4,0,0,1-.68-1.35A6.36,6.36,0,0,1,10,15.68,3.77,3.77,0,0,1,11,13a3.57,3.57,0,0,1,.09-2.64,1.87,1.87,0,0,1,1.12.18,6.56,6.56,0,0,1,1.07.5c.23.13.41.25.55.34a9.48,9.48,0,0,1,5,0l.49-.31a7.36,7.36,0,0,1,1.19-.56,1.72,1.72,0,0,1,1.05-.15,3.48,3.48,0,0,1,.1,2.64,3.77,3.77,0,0,1,1,2.66,6.36,6.36,0,0,1-.27,1.94A3.84,3.84,0,0,1,21.7,19a3.73,3.73,0,0,1-1.05.86,5.09,5.09,0,0,1-1.21.5,9,9,0,0,1-1.32.23,2.34,2.34,0,0,1,.67,1.84v2.72a.51.51,0,0,0,.16.39.58.58,0,0,0,.51.09,9.91,9.91,0,0,0,6.78-9.42A9.67,9.67,0,0,0,24.91,11.22Z"></path>
 </g>
 </g>
 </svg>
@@ -3916,11 +4806,11 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
 <g id="_10.Linkedin" data-name="10.Linkedin">
-<path class="cls-2" d="M24.13,24.13v-6c0-2.92-.63-5.16-4.05-5.16a3.55,3.55,0,0,0-3.19,1.75h0V13.28H13.62V24.13H17V18.74c0-1.42.26-2.78,2-2.78s1.74,1.6,1.74,2.86v5.29h3.38Z"/>
-<path class="cls-2" d="M8.14,13.28h3.37V24.13H8.14Z"/>
-<path class="cls-2" d="M9.82,7.87a2,2,0,1,0,1.95,2A2,2,0,0,0,9.82,7.87Z"/>
+<path class="cls-2" d="M24.13,24.13v-6c0-2.92-.63-5.16-4.05-5.16a3.55,3.55,0,0,0-3.19,1.75h0V13.28H13.62V24.13H17V18.74c0-1.42.26-2.78,2-2.78s1.74,1.6,1.74,2.86v5.29h3.38Z"></path>
+<path class="cls-2" d="M8.14,13.28h3.37V24.13H8.14Z"></path>
+<path class="cls-2" d="M9.82,7.87a2,2,0,1,0,1.95,2A2,2,0,0,0,9.82,7.87Z"></path>
 </g>
 </g>
 </g>
@@ -3940,8 +4830,8 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
-<path class="cls-2" d="M20.28,9.28h2.28l-5,5.69,5.86,7.75H18.85L15.25,18l-4.11,4.7H8.86l5.33-6.09L8.56,9.28h4.71l3.25,4.29Zm-.8,12.08h1.26L12.58,10.57H11.23l8.25,10.79Z"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
+<path class="cls-2" d="M20.28,9.28h2.28l-5,5.69,5.86,7.75H18.85L15.25,18l-4.11,4.7H8.86l5.33-6.09L8.56,9.28h4.71l3.25,4.29Zm-.8,12.08h1.26L12.58,10.57H11.23l8.25,10.79Z"></path>
 </g>
 </g>
 </svg>
@@ -3960,16 +4850,16 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
-<path id="f" class="cls-2" d="M17.35,24.72V16.77H20l.4-3.11H17.35v-2c0-.89.25-1.51,1.54-1.51h1.64V7.4a21.51,21.51,0,0,0-2.39-.12,3.73,3.73,0,0,0-4,4.1v2.28H11.47v3.11h2.68v8Z"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
+<path id="f" class="cls-2" d="M17.35,24.72V16.77H20l.4-3.11H17.35v-2c0-.89.25-1.51,1.54-1.51h1.64V7.4a21.51,21.51,0,0,0-2.39-.12,3.73,3.73,0,0,0-4,4.1v2.28H11.47v3.11h2.68v8Z"></path>
 </g>
 </g>
 </svg>
                         </a>
                         <a href="https://www.instagram.com/stakater.se/" class="svg-container" title="Instagram">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M16.0008 7.4668C13.6833 7.4668 13.3924 7.47693 12.4822 7.51835C11.5737 7.55995 10.9536 7.70378 10.4111 7.9148C9.8498 8.13276 9.37371 8.42432 8.89939 8.89881C8.42472 9.37313 8.13316 9.84922 7.91449 10.4103C7.70294 10.9531 7.55893 11.5733 7.51805 12.4814C7.47733 13.3917 7.46667 13.6827 7.46667 16.0002C7.46667 18.3178 7.47698 18.6077 7.51822 19.5179C7.56 20.4264 7.70383 21.0465 7.91467 21.5891C8.13281 22.1503 8.42437 22.6264 8.89886 23.1007C9.373 23.5754 9.84909 23.8677 10.41 24.0856C10.9529 24.2967 11.5732 24.4405 12.4815 24.4821C13.3917 24.5235 13.6824 24.5336 15.9997 24.5336C18.3174 24.5336 18.6074 24.5235 19.5176 24.4821C20.4261 24.4405 21.0469 24.2967 21.5898 24.0856C22.1509 23.8677 22.6263 23.5754 23.1004 23.1007C23.5751 22.6264 23.8667 22.1503 24.0853 21.5893C24.2951 21.0465 24.4391 20.4262 24.4818 19.5181C24.5227 18.6079 24.5333 18.3178 24.5333 16.0002C24.5333 13.6827 24.5227 13.3918 24.4818 12.4816C24.4391 11.5732 24.2951 10.9531 24.0853 10.4105C23.8667 9.84922 23.5751 9.37313 23.1004 8.89881C22.6258 8.42414 22.1511 8.13258 21.5893 7.9148C21.0453 7.70378 20.4248 7.55995 19.5164 7.51835C18.6062 7.47693 18.3164 7.4668 15.9981 7.4668H16.0008ZM15.2352 9.00457C15.4624 9.00421 15.716 9.00457 16.0008 9.00457C18.2792 9.00457 18.5492 9.01274 19.449 9.05363C20.281 9.09168 20.7325 9.2307 21.0333 9.3475C21.4316 9.50217 21.7155 9.68706 22.014 9.98573C22.3127 10.2844 22.4975 10.5688 22.6526 10.9671C22.7694 11.2675 22.9086 11.7191 22.9464 12.5511C22.9873 13.4507 22.9962 13.7209 22.9962 15.9982C22.9962 18.2756 22.9873 18.5458 22.9464 19.4454C22.9084 20.2774 22.7694 20.729 22.6526 21.0294C22.4979 21.4276 22.3127 21.7112 22.014 22.0097C21.7153 22.3084 21.4318 22.4932 21.0333 22.6479C20.7329 22.7652 20.281 22.9039 19.449 22.942C18.5494 22.9828 18.2792 22.9917 16.0008 22.9917C13.7222 22.9917 13.4521 22.9828 12.5526 22.942C11.7205 22.9036 11.269 22.7645 10.968 22.6477C10.5698 22.4931 10.2853 22.3082 9.98666 22.0095C9.68799 21.7108 9.5031 21.4271 9.34807 21.0287C9.23127 20.7282 9.09207 20.2767 9.0542 19.4447C9.01331 18.5451 9.00514 18.2749 9.00514 15.9961C9.00514 13.7173 9.01331 13.4485 9.0542 12.549C9.09225 11.717 9.23127 11.2654 9.34807 10.9646C9.50274 10.5664 9.68799 10.2819 9.98666 9.98324C10.2853 9.68457 10.5698 9.49968 10.968 9.34466C11.2688 9.22732 11.7205 9.08866 12.5526 9.05043C13.3398 9.01488 13.6448 9.00421 15.2352 9.00243V9.00457ZM20.5558 10.4215C19.9905 10.4215 19.5318 10.8796 19.5318 11.4451C19.5318 12.0105 19.9905 12.4691 20.5558 12.4691C21.1212 12.4691 21.5798 12.0105 21.5798 11.4451C21.5798 10.8798 21.1212 10.4215 20.5558 10.4215ZM16.0008 11.6179C13.5807 11.6179 11.6185 13.5801 11.6185 16.0002C11.6185 18.4203 13.5807 20.3816 16.0008 20.3816C18.4209 20.3816 20.3824 18.4203 20.3824 16.0002C20.3824 13.5801 18.4209 11.6179 16.0008 11.6179ZM16.0008 13.1557C17.5716 13.1557 18.8453 14.4292 18.8453 16.0002C18.8453 17.5711 17.5716 18.8447 16.0008 18.8447C14.4297 18.8447 13.1563 17.5711 13.1563 16.0002C13.1563 14.4292 14.4297 13.1557 16.0008 13.1557Z" fill="#EA7845"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.0008 7.4668C13.6833 7.4668 13.3924 7.47693 12.4822 7.51835C11.5737 7.55995 10.9536 7.70378 10.4111 7.9148C9.8498 8.13276 9.37371 8.42432 8.89939 8.89881C8.42472 9.37313 8.13316 9.84922 7.91449 10.4103C7.70294 10.9531 7.55893 11.5733 7.51805 12.4814C7.47733 13.3917 7.46667 13.6827 7.46667 16.0002C7.46667 18.3178 7.47698 18.6077 7.51822 19.5179C7.56 20.4264 7.70383 21.0465 7.91467 21.5891C8.13281 22.1503 8.42437 22.6264 8.89886 23.1007C9.373 23.5754 9.84909 23.8677 10.41 24.0856C10.9529 24.2967 11.5732 24.4405 12.4815 24.4821C13.3917 24.5235 13.6824 24.5336 15.9997 24.5336C18.3174 24.5336 18.6074 24.5235 19.5176 24.4821C20.4261 24.4405 21.0469 24.2967 21.5898 24.0856C22.1509 23.8677 22.6263 23.5754 23.1004 23.1007C23.5751 22.6264 23.8667 22.1503 24.0853 21.5893C24.2951 21.0465 24.4391 20.4262 24.4818 19.5181C24.5227 18.6079 24.5333 18.3178 24.5333 16.0002C24.5333 13.6827 24.5227 13.3918 24.4818 12.4816C24.4391 11.5732 24.2951 10.9531 24.0853 10.4105C23.8667 9.84922 23.5751 9.37313 23.1004 8.89881C22.6258 8.42414 22.1511 8.13258 21.5893 7.9148C21.0453 7.70378 20.4248 7.55995 19.5164 7.51835C18.6062 7.47693 18.3164 7.4668 15.9981 7.4668H16.0008ZM15.2352 9.00457C15.4624 9.00421 15.716 9.00457 16.0008 9.00457C18.2792 9.00457 18.5492 9.01274 19.449 9.05363C20.281 9.09168 20.7325 9.2307 21.0333 9.3475C21.4316 9.50217 21.7155 9.68706 22.014 9.98573C22.3127 10.2844 22.4975 10.5688 22.6526 10.9671C22.7694 11.2675 22.9086 11.7191 22.9464 12.5511C22.9873 13.4507 22.9962 13.7209 22.9962 15.9982C22.9962 18.2756 22.9873 18.5458 22.9464 19.4454C22.9084 20.2774 22.7694 20.729 22.6526 21.0294C22.4979 21.4276 22.3127 21.7112 22.014 22.0097C21.7153 22.3084 21.4318 22.4932 21.0333 22.6479C20.7329 22.7652 20.281 22.9039 19.449 22.942C18.5494 22.9828 18.2792 22.9917 16.0008 22.9917C13.7222 22.9917 13.4521 22.9828 12.5526 22.942C11.7205 22.9036 11.269 22.7645 10.968 22.6477C10.5698 22.4931 10.2853 22.3082 9.98666 22.0095C9.68799 21.7108 9.5031 21.4271 9.34807 21.0287C9.23127 20.7282 9.09207 20.2767 9.0542 19.4447C9.01331 18.5451 9.00514 18.2749 9.00514 15.9961C9.00514 13.7173 9.01331 13.4485 9.0542 12.549C9.09225 11.717 9.23127 11.2654 9.34807 10.9646C9.50274 10.5664 9.68799 10.2819 9.98666 9.98324C10.2853 9.68457 10.5698 9.49968 10.968 9.34466C11.2688 9.22732 11.7205 9.08866 12.5526 9.05043C13.3398 9.01488 13.6448 9.00421 15.2352 9.00243V9.00457ZM20.5558 10.4215C19.9905 10.4215 19.5318 10.8796 19.5318 11.4451C19.5318 12.0105 19.9905 12.4691 20.5558 12.4691C21.1212 12.4691 21.5798 12.0105 21.5798 11.4451C21.5798 10.8798 21.1212 10.4215 20.5558 10.4215ZM16.0008 11.6179C13.5807 11.6179 11.6185 13.5801 11.6185 16.0002C11.6185 18.4203 13.5807 20.3816 16.0008 20.3816C18.4209 20.3816 20.3824 18.4203 20.3824 16.0002C20.3824 13.5801 18.4209 11.6179 16.0008 11.6179ZM16.0008 13.1557C17.5716 13.1557 18.8453 14.4292 18.8453 16.0002C18.8453 17.5711 17.5716 18.8447 16.0008 18.8447C14.4297 18.8447 13.1563 17.5711 13.1563 16.0002C13.1563 14.4292 14.4297 13.1557 16.0008 13.1557Z" fill="#EA7845"></path>
 </svg>
                         </a>
                         <a href="https://www.reddit.com/user/stakater/" class="svg-container" title="Reddit">
@@ -3986,9 +4876,9 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 </defs>
 <g id="Layer_2" data-name="Layer 2">
 <g id="Layer_1-2" data-name="Layer 1">
-<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#282626"></path>
 <g id="_32.Reddit" data-name="32.Reddit">
-<path id="Icon" class="cls-2" d="M26,16.16a2.18,2.18,0,0,0-3.69-1.53,10.65,10.65,0,0,0-5.79-1.84l1-4.67,3.22.65A1.49,1.49,0,1,0,22,7.12a1.47,1.47,0,0,0-1.12.72l-3.67-.72a.46.46,0,0,0-.55.35l-1.1,5.22a10.71,10.71,0,0,0-5.86,1.84,2.19,2.19,0,0,0-3,3.2,2.73,2.73,0,0,0,.6.4,3.53,3.53,0,0,0,0,.65c0,3.37,3.92,6.11,8.76,6.11s8.76-2.72,8.76-6.11a2.36,2.36,0,0,0,0-.65A2.14,2.14,0,0,0,26,16.16Zm-15,1.52a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,10.93,17.68Zm8.74,4.14A5.7,5.7,0,0,1,16,23a5.75,5.75,0,0,1-3.69-1.15.4.4,0,0,1,.57-.57A5,5,0,0,0,16,22.2a4.89,4.89,0,0,0,3.15-.93.42.42,0,1,1,.6.6v-.05Zm-.25-2.57a1.06,1.06,0,1,1,0,.05h-.08Z"/>
+<path id="Icon" class="cls-2" d="M26,16.16a2.18,2.18,0,0,0-3.69-1.53,10.65,10.65,0,0,0-5.79-1.84l1-4.67,3.22.65A1.49,1.49,0,1,0,22,7.12a1.47,1.47,0,0,0-1.12.72l-3.67-.72a.46.46,0,0,0-.55.35l-1.1,5.22a10.71,10.71,0,0,0-5.86,1.84,2.19,2.19,0,0,0-3,3.2,2.73,2.73,0,0,0,.6.4,3.53,3.53,0,0,0,0,.65c0,3.37,3.92,6.11,8.76,6.11s8.76-2.72,8.76-6.11a2.36,2.36,0,0,0,0-.65A2.14,2.14,0,0,0,26,16.16Zm-15,1.52a1.5,1.5,0,1,1,1.5,1.5A1.5,1.5,0,0,1,10.93,17.68Zm8.74,4.14A5.7,5.7,0,0,1,16,23a5.75,5.75,0,0,1-3.69-1.15.4.4,0,0,1,.57-.57A5,5,0,0,0,16,22.2a4.89,4.89,0,0,0,3.15-.93.42.42,0,1,1,.6.6v-.05Zm-.25-2.57a1.06,1.06,0,1,1,0,.05h-.08Z"></path>
 </g>
 </g>
 </g>
@@ -4008,7 +4898,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     </div>
     
     
-      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden="">
         <div class="md-consent__overlay"></div>
         <aside class="md-consent__inner">
           <form class="md-consent__form md-grid md-typeset" name="consent">
@@ -4018,7 +4908,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 
 <h4>Cookie consent</h4>
 <p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
-<input class="md-toggle" type="checkbox" id="__settings" >
+<input class="md-toggle" type="checkbox" id="__settings">
 <div class="md-consent__settings">
   <ul class="task-list">
     
@@ -4032,7 +4922,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   <li class="task-list-item">
     <label class="task-list-control">
-      <input type="checkbox" name="analytics" checked>
+      <input type="checkbox" name="analytics" checked="">
       <span class="task-list-indicator"></span>
       Google Analytics
     </label>
@@ -4050,7 +4940,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
   
   <li class="task-list-item">
     <label class="task-list-control">
-      <input type="checkbox" name="github" checked>
+      <input type="checkbox" name="github" checked="">
       <span class="task-list-indicator"></span>
       GitHub
     </label>
@@ -4090,11 +4980,13 @@ This documentation is for a pull request deployment and is unreleased, it is onl
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/finops/renovate-main-testcafe-3.x-lockfile", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "/finops/renovate-main-testcafe-3.x-lockfile/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "navigation.tracking", "toc.follow", "navigation.top"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="/finops/renovate-main-testcafe-3.x-lockfile/assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
