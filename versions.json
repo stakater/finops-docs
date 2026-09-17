@@ -7,7 +7,9 @@
   {
     "version": "renovate-main-testcafe-3.x-lockfile",
     "title": "renovate-main-testcafe-3.x-lockfile",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "renovate-main-stakater-vale-package-0.x",
@@ -27,9 +29,7 @@
   {
     "version": "renovate-main-npm-minimatch-vulnerability",
     "title": "renovate-main-npm-minimatch-vulnerability",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "renovate-main-node-24.x",
