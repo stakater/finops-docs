@@ -4041,19 +4041,8 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p><em><strong>September 2, 2026</strong></em></p>
 <h4 id="features">Features<a class="headerlink" href="#features" title="Permanent link">#</a></h4>
 <ul>
-<li>
-<p><code>CostJob.spec.sharding</code> splits the hourly allocation query into namespace-filtered batches run in parallel, for clusters where the single cluster-wide request times out:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">sharding</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">namespacesPerShard</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
-<span class="w">    </span><span class="nt">concurrency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
-</code></pre></div>
-<p>Shard keys come from OpenCost's own namespace list rather than from Kubernetes, so namespaces deleted mid-window and OpenCost's pseudo-namespaces are still covered and sharding cannot quietly drop rows that a single unfiltered query would have returned. Concurrency is capped, and the first shard failure aborts the rest, so a partial hour is rolled back rather than committed.</p>
-<p>It is opt-in. Left unset, the job issues the same single unfiltered query as before. Apply the regenerated CRD before setting it, or the field is pruned.</p>
-</li>
-<li>
-<p><code>CostJob.spec.resources</code> sets the collection container's requests and limits, which previously lived only in the operator image and so could not be changed without rebuilding it. It replaces the defaults rather than merging with them, so a requests-only spec leaves the container without a memory limit.</p>
-</li>
+<li><code>CostJob.spec.sharding</code> splits the hourly allocation query into namespace-filtered batches run in parallel, for clusters where the single cluster-wide request times out. Opt-in, and unset leaves the query unchanged. See <a href="concepts/costjob.html#sharding-the-allocation-query">CostJob</a>.</li>
+<li><code>CostJob.spec.resources</code> sets the collection container's requests and limits, which previously lived only in the operator image and so could not be changed without rebuilding it. It replaces the defaults rather than merging with them, so a requests-only spec leaves the container without a memory limit.</li>
 <li><code>Offering.status.resolvedPricing.subscriptionFee.period</code> now always carries an explicit unit suffix, so a reader no longer has to fetch <code>tickAlignment</code> to learn whether <code>1</code> means an hour, a day or a month. The spec accepts both the bare and the suffixed form, since Offering specs are immutable and existing ones cannot be migrated, and a suffix belonging to a different alignment is rejected at admission rather than misread.</li>
 </ul>
 <h4 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">#</a></h4>
