@@ -17,9 +17,7 @@
   {
     "version": "renovate-main-stakater-.github-0.x",
     "title": "renovate-main-stakater-.github-0.x",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "renovate-main-python-3.x",
@@ -69,6 +67,8 @@
   {
     "version": "docs-mto-1.10-changelog",
     "title": "docs-mto-1.10-changelog",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   }
 ]
