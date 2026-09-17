@@ -2,9 +2,6 @@
 
 Releases of the FinOps Operator, newest first. Each entry summarises what changed for someone running or configuring the operator; the chart and the operator image share a version.
 
-!!! note
-    This documentation describes the operator as it currently stands in development, which is ahead of v0.1.7 in a couple of places that are visible in a manifest. The whole-family compatibility model and its `status.compatibilityRoot`, and the `namespace` field being required on every reference rather than defaulted from the referrer, are neither of them in a tagged release yet. Where a page describes one of those, read it as the behaviour you will get on the next release rather than on v0.1.7.
-
 ## v0.1.x
 
 ### v0.1.7
