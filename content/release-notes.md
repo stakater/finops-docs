@@ -28,7 +28,7 @@ _**September 2, 2026**_
 
 #### Features
 
-- `CostJob.spec.sharding` splits the hourly allocation query into namespace-filtered batches run in parallel, for clusters where the single cluster-wide request times out. Opt-in, and unset leaves the query unchanged. See [CostJob](concepts/costjob.md#sharding-the-allocation-query).
+- `CostJob.spec.sharding` splits the hourly allocation query into namespace-filtered batches run in parallel, which is intended for clusters where the single cluster-wide request times out. It is opt-in, and leaving it unset preserves the existing behaviour. See [CostJob](concepts/costjob.md#sharding-the-allocation-query).
 - `CostJob.spec.resources` sets the collection container's requests and limits, which previously lived only in the operator image and so could not be changed without rebuilding it. It replaces the defaults rather than merging with them, so a requests-only spec leaves the container without a memory limit.
 - `Offering.status.resolvedPricing.subscriptionFee.period` now always carries an explicit unit suffix, so a reader no longer has to fetch `tickAlignment` to learn whether `1` means an hour, a day or a month. The spec accepts both the bare and the suffixed form, since Offering specs are immutable and existing ones cannot be migrated, and a suffix belonging to a different alignment is rejected at admission rather than misread.
 
