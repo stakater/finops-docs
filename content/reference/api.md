@@ -65,7 +65,7 @@ _Appears in:_
 
 | Field | Description | Default | Validation |
 | --- | --- | --- | --- |
-| `requiredOfferings` _[ObjectReference](#objectreference) array_ | RequiredOfferings lists offerings that must be covered by an active subscription in<br />the same family (the connected tree sharing a root ancestor) for a subscription to<br />this offering to activate. Coverage spans the whole family EXCEPT the subscription's<br />own subtree: ancestors, siblings, uncles, and cousins all count; the subscription's<br />own children and descendants do not. A root subscription's subtree is the entire<br />family, so a requirement-bearing root can never be covered. |  | Optional: \{\} <br /> |
+| `requiredOfferings` _[ObjectReference](#objectreference) array_ | RequiredOfferings lists offerings that must exist in parent or sibling subscriptions |  | Optional: \{\} <br /> |
 
 
 #### CostBucket
@@ -110,6 +110,23 @@ CostJob is the Schema for the costjobs API.
 
 
 
+#### CostJobSharding
+
+
+
+CostJobSharding configures how the OpenCost allocation query is split up.
+
+
+
+_Appears in:_
+- [CostJobSpec](#costjobspec)
+
+| Field | Description | Default | Validation |
+| --- | --- | --- | --- |
+| `namespacesPerShard` _integer_ | NamespacesPerShard is the maximum number of namespaces covered by a single<br />OpenCost query. Lower values mean more, smaller requests. | 25 | Minimum: 1 <br />Optional: \{\} <br /> |
+| `concurrency` _integer_ | Concurrency is how many shard queries are in flight at once. It also bounds<br />the job's peak memory, since that many responses can be held at a time. | 4 | Maximum: 32 <br />Minimum: 1 <br />Optional: \{\} <br /> |
+
+
 #### CostJobSpec
 
 
@@ -133,6 +150,7 @@ _Appears in:_
 | `httpClientTimeout` _[Duration](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#duration-v1-meta)_ | HTTPClientTimeout is the timeout for HTTP client requests | 90s | Optional: \{\} <br /> |
 | `interval` _[Duration](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#duration-v1-meta)_ |  | 24h |  |
 | `resources` _[ResourceRequirements](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#resourcerequirements-v1-core)_ | Resources overrides compute resources for the generated CronJob's loader container.<br />Setting this replaces the whole block, so a partial value does not inherit the<br />template defaults for the keys it omits. Unset means the operator defaults apply. |  | Optional: \{\} <br /> |
+| `sharding` _[CostJobSharding](#costjobsharding)_ | Sharding splits the OpenCost allocation query into several smaller<br />namespace-filtered queries run in parallel, instead of one cluster-wide<br />query per hour. Set this when the single query times out or exhausts<br />memory on a large cluster. Unset means the single cluster-wide query. |  | Optional: \{\} <br /> |
 
 
 #### CostJobStatus
@@ -384,7 +402,7 @@ _Appears in:_
 | Field | Description | Default | Validation |
 | --- | --- | --- | --- |
 | `name` _string_ |  |  | Required: \{\} <br /> |
-| `namespace` _string_ | Namespace of the referenced object. Must be set explicitly — references are<br />never resolved against the referrer's namespace, so the same reference always<br />means the same object no matter where it is authored. MinLength guards against<br />an empty string, which +required alone would accept. |  | MinLength: 1 <br />Required: \{\} <br /> |
+| `namespace` _string_ | Namespace of the Offering. If empty, defaults to the Subscription's namespace. |  | Optional: \{\} <br /> |
 
 
 #### Offering
@@ -683,6 +701,8 @@ Minimum commitment (minPeriods):
 
 All monetary values are expressed in micro-currency units (10^-6 of the currency).
 
+The period bounds below are derived in PeriodCount's doc; change them together.
+
 
 
 _Appears in:_
@@ -691,7 +711,7 @@ _Appears in:_
 
 | Field | Description | Default | Validation |
 | --- | --- | --- | --- |
-| `period` _string_ | Period is the tick interval. Its interpretation depends on tickAlignment:<br />  - ActivatedAt: a Go duration string (e.g., "1h", "30m", "24h").<br />  - HourBoundary: an integer number of hours (e.g., "1", "2").<br />  - DayBoundary: an integer number of days (e.g., "1", "7").<br />  - MonthBoundary: an integer number of months (e.g., "1", "3", "12"). |  |  |
+| `period` _string_ | Period is the tick interval. It must be greater than zero, and its form<br />depends on tickAlignment:<br />  - ActivatedAt: a Go duration string (e.g., "30m", "1h", "24h").<br />  - HourBoundary: hours, bare or "h"-suffixed (e.g., "1", "2h"), max 999999.<br />  - DayBoundary: days, bare or "d"-suffixed (e.g., "1", "7d"), max 99999.<br />  - MonthBoundary: months, bare or "mo"-suffixed (e.g., "1", "3mo"), max 999.<br />The unit suffix is optional, but a suffix belonging to a different<br />alignment is rejected. status.resolvedPricing republishes this value in<br />canonical suffixed form. |  | MaxLength: 8 <br /> |
 | `tickAlignment` _[TickAlignment](#tickalignment)_ | TickAlignment defines where tick boundaries occur.<br />ActivatedAt: ticks start at status.activatedAt (tick boundaries are: activatedAt + N*period).<br />Best for per-subscription billing cycles (common for add-ons).<br />HourBoundary / DayBoundary / MonthBoundary: ticks align to wall-clock boundaries.<br />Best for synchronized billing windows across subscriptions (common for reporting).<br />For boundary-aligned modes, the first tick after activation covers a partial period<br />and is prorated: charge = priceMicros * actualDuration / periodDuration.<br />For MonthBoundary, the period duration denominator is a fixed 365.25/12 days (30.4375 days). |  | Enum: [ActivatedAt HourBoundary DayBoundary MonthBoundary] <br /> |
 | `minPeriods` _integer_ | MinPeriods is the minimum number of full tick periods before deletion is allowed.<br />The collection job keeps the subscription finalizer until at least minPeriods ticks<br />have elapsed since activation. The subscription continues accruing charges normally<br />until the finalizer is removed. |  | Minimum: 1 <br />Optional: \{\} <br /> |
 | `priceMicros` _integer_ | PriceMicros is the price per tick, in micro-currency units |  | Minimum: 1 <br />Required: \{\} <br /> |
@@ -710,7 +730,7 @@ _Appears in:_
 
 | Field | Description | Default | Validation |
 | --- | --- | --- | --- |
-| `onParentDeactivate` _[ParentDeactivateAction](#parentdeactivateaction)_ | OnParentDeactivate controls what happens when the parent subscription deactivates:<br />- Deactivate: this subscription also deactivates.<br />- Orphan: this subscription stays active independently, while retaining the parent reference for traceability.<br />Orphan only detaches the parent lifecycle link; compatibility requirements are still enforced.<br />An orphan whose required offering was covered only by the now-deactivated parent (and by no<br />active sibling) is still deactivated, because keeping it active would violate the requirement. | Deactivate | Enum: [Deactivate Orphan] <br /> |
+| `onParentDeactivate` _[ParentDeactivateAction](#parentdeactivateaction)_ | OnParentDeactivate controls what happens when the parent subscription deactivates:<br />- Deactivate: this subscription also deactivates.<br />- Orphan: this subscription stays active independently, while retaining the parent reference for traceability. | Deactivate | Enum: [Deactivate Orphan] <br /> |
 | `targetRef` _[TargetReference](#targetreference)_ | TargetRef ties the lifecycle of the subscription to a target resource.<br />The subscription will not activate until the target status is Ready.<br />When the target is deleted, the subscription will be deactivated. |  | Optional: \{\} <br /> |
 
 
@@ -738,10 +758,6 @@ SubscriptionSpec defines the desired state of Subscription.
 A Subscription creates a binding to an Offering, starting the clock and instantiating the offering.
 Effectively it starts consuming the cost-driving entity from a billing perspective.
 
-offeringRef and parent are immutable: both determine what the subscription is
-billed for and which subscriptions provide its compatibility coverage, and a
-subscription's activation is a billing epoch that cannot be re-pointed.
-
 
 
 _Appears in:_
@@ -752,7 +768,7 @@ _Appears in:_
 | `offeringRef` _[ObjectReference](#objectreference)_ | OfferingRef is the reference to the Offering which is being subscribed to. |  | Required: \{\} <br /> |
 | `parent` _[SubscriptionParent](#subscriptionparent)_ | Parent is an optional reference to a parent subscription for traceability.<br />For example, a storage subscription attached to a VM would reference the VM subscription. |  | Optional: \{\} <br /> |
 | `usageSources` _[UsageSource](#usagesource) array_ | UsageSources defines from where the data for the resource usage of this subscription comes. |  | Optional: \{\} <br /> |
-| `lifecycle` _[SubscriptionLifecycle](#subscriptionlifecycle)_ | Lifecycle allows overriding lifecycle behavior if the Offering permits it.<br />If both parent and targetRef are set:<br />- activation requires BOTH (parent active AND target Ready)<br />- deactivation happens if EITHER stops applying, except parent deactivation is ignored when onParentDeactivate=Orphan<br />Note: onParentDeactivate=Orphan only governs the parent lifecycle link. It does not<br />exempt the subscription from its offering's compatibility requirements: if the deactivating<br />parent was the only active provider of a required offering, the subscription is still<br />deactivated for the coverage gap. |  | Optional: \{\} <br /> |
+| `lifecycle` _[SubscriptionLifecycle](#subscriptionlifecycle)_ | Lifecycle allows overriding lifecycle behavior if the Offering permits it.<br />If both parent and targetRef are set:<br />- activation requires BOTH (parent active AND target Ready)<br />- deactivation happens if EITHER stops applying, except parent deactivation is ignored when onParentDeactivate=Orphan |  | Optional: \{\} <br /> |
 
 
 #### SubscriptionStatus
@@ -776,7 +792,6 @@ _Appears in:_
 | `ready` _[ConditionStatus](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#conditionstatus-v1-meta)_ | Ready indicates whether the subscription is active and ready. |  |  |
 | `activatedAt` _[Time](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#time-v1-meta)_ | ActivatedAt is the time when the subscription became active. |  | Optional: \{\} <br /> |
 | `deactivatedAt` _[Time](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#time-v1-meta)_ | DeactivatedAt is the time when the subscription was deactivated. |  | Optional: \{\} <br /> |
-| `compatibilityRoot` _string_ | CompatibilityRoot is the metadata.uid of this subscription's root ancestor,<br />resolved once by the controller. It identifies the connected family used<br />for compatibility coverage. |  | Optional: \{\} <br /> |
 | `costs` _[CostBucket](#costbucket) array_ | Costs contains rolling cost summaries for the current hour, day, and month.<br />When populated, contains exactly 3 entries — one per granularity.	// +optional |  |  |
 | `conditions` _[Condition](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#condition-v1-meta) array_ | Conditions represent the latest available observations of the Subscription's state. |  | Optional: \{\} <br /> |
 

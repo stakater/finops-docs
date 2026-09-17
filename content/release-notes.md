@@ -28,19 +28,7 @@ _**September 2, 2026**_
 
 #### Features
 
-- `CostJob.spec.sharding` splits the hourly allocation query into namespace-filtered batches run in parallel, for clusters where the single cluster-wide request times out:
-
-    ```yaml
-    spec:
-      sharding:
-        namespacesPerShard: 25
-        concurrency: 4
-    ```
-
-    Shard keys come from OpenCost's own namespace list rather than from Kubernetes, so namespaces deleted mid-window and OpenCost's pseudo-namespaces are still covered and sharding cannot quietly drop rows that a single unfiltered query would have returned. Concurrency is capped, and the first shard failure aborts the rest, so a partial hour is rolled back rather than committed.
-
-    It is opt-in. Left unset, the job issues the same single unfiltered query as before. Apply the regenerated CRD before setting it, or the field is pruned.
-
+- `CostJob.spec.sharding` splits the hourly allocation query into namespace-filtered batches run in parallel, for clusters where the single cluster-wide request times out. Opt-in, and unset leaves the query unchanged. See [CostJob](concepts/costjob.md#sharding-the-allocation-query).
 - `CostJob.spec.resources` sets the collection container's requests and limits, which previously lived only in the operator image and so could not be changed without rebuilding it. It replaces the defaults rather than merging with them, so a requests-only spec leaves the container without a memory limit.
 - `Offering.status.resolvedPricing.subscriptionFee.period` now always carries an explicit unit suffix, so a reader no longer has to fetch `tickAlignment` to learn whether `1` means an hour, a day or a month. The spec accepts both the bare and the suffixed form, since Offering specs are immutable and existing ones cannot be migrated, and a suffix belonging to a different alignment is rejected at admission rather than misread.
 
