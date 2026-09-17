@@ -4041,7 +4041,7 @@ This documentation is for a pull request deployment and is unreleased, it is onl
 <p><em><strong>September 2, 2026</strong></em></p>
 <h4 id="features">Features<a class="headerlink" href="#features" title="Permanent link">#</a></h4>
 <ul>
-<li><code>CostJob.spec.sharding</code> splits the hourly allocation query into namespace-filtered batches run in parallel, for clusters where the single cluster-wide request times out. Opt-in, and unset leaves the query unchanged. See <a href="concepts/costjob.html#sharding-the-allocation-query">CostJob</a>.</li>
+<li><code>CostJob.spec.sharding</code> splits the hourly allocation query into namespace-filtered batches run in parallel, which is intended for clusters where the single cluster-wide request times out. It is opt-in, and leaving it unset preserves the existing behaviour. See <a href="concepts/costjob.html#sharding-the-allocation-query">CostJob</a>.</li>
 <li><code>CostJob.spec.resources</code> sets the collection container's requests and limits, which previously lived only in the operator image and so could not be changed without rebuilding it. It replaces the defaults rather than merging with them, so a requests-only spec leaves the container without a memory limit.</li>
 <li><code>Offering.status.resolvedPricing.subscriptionFee.period</code> now always carries an explicit unit suffix, so a reader no longer has to fetch <code>tickAlignment</code> to learn whether <code>1</code> means an hour, a day or a month. The spec accepts both the bare and the suffixed form, since Offering specs are immutable and existing ones cannot be migrated, and a suffix belonging to a different alignment is rejected at admission rather than misread.</li>
 </ul>
