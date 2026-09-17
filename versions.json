@@ -27,7 +27,9 @@
   {
     "version": "renovate-main-npm-minimatch-vulnerability",
     "title": "renovate-main-npm-minimatch-vulnerability",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "renovate-main-node-24.x",
@@ -67,8 +69,6 @@
   {
     "version": "docs-mto-1.10-changelog",
     "title": "docs-mto-1.10-changelog",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   }
 ]
