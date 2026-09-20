@@ -47,7 +47,9 @@
   {
     "version": "renovate-main-dotenv-18.x",
     "title": "renovate-main-dotenv-18.x",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "renovate-main-dotenv-16.x-lockfile",
@@ -72,8 +74,6 @@
   {
     "version": "docs-mto-1.10-changelog",
     "title": "docs-mto-1.10-changelog",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   }
 ]
