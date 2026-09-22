@@ -2,146 +2,146 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/index.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/eula.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/release-notes.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/troubleshooting.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/concepts/architecture.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/concepts/billing-model.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/concepts/compatibility-and-hierarchy.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/concepts/costjob.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/concepts/finops-provider.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/concepts/offering.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/concepts/pricebook.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/concepts/subscription.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/concepts/terminology.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/getting-started/quick-start.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/getting-started/uninstalling.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/getting-started/installation/kubernetes.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/getting-started/installation/openshift.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/getting-started/installation/overview.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/guides/collect-cost-data.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/guides/compose-subscriptions.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/guides/deactivate-a-subscription.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/guides/define-offering.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/guides/define-pricing.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/guides/price-resource-usage.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/guides/read-subscription-costs.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/guides/subscribe-to-offering.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/guides/switch-active-pricebook.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/overview/key-features.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/overview/use-cases.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/reference/api.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/reference/configuration.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/reference/metrics.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/reference/rbac.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/reference/security-model.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/reference/status-conditions.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
     <url>
          <loc>https://docs.stakater.com/finops/docs-mto-1.10-changelog/reference/webhooks.html</loc>
-         <lastmod>2026-09-17</lastmod>
+         <lastmod>2026-09-22</lastmod>
     </url>
 </urlset>
