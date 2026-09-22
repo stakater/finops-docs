@@ -81,6 +81,32 @@ Unlike the environment, this is not merged. Setting `spec.resources` replaces th
 
 The override applies to either job type, because both generate their CronJob from the same template and the reconciler matches the `loader` container by name. Like the rest of the CronJob's `spec`, it is reapplied on every reconcile, so raising it on the CostJob is the only way to make it stick.
 
+## Sharding the allocation query
+
+A `ResourceCostCollection` run asks OpenCost for one hour of allocation data at a time, aggregated over the whole cluster in a single request. On a large enough cluster that request times out, or returns a response big enough to exhaust the job's memory. `spec.sharding` splits each hour into several namespace-filtered queries run in parallel instead.
+
+```yaml
+apiVersion: finops.stakater.com/v1alpha1
+kind: CostJob
+metadata:
+  name: allocation-collection
+  namespace: finops-operator-system
+spec:
+  type: ResourceCostCollection
+  interval: 1h
+  sharding:
+    namespacesPerShard: 25
+    concurrency: 4
+```
+
+`namespacesPerShard` is the largest number of namespaces one query covers, defaulting to `25`; lower values mean more, smaller requests. `concurrency` is how many of those queries are in flight at once, defaulting to `4`, and it also bounds the run's peak memory, since that many responses can be held at a time.
+
+The namespaces to shard on come from OpenCost rather than from the Kubernetes API, through a cheap discovery query that aggregates the hour by namespace. That matters: OpenCost's list also covers namespaces deleted part way through the window, and its own pseudo-namespaces, neither of which the Kubernetes API would return. Sharding therefore cannot quietly drop rows that a single unfiltered query would have returned.
+
+A failure in any one shard aborts the rest of that hour and is propagated, so the hour is rolled back rather than committed half written. Shards write through one shared transaction, and the rows a shard produces are the rows a single unfiltered query would have produced for those namespaces.
+
+Sharding is opt-in and applies only to allocation collection. Left unset, the run issues the same single unfiltered query as before, and `spec.sharding` on a `SubscriptionChargeCollection` CostJob does nothing. Apply the regenerated CRD before setting the field, or the API server prunes it and the run silently falls back to the single query.
+
 ## Timeouts
 
 Six optional fields bound the phases of a run. Each is a duration with a default set on the type, and the reconciler copies whatever is set onto the pod's environment; a field left unset falls back to that default.
