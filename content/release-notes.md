@@ -84,10 +84,6 @@ _**April 13, 2026**_
 - The first `SubscriptionChargeCollection` implementation, populating each Subscription's status from the charges it computed.
 - Database schema for subscriptions, offerings, and subscription costs.
 
-#### Bug Fixes
-
-- Several Helm chart fixes.
-
 ### v0.1.0
 
 _**February 23, 2026**_
