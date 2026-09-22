@@ -32,7 +32,9 @@
   {
     "version": "renovate-main-node-24.x",
     "title": "renovate-main-node-24.x",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "renovate-main-nginxinc-nginx-unprivileged-1.x",
@@ -57,9 +59,7 @@
   {
     "version": "renovate-main-docker-login-action-4.x",
     "title": "renovate-main-docker-login-action-4.x",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "renovate-main-actions-checkout-7.x",
