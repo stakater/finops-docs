@@ -7,7 +7,9 @@
   {
     "version": "renovate-main-testcafe-3.x-lockfile",
     "title": "renovate-main-testcafe-3.x-lockfile",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "renovate-main-stakater-vale-package-0.x",
@@ -72,8 +74,6 @@
   {
     "version": "feat-docs-target",
     "title": "feat-docs-target",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   }
 ]
