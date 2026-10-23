@@ -27,7 +27,9 @@
   {
     "version": "renovate-main-npm-minimatch-vulnerability",
     "title": "renovate-main-npm-minimatch-vulnerability",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "renovate-main-node-24.x",
@@ -47,9 +49,7 @@
   {
     "version": "renovate-main-dotenv-18.x",
     "title": "renovate-main-dotenv-18.x",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "renovate-main-dotenv-16.x-lockfile",
