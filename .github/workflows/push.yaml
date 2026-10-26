@@ -6,9 +6,15 @@ on:
       - 'main'
       - '[0-9]+.[0-9]+'
 
+# A newer push to the same branch supersedes the running one. Deploys across
+# branches are queued in the shared workflow, so this must not reuse its group.
+concurrency:
+  group: push-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   push:
-    uses: stakater/.github/.github/workflows/push_versioned_doc.yaml@v0.0.131
+    uses: stakater/.github/.github/workflows/push_versioned_doc.yaml@v0.0.202
     with:
       LATEST_DOC_VERSION: "0.1"
     secrets:
