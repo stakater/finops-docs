@@ -17,7 +17,9 @@
   {
     "version": "renovate-main-stakater-.github-0.x",
     "title": "renovate-main-stakater-.github-0.x",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "renovate-main-python-3.x",
@@ -72,8 +74,6 @@
   {
     "version": "fix-serialize-gh-pages-deploys",
     "title": "fix-serialize-gh-pages-deploys",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   }
 ]
