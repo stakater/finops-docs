@@ -70,5 +70,10 @@
     "version": "renovate-main-actions-checkout-6.x",
     "title": "renovate-main-actions-checkout-6.x",
     "aliases": []
+  },
+  {
+    "version": "fix-serialize-gh-pages-deploys",
+    "title": "fix-serialize-gh-pages-deploys",
+    "aliases": []
   }
 ]
