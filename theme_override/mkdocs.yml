@@ -13,6 +13,7 @@ plugins:
   # which arrived in the shared theme at v0.0.61.
   - redirects:
       redirect_maps:
+        index.md: overview/introduction.md
         getting-started/index.md: getting-started/quick-start.md
         getting-started/prerequisites.md: getting-started/installation/overview.md
         getting-started/installation.md: getting-started/installation/kubernetes.md
@@ -46,10 +47,11 @@ extra:
 
 nav:
   - Overview:
-      - Introduction: index.md
+      - Introduction: overview/introduction.md
       - overview/key-features.md
       - overview/use-cases.md
   - Concepts:
+      - concepts/resource-model.md
       - concepts/architecture.md
       - concepts/terminology.md
       - concepts/finops-provider.md
