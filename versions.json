@@ -27,7 +27,9 @@
   {
     "version": "renovate-main-npm-minimatch-vulnerability",
     "title": "renovate-main-npm-minimatch-vulnerability",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "renovate-main-node-26.x",
@@ -72,8 +74,6 @@
   {
     "version": "docs-welcome-page",
     "title": "docs-welcome-page",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   }
 ]
