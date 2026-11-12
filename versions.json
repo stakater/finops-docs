@@ -70,5 +70,10 @@
     "version": "renovate-main-actions-checkout-6.x",
     "title": "renovate-main-actions-checkout-6.x",
     "aliases": []
+  },
+  {
+    "version": "docs-welcome-page",
+    "title": "docs-welcome-page",
+    "aliases": []
   }
 ]
